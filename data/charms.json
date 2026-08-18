@@ -1,0 +1,16 @@
+[
+  {
+    "id": 50001,
+    "legacyKey": "애니참",
+    "name": "섬멸의 부적 (애니참)",
+    "drop": "우버 디아블로 (디아블로 클론) 처치 시 100% 드랍",
+    "stats": "고정 스펙: <strong>+1 모든 스킬</strong> / <strong>모든 스탯 +20</strong> (으뜸) / <strong>모든 저항 +20</strong> (으뜸) / <strong>경험치 획득 +10%</strong>"
+  },
+  {
+    "id": 50002,
+    "legacyKey": "횃불참",
+    "name": "지옥의 횃불 (횃불참)",
+    "drop": "트리스트럼 횃불 퀘스트 (메피스토, 디아블로, 바알 처치)",
+    "stats": "고정 스펙: <strong>+3 [캐릭터 직업 스킬]</strong> / <strong>모든 스탯 +20</strong> (으뜸) / <strong>모든 저항 +20</strong> (으뜸) / 8레벨 화염 폭풍(Firestorm) 타격 시 5% 확률 발동"
+  }
+]

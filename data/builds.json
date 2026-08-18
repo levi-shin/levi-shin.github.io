@@ -1,0 +1,1957 @@
+{
+  "meta": {
+    "dataVersion": "1.3",
+    "patchVersion": "3.3",
+    "verificationStatus": "Needs Verification"
+  },
+  "items": [
+    {
+      "id": 70001,
+      "legacyKey": "sorc_light",
+      "title": "원소술사 (Sorceress)",
+      "subtitle": "체라소서 (연쇄 번개)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "text",
+              "value": "엘드리치 오브 ["
+            },
+            {
+              "type": "link",
+              "name": "주얼작",
+              "unresolved": true,
+              "target": "감시자의 천둥",
+              "dataType": "unique"
+            },
+            {
+              "type": "text",
+              "value": "]"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "그리폰의 눈 다이어뎀",
+              "dataType": "unique",
+              "id": 20006
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            },
+            {
+              "type": "text",
+              "value": " (메이지 플레이트)"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크 (35% 패캐)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "배틀 부츠",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / 조던 쌍"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 통찰/무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골 (에테)",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 번개 스킬참<br><strong>⚡ 스킬:</strong> 번개 줄기(20), 번개(20), 연쇄 번개(20), 번개 숙련(20)"
+    },
+    {
+      "id": 70002,
+      "legacyKey": "sorc_cold",
+      "title": "원소술사 (Sorceress)",
+      "subtitle": "극블리소서 (눈보라)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "데스 파버 오브",
+              "dataType": "unique",
+              "id": 20012
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " 또는 밤날개의 투구"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "text",
+              "value": "명예의 굴레 또는 "
+            },
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크 (35% 패캐)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "배틀 부츠",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / 조던링 쌍"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 통찰 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "통찰 (Insight)",
+                "dataType": "runeword",
+                "id": 30018
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참<br><strong>❄️ 스킬:</strong> 블리자드(20), 얼음 폭풍(20), 빙하의 창(20), 냉기 숙련"
+    },
+    {
+      "id": 70003,
+      "legacyKey": "pala_ham",
+      "title": "성기사 (Paladin)",
+      "subtitle": "축복받은 망치 (햄딘)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "오크의 심장",
+              "dataType": "runeword",
+              "id": 30019
+            },
+            {
+              "type": "text",
+              "value": " (오심)"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [참룬 또는 베르룬작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            },
+            {
+              "type": "text",
+              "value": " (아콘 플레이트)"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 세타 (올레지 45)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "배틀 부츠",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / 조던링 + 발카링"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 통찰 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "통찰 (Insight)",
+                "dataType": "runeword",
+                "id": 30018
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 홀리실드 켜고 블럭 75%, 생명력 올인<br><strong>🎒 인벤토리:</strong> 전투 스킬참, 애니참, 횃불참<br><strong>🔨 스킬:</strong> 축복받은 망치(20), 집중(20), 원기(20), 조준(20)"
+    },
+    {
+      "id": 70004,
+      "legacyKey": "pala_smite",
+      "title": "성기사 (Paladin)",
+      "subtitle": "슴딘 (우버/횃불 특화)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "슬픔 (고뇌 페이즈 블레이드)",
+              "dataType": "runeword",
+              "id": 30013
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "기욤의 얼굴 [공속/올저 주얼작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "배신",
+              "dataType": "runeword",
+              "id": 30017
+            },
+            {
+              "type": "text",
+              "value": " (흐리기 스위치) / "
+            },
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "망명",
+              "dataType": "runeword",
+              "id": 30014
+            },
+            {
+              "type": "text",
+              "value": " (에테 엘리트 팔라 방패)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "뱀파이어 본 글러브(드라쿨) / 고어 라이더"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "미스릴 코일 / 대군주의 분노 / 레이븐링 쌍"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 사막 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "리퍼스 톨 (사형수의 자비)",
+                "unresolved": true,
+                "target": "사형수의 자비",
+                "dataType": "runeword"
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 블럭 75%, 생명력 올인<br><strong>🎒 인벤토리:</strong> 애니참, 횃불참, 올레지/피 스몰참 도배<br><strong>🛡️ 스킬:</strong> 강타(20), 신성한 방패(20), 파나티시즘(20)"
+    },
+    {
+      "id": 70005,
+      "legacyKey": "necro_summon",
+      "title": "강령술사 (Necromancer)",
+      "subtitle": "조독넥 (해골 소환)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "야수",
+              "unresolved": true,
+              "target": "야수",
+              "dataType": "runeword"
+            },
+            {
+              "type": "text",
+              "value": " (광신 오라 룬어)"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            },
+            {
+              "type": "text",
+              "value": " (메이지 플레이트)"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "트랑울 장갑 / 골수걸음"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 2스킬 패캐 아뮬 / "
+            },
+            {
+              "type": "link",
+              "name": "조던 쌍",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 소환 스킬참, 애니참, 횃불참<br><strong>💀 스킬:</strong> 해골 되살리기(20), 해골 숙련(20), 시체 폭발(20)"
+    },
+    {
+      "id": 70006,
+      "legacyKey": "necro_bone",
+      "title": "강령술사 (Necromancer)",
+      "subtitle": "본넥 (뼈 창)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "text",
+              "value": "화이트 완드 (+3 뼈 창 베이스)"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "2강령 20패캐 서클릿"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "트랑울 장갑 / "
+            },
+            {
+              "type": "link",
+              "name": "배틀 부츠",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 패캐링"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 통찰 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "통찰 (Insight)",
+                "dataType": "runeword",
+                "id": 30018
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 뼈와 독 스킬참, 애니/횃불참<br><strong>💀 스킬:</strong> 뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)"
+    },
+    {
+      "id": 70007,
+      "legacyKey": "ama_jav",
+      "title": "아마존 (Amazon)",
+      "subtitle": "자바마 (번개 분노)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "거인의 복수 (타이탄)",
+              "dataType": "unique",
+              "id": "타이탄의 복수"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "그리폰의 눈 다이어뎀",
+              "dataType": "unique",
+              "id": 20006
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "인내",
+              "dataType": "runeword",
+              "id": 30020
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "불사조 모나크",
+              "dataType": "runeword",
+              "id": 30012
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "+2투창 20공속 레어 장갑 / "
+            },
+            {
+              "type": "link",
+              "name": "워 트래블러",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "관통 벨트 / 대군주의 분노 / 레이븐링 쌍"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 민첩 블럭 75%, 남은 스탯 생명력<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 투창 스킬참<br><strong>⚡ 스킬:</strong> 번개 분노(20), 번개 일격(20), 전기 일격(20)"
+    },
+    {
+      "id": 70008,
+      "legacyKey": "ama_bow",
+      "title": "아마존 (Amazon)",
+      "subtitle": "신뢰 활마 (다발 사격)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "신뢰 (그랜드 매이트런)",
+              "dataType": "runeword",
+              "id": 30009
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "안다리엘의 두건",
+              "dataType": "unique",
+              "id": "안다리엘의 두건"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "인내 (Fortitude)",
+              "dataType": "runeword",
+              "id": 30020
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "text",
+              "value": "사용 불가 (양손 무기)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "안수 (고무장갑) / 고어 라이더"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "관통 벨트 / 대군주의 분노 / 레이븐 + 듀얼링"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 1 신념/자존심 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "자존심 (Pride)",
+                "dataType": "runeword",
+                "id": 30021
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 생명력 최소, 남은 스탯 민첩 올인 (극딜)<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분새(물리), 맥어뎀참 도배<br><strong>🏹 스킬:</strong> 다발 사격, 속사(20), 유도 화살(20)"
+    },
+    {
+      "id": 70009,
+      "legacyKey": "barb_whirl",
+      "title": "야만용사 (Barbarian)",
+      "subtitle": "왚바바 (삥바바)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "슬픔 (고뇌 페이즈 블레이드)",
+              "dataType": "runeword",
+              "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " 쌍수"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "슬레이어의 갈기 [렘룬작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            },
+            {
+              "type": "text",
+              "value": " 또는 부 (Wealth)"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "text",
+              "value": "쌍수 착용"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "챈스가드 / 지옥걸음"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "금박 허리띠 / 초승달 아뮬 / 왜성 반지 쌍"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 위압 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 넉넉히, 오더스 후 생명력 3천<br><strong>🎒 인벤토리:</strong> 삥참(골드 증가율) 및 기드의 운 참 도배<br><strong>⚔️ 스킬:</strong> 소용돌이(20), 검 숙련(20), 아이템 찾기(50%이상)"
+    },
+    {
+      "id": 70010,
+      "legacyKey": "barb_ber",
+      "title": "야만용사 (Barbarian)",
+      "subtitle": "버서크 바바",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "슬픔 (고뇌 페이즈)",
+              "dataType": "runeword",
+              "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " + 알리바바"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "슬레이어의 갈기 [참룬작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "text",
+              "value": "쌍수"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "안수 / "
+            },
+            {
+              "type": "link",
+              "name": "워 트래블러",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "미스릴 코일 / 대군주 / 레이븐링 + 마흡"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 사막 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "리퍼스 톨",
+                "unresolved": true,
+                "target": "사형수의 자비",
+                "dataType": "runeword"
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 생명력 3천 맞추고 올 힘 (극딜)<br><strong>🎒 인벤토리:</strong> 뼈의 분새(물리 파괴참), 맥어뎀/피참 도배<br><strong>⚔️ 스킬:</strong> 광전사(20), 검 숙련(20), 포효(20)"
+    },
+    {
+      "id": 70011,
+      "legacyKey": "dru_ele",
+      "title": "드루이드 (Druid)",
+      "subtitle": "엘리드루 (풍수)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "오크의 심장",
+              "dataType": "runeword",
+              "id": 30019
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "잘랄의 갈기"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크 (35% 패캐)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "워 트래블러",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "조던 쌍",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 통찰 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "통찰 (Insight)",
+                "dataType": "runeword",
+                "id": 30018
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 모나크 힘(156), 생명력 올인<br><strong>🎒 인벤토리:</strong> 원소 스킬참, 애니참, 횃불참<br><strong>🌪️ 스킬:</strong> 돌풍(20), 회오리바람(20), 허리케인(20)"
+    },
+    {
+      "id": 70012,
+      "legacyKey": "dru_wolf",
+      "title": "드루이드 (Druid)",
+      "subtitle": "퓨리 늑드루",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "text",
+              "value": "에테 리퍼스 톨 [조드룬작]"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "text",
+              "value": "잘랄의 갈기 [공속/올저 주얼작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "인내 (Fortitude)",
+              "dataType": "runeword",
+              "id": 30020
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "text",
+              "value": "양손 무기"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "드라쿨의 장갑 / 고어 라이더"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "text",
+              "value": "귀꿰미 / 대군주의 분노 / 레이븐 + 듀얼"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 1 자존심 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "자존심 (Pride)",
+                "dataType": "runeword",
+                "id": 30021
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 무기 요구치 민첩, 생명력 올인<br><strong>🎒 인벤토리:</strong> 변신 스킬참, 맥어뎀/피참 도배<br><strong>🐺 스킬:</strong> 늑대인간(20), 변신술(20), 분노(20)"
+    },
+    {
+      "id": 70013,
+      "legacyKey": "sin_mosaic",
+      "title": "암살자 (Assassin)",
+      "subtitle": "모자이크씬 (무술)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "text",
+              "value": "쌍 모자이크 룬어 클러"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "그리폰의 눈 다이어뎀",
+              "dataType": "unique",
+              "id": 20006
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "text",
+              "value": "쌍수 무기 장착"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "+2무술 20공속 레어 장갑 / 섀도우 댄서"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "조던 쌍",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 장비 요구치 이후 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 무술 스킬참<br><strong>🥋 스킬:</strong> 불사조 일격(20), 천둥의 손톱(20), 얼음 손톱(20)"
+    },
+    {
+      "id": 70014,
+      "legacyKey": "sin_trap",
+      "title": "암살자 (Assassin)",
+      "subtitle": "트랩씬 (번개 파수기)",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "오크의 심장",
+              "dataType": "runeword",
+              "id": 30019
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " 또는 2어쌔 20패캐 서클릿"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / 물부츠"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "마라",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "조던",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": "안다리엘의 두건"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 모나크 힘(156), 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 덫(트랩) 스킬참<br><strong>🥋 스킬:</strong> 번개 파수기(20), 죽음 파수기(20), 감전 그물(20)"
+    },
+    {
+      "id": 70015,
+      "legacyKey": "demo",
+      "title": "악마술사 (Demonologist)",
+      "subtitle": "악마 소환 & 화염 변신",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "야수",
+              "unresolved": true,
+              "target": "야수",
+              "dataType": "runeword"
+            },
+            {
+              "type": "text",
+              "value": " (광신 오라)"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [보호자의 불꽃 화염 주얼작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "item",
+              "id": "enigma"
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " 모나크"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "text",
+              "value": "트랑울 장갑 / 섀도우 댄서"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 3소환 아뮬 / "
+            },
+            {
+              "type": "link",
+              "name": "조던 쌍",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한 (Infinity)",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내 (Fortitude)",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 불길의 균열(화염 파괴참), 소환 스킬참<br><strong>🔥 스킬:</strong> 지옥의 악마 소환(20), 지옥불(20), 소환수 강화(20)"
+    }
+  ]
+}
