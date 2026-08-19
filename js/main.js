@@ -38,6 +38,7 @@ function indexRecords(type, records) {
         if (record.name) map.set(record.name, record);
     });
 }
+
 async function loadData() {
     if (loadPromise) return loadPromise;
 
@@ -175,38 +176,103 @@ function filterBuilds(evt, tag) {
     });
 }
 
-function findRelatedBuilds(keyword) {
-    if (!window.DATA || !window.DATA.builds) return [];
+// ==========================================
+// 🛡️ 빌드 검색 전용 유틸리티 함수 (main.js 하단 추가)
+// ==========================================
+window.findRelatedBuilds = function(keyword) {
+    if (!window.DATA || !window.DATA.builds) {
+        console.warn("⚠️ window.DATA.builds가 없습니다!");
+        return [];
+    }
     const results = [];
     const lowerKeyword = keyword.toLowerCase();
 
     window.DATA.builds.forEach(build => {
-        let isMatched = false;
+        const titleText = (build.title || "").toLowerCase();
+        const subtitleText = (build.subtitle || "").toLowerCase();
         
+        let isMatched = titleText.includes(lowerKeyword) || subtitleText.includes(lowerKeyword);
+
         const checkSegments = (segments) => {
-            if (!Array.isArray(segments)) return;
-            segments.forEach(seg => {
-                const name = (seg.name || seg.target || seg.value || "").toLowerCase();
-                if (name.includes(lowerKeyword)) {
-                    isMatched = true;
-                }
-            });
+            if (Array.isArray(segments)) {
+                segments.forEach(seg => {
+                    const segText = (seg.name || seg.target || seg.value || "").toLowerCase();
+                    if (segText.includes(lowerKeyword)) isMatched = true;
+                });
+            }
         };
 
         build.slots?.forEach(slot => checkSegments(slot.content));
         build.merc?.gear?.forEach(gear => checkSegments(gear.content));
 
         if (isMatched) {
-            results.push({
-                title: build.title,
-                subtitle: build.subtitle,
-                id: build.id
+            results.push({ 
+                title: build.title, 
+                subtitle: build.subtitle, 
+                id: build.id 
             });
         }
     });
 
     return results;
-}
+};
+
+// 드롭다운 렌더링 함수 오버라이드 (아이템 카드 + 종결 빌드 카드 통합)
+window.renderGlobalSearchResults = function(keyword, primaries, builds) {
+    let dropdown = document.getElementById('global-search-dropdown');
+    if (!dropdown) {
+        const searchInput = document.getElementById('searchInput');
+        if (!searchInput) return;
+        dropdown = document.createElement('div');
+        dropdown.id = 'global-search-dropdown';
+        dropdown.style.cssText = `position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #15151a; border: 1px solid var(--gold); border-radius: 8px; max-height: 400px; overflow-y: auto; z-index: 99999; box-shadow: 0 15px 35px rgba(0,0,0,0.9); padding: 10px; font-size: 0.9rem;`;
+        searchInput.parentElement.style.position = 'relative';
+        searchInput.parentElement.appendChild(dropdown);
+    }
+
+    if (primaries.length === 0 && builds.length === 0) {
+        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">검색 결과가 없습니다.</div>`;
+    } else {
+        let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">🔍 '${keyword}' 통합 검색 결과</div>`;
+        
+        // 1. 유니크 / 룬어 아이템 결과
+        if (primaries.length > 0) {
+            html += `<div style="font-size: 0.75rem; color: var(--gold); margin: 6px 4px 4px; font-weight: bold;">✨ 핵심 정보 (조합 및 스크립트)</div>`;
+            primaries.forEach(item => {
+                html += `
+                <div onclick="open${item.type === 'runeword' ? 'Rune' : 'Unique'}Modal(${item.id}); window.closeGlobalSearch();" 
+                     style="background: #1e1e24; border: 1px solid #333; border-radius: 6px; padding: 10px; margin-bottom: 6px; cursor: pointer;"
+                     onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='#333'">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <span style="color: #f39c12; font-weight: bold;">${item.title}</span>
+                        <span style="font-size: 0.7rem; background: #2a2a35; color: #aaa; padding: 2px 6px; border-radius: 4px;">${item.category}</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: #ccc;">${item.highlight}</div>
+                </div>`;
+            });
+        }
+
+        // 2. 추천 종결 빌드 결과 (성공적으로 매칭된 햄딘 등 출력)
+        if (builds.length > 0) {
+            html += `<div style="font-size: 0.75rem; color: #38bdf8; margin: 10px 4px 4px; font-weight: bold;">🛡️ 추천 종결 빌드</div>`;
+            builds.forEach(build => {
+                html += `
+                <div onclick="switchSection(null, 'builds'); openPaperDollModal(${build.id}); window.closeGlobalSearch();" 
+                     style="background: #1e1e24; border: 1px solid #333; border-radius: 6px; padding: 10px; margin-bottom: 6px; cursor: pointer;"
+                     onmouseover="this.style.borderColor='#38bdf8'" onmouseout="this.style.borderColor='#333'">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <span style="color: #38bdf8; font-weight: bold;">${build.title}</span>
+                        <span style="font-size: 0.7rem; background: #1e293b; color: #38bdf8; padding: 2px 6px; border-radius: 4px;">종결 빌드</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: #ccc;">${build.subtitle}</div>
+                </div>`;
+            });
+        }
+
+        dropdown.innerHTML = html;
+    }
+    dropdown.style.display = 'block';
+};
 
 function filterContent() {
     const inputEl = document.getElementById('searchInput');
@@ -214,8 +280,9 @@ function filterContent() {
     
     const filter = inputEl.value.toLowerCase().trim();
     
+    // 1. 검색어가 없을 때: 드롭다운 닫기
     if (!filter) {
-        clearSearchResultsUI();
+        if (typeof clearSearchResultsUI === 'function') clearSearchResultsUI();
         return;
     }
 
@@ -223,7 +290,7 @@ function filterContent() {
 
     const primaryMatches = [];
 
-    // 1. 룬어 검색
+    // 2. 룬어 검색
     if (Array.isArray(window.DATA.runewords)) {
         window.DATA.runewords.forEach(rw => {
             const legacyKey = String(rw.legacyKey || "").toLowerCase();
@@ -237,13 +304,14 @@ function filterContent() {
                     title: rw.legacyKey || rw.name,
                     category: '룬어 조합식',
                     highlight: `조합: ${rw.recipe || '-'}`,
-                    id: rw.id
+                    id: rw.id,
+                    isLadder: rw.isLadder // 🌟 이 부분을 추가해 주어야 데이터에서 값을 읽어옵니다!
                 });
             }
         });
     }
 
-    // 2. 유니크 아이템 검색
+    // 3. 유니크 아이템 검색
     if (Array.isArray(window.DATA.uniques)) {
         window.DATA.uniques.forEach(uni => {
             const name = String(uni.name || "").toLowerCase();
@@ -263,7 +331,7 @@ function filterContent() {
         });
     }
 
-    // 3. 🌟 신 파괴참 검색 ('잠복하는 파괴참' 등 대응)
+    // 4. 신 파괴참 검색
     if (Array.isArray(window.DATA.sunders)) {
         window.DATA.sunders.forEach(item => {
             const name = String(item.name || "").toLowerCase();
@@ -282,7 +350,7 @@ function filterContent() {
         });
     }
 
-    // 4. 🌟 종결 부적 (애니참, 횃불 등) 검색
+    // 5. 종결 부적 검색
     if (Array.isArray(window.DATA.charms)) {
         window.DATA.charms.forEach(item => {
             const name = String(item.name || "").toLowerCase();
@@ -300,7 +368,7 @@ function filterContent() {
         });
     }
 
-    // 5. 🌟 우버 바바 / 전용 주얼 검색 ('감시자의 천둥' 등 대응)
+    // 6. 우버 바바/주얼 검색
     if (Array.isArray(window.DATA.ubers)) {
         window.DATA.ubers.forEach(item => {
             const name = String(item.name || "").toLowerCase();
@@ -319,11 +387,17 @@ function filterContent() {
         });
     }
 
-    // 6. 연관 사용처 수집 (종결 빌드 탐색)
-    const relatedBuilds = findRelatedBuilds(filter);
+    // 7. 연관 빌드 탐색 ('햄' 입력 시 햄딘 빌드 수집)
+    const relatedBuilds = (typeof findRelatedBuilds === 'function') ? findRelatedBuilds(filter) : [];
 
-    // 7. 통합 검색 결과 UI 렌더링
-    renderGlobalSearchResults(filter, primaryMatches, relatedBuilds);
+    // 8. 드롭다운 결과 렌더링 (메인 화면 카드는 절대 건드리지 않음)
+    if (primaryMatches.length === 0 && relatedBuilds.length === 0) {
+        if (typeof clearSearchResultsUI === 'function') clearSearchResultsUI();
+    } else {
+        if (typeof renderGlobalSearchResults === 'function') {
+            renderGlobalSearchResults(filter, primaryMatches, relatedBuilds);
+        }
+    }
 }
 
 function renderGlobalSearchResults(keyword, primaries, builds) {
@@ -363,10 +437,19 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
             else if (item.type === 'charm') clickAction = `openCharmModal(${item.id})`;
             else if (item.type === 'uber') clickAction = `openUberModal(${item.id})`;
 
+            // 🌟 래더 전용 여부 확인 및 배지 생성 (item 데이터에 isLadder 또는 ladder 속성이 true일 때)
+            let ladderBadge = '';
+            if (item.isLadder || item.ladder) {
+                ladderBadge = `<span style="font-size: 0.65rem; background: #7f1d1d; color: #fca5a5; padding: 1px 5px; border-radius: 4px; margin-left: 6px; font-weight: normal; vertical-align: middle;">래더전용</span>`;
+            }
+
             html += `
                 <div onclick="${clickAction}; closeGlobalSearch();" style="padding: 8px; border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); margin-bottom: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,154,69,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span style="color: var(--gold, #dfb15b); font-weight: bold;">${item.title}</span>
+                        <div>
+                            <span style="color: var(--gold, #dfb15b); font-weight: bold;">${item.title}</span>
+                            ${ladderBadge}
+                        </div>
                         <span style="font-size: 0.75rem; color: #888; background: #222; padding: 2px 6px; border-radius: 4px;">${item.category}</span>
                     </div>
                     <div style="font-size: 0.85rem; color: #ddd; margin-top: 2px;">${item.highlight}</div>
@@ -392,6 +475,47 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
     dropdown.innerHTML = html;
     dropdown.style.display = 'block';
 }
+
+// ==========================================
+// 🛡️ 빌드 검색 전용 유틸리티 함수
+// ==========================================
+window.findRelatedBuilds = function(keyword) {
+    if (!window.DATA || !window.DATA.builds) {
+        console.warn("⚠️ window.DATA.builds가 없습니다!");
+        return [];
+    }
+    const results = [];
+    const lowerKeyword = keyword.toLowerCase();
+
+    window.DATA.builds.forEach(build => {
+        const titleText = (build.title || "").toLowerCase();
+        const subtitleText = (build.subtitle || "").toLowerCase();
+        
+        let isMatched = titleText.includes(lowerKeyword) || subtitleText.includes(lowerKeyword);
+
+        const checkSegments = (segments) => {
+            if (Array.isArray(segments)) {
+                segments.forEach(seg => {
+                    const segText = (seg.name || seg.target || seg.value || "").toLowerCase();
+                    if (segText.includes(lowerKeyword)) isMatched = true;
+                });
+            }
+        };
+
+        build.slots?.forEach(slot => checkSegments(slot.content));
+        build.merc?.gear?.forEach(gear => checkSegments(gear.content));
+
+        if (isMatched) {
+            results.push({ 
+                title: build.title, 
+                subtitle: build.subtitle, 
+                id: build.id 
+            });
+        }
+    });
+
+    return results;
+};
 
 function clearSearchResultsUI() {
     const dropdown = document.getElementById('global-search-dropdown');
@@ -433,6 +557,23 @@ function escapeHtml(value = "") {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+function setDbModalImage(imagePath) {
+    const artEl = document.getElementById("dbModalArt");
+    if (!artEl) return;
+
+    const fallback = () => { artEl.innerHTML = '<div class="d2-item-art"><div class="d2-armor"></div></div>'; };
+
+    if (!imagePath) { fallback(); return; }
+
+    const img = document.createElement("img");
+    img.className = "db-modal-img";
+    img.src = `items/${imagePath}`;
+    img.alt = "";
+    img.onerror = fallback;
+    artEl.innerHTML = "";
+    artEl.appendChild(img);
 }
 
 function openDatabaseModal() {
@@ -549,6 +690,7 @@ function openRuneModal(runewordId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 룬 조합 복사";
     databaseCopyText = item.recipe;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -569,6 +711,7 @@ function openUniqueModal(uniqueId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 아이템 정보 복사";
     databaseCopyText = `${item.name} (${item.eng || ""}) - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.add("unique-art");
     openDatabaseModal();
 }
@@ -585,6 +728,7 @@ function openSunderModal(sunderId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 큐빙 공식 복사";
     databaseCopyText = `${item.name} 공식: ${item.recipe}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -600,6 +744,7 @@ function openCharmModal(charmId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
     databaseCopyText = `${item.name} - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -615,6 +760,7 @@ function openUberModal(uberId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
     databaseCopyText = `${item.name} - 드랍 보상 스펙 정보`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -938,6 +1084,60 @@ async function loadRunewords() {
     }
 }
 
+async function renderBuildCards() {
+    const gridContainer = document.getElementById('buildCardsGrid');
+    if (!gridContainer) return;
+
+    try {
+        const response = await fetch('data/builds.json'); 
+        const data = await response.json();
+        const builds = data.items; 
+
+        gridContainer.innerHTML = '';
+
+        builds.forEach(build => {
+            let badgeText = build.title.split(' ')[0]; 
+            let titleText = build.subtitle || build.title;
+            let descText = build.info ? build.info.replace(/<[^>]*>?/gm, '').substring(0, 45) + '...' : '클릭하여 상세 장비 세팅을 확인하세요.';
+
+            let tagAttr = 'farm,magic';
+            if (build.id === 70004 || build.id === 70010 || build.id === 70012) tagAttr = 'boss,physical';
+            if (build.id === 70005 || build.id === 70015 || build.id === 70016) tagAttr = 'summon,magic,boss,farm';
+
+            const card = document.createElement('div');
+            card.className = 'card searchable-item';
+            card.setAttribute('data-tags', tagAttr);
+            card.onclick = () => openPaperDollModal(build.id);
+
+            card.innerHTML = `
+                <span class="badge">${badgeText}</span>
+                <h3>${titleText}</h3>
+                <p>${descText}</p>
+                <button class="btn-detail">장비 슬롯 보기</button>
+            `;
+
+            gridContainer.appendChild(card);
+        });
+
+        // ==========================================
+        // ★ 핵심 추가: 카드가 동적으로 다 만들어진 직후에 
+        // 기존 검색/필터 함수가 있다면 강제로 한 번 실행해 줌
+        // ==========================================
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput && searchInput.value.trim() !== '' && typeof filterBuilds === 'function') {
+            // 만약 검색창에 이미 무언가 적혀있었다면 그에 맞춰 필터 적용
+            filterBuilds(); 
+        }
+
+    } catch (error) {
+        console.error('builds.json 불러오기 실패:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderBuildCards();
+});
+
 document.addEventListener('DOMContentLoaded', loadRunewords);
 document.addEventListener('DOMContentLoaded', initialize);
 
@@ -957,4 +1157,57 @@ window.addEventListener("keydown", event => {
         closeFeedbackModal();
         closeHistoryModal();
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('sidebarLogo');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            // 1. 네비게이션의 '1. 종결 빌드' 버튼 찾기
+            const buildsNavBtn = document.querySelector("button[onclick*=\"switchSection(event, 'builds')\"]");
+            
+            // 2. 만약 switchSection 함수가 있다면 종결 빌드 섹션으로 전환
+            if (typeof switchSection === 'function' && buildsNavBtn) {
+                // 가짜 이벤트 객체나 첫 번째 인자로 전달해 switchSection 실행
+                switchSection({ target: buildsNavBtn }, 'builds');
+            }
+            
+            // 3. 검색창 초기화 및 전체 빌드 보기 상태로 정렬 (필요시)
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) searchInput.value = '';
+            
+            const allFilterBtn = document.querySelector('.filter-btn');
+            if (allFilterBtn && typeof filterBuilds === 'function') {
+                filterBuilds({ target: allFilterBtn }, 'all');
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderBuildCards();
+
+    // 사이드바 로고 클릭 이벤트
+    const logo = document.getElementById('sidebarLogo');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            const buildsNavBtn = document.querySelector("button[onclick*=\"switchSection(event, 'builds')\"]");
+            if (typeof switchSection === 'function' && buildsNavBtn) {
+                switchSection({ target: buildsNavBtn }, 'builds');
+            }
+        });
+    }
+    
+    // ==========================================
+    // ★ [강제 연결] 페이지 내의 모든 텍스트 입력창을 뒤져서
+    // 검색창(`searchInput` 등)인 경우 입력할 때마다 filterContent가 무조건 실행되게 함
+    // ==========================================
+    const allInputs = document.querySelectorAll('input[type="text"]');
+    allInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (typeof filterContent === 'function') {
+                filterContent();
+            }
+        });
+    });
 });

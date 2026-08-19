@@ -14,10 +14,13 @@
 <div class="page-shell">
 
     <aside class="left-sidebar" aria-label="사이드바 네비게이션">
-        <div class="sidebar-logo">⚔️ DIABLO II RESURRECTED<br><span style="font-size:0.75rem; color:var(--gold-light);">악군 패키지 마스터 백과사전</span></div>
+        <div class="sidebar-logo" id="sidebarLogo" style="cursor: pointer;">
+            ⚔️ DIABLO II RESURRECTED<br>
+            <span style="font-size:0.75rem; color:var(--gold-light);">악군 패키지 마스터 백과사전</span>
+        </div>
         <div class="sidebar-search">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="검색어 입력...">
+            <input type="text" id="searchInput" class="search-input" placeholder="검색어 입력..." oninput="filterContent()">
         </div>
         <ul class="nav-menu">
             <li><button class="nav-btn active" onclick="switchSection(event, 'builds')">1. 종결 빌드</button></li>
@@ -66,112 +69,7 @@
         </div>
 
         <div class="grid-cards" id="buildCardsGrid">
-
-            <div class="card searchable-item" data-tags="farm,magic" onclick="openPaperDollModal(70001)">
-                <span class="badge">원소술사</span>
-                <h3>체라소서 (연쇄 번개)</h3>
-                <p>무한의 공간(용병)을 활용한 번개 저항 파괴 광속 앵벌 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,magic" onclick="openPaperDollModal(70002)">
-                <span class="badge">원소술사</span>
-                <h3>극블리소서 (눈보라)</h3>
-                <p>보스 극딜 및 카우방/고대 하수도 특화 냉기 마법 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,magic,physical" onclick="openPaperDollModal(70003)">
-                <span class="badge">성기사</span>
-                <h3>축복받은 망치 (햄딘)</h3>
-                <p>디아블로2 최고의 올라운더 1티어 앵벌 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="boss,physical" onclick="openPaperDollModal(70004)">
-                <span class="badge">성기사</span>
-                <h3>슴딘 (우버/횃불 특화)</h3>
-                <p>라이프 탭과 강타를 활용한 트리스트럼 횃불 퀘스트 솔플 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="summon,farm" onclick="openPaperDollModal(70005)">
-                <span class="badge">강령술사</span>
-                <h3>조독넥 (해골 소환)</h3>
-                <p>강력한 소환수 군단과 시체 폭발(시폭)을 이용한 안정성 1위 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="magic" onclick="openPaperDollModal(70006)">
-                <span class="badge">강령술사</span>
-                <h3>본넥 (뼈 창)</h3>
-                <p>마법 피해(매직 데미지) 극대화를 통한 PK 및 범용 사냥 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,magic" onclick="openPaperDollModal(70007)">
-                <span class="badge">아마존</span>
-                <h3>자바마 (번개 분노)</h3>
-                <p>수십 마리의 소떼를 단 한 방에 녹이는 카우방 학살자 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="physical,boss" onclick="openPaperDollModal(70008)">
-                <span class="badge">아마존</span>
-                <h3>신뢰 활마 (다발 사격)</h3>
-                <p>파나티시즘 오라와 인내 갑옷을 활용한 극 물리 대미지 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,physical" onclick="openPaperDollModal(70009)">
-                <span class="badge">야만용사</span>
-                <h3>왚바바 (삥바바)</h3>
-                <p>트라빈칼 의회원을 털어 엄청난 양의 골드를 수급하는 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="boss,physical" onclick="openPaperDollModal(70010)">
-                <span class="badge">야만용사</span>
-                <h3>버서크 바바</h3>
-                <p>마법 대미지 변환 타격으로 TC85 유니크 보스만 1.5초 컷 저격</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,magic" onclick="openPaperDollModal(70011)">
-                <span class="badge">드루이드</span>
-                <h3>엘리드루 (풍수)</h3>
-                <p>허리케인과 토네이도로 밀어붙이는 압도적인 원소 대미지 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="physical,boss" onclick="openPaperDollModal(70012)">
-                <span class="badge">드루이드</span>
-                <h3>퓨리 늑드루</h3>
-                <p>변신 후 광속의 5연타 강타 공격을 퍼붓는 강력한 밀리 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="boss,farm,magic" onclick="openPaperDollModal(70013)">
-                <span class="badge">암살자</span>
-                <h3>모자이크씬 (무술)</h3>
-                <p>충전 스택을 무한으로 유지하며 화면을 터뜨리는 파괴신 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="farm,magic" onclick="openPaperDollModal(70014)">
-                <span class="badge">암살자</span>
-                <h3>트랩씬 (번개 파수기)</h3>
-                <p>안전한 거리에서 트랩을 깔고 시체 폭발을 연계하는 앵벌 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
-            <div class="card searchable-item" data-tags="summon,magic" onclick="openPaperDollModal(70015)">
-                <span class="badge">악마술사</span>
-                <h3>악마 소환 & 화염</h3>
-                <p>지옥의 군단을 부리고 강력한 지옥불을 내뿜는 하이브리드 세팅</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
-            </div>
-
+            
         </div>
     </section>
 

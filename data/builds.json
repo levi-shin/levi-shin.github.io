@@ -1952,6 +1952,145 @@
         ]
       },
       "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 불길의 균열(화염 파괴참), 소환 스킬참<br><strong>🔥 스킬:</strong> 지옥의 악마 소환(20), 지옥불(20), 소환수 강화(20)"
+    },
+    {
+      "id": 70016,
+      "legacyKey": "demo_endgame",
+      "title": "악마술사 (종결 화염 장판 빌드)",
+      "subtitle": "집착 & 불사조 하이엔드 세팅",
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "집착",
+              "dataType": "runeword",
+              "id": 30040
+            },
+            {
+              "type": "text",
+              "value": " [6소켓 에테 스태프 베이스]"
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "지옥파수꾼의 의지",
+              "dataType": "unique",
+              "id": 20050
+            },
+            {
+              "type": "text",
+              "value": " [화염 주얼 2작]"
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "불사조",
+              "dataType": "runeword",
+              "id": 30030
+            },
+            {
+              "type": "text",
+              "value": " (모나크 베이스)"
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "트랑울의 발톱",
+              "dataType": "unique",
+              "id": 20040
+            },
+            {
+              "type": "text",
+              "value": " / 섀도우 댄서"
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "스파이더웹",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 화염 크래프트 아뮬 / "
+            },
+            {
+              "type": "link",
+              "name": "조던 쌍",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두개골",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>🔥 운영법:</strong> 텔레포트로 몹 중앙 진입 -> 불사조 속죄 오라로 마나 무한 수급하며 집착의 65패캐로 장판기 연사. <strong>🎒 세팅 핵심:</strong> 무한(용병) + 불사조(방패)의 이중 화염 저항 깎기로 헬 난이도 화염 면역까지 무시하며 밀어버림."
     }
   ]
 }

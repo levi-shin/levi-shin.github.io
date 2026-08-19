@@ -1,9 +1,10 @@
 [
   {
     "id": 20001,
-    "legacyKey": "요르단의 반지|The Stone of Jordan",
-    "name": "요르단의 반지",
+    "legacyKey": "요르단(조단)의 반지|The Stone of Jordan",
+    "name": "요르단(조단)의 반지",
     "eng": "The Stone of Jordan",
+    "image": "uniques/jordan.png",
     "base": "반지 (Ring)",
     "drop": "악몽(나이트) 안다리엘 (최고 확률 1/31), 헬 안다/메피",
     "stats": "모든 스킬 <strong>+1</strong> / 최대 마나 <strong>+25%</strong> / 마나 <strong>+20</strong> (고정 으뜸)"
@@ -13,6 +14,7 @@
     "legacyKey": "불카토스의 결혼반지|Bul-Kathos' Wedding Band",
     "name": "불카토스의 결혼반지",
     "eng": "Bul-Kathos' Wedding Band",
+    "image": "uniques/bulkathos.png",
     "base": "유니크 링",
     "drop": "지옥(헬) 안다리엘, 메피스토, 디아블로, 바알, TC85 사냥터",
     "stats": "모든 스킬 <strong>+1</strong> / 라이프 흡수 <strong>+5%</strong> (으뜸) / 레벨 비례 생명력"
@@ -22,6 +24,7 @@
     "legacyKey": "마라의 만화경|Mara's Kaleidoscope",
     "name": "마라의 만화경",
     "eng": "Mara's Kaleidoscope",
+    "image": "uniques/mara.png",
     "base": "목걸이 (Amulet)",
     "drop": "지옥(헬) 메피스토, 디아블로, 트라빈칼, TC85 사냥터",
     "stats": "모든 스킬 <strong>+2</strong> / 모든 저항 <strong>+30</strong> (으뜸) / 모든 스탯 <strong>+5</strong>"
@@ -40,6 +43,7 @@
     "legacyKey": "샤코|Harlequin Crest",
     "name": "샤코",
     "eng": "Harlequin Crest",
+    "image": "uniques/shako.png",
     "base": "샤코",
     "drop": "지옥(헬) 안다리엘, 메피스토 (국민 앵벌)",
     "stats": "방어력 <strong>141</strong> (최고 으뜸) / 모든 스킬 <strong>+2</strong> / 레벨 비례 생명력·마나 / 피해 감소 <strong>10%</strong> / 매찬 <strong>50%</strong>"
@@ -58,6 +62,7 @@
     "legacyKey": "안다리엘의 두개골|Andariel's Visage",
     "name": "안다리엘의 두건",
     "eng": "Andariel's Visage",
+    "image": "uniques/andys.png",
     "base": "데몬헤드",
     "drop": "지옥(헬) 안다리엘, 디아블로, 바알 (에테 으뜸)",
     "stats": "방어력상승 <strong>+150%</strong> (으뜸) / 힘 <strong>+30</strong> (으뜸) / 라이프 흡수 <strong>10%</strong> (으뜸) / 공격 속도 +20%"
@@ -67,6 +72,7 @@
     "legacyKey": "배틀부츠|War Traveler",
     "name": "배틀 부츠",
     "eng": "War Traveler",
+    "image": "uniques/wartraveler.png",
     "base": "배틀 부츠",
     "drop": "지옥(헬) 메피스토, 안다리엘, 카오스",
     "stats": "방어력상승 <strong>+190%</strong> (으뜸) / 매직 아이템 발견 확률 <strong>+50%</strong> (으뜸) / 추가 피해 15~25"
@@ -94,6 +100,7 @@
     "legacyKey": "바람살|Windforce",
     "name": "바람살",
     "eng": "Windforce",
+    "image": "uniques/windforce.png",
     "base": "히드라 보우",
     "drop": "지옥(헬) 피트, 고대 하수도, 바알 등 TC85",
     "stats": "마나 훔침 <strong>8%</strong> (으뜸) / 피해 <strong>+250%</strong> / 최대 피해 (캐릭터 레벨 비례) / 적중 시 밀어냄"
@@ -112,6 +119,7 @@
     "legacyKey": "거미그물 띠|Arachnid Mesh",
     "name": "거미그물 띠",
     "eng": "Arachnid Mesh",
+    "image": "uniques/arach.png",
     "base": "스파이더웹 새시",
     "drop": "지옥(헬) 메피스토, 디아블로, 바알",
     "stats": "방어력 상승 <strong>+120%</strong> (으뜸) / 모든 스킬 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 최대 마나 5% 증가"
@@ -121,6 +129,7 @@
     "legacyKey": "자카룸의 전령|Herald of Zakarum",
     "name": "자카룸의 전령",
     "eng": "Herald of Zakarum",
+    "image": "uniques/heraldofzakarum.png",
     "base": "길디드 실드",
     "drop": "지옥(헬) 안다리엘, 메피스토, 카오스",
     "stats": "방어력 상승 <strong>+200%</strong> (으뜸) / 성기사 기술 <strong>+2</strong> / 전투 기술 <strong>+2</strong> / 모든 저항 +50"
@@ -130,6 +139,7 @@
     "legacyKey": "마수|Magefist",
     "name": "마수",
     "eng": "Magefist",
+    "image": "uniques/magefist.png",
     "base": "라이트 건틀릿",
     "drop": "일반(노말) 디아블로, 바알 / 악몽(나이트) 전 지역",
     "stats": "방어력 상승 <strong>+30%</strong> (으뜸) / 화염 기술 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 마나 재생 25%"
@@ -148,6 +158,7 @@
     "legacyKey": "새총|Slingshot",
     "name": "새총",
     "eng": "Slingshot",
+    "image": "uniques/slingshot.png",
     "base": "반지 (Ring)",
     "drop": "지옥(헬) 보스 및 공포의 영역",
     "stats": "시전 속도 <strong>+10%</strong> / 타운 포탈(Town Portal) 1레벨 스킬 부여 / 매직 피해 감소 <strong>3~5</strong> / 에너지 <strong>+10~15</strong> / 대상 감속 <strong>15%</strong> / 매찬 <strong>+10~20%</strong>"
@@ -166,8 +177,119 @@
     "legacyKey": "지옥파수꾼의 의지|Will of Hell-Keeper",
     "name": "지옥파수꾼의 의지",
     "eng": "Will of Hell-Keeper",
+    "image": "uniques/hellkeeperswill.png",
     "base": "데스 마스크 (Helm)",
     "drop": "지옥(헬) 카오스 샌크츄어리",
     "stats": "모든 스킬 <strong>+1</strong> / 적의 화염 저항 <strong>-5~8%</strong> / 적의 매직 저항 <strong>-5~8%</strong> / 시전 속도 <strong>+20%</strong> / 공격 속도 <strong>+20%</strong> / 방어력 상승 <strong>+150~215%</strong> / 마나 획득(마상) <strong>+4~6</strong>"
+  },
+  {
+    "id": 20020,
+    "legacyKey": "섀도우 댄서|Shadow Dancer",
+    "name": "섀도우 댄서",
+    "eng": "Shadow Dancer",
+    "image": "uniques/shadowdancer.png",
+    "base": "미르미돈 그리브 (Boots)",
+    "drop": "지옥(헬) 테러 존, 바알, 디아블로",
+    "stats": "방어력 <strong>+70~100%</strong> 증가 / 모든 그림자 단련 기술 레벨 <strong>+1~2</strong> (암살자 전용) / 달리기/걷기 속도 <strong>+30%</strong> / 타격 회복 속도 <strong>+30%</strong> / 민첩성 <strong>+15~25</strong>"
+  },
+  {
+    "id": 20021,
+    "legacyKey": "대군주의 분노|Highlord's Wrath",
+    "name": "대군주의 분노",
+    "eng": "Highlord's Wrath",
+    "image": "uniques/highlordswrath.png",
+    "base": "아뮬렛 (Amulet)",
+    "drop": "지옥(헬) 메피스토, 디아블로, 바알, 테러 존",
+    "stats": "모든 스킬 레벨 <strong>+1</strong> / 공격 속도 <strong>+20%</strong> / 치명적 공격 <strong>+0.375%</strong> (캐릭터 레벨당 비례) / 번개 저항 <strong>+35%</strong> / 번개 피해 <strong>1~30</strong> 추가 / 공격 시 5% 확률로 레벨 10 낙뢰 시전"
+  },
+  {
+    "id": 20022,
+    "legacyKey": "드라쿨의 장갑|Dracul's Grasp",
+    "name": "드라쿨의 장갑",
+    "eng": "Dracul's Grasp",
+    "image": "uniques/draculsgrasp.png",
+    "base": "뱀파이어 본 글러브 (Gloves)",
+    "drop": "지옥(헬) 테러 존, 디아블로, 바알, 니라트하크",
+    "stats": "방어력 <strong>+90~120%</strong> 증가 / 생명력 획득 <strong>+7~10%</strong> / 타격 시 5% 확률로 레벨 10 생명력 추출 저주 시전 / 적중당할 때마다 체력 <strong>+5~10</strong> 회복 / 힘 <strong>+10~15</strong> / 적중 시 몬스터 명중률 <strong>+25%</strong> 둔화"
+  },
+  {
+    "id": 20023,
+    "legacyKey": "밤날개의 너울|Nightwing's Veil",
+    "name": "밤날개의 너울",
+    "eng": "NightwingsVeil",
+    "image": "uniques/nightwingsveil.png",
+    "base": "스파이어드 헬름 (Helm)",
+    "drop": "지옥(헬) 전역",
+    "stats": "+2 모든 기술 / 냉기 기술 피해 +8~15% / 민첩 +10~20 / 빙결되지 않음"
+  },
+  {
+    "id": 20024,
+    "legacyKey": "칠흑서리|Raven Frost",
+    "name": "칠흑서리",
+    "eng": "Raven Frost",
+    "image": "uniques/ravenfrost.png",
+    "base": "반지 (Ring)",
+    "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
+    "stats": "빙결되지 않음 / 냉기 피해 <strong>15~45</strong> / 민첩 <strong>+20</strong> (으뜸) / 매찬 <strong>+24%</strong>"
+  },
+  {
+    "id": 20025,
+    "legacyKey": "왜성반지|Dwarf Star",
+    "name": "왜성반지",
+    "eng": "Dwarf Star",
+    "image": "uniques/dwarfstar.png",
+    "base": "반지 (Ring)",
+    "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
+    "stats": "화염 흡수 <strong>15%</strong> / 마법 피해 감소 <strong>12~15</strong> (으뜸) / 삥 <strong>+100%</strong> / 생명력 <strong>+40</strong>"
+  },
+  {
+    "id": 20026,
+    "legacyKey": "자연의 평화반지|Nature's Peace",
+    "name": "자연의 평화반지",
+    "eng": "Nature's Peace",
+    "image": "uniques/naturespeace.png",
+    "base": "반지 (Ring)",
+    "drop": "지옥(헬) TC85 사냥터",
+    "stats": "죽은 몬스터가 되살아나지 않음 / 슬로우 타겟 <strong>20%</strong> / 독 저항 <strong>+20~30%</strong>"
+  },
+  {
+    "id": 20027,
+    "legacyKey": "에스추타의 온도|Eschuta's Temper",
+    "name": "에스추타의 온도",
+    "eng": "Eschuta's Temper",
+    "image": "uniques/eschutastemper.png",
+    "base": "엘더 스태프 (Elder Staff)",
+    "drop": "지옥(헬) TC85 사냥터, 공포의 영역",
+    "stats": "원소 기술 피해 <strong>+3~7%</strong> / 번개 기술 피해 <strong>+10~20%</strong> (으뜸) / 화염 기술 피해 <strong>+10~20%</strong> (으뜸) / 모든 스킬 <strong>+1~3</strong>"
+  },
+  {
+    "id": 20028,
+    "legacyKey": "천둥일격|Thunderstroke",
+    "name": "천둥일격",
+    "eng": "Thunderstroke",
+    "image": "uniques/thunderstroke.png",
+    "base": "매테리얼 재블린 (Matriarchal Javelin)",
+    "drop": "지옥(헬) TC85 사냥터, 바알",
+    "stats": "번개 기술 피해 <strong>+10~15%</strong> / 아마존 스킬 <strong>+2</strong> / 번개 분노 <strong>+3</strong> / 번개 피해 추가"
+  },
+  {
+    "id": 20029,
+    "legacyKey": "선혈 기수|Blood Rider",
+    "name": "선혈 기수",
+    "eng": "Blood Rider",
+    "image": "uniques/boodrider.png",
+    "base": "뼈 부츠 (Bone Boots)",
+    "drop": "지옥(헬) TC85 사냥터, 공포의 영역",
+    "stats": "달리기/걷기 속도 <strong>+30%</strong> / 생명력 흡수 <strong>+5%</strong> / 방어력 상승 <strong>+100~150%</strong>"
+  },
+  {
+    "id": 20030,
+    "legacyKey": "알리바바의 칼날|Blade of Ali Baba",
+    "name": "알리바바의 칼날",
+    "eng": "Blade of Ali Baba",
+    "image": "uniques/alibaba.png",
+    "base": "튤워 (Tulwar)",
+    "drop": "지옥(헬) 메피스토, TC85 사냥터",
+    "stats": "삥 <strong>+200%</strong> (레벨 비례) / 매찬 <strong>+50%</strong> (레벨 비례) / 마나 <strong>+20</strong>"
   }
 ]

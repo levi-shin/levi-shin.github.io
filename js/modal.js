@@ -21,6 +21,23 @@ function openDatabaseModal() {
     document.body.style.overflow = "hidden";
 }
 
+function setDbModalImage(imagePath) {
+    const artEl = document.getElementById("dbModalArt");
+    if (!artEl) return;
+
+    const fallback = () => { artEl.innerHTML = '<div class="d2-item-art"><div class="d2-armor"></div></div>'; };
+
+    if (!imagePath) { fallback(); return; }
+
+    const img = document.createElement("img");
+    img.className = "db-modal-img";
+    img.src = `items/${imagePath}`;
+    img.alt = "";
+    img.onerror = fallback;
+    artEl.innerHTML = "";
+    artEl.appendChild(img);
+}
+
 function renderBuildContent(content = []) {
     return content.map(segment => {
         if (segment.type === "text") return escapeHtml(segment.value);
@@ -134,6 +151,7 @@ export function openRuneModal(runewordId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 룬 조합 복사";
     databaseCopyText = item.recipe;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -155,6 +173,7 @@ export function openUniqueModal(uniqueId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 아이템 정보 복사";
     databaseCopyText = `${item.name} (${item.eng || ""}) - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.add("unique-art");
     openDatabaseModal();
 }
@@ -172,6 +191,7 @@ export function openSunderModal(sunderId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 큐빙 공식 복사";
     databaseCopyText = `${item.name} 공식: ${item.recipe}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -188,6 +208,7 @@ export function openCharmModal(charmId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
     databaseCopyText = `${item.name} - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
@@ -204,6 +225,7 @@ export function openUberModal(uberId) {
 
     document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
     databaseCopyText = `${item.name} - 드랍 보상 스펙 정보`;
+    setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
 }
