@@ -15,3 +15,17 @@ export function switchSection(evt, sectionId) {
 export function toggleAccordion(headerEl) { 
     headerEl.parentElement.classList.toggle('open'); 
 }
+
+// 예시: 카드 렌더링 함수 내부
+const ladderBadge = item.isLadder 
+    ? '<span class="badge ladder">래더 전용</span>' 
+    : '<span class="badge standard">비래더 가능</span>';
+
+// HTML 구조에 ${ladderBadge} 삽입
+cardElement.innerHTML = `
+    <h3>${item.legacyKey}</h3>
+    ${ladderBadge}
+    <p class="recipe">${item.recipe}</p>
+    <p class="base">${item.base}</p>
+    <p class="stats">${item.stats}</p>
+`;

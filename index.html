@@ -17,7 +17,7 @@
         <div class="sidebar-logo">⚔️ DIABLO II RESURRECTED<br><span style="font-size:0.75rem; color:var(--gold-light);">악군 패키지 마스터 백과사전</span></div>
         <div class="sidebar-search">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="검색어 입력..." onkeyup="filterContent()">
+            <input type="text" id="searchInput" class="search-input" placeholder="검색어 입력...">
         </div>
         <ul class="nav-menu">
             <li><button class="nav-btn active" onclick="switchSection(event, 'builds')">1. 종결 빌드</button></li>
@@ -191,38 +191,20 @@
         </table>
     </section>
 
-    <section id="runes" class="content-section">
-        <h2 class="section-title">📜 3. 핵심 룬어 조합법 족보</h2>
-        <div class="item-click-hint">💡 <b>아이템명을 클릭하면</b> 상세 베이스, 조합 순서 및 으뜸 수치를 볼 수 있습니다.</div>
-        <table>
-            <thead><tr><th>룬어 명칭</th><th>조합 룬</th></tr></thead>
-            <tbody>
-                <tr><td colspan="2" style="background:#111115; color:var(--gold-light); font-weight:bold; text-align:center; padding:10px; border-bottom: 2px solid var(--gold);">👇 초반 렙업용 필수 룬어 (저렙용) 👇</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30001)">강철 (Steel) <span style="color:#a1a1aa; font-size:0.8rem;">[렙제: 13]</span></span></td><td class="rune">티르(Tir) + 엘(El)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30002)">잠행 (Stealth) <span style="color:#a1a1aa; font-size:0.8rem;">[렙제: 17]</span></span></td><td class="rune">탈(Tal) + 에드(Eth)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30003)">꽃잎 (Leaf) <span style="color:#a1a1aa; font-size:0.8rem;">[렙제: 19]</span></span></td><td class="rune">티르(Tir) + 랄(Ral)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30004)">고대인의 서약 (Ancient\'s Pledge) <span style="color:#a1a1aa; font-size:0.8rem;">[렙제: 21]</span></span></td><td class="rune">랄(Ral) + 오르트(Ort) + 탈(Tal)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30005)">학식 (Lore) <span style="color:#a1a1aa; font-size:0.8rem;">[렙제: 27]</span></span></td><td class="rune">오르트(Ort) + 솔(Sol)</td></tr>
-                <tr><td colspan="2" style="background:#111115; color:var(--gold-light); font-weight:bold; text-align:center; padding:10px; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold);">👇 중후반 종결 룬어 👇</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30006)">콜투암스 (Call to Arms / 콜투)</span></td><td class="rune">앰(Amn) + 랄(Ral) + 말(Mal) + 이스트(Ist) + 오옴(Ohm)</td></tr>
-                <tr class="searchable-item item-row-clickable" data-item-id="10001"><td class="highlight"><span class="item-inline" onclick="openItemModal(10001)">수수께끼 (Enigma)</span></td><td class="rune">자(Jah) + 아이드(Ith) + 베르(Ber)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30007)">영혼 (Spirit / 스피릿)</span></td><td class="rune">탈(Tal) + 주울(Thul) + 오르트(Ort) + 앰(Amn)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30008)">무한 (Infinity / 무공)</span></td><td class="rune">베르(Ber) + 말(Mal) + 베르(Ber) + 이스트(Ist)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30009)">신념 (Faith / 신뢰)</span></td><td class="rune">오옴(Ohm) + 제(Jah) + 럼(Lum) + 엘(El)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30010)">꿈 (Dream)</span></td><td class="rune">이오(Io) + 주울(Thul) + 주르(Sur)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30011)">명예의 굴레 (Chains of Honor / 명굴)</span></td><td class="rune">돌(Dol) + 움(Um) + 베르(Ber) + 이스트(Ist)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30012)">불사조 (Phoenix)</span></td><td class="rune">벡스(Vex) + 벡스(Vex) + 로(Lo) + 자(Jah)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30013)">슬픔 (Grief / 고뇌)</span></td><td class="rune">에드(Eth) + 티르(Tir) + 로(Lo) + 말(Mal) + 랄(Ral)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30014)">망명 (Exile)</span></td><td class="rune">벡스(Vex) + 오옴(Ohm) + 이스트(Ist) + 돌(Dol)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30015)">성역 (Sanctuary)</span></td><td class="rune">코(Ko) + 코(Ko) + 말(Mal)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30016)">순종 (Obedience)</span></td><td class="rune">헬(Hel) + 코(Ko) + 주울(Thul) + 에드(Eth) + 팔(Fal)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30017)">배신 (Treachery / 배신갑)</span></td><td class="rune">샤엘(Shael) + 주울(Thul) + 렘(Lem)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30018)">통찰 (Insight)</span></td><td class="rune">랄(Ral) + 티르(Tir) + 탈(Tal) + 솔(Sol)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30019)">오크의 심장 (Heart of the Oak / 오심)</span></td><td class="rune">코(Ko) + 벡스(Vex) + 풀(Pul) + 주울(Thul)</td></tr>
-                <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openRuneModal(30020)">인내 (Fortitude)</span></td><td class="rune">엘(El) + 솔(Sol) + 돌(Dol) + 로(Lo)</td></tr>
-            </tbody>
-        </table>
-    </section>
+<section id="runes" class="content-section">
+    <h2 class="section-title">📜 3. 핵심 룬어 조합법 족보</h2>
+    <div class="item-click-hint">💡 <b>아이템명을 클릭하면</b> 상세 베이스, 조합 순서 및 으뜸 수치를 볼 수 있습니다.</div>
+    
+    <!-- 룬어 테이블이 동적으로 렌더링될 영역 -->
+    <table id="runewordsTable">
+        <thead>
+            <tr><th>룬어 명칭</th><th>조합 룬</th></tr>
+        </thead>
+        <tbody id="runewordsTbody">
+            <!-- JS가 runewords.json을 읽어와서 여기에 <tr>들을 꽂아넣습니다 -->
+        </tbody>
+    </table>
+</section>
 
     <section id="charms" class="content-section">
         <h2 class="section-title">🔮 4. '잠복하는 파괴참' 업그레이드 및 '새로워진 파괴참' 6종 족보</h2>
@@ -568,55 +550,11 @@
 
     <section id="ladder" class="content-section">
         <h2 class="section-title">🔥 13. 디아블로 2 레저렉션 패치 노트 아카이브</h2>
-        <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">항목을 클릭하여 과거부터 현재까지의 상세 패치 내역을 확인하세요. (최신 패치가 맨 위에 위치합니다)</p>
-
-        <div class="patch-accordion open searchable-item">
-            <div class="patch-header" onclick="toggleAccordion(this)">🚀 3.3 패치 (래더 시즌 15 적용)</div>
-            <div class="patch-body">
-                <h4>📅 시즌 일정</h4>
-                <ul>
-                    <li>기존 시즌 14 종료: 2026년 8월 18일 새벽 (PDT 8월 17일)</li>
-                    <li>패치 3.3 배포: 2026년 8월 18일</li>
-                    <li><b>래더 시즌 15 시작: 2026년 8월 22일 오전 9시 (한국 시간)</b></li>
-                </ul>
-                <h4>🛡️ 주요 변경 사항</h4>
-                <ul>
-                    <li><b>비레더(스탠다드) 이관:</b> 이전 래더 전용이었던 룬어 아이템들(광기, 탈퇴, 치료, 방벽, 발작, 접지, 담금질, 화로 등)을 이제 비레더 환경에서도 제작 및 사용 가능</li>
-                    <li><b>초중반 유니크·세트 상향:</b> 육성 구간에 쓰이는 일부 고유 장비(핏빛 칼날, 재의 화살통 등) 및 천사의 의복 세트(풀세트 장착 시 모든 스킬 +1 추가 등) 대거 상향</li>
-                    <li><b>파괴참 드랍 조정:</b> '잠복하는 파괴참' 최소 드랍 레벨이 75레벨로 상향되었으며, 매찬 적용에 따른 드랍률 조정 및 지옥 난이도 한정으로 변경</li>
-                    <li><b>공유 창고 주의사항:</b> 이전 시즌 14의 공유 창고 아이템은 '아이템 찾기 전용' 탭으로 이동하며, 이번 시즌 동안 보관하지 않으면 영구 소멸되므로 반드시 수동 이동 필요</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="patch-accordion searchable-item">
-            <div class="patch-header" onclick="toggleAccordion(this)">📜 3.2 패치 (래더 시즌 14 적용 역사)</div>
-            <div class="patch-body">
-                <h4>📅 시즌 일정 및 개요</h4>
-                <ul>
-                    <li>래더 시즌 14 시작일: 2026년 5월 22일 (PDT 기준) / 한국 시간 5월 23일 오전 9시</li>
-                    <li>신규 클래스 '워록(Warlock)' 관련 밸런스 조정 및 공포의 영역(테러존) 시스템 대대적 개편 적용</li>
-                </ul>
-                <h4>🛠️ 주요 밸런스 및 시스템 개편</h4>
-                <ul>
-                    <li><b>워록(Warlock) 클래스 조정:</b> 미아스마 볼트, 미아스마 체인, 에코잉 스트라이크 등 주요 스킬의 메커니즘 개편 및 데미지 시너지 밸런스 조정</li>
-                    <li><b>공포의 영역 및 헤럴드(Herald) 등급 개편:</b> 테러존 내에서 티어 1~3 등급별 전령들이 플레이어를 추적하며 등장하도록 변경, 고티어(티어 3 이상) 헤럴드 처치 시 잠복하는 파괴참(Latent Sunder Charm) 및 세계석 조각 획득 확률 대폭 상향</li>
-                    <li><b>고대인(Colossal Ancients) 난이도 상향:</b> 트리스트럼 및 엔드게임 인카운터의 마법 저항(75%) 및 데미지 매커니즘이 더욱 위협적으로 강화됨</li>
-                    <li><b>편의성 개선:</b> 지역 간 게임 참가 오류 수정, 해상도 스케일링 설정 버グ 해결 및 전반적인 클라이언트 성능 최적화</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="patch-accordion searchable-item">
-            <div class="patch-header" onclick="toggleAccordion(this)">📜 3.1 패치 (신규 클래스 '워록' 출시 및 시스템 정비)</div>
-            <div class="patch-body">
-                <h4>✨ 주요 업데이트</h4>
-                <ul>
-                    <li><b>신규 클래스 '워록(Warlock)' 정식 참전:</b> 새로운 어둠의 마법과 소환 트리를 사용하는 워록 클래스 및 전용 장비(그리모어 등) 도입</li>
-                    <li><b>하드코어 99 레이스 이벤트:</b> 워록 출시 기념 하드코어 래더 99레벨 달성 경쟁 이벤트 'The Grimoire of the Unfallen' 개최</li>
-                    <li>그래픽 렌더링 최적화, 대기실(Lobby) 필터 기능 개선 및 각종 클라이언트 크래시 현상 대거 수정</li>
-                </ul>
-            </div>
+        <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">과거부터 현재까지의 상세 패치 내역을 확인하세요.</p>
+        
+        <!-- 자바스크립트가 patchnotes.json을 읽어와서 이 안에 자동으로 꽂아넣습니다 -->
+        <div id="patch-notes-container">
+            <!-- 패치 노트가 동적으로 로드됩니다 -->
         </div>
     </section>
 
@@ -763,7 +701,26 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="js/legacy-globals.js?v=4"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-<script src="js/main.js?v=4"></script>
+<script type="module" src="js/main.js?v=4"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("searchInput");
+        if (searchInput) {
+            // 기존 onkeyup 속성이 있든 없든 강제로 이벤트 리스너를 장착합니다.
+            searchInput.addEventListener("input", function() {
+                if (typeof filterContent === "function") {
+                    filterContent();
+                } else {
+                    console.error("filterContent 함수를 찾을 수 없습니다.");
+                }
+            });
+            console.log("🔍 악군 백과사전 전역 검색 감지기가 정상 부착되었습니다.");
+        } else {
+            console.error("searchInput 요소를 찾지 못했습니다.");
+        }
+    });
+</script>
 
 <footer style="text-align: center; padding: 20px; font-size: 0.75rem; color: #666; border-top: 1px solid #262630; margin-top: 50px;">
     <p>© LEVI SHIN. All rights reserved. | <span id="siteVersionDisplay"></span></p>

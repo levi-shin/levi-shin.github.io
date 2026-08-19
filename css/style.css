@@ -99,6 +99,23 @@ html, body {
     font-size: 0.95rem;
 }
 
+/* 🌟 전역 통합 검색 결과 드롭다운 스타일 */
+#global-search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #15151a;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -206,9 +223,107 @@ tr:hover { background: #1f1f28; }
 /* 패치 노트 아코디언 스타일 */
 .patch-accordion { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: all 0.25s ease; }
 .patch-accordion:hover { border-color: var(--gold); transform: translateY(-2px); }
-.patch-header { padding: 18px 22px; background: linear-gradient(135deg, #181820 0%, #111115 100%); color: var(--gold); font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; border-left: 4px solid var(--gold); }
-.patch-header::after { content: '▼'; font-size: 0.85rem; color: var(--gold-light); transition: transform 0.3s ease; }
-.patch-accordion.open .patch-header::after { transform: rotate(180deg); }
+
+/* 기본 헤더 스타일 */
+.patch-header { 
+    padding: 18px 22px; 
+    background: linear-gradient(135deg, #181820 0%, #111115 100%); 
+    color: var(--gold); 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    user-select: none; 
+    border-left: 4px solid var(--gold); 
+    border-color: var(--card-border); 
+    transition: all 0.25s ease; 
+    gap: 15px; 
+}
+
+/* 타이틀 텍스트 말줄임 및 영역 고정 */
+.patch-title-text {
+    flex: 1 1 auto;
+    min-width: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 활성화 항목 (always-gold) */
+.patch-accordion.always-gold .patch-header,
+.patch-accordion.always-gold .patch-title-text {
+    color: var(--gold) !important;
+}
+
+.patch-accordion.always-gold .patch-header * {
+    color: var(--gold) !important;
+}
+.patch-accordion.always-gold .patch-header::after {
+    color: var(--gold-light) !important;
+}
+
+/* 비활성화 항목 (always-gray) */
+.patch-accordion.always-gray .patch-header {
+    color: #9ca3af !important;
+    background: linear-gradient(135deg, #181820 0%, #111115 100%) !important;
+    border-color: #3f3f46;
+    border-left-color: #52525b !important;
+}
+.patch-accordion.always-gray .patch-header::after {
+    color: #71717a !important;
+}
+
+.patch-accordion.always-gray:not(.open) .patch-header:hover {
+    color: #d1d5db !important;
+    border-left-color: var(--gold) !important;
+    opacity: 1;
+}
+
+/* 열렸을 때 화살표 회전 */
+.patch-accordion.open .patch-header::after {
+    transform: rotate(180deg);
+}
+
+/* 우측 그룹 (링크 + 화살표) */
+.patch-header-right {
+    display: flex;
+    align-items: center;
+    gap: 14px; 
+    flex-shrink: 0; 
+}
+
+.patch-header::after { 
+    content: '▼'; 
+    font-size: 0.85rem; 
+    color: var(--gold-light); 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    flex-shrink: 0; 
+}
+
+/* 외부 링크 아이콘 스타일 */
+.patch-external-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.patch-external-link:hover {
+    background: rgba(196, 154, 69, 0.15);
+    border-color: var(--gold);
+    transform: scale(1.05);
+}
+
+/* 패치 본문 스타일 */
 .patch-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out, padding 0.35s ease-out; padding: 0 22px; background: var(--card-bg); font-size: 0.92rem; }
 .patch-accordion.open .patch-body { max-height: 1500px; padding: 20px 22px 25px 22px; border-top: 1px solid var(--card-border); }
 .patch-body h4 { color: var(--gold-light); font-size: 0.98rem; margin: 14px 0 6px 0; border-left: 3px solid var(--unique-orange); padding-left: 8px; background: rgba(196, 154, 69, 0.05); }
@@ -217,7 +332,7 @@ tr:hover { background: #1f1f28; }
 
 .item-click-hint { margin: -6px 0 14px; padding: 10px 13px; border: 1px solid var(--card-border); border-left: 3px solid var(--gold); border-radius: 7px; background: rgba(223,177,91,.045); color: #a9a9b2; font-size: .82rem; }
 
-/* 🛡️ 공용 모달 (Z-INDEX 해결 핵심 적용) */
+/* 공용 모달 */
 .item-modal { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 18px; background: rgba(0,0,0,.86); backdrop-filter: blur(7px); }
 .item-modal.open { display: flex; }
 
@@ -289,7 +404,24 @@ td ul li { margin-bottom: 5px; }
 .side-ad-inner { width: 160px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .mobile-ad { display: none; width: 100%; margin: 15px 0; overflow: hidden; }
 
-/* 📱 모바일 및 반응형 설정 (여백 압축 및 모달 스크롤 최적화 버전) */
+/* 전역 통합 검색 결과 드롭다운 스타일 */
+#global-search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #15151a;
+    border: 1px solid var(--gold, #dfb15b);
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 99999;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.9);
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* 미디어쿼리 반응형 */
 @media screen and (max-width: 767px) {
     .desktop-only { display: none !important; }
 }
@@ -341,7 +473,6 @@ td ul li { margin-bottom: 5px; }
         margin-bottom: 10px !important;
     }
 
-    /* 💡 모바일 모달 창 내부 이미지 잘림 및 밀림 현상 해결 설정 */
     .item-modal {
         padding: 10px !important;
     }

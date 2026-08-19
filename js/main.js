@@ -1,4 +1,3 @@
-
 /* ===== data.js ===== */
 /**
  * 악군 데이터 로더
@@ -23,6 +22,9 @@ const DATA = {
         build: new Map()
     }
 };
+
+// 🌟 브라우저 전역 객체에 DATA를 확실하게 바인딩합니다.
+window.DATA = DATA;
 
 let loadPromise = null;
 
@@ -153,10 +155,10 @@ function toggleAccordion(headerEl) {
 }
 
 
-/* ===== search.js ===== */
+/* ===== search.js (통합 검색 로직 적용 버전) ===== */
 /**
  * @file search.js
- * @description 사이드바 실시간 검색/필터링 및 빌드 태그 필터 기능 제어 모듈
+ * @description 전역 DATA 객체 기반 실시간 통합 검색 (룬어, 유니크, 연관 빌드 매칭) 및 태그 필터
  * @author LEVI SHIN (악군 패키지 백과사전 프로젝트)
  */
 function filterBuilds(evt, tag) {
@@ -172,20 +174,248 @@ function filterBuilds(evt, tag) {
         }
     });
 }
-function filterContent() {
-    const filter = document.getElementById('searchInput').value.toLowerCase().trim();
-    const items = document.getElementsByClassName('searchable-item');
-    for (let i = 0; i < items.length; i++) {
-        const text = items[i].textContent || items[i].innerText;
-        if (text.toLowerCase().indexOf(filter) > -1) {
-            if (items[i].tagName === 'TR') items[i].style.display = 'table-row';
-            else if (items[i].classList.contains('card')) items[i].style.display = 'flex';
-            else items[i].style.display = 'block';
-        } else {
-            items[i].style.display = 'none';
+
+function findRelatedBuilds(keyword) {
+    if (!window.DATA || !window.DATA.builds) return [];
+    const results = [];
+    const lowerKeyword = keyword.toLowerCase();
+
+    window.DATA.builds.forEach(build => {
+        let isMatched = false;
+        
+        const checkSegments = (segments) => {
+            if (!Array.isArray(segments)) return;
+            segments.forEach(seg => {
+                const name = (seg.name || seg.target || seg.value || "").toLowerCase();
+                if (name.includes(lowerKeyword)) {
+                    isMatched = true;
+                }
+            });
+        };
+
+        build.slots?.forEach(slot => checkSegments(slot.content));
+        build.merc?.gear?.forEach(gear => checkSegments(gear.content));
+
+        if (isMatched) {
+            results.push({
+                title: build.title,
+                subtitle: build.subtitle,
+                id: build.id
+            });
         }
+    });
+
+    return results;
+}
+
+function filterContent() {
+    const inputEl = document.getElementById('searchInput');
+    if (!inputEl) return;
+    
+    const filter = inputEl.value.toLowerCase().trim();
+    
+    if (!filter) {
+        clearSearchResultsUI();
+        return;
+    }
+
+    if (!window.DATA) return;
+
+    const primaryMatches = [];
+
+    // 1. 룬어 검색
+    if (Array.isArray(window.DATA.runewords)) {
+        window.DATA.runewords.forEach(rw => {
+            const legacyKey = String(rw.legacyKey || "").toLowerCase();
+            const name = String(rw.name || "").toLowerCase();
+            const recipe = String(rw.recipe || "").toLowerCase();
+            const base = String(rw.base || "").toLowerCase();
+            
+            if (legacyKey.includes(filter) || name.includes(filter) || recipe.includes(filter) || base.includes(filter)) {
+                primaryMatches.push({
+                    type: 'runeword',
+                    title: rw.legacyKey || rw.name,
+                    category: '룬어 조합식',
+                    highlight: `조합: ${rw.recipe || '-'}`,
+                    id: rw.id
+                });
+            }
+        });
+    }
+
+    // 2. 유니크 아이템 검색
+    if (Array.isArray(window.DATA.uniques)) {
+        window.DATA.uniques.forEach(uni => {
+            const name = String(uni.name || "").toLowerCase();
+            const eng = String(uni.eng || "").toLowerCase();
+            const legacyKey = String(uni.legacyKey || "").toLowerCase();
+            const drop = String(uni.drop || "").toLowerCase();
+            
+            if (name.includes(filter) || eng.includes(filter) || legacyKey.includes(filter) || drop.includes(filter)) {
+                primaryMatches.push({
+                    type: 'unique',
+                    title: uni.name || uni.legacyKey,
+                    category: '유니크 아이템',
+                    highlight: `베이스: ${uni.base || '-'}`,
+                    id: uni.id
+                });
+            }
+        });
+    }
+
+    // 3. 🌟 신 파괴참 검색 ('잠복하는 파괴참' 등 대응)
+    if (Array.isArray(window.DATA.sunders)) {
+        window.DATA.sunders.forEach(item => {
+            const name = String(item.name || "").toLowerCase();
+            const legacyKey = String(item.legacyKey || "").toLowerCase();
+            const stats = String(item.stats || "").toLowerCase();
+            
+            if (name.includes(filter) || legacyKey.includes(filter) || stats.includes(filter)) {
+                primaryMatches.push({
+                    type: 'sunder',
+                    title: item.name,
+                    category: '신 파괴참',
+                    highlight: `드랍: ${item.drop || '-'}`,
+                    id: item.id
+                });
+            }
+        });
+    }
+
+    // 4. 🌟 종결 부적 (애니참, 횃불 등) 검색
+    if (Array.isArray(window.DATA.charms)) {
+        window.DATA.charms.forEach(item => {
+            const name = String(item.name || "").toLowerCase();
+            const stats = String(item.stats || "").toLowerCase();
+            
+            if (name.includes(filter) || stats.includes(filter)) {
+                primaryMatches.push({
+                    type: 'charm',
+                    title: item.name,
+                    category: '종결 부적',
+                    highlight: `획득: ${item.drop || '-'}`,
+                    id: item.id
+                });
+            }
+        });
+    }
+
+    // 5. 🌟 우버 바바 / 전용 주얼 검색 ('감시자의 천둥' 등 대응)
+    if (Array.isArray(window.DATA.ubers)) {
+        window.DATA.ubers.forEach(item => {
+            const name = String(item.name || "").toLowerCase();
+            const summon = String(item.summon || "").toLowerCase();
+            const stats = String(item.stats || "").toLowerCase();
+            
+            if (name.includes(filter) || summon.includes(filter) || stats.includes(filter)) {
+                primaryMatches.push({
+                    type: 'uber',
+                    title: item.name,
+                    category: '우버 바바/주얼',
+                    highlight: `소환/효과: ${item.summon || '-'}`,
+                    id: item.id
+                });
+            }
+        });
+    }
+
+    // 6. 연관 사용처 수집 (종결 빌드 탐색)
+    const relatedBuilds = findRelatedBuilds(filter);
+
+    // 7. 통합 검색 결과 UI 렌더링
+    renderGlobalSearchResults(filter, primaryMatches, relatedBuilds);
+}
+
+function renderGlobalSearchResults(keyword, primaries, builds) {
+    let dropdown = document.getElementById('global-search-dropdown');
+    
+    if (!dropdown) {
+        const searchInput = document.getElementById('searchInput');
+        if (!searchInput) return;
+        
+        dropdown = document.createElement('div');
+        dropdown.id = 'global-search-dropdown';
+        dropdown.style.cssText = `
+            position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+            background: #15151a; border: 1px solid var(--gold, #dfb15b);
+            border-radius: 8px; max-height: 400px; overflow-y: auto; z-index: 99999;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.9); padding: 10px; font-size: 0.9rem;
+        `;
+        searchInput.parentElement.style.position = 'relative';
+        searchInput.parentElement.appendChild(dropdown);
+    }
+
+    if (primaries.length === 0 && builds.length === 0) {
+        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">검색 결과가 없습니다.</div>`;
+        dropdown.style.display = 'block';
+        return;
+    }
+
+    let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">🔍 '${keyword}' 통합 검색 결과</div>`;
+
+    if (primaries.length > 0) {
+        html += `<div style="margin-bottom: 8px;"><div style="font-size: 0.75rem; color: var(--gold-light, #f3e5ab); font-weight: bold; margin-bottom: 4px;">✨ 핵심 정보 (조합 및 스펙)</div>`;
+        primaries.slice(0, 5).forEach(item => {
+            // 🌟 아이템 타입별 올바른 모달 함수 매핑
+            let clickAction = `openUniqueModal(${item.id})`;
+            if (item.type === 'runeword') clickAction = `openRuneModal(${item.id})`;
+            else if (item.type === 'sunder') clickAction = `openSunderModal(${item.id})`;
+            else if (item.type === 'charm') clickAction = `openCharmModal(${item.id})`;
+            else if (item.type === 'uber') clickAction = `openUberModal(${item.id})`;
+
+            html += `
+                <div onclick="${clickAction}; closeGlobalSearch();" style="padding: 8px; border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); margin-bottom: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,154,69,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold, #dfb15b); font-weight: bold;">${item.title}</span>
+                        <span style="font-size: 0.75rem; color: #888; background: #222; padding: 2px 6px; border-radius: 4px;">${item.category}</span>
+                    </div>
+                    <div style="font-size: 0.85rem; color: #ddd; margin-top: 2px;">${item.highlight}</div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+    }
+
+    if (builds.length > 0) {
+        html += `<div><div style="font-size: 0.75rem; color: #38bdf8; font-weight: bold; margin-bottom: 4px;">🛡️ 연관 사용처 (종결 빌드 세팅)</div>`;
+        builds.slice(0, 5).forEach(build => {
+            html += `
+                <div onclick="switchSection(null, 'builds'); openPaperDollModal(${build.id}); closeGlobalSearch();" style="padding: 8px; border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); margin-bottom: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(56,189,248,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
+                    <div style="color: #38bdf8; font-weight: bold;">${build.title}</div>
+                    <div style="font-size: 0.8rem; color: #aaa;">${build.subtitle}</div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+    }
+
+    dropdown.innerHTML = html;
+    dropdown.style.display = 'block';
+}
+
+function clearSearchResultsUI() {
+    const dropdown = document.getElementById('global-search-dropdown');
+    if (dropdown) {
+        dropdown.style.display = 'none';
+        dropdown.innerHTML = '';
     }
 }
+
+window.closeGlobalSearch = function() {
+    clearSearchResultsUI();
+    const inputEl = document.getElementById('searchInput');
+    if (inputEl) inputEl.value = '';
+};
+
+window.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('global-search-dropdown');
+    const searchInput = document.getElementById('searchInput');
+    if (dropdown && searchInput) {
+        if (!dropdown.contains(e.target) && !searchInput.contains(e.target)) {
+            clearSearchResultsUI();
+        }
+    }
+});
 
 
 /* ===== modal.js ===== */
@@ -569,8 +799,6 @@ function bindGlobalFunctions() {
     window.closeHistoryModal = closeHistoryModal;
 }
 
-// inline onclick가 DOMContentLoaded보다 먼저 실행되더라도 접근할 수 있도록
-// 모듈 평가 시점에 즉시 전역 함수로 노출합니다.
 bindGlobalFunctions();
 
 function renderUniqueTable() {
@@ -616,8 +844,6 @@ window.copyPaperDollValue = function () {
 };
 
 async function initialize() {
-    // HTML의 inline onclick가 JSON 로딩 실패 여부와 관계없이
-    // 정상적으로 함수에 접근할 수 있도록 먼저 전역 함수를 연결합니다.
     bindGlobalFunctions();
 
     try {
@@ -627,8 +853,6 @@ async function initialize() {
     } catch (error) {
         console.error('악군 데이터 초기화 실패:', error);
 
-        // file:// 로 직접 index.html을 열면 브라우저 보안 정책상
-        // JSON fetch가 차단될 수 있습니다.
         if (location.protocol === 'file:') {
             console.warn(
                 'JSON 데이터는 file:// 환경에서 fetch할 수 없습니다. ' +
@@ -638,6 +862,83 @@ async function initialize() {
     }
 }
 
+async function loadPatchNotes() {
+    try {
+        const response = await fetch('data/patchnotes.json');
+        const patches = await response.json();
+        
+        const container = document.getElementById('patch-notes-container');
+        if (!container) return;
+
+        container.innerHTML = patches.map(patch => {
+            const activeClass = patch.isActive ? 'always-gold' : 'always-gray';
+            
+            const linkButtonHtml = patch.link ? `
+                <a href="${patch.link}" target="_blank" rel="noopener noreferrer" class="patch-external-link" onclick="event.stopPropagation()" title="공식 패치 노트 원문 보기">
+                    🔗
+                </a>
+            ` : '';
+
+            return `
+                <div class="patch-accordion ${patch.isOpen ? 'open' : ''} ${activeClass} searchable-item">
+                    <div class="patch-header" onclick="toggleAccordion(this)">
+                        <span class="patch-title-text">${patch.badge} ${patch.version}</span>
+                        <div class="patch-header-right">
+                            ${linkButtonHtml}
+                        </div>
+                    </div>
+                    <div class="patch-body">
+                        ${patch.schedule.length > 0 ? `
+                            <h4>📅 시즌 일정</h4>
+                            <ul>
+                                ${patch.schedule.map(s => `<li>${s}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        <h4>🛡️ 주요 변경 사항</h4>
+                        <ul>
+                            ${patch.changes.map(c => `<li>${c}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } catch (error) {
+        console.error('패치 노트를 불러오지 못했습니다:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadPatchNotes);
+
+async function loadRunewords() {
+    try {
+        const response = await fetch('data/runewords.json');
+        const runewords = await response.json();
+        
+        const tbody = document.getElementById('runewordsTbody');
+        if (!tbody) return;
+
+        tbody.innerHTML = runewords.map(item => {
+            const badgeHtml = item.isLadder 
+                ? '<span style="display:inline-block; margin-left:8px; padding:2px 6px; font-size:0.68rem; font-weight:normal; background:rgba(239, 68, 68, 0.15); color:#ef4444; border:1px solid rgba(239, 68, 68, 0.3); border-radius:4px; vertical-align:middle;">🔥 래더전용</span>' 
+                : '<span style="display:inline-block; margin-left:8px; padding:2px 6px; font-size:0.68rem; font-weight:normal; background:rgba(16, 185, 129, 0.15); color:#10b981; border:1px solid rgba(16, 185, 129, 0.3); border-radius:4px; vertical-align:middle;">✨ 비래더가능</span>';
+
+            return `
+                <tr class="searchable-item">
+                    <td class="highlight">
+                        <span class="item-inline" onclick="openRuneModal(${item.id})" style="cursor:pointer; display:inline-flex; align-items:center;">
+                            ${item.legacyKey} ${badgeHtml}
+                        </span>
+                    </td>
+                    <td class="rune">${item.recipe}</td>
+                </tr>
+            `;
+        }).join('');
+    } catch (error) {
+        console.error('룬어 데이터를 불러오지 못했습니다:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadRunewords);
 document.addEventListener('DOMContentLoaded', initialize);
 
 window.addEventListener("click", event => {

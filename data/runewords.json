@@ -4,153 +4,287 @@
     "legacyKey": "강철",
     "recipe": "Tir + El",
     "base": "2소켓 검 / 도끼 / 메이스 (렙제: 13)",
-    "stats": "공격 속도 <strong>+25%</strong> / 피해 <strong>+20%</strong> 증가 / 상처 악화 50%"
+    "stats": "공격 속도 <strong>+25%</strong> / 피해 <strong>+20%</strong> 증가 / 상처 악화 50%",
+    "isLadder": false
   },
   {
     "id": 30002,
     "legacyKey": "잠행",
     "recipe": "Tal + Eth",
     "base": "2소켓 갑옷 (렙제: 17)",
-    "stats": "달리기/걷기 속도 <strong>+25%</strong> / 시전 속도 <strong>+25%</strong> / 타격 회복 속도 <strong>+25%</strong>"
+    "stats": "달리기/걷기 속도 <strong>+25%</strong> / 시전 속도 <strong>+25%</strong> / 타격 회복 속도 <strong>+25%</strong>",
+    "isLadder": false
   },
   {
     "id": 30003,
     "legacyKey": "꽃잎",
     "recipe": "Tir + Ral",
     "base": "2소켓 지팡이(스태프) (렙제: 19)",
-    "stats": "화염 스킬 <strong>+3</strong> / 온기 <strong>+3</strong> / 냉기 저항 <strong>+33%</strong>"
+    "stats": "화염 스킬 <strong>+3</strong> / 온기 <strong>+3</strong> / 냉기 저항 <strong>+33%</strong>",
+    "isLadder": false
   },
   {
     "id": 30004,
     "legacyKey": "고대인의 서약",
     "recipe": "Ral + Ort + Tal",
     "base": "3소켓 방패 (렙제: 21)",
-    "stats": "모든 저항 <strong>+43~48%</strong> / 받는 피해 10% 마나로 회복"
+    "stats": "모든 저항 <strong>+43~48%</strong> / 받는 피해 10% 마나로 회복",
+    "isLadder": false
   },
   {
     "id": 30005,
     "legacyKey": "학식",
     "recipe": "Ort + Sol",
     "base": "2소켓 투구 (렙제: 27)",
-    "stats": "모든 스킬 <strong>+1</strong> / 번개 저항 <strong>+30%</strong> / 적 처치 시 마나 <strong>+2</strong>"
+    "stats": "모든 스킬 <strong>+1</strong> / 번개 저항 <strong>+30%</strong> / 적 처치 시 마나 <strong>+2</strong>",
+    "isLadder": false
   },
   {
     "id": 30006,
     "legacyKey": "콜투암스",
     "recipe": "Amn + Ral + Mal + Ist + Ohm",
     "base": "5소켓 무기 (크리스탈 소드 / 프레일 / 셉터)",
-    "stats": "전투 지시(BO) <strong>+6</strong> / 전투 명령 <strong>+6</strong> / 외침 <strong>+6</strong> (6/6/6 으뜸)"
+    "stats": "전투 지시(BO) <strong>+6</strong> / 전투 명령 <strong>+6</strong> / 외침 <strong>+6</strong> (6/6/6 으뜸)",
+    "isLadder": false
   },
   {
     "id": 30007,
     "legacyKey": "영혼",
     "recipe": "Tal + Thul + Ort + Amn",
     "base": "4소켓 검 / 모나크 방패 / 팔라딘 방패",
-    "stats": "시전 속도 <strong>+35%</strong> (으뜸) / 마나 <strong>+112</strong> / 마법 흡수 <strong>+8</strong>"
+    "stats": "시전 속도 <strong>+35%</strong> (으뜸) / 마나 <strong>+112</strong> / 마법 흡수 <strong>+8</strong>",
+    "isLadder": false
   },
   {
     "id": 30008,
     "legacyKey": "무한",
     "recipe": "Ber + Mal + Ber + Ist",
     "base": "용병: 4소켓 에테 맨캐쳐 / 자이언트 쓰레셔 | 직저: 4소켓 싸이더",
-    "stats": "선고 오라 12레벨 / 적 번개 저항 <strong>-55%</strong> (으뜸) / 피해 증대 <strong>+325%</strong>"
+    "stats": "선고 오라 12레벨 / 적 번개 저항 <strong>-55%</strong> (으뜸) / 피해 증대 <strong>+325%</strong>",
+    "isLadder": false
   },
   {
     "id": 30009,
     "legacyKey": "신념",
     "recipe": "Ohm + Jah + Lem + Eld",
     "base": "4소켓 엘리트 활 (그랜드 매이트런 보우 등)",
-    "stats": "파나티시즘 오라 <strong>15레벨</strong> (으뜸) / 피해 <strong>+330%</strong> 증가"
+    "stats": "파나티시즘 오라 <strong>15레벨</strong> (으뜸) / 피해 <strong>+330%</strong> 증가",
+    "isLadder": false
   },
   {
     "id": 30010,
     "legacyKey": "꿈",
     "recipe": "Io + Jah + Pul",
     "base": "3소켓 투구 / 3소켓 팔라딘 전용 방패",
-    "stats": "홀리 쇼크 오라 <strong>15레벨</strong> / 방어력 <strong>+30%</strong> / 모든 저항 <strong>+20</strong> (으뜸)"
+    "stats": "홀리 쇼크 오라 <strong>15레벨</strong> / 방어력 <strong>+30%</strong> / 모든 저항 <strong>+20</strong> (으뜸)",
+    "isLadder": false
   },
   {
     "id": 30011,
     "legacyKey": "명예의 굴레",
     "recipe": "Dol + Um + Ber + Ist",
     "base": "4소켓 엘리트 갑옷 (더스크 슈라우드 / 메이지 플레이트 등)",
-    "stats": "모든 저항 <strong>+65</strong> (고정) / 모든 스킬 <strong>+2</strong> / 피해 감소 8%"
+    "stats": "모든 저항 <strong>+65</strong> (고정) / 모든 스킬 <strong>+2</strong> / 피해 감소 8%",
+    "isLadder": false
   },
   {
     "id": 30012,
     "legacyKey": "불사조",
     "recipe": "Vex + Vex + Lo + Jah",
     "base": "4소켓 모나크 방패 (속죄 오라용) 또는 원거리 무기 / 폴암",
-    "stats": "속죄 오라 <strong>15레벨</strong> / 화염 기술 피해 <strong>+40%</strong> / 적 화염 저항 <strong>-28%</strong> / 방어력 <strong>+400%</strong> (으뜸)"
+    "stats": "속죄 오라 <strong>15레벨</strong> / 화염 기술 피해 <strong>+40%</strong> / 적 화염 저항 <strong>-28%</strong> / 방어력 <strong>+400%</strong> (으뜸)",
+    "isLadder": false
   },
   {
     "id": 30013,
     "legacyKey": "고뇌",
     "recipe": "Eth + Tir + Lo + Mal + Ral",
     "base": "5소켓 페이즈 블레이드 / 버서커 액스",
-    "stats": "추가 피해 <strong>+400</strong> / 공격 속도 <strong>+40%</strong> (최고 으뜸)"
+    "stats": "추가 피해 <strong>+400</strong> / 공격 속도 <strong>+40%</strong> (최고 으뜸)",
+    "isLadder": false
   },
   {
     "id": 30014,
     "legacyKey": "망명",
     "recipe": "Vex + Ohm + Ist + Dol",
     "base": "4소켓 팔라딘 전용 엘리트 방패 (에테 세타 등)",
-    "stats": "디파이언스 오라 <strong>16레벨</strong> / 방어력 <strong>+260%</strong> (으뜸)"
+    "stats": "디파이언스 오라 <strong>16레벨</strong> / 방어력 <strong>+260%</strong> (으뜸)",
+    "isLadder": false
   },
   {
     "id": 30015,
     "legacyKey": "성역",
     "recipe": "Ko + Ko + Mal",
     "base": "3소켓 모나크 방패 / 팔라딘 전용 방패",
-    "stats": "모든 저항 <strong>+70</strong> (최고 으뜸) / 방어력 <strong>+250%</strong> / 패힛 <strong>+20%</strong>"
+    "stats": "모든 저항 <strong>+70</strong> (최고 으뜸) / 방어력 <strong>+250%</strong> / 패힛 <strong>+20%</strong>",
+    "isLadder": false
   },
   {
     "id": 30016,
     "legacyKey": "순종",
     "recipe": "Hel + Ko + Thul + Eth + Fal",
     "base": "5소켓 에테르 폴암 (쓰레셔 / 자이언트 쓰레셔)",
-    "stats": "적 화염 저항 <strong>-25%</strong> / 피해 증대 <strong>+370%</strong> (으뜸) / 강타 40%"
+    "stats": "적 화염 저항 <strong>-25%</strong> / 피해 증대 <strong>+370%</strong> (으뜸) / 강타 40%",
+    "isLadder": false
   },
   {
     "id": 30017,
     "legacyKey": "배신",
     "recipe": "Shael + Thul + Lem",
     "base": "3소켓 엘리트 갑옷 (용병 및 우버전 스위치용)",
-    "stats": "공격 속도 <strong>+45%</strong> / 피격 시 15% 확률로 15레벨 흐리기 발동"
+    "stats": "공격 속도 <strong>+45%</strong> / 피격 시 15% 확률로 15레벨 흐리기 발동",
+    "isLadder": false
   },
   {
     "id": 30018,
     "legacyKey": "통찰",
     "recipe": "Ral + Tir + Tal + Sol",
     "base": "4소켓 에테르 폴암 (원거리: 아마존 전용 활)",
-    "stats": "명상 오라 <strong>17레벨</strong> (으뜸) / 피해 증대 <strong>+260%</strong>"
+    "stats": "명상 오라 <strong>17레벨</strong> (으뜸) / 피해 증대 <strong>+260%</strong>",
+    "isLadder": false
   },
   {
     "id": 30019,
     "legacyKey": "오크의 심장",
     "recipe": "Ko + Vex + Pul + Thul",
     "base": "4소켓 프레일",
-    "stats": "모든 저항 <strong>+40</strong> (으뜸) / 모든 스킬 +3 / 시전 속도 +40%"
+    "stats": "모든 저항 <strong>+40</strong> (으뜸) / 모든 스킬 +3 / 시전 속도 +40%",
+    "isLadder": false
   },
   {
     "id": 30020,
     "legacyKey": "인내",
     "recipe": "El + Sol + Dol + Lo",
     "base": "용병: 4소켓 에테 갑옷 | 본체: 엘리트 갑옷",
-    "stats": "모든 저항 <strong>+30</strong> / 피해 증대 <strong>+300%</strong> (고정) / 레벨 비례 생명력"
+    "stats": "모든 저항 <strong>+30</strong> / 피해 증대 <strong>+300%</strong> (고정) / 레벨 비례 생명력",
+    "isLadder": false
   },
   {
     "id": 30021,
     "legacyKey": "자존심",
     "recipe": "Cham + Shael + Um + Lo",
     "base": "4소켓 엘리트 폴암 (쓰레셔 / 자이언트 쓰레셔 등)",
-    "stats": "집중(Concentration) 오라 <strong>매우 높음</strong> / 공격 등급 상승 / 대상의 방어력 무시 / 피격 시 포화 명중"
+    "stats": "집중(Concentration) 오라 <strong>매우 높음</strong> / 공격 등급 상승 / 대상의 방어력 무시 / 피격 시 포화 명중",
+    "isLadder": false
   },
   {
     "id": 30022,
     "legacyKey": "수수께끼",
     "recipe": "Jah + Ith + Ber",
     "base": "3소켓 엘리트 갑옷 (메이지 플레이트 / 더스크 슈라우드 등)",
-    "stats": "텔레포트(순간 이동) 스킬 부여 / 레벨 비례 마법 아이템 발견 확률 증가 / 힘 증가"
+    "stats": "텔레포트(순간 이동) 스킬 부여 / 레벨 비례 마법 아이템 발견 확률 증가 / 힘 증가",
+    "isLadder": false
+  },
+  {
+    "id": 30023,
+    "legacyKey": "정신 발작",
+    "recipe": "Lem + Ko + Ist",
+    "base": "3소켓 투구",
+    "stats": "피격 시 10% 확률로 8레벨 공포 발동 / 레벨 당 공격 등급 상승 / 달리기/걷기 속도 +40%",
+    "isLadder": false
+  },
+  {
+    "id": 30024,
+    "legacyKey": "엣지",
+    "recipe": "Tir + Tir + Amn",
+    "base": "3소켓 원거리 무기 (활 / 쇠뇌)",
+    "stats": "상점가 15% 하락 / 레벨 15쏜즈(Thorns) 오라 / 악마에게 주는 피해 +380%",
+    "isLadder": false
+  },
+  {
+    "id": 30025,
+    "legacyKey": "치료",
+    "recipe": "Shael + Io + Tal",
+    "base": "3소켓 투구",
+    "stats": "정화 오라 1레벨 / 독 저항 +50% / 피격 시 5% 확률로 16레벨 맹독 확산 발동",
+    "isLadder": false
+  },
+  {
+    "id": 30026,
+    "legacyKey": "방벽",
+    "recipe": "Dol + Io + Tal",
+    "base": "3소켓 투구",
+    "stats": "원거리 공격 방어력 +100 / 냉기 저항 +50% / 피격 시 5% 확률로 15레벨 서릿발 발동",
+    "isLadder": false
+  },
+  {
+    "id": 30027,
+    "legacyKey": "발작",
+    "recipe": "Shael + Io + Lem",
+    "base": "3소켓 투구",
+    "stats": "피격 시 5% 확률로 15레벨 화염구 발동 / 화염 저항 +50% / 마법 아이템 발견 확률 25% 증가",
+    "isLadder": false
+  },
+  {
+    "id": 30028,
+    "legacyKey": "접지",
+    "recipe": "Shael + Io + Ort",
+    "base": "3소켓 투구",
+    "stats": "피격 시 5% 확률로 7레벨 번개 줄기 발동 / 번개 저항 +50% / 마나 +10",
+    "isLadder": false
+  },
+  {
+    "id": 30029,
+    "legacyKey": "담금질",
+    "recipe": "Shael + Io + Thul",
+    "base": "3소켓 투구",
+    "stats": "피격 시 5% 확률로 10레벨 서리 화살 발동 / 냉기 저항 +50% / 생명력 +10",
+    "isLadder": false
+  },
+  {
+    "id": 30030,
+    "legacyKey": "화로",
+    "recipe": "Shael + Io + Ral",
+    "base": "3소켓 투구",
+    "stats": "피격 시 5% 확률로 15레벨 화염 폭풍 발동 / 화염 저항 +50% / 힘 +10",
+    "isLadder": false
+  },
+  {
+    "id": 30031,
+    "legacyKey": "모자이크",
+    "recipe": "Mal + Gul + Amn",
+    "base": "3소켓 암살자 전용 손톱 (클로 / 블레이드 탤런 등)",
+    "stats": "마법사의 기술 시전 시 50% 확률로 충전 소모 안 함 / 타격 시 <strong>화염 피해 200~250</strong> / 타격 시 <strong>번개 피해 15~490</strong> / 냉기 피해 3~14 추가 / 적의 화염 저항 <strong>-5%</strong>",
+    "isLadder": true
+  },
+  {
+    "id": 30032,
+    "legacyKey": "집행자",
+    "recipe": "Amn + Um + Ko",
+    "base": "3소켓 무기 (검 / 해머 / 폴암)",
+    "stats": "20% 확률로 레벨 15 노화(Decrepify) 저주 시전 / 영혼 부착물 명중 / 대상의 방어력 무시 / 악마에게 주는 피해 <strong>+200~250%</strong>",
+    "isLadder": false
+  },
+  {
+    "id": 30033,
+    "legacyKey": "열정",
+    "recipe": "Dol + Ort + Eld + Lem",
+    "base": "4소켓 무기 (모든 무기 종류)",
+    "stats": "+1 질(Zeal) 스킬 / +1 버서크 스킬 / 피해 <strong>+180~210%</strong> 증가 / 공격 속도 <strong>+25%</strong> / 적중당 생명력 훔침 7%",
+    "isLadder": false
+  },
+  {
+    "id": 30034,
+    "legacyKey": "탈태",
+    "recipe": "Io + Cham + Fal",
+    "base": "3소켓 투구",
+    "stats": "변신 기술 시 타격 시 늑대/곰 징표 발동 / 레벨 당 생명력 증가",
+    "isLadder": true
+  },
+  {
+    "id": 30035,
+    "legacyKey": "투지",
+    "recipe": "Shael + Ko + Eld",
+    "base": "3소켓 무기 또는 갑옷",
+    "stats": "무기: 1레벨 광신 오라 / 갑옷: 달리기/걷기 속도 +25%",
+    "isLadder": true
+  },
+  {
+    "id": 30036,
+    "legacyKey": "방책",
+    "recipe": "Shael + Io + Sol",
+    "base": "3소켓 투구",
+    "stats": "피해 감소 20% / 적중당 생명력 훔침 7%",
+    "isLadder": true
   }
 ]

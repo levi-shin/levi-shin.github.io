@@ -1,24 +1,29 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.2",
-  "lastUpdated": "2026-08-18",
+  "siteVersion": "v1.0.3",
+  "lastUpdated": "2026-08-19",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
     {
-      "version": "v1.2",
+      "version": "v1.0.3",
+      "date": "2026-08-19",
+      "desc": "사이트 전역 실시간 통합 검색 및 데이터 타입별 맞춤형 상세 모달 연동 고도화"
+    },
+    {
+      "version": "v1.0.2",
       "date": "2026-08-18",
       "desc": "사이트 푸터 버전 클릭 시 패치 히스토리 모달 팝업 기능 추가 및 모듈 연동 고도화"
     },
     {
-      "version": "v1.1",
+      "version": "v1.0.1",
       "date": "2026-08-18",
       "desc": "유니크 아이템 데이터 동적 렌더링 및 모달 매칭 오류 수정"
     },
     {
-      "version": "v1.0",
+      "version": "v1.0.0",
       "date": "2026-08-10",
-      "desc": "GitHub Pages 정적 프레임워크 기반 데이터/기능 분리 리팩터링 완료"
+      "desc": "정적 프레임워크 기반 데이터/기능 분리 리팩터링 완료"
     }
   ]
 }
