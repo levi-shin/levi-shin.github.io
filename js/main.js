@@ -293,19 +293,14 @@ function filterContent() {
     // 2. 룬어 검색
     if (Array.isArray(window.DATA.runewords)) {
         window.DATA.runewords.forEach(rw => {
-            const legacyKey = String(rw.legacyKey || "").toLowerCase();
-            const name = String(rw.name || "").toLowerCase();
-            const recipe = String(rw.recipe || "").toLowerCase();
-            const base = String(rw.base || "").toLowerCase();
-            
-            if (legacyKey.includes(filter) || name.includes(filter) || recipe.includes(filter) || base.includes(filter)) {
+            if (matchesSearchText(rw, filter)) {
                 primaryMatches.push({
                     type: 'runeword',
                     title: rw.legacyKey || rw.name,
                     category: '룬어 조합식',
                     highlight: `조합: ${rw.recipe || '-'}`,
                     id: rw.id,
-                    isLadder: rw.isLadder // 🌟 이 부분을 추가해 주어야 데이터에서 값을 읽어옵니다!
+                    isLadder: rw.isLadder
                 });
             }
         });
@@ -314,12 +309,7 @@ function filterContent() {
     // 3. 유니크 아이템 검색
     if (Array.isArray(window.DATA.uniques)) {
         window.DATA.uniques.forEach(uni => {
-            const name = String(uni.name || "").toLowerCase();
-            const eng = String(uni.eng || "").toLowerCase();
-            const legacyKey = String(uni.legacyKey || "").toLowerCase();
-            const drop = String(uni.drop || "").toLowerCase();
-            
-            if (name.includes(filter) || eng.includes(filter) || legacyKey.includes(filter) || drop.includes(filter)) {
+            if (matchesSearchText(uni, filter)) {
                 primaryMatches.push({
                     type: 'unique',
                     title: uni.name || uni.legacyKey,
@@ -574,6 +564,24 @@ function setDbModalImage(imagePath) {
     img.onerror = fallback;
     artEl.innerHTML = "";
     artEl.appendChild(img);
+}
+
+function matchesSearchText(item, filter) {
+    const fields = [
+        item.name,
+        item.eng,
+        item.legacyKey,
+        item.drop,
+        item.recipe,
+        item.base,
+        item.summon,
+        item.stats
+    ];
+    if (fields.some(v => String(v || "").toLowerCase().includes(filter))) return true;
+    if (Array.isArray(item.aliases)) {
+        return item.aliases.some(alias => String(alias).toLowerCase().includes(filter));
+    }
+    return false;
 }
 
 function openDatabaseModal() {

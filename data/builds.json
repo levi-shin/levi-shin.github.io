@@ -187,7 +187,13 @@
             },
             {
               "type": "text",
-              "value": " 또는 밤날개의 투구"
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "밤날개의 너울",
+              "dataType": "unique",
+              "id": 20023
             }
           ]
         },
@@ -195,13 +201,19 @@
           "slot": "갑옷 (Armor)",
           "content": [
             {
+              "type": "link",
+              "name": "명예의 굴레",
+              "dataType": "runeword",
+              "id": 30011
+            },
+            {
               "type": "text",
-              "value": "명예의 굴레 또는 "
+              "value": " 또는 "
             },
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
+              "dataType": "runeword",
               "id": 30022
             }
           ]

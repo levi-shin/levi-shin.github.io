@@ -91,6 +91,13 @@ window.filterContent = function() {
             }
         });
     }
+    if (window.DATA?.uniques) {
+        window.DATA.uniques.forEach(uni => {
+            if (JSON.stringify(uni).toLowerCase().includes(filter)) {
+                primaryMatches.push({ type: 'unique', title: uni.name || uni.legacyKey, category: '유니크', id: uni.id });
+            }
+        });
+    }
     const relatedBuilds = window.findRelatedBuilds(filter);
 
     // 3. UI 처리

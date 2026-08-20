@@ -4,170 +4,188 @@
     "legacyKey": "요르단(조단)의 반지|The Stone of Jordan",
     "name": "요르단(조단)의 반지",
     "eng": "The Stone of Jordan",
+    "aliases": ["조단", "조던", "조던링", "조단링", "SoJ", "SOJ", "Stone of Jordan", "요르단"],
     "image": "uniques/jordan.png",
     "base": "반지 (Ring)",
     "drop": "악몽(나이트) 안다리엘 (최고 확률 1/31), 헬 안다/메피",
-    "stats": "모든 스킬 <strong>+1</strong> / 최대 마나 <strong>+25%</strong> / 마나 <strong>+20</strong> (고정 으뜸)"
+    "stats": "모든 스킬 <strong>+1</strong> / 최대 마나 <strong>+25%</strong> / 번개 피해 <strong>1~12</strong> / 마나 <strong>+20</strong> (고정 으뜸)"
   },
   {
     "id": 20002,
     "legacyKey": "불카토스의 결혼반지|Bul-Kathos' Wedding Band",
     "name": "불카토스의 결혼반지",
     "eng": "Bul-Kathos' Wedding Band",
+    "aliases": ["불카", "불카링", "발카링", "BK링", "BK Band", "Wedding Band"],
     "image": "uniques/bulkathos.png",
-    "base": "유니크 링",
+    "base": "반지 (Ring)",
     "drop": "지옥(헬) 안다리엘, 메피스토, 디아블로, 바알, TC85 사냥터",
-    "stats": "모든 스킬 <strong>+1</strong> / 라이프 흡수 <strong>+5%</strong> (으뜸) / 레벨 비례 생명력"
+    "stats": "모든 스킬 <strong>+1</strong> / 라이프 흡수 <strong>3~5%</strong> (으뜸 5%) / 레벨당 생명력 <strong>+0.5</strong> (캐릭터 레벨 비례)"
   },
   {
     "id": 20003,
     "legacyKey": "마라의 만화경|Mara's Kaleidoscope",
     "name": "마라의 만화경",
     "eng": "Mara's Kaleidoscope",
+    "aliases": ["마라", "마라아뮬", "Mara", "Maras"],
     "image": "uniques/mara.png",
     "base": "목걸이 (Amulet)",
     "drop": "지옥(헬) 메피스토, 디아블로, 트라빈칼, TC85 사냥터",
-    "stats": "모든 스킬 <strong>+2</strong> / 모든 저항 <strong>+30</strong> (으뜸) / 모든 스탯 <strong>+5</strong>"
+    "stats": "모든 스킬 <strong>+2</strong> / 모든 저항 <strong>+20~30</strong> (으뜸 30) / 모든 스탯 <strong>+5</strong>"
   },
   {
     "id": 20004,
     "legacyKey": "티리얼의 권능|Tyrael's Might",
     "name": "티리얼의 권능",
     "eng": "Tyrael's Might",
-    "base": "세이크리드 아머",
+    "aliases": ["티리얼", "티리엘", "Tyrael", "Tyraels Might"],
+    "base": "세이크리드 아머 (Sacred Armor)",
     "drop": "지옥(헬) 바알, 디아블로, TC85 사냥터 (극악의 드랍률)",
-    "stats": "방어력 상승 <strong>+150%</strong> / 모든 스탯 <strong>+30</strong> / 모든 저항 <strong>+30</strong>"
+    "stats": "방어력 상승 <strong>+120~150%</strong> / 악마에게 주는 피해 <strong>+50~100%</strong> / 달리기·걷기 <strong>+20%</strong> / 힘 <strong>+20~30</strong> / 모든 저항 <strong>+20~30</strong> / 빙결되지 않음 / 요구치 <strong>-100%</strong> / 죽은 몬스터 되살아나지 않음 / 파괴 불가"
   },
   {
     "id": 20005,
     "legacyKey": "샤코|Harlequin Crest",
     "name": "샤코",
     "eng": "Harlequin Crest",
+    "aliases": ["할리퀸", "할리퀸 관모", "Shako", "Harlequin"],
     "image": "uniques/shako.png",
-    "base": "샤코",
+    "base": "샤코 (Cap)",
     "drop": "지옥(헬) 안다리엘, 메피스토 (국민 앵벌)",
-    "stats": "방어력 <strong>141</strong> (최고 으뜸) / 모든 스킬 <strong>+2</strong> / 레벨 비례 생명력·마나 / 피해 감소 <strong>10%</strong> / 매찬 <strong>50%</strong>"
+    "stats": "모든 스킬 <strong>+2</strong> / 레벨당 생명력·마나 <strong>+1.5</strong> / 피해 감소 <strong>10%</strong> / 매찬 <strong>50%</strong> / 방어력 상승 <strong>+100%</strong>"
   },
   {
     "id": 20006,
-    "legacyKey": "다이어뎀|Griffon's Eye",
+    "legacyKey": "그리폰의 눈|Griffon's Eye",
     "name": "그리폰의 눈",
     "eng": "Griffon's Eye",
-    "base": "다이어뎀",
+    "aliases": ["그리폰", "Griffon", "Griffons Eye"],
+    "base": "다이어뎀 (Diadem)",
     "drop": "TC85 사냥터 (피트, 카오스, 바알, 고대하수도)",
-    "stats": "모든 스킬 <strong>+1</strong> / 시전 속도 +25% / 번개 기술 피해 <strong>+15%</strong> / 적 번개 저항 <strong>-20%</strong> / 방어력 <strong>+200%</strong> (으뜸)"
+    "stats": "모든 스킬 <strong>+1</strong> / 시전 속도 <strong>+25%</strong> / 번개 기술 피해 <strong>+10~15%</strong> / 적 번개 저항 <strong>-15~20%</strong> / 방어력 <strong>+100~200</strong>"
   },
   {
     "id": 20007,
     "legacyKey": "안다리엘의 두개골|Andariel's Visage",
     "name": "안다리엘의 두건",
     "eng": "Andariel's Visage",
+    "aliases": ["안다헬", "안다투구", "앤디", "Andy", "Andariel", "Andys"],
     "image": "uniques/andys.png",
-    "base": "데몬헤드",
+    "base": "데몬헤드 (Demonhead)",
     "drop": "지옥(헬) 안다리엘, 디아블로, 바알 (에테 으뜸)",
-    "stats": "방어력상승 <strong>+150%</strong> (으뜸) / 힘 <strong>+30</strong> (으뜸) / 라이프 흡수 <strong>10%</strong> (으뜸) / 공격 속도 +20%"
+    "stats": "모든 스킬 <strong>+2</strong> / 방어력 상승 <strong>+100~150%</strong> / 공격 속도 <strong>+20%</strong> / 라이프 흡수 <strong>8~10%</strong> / 힘 <strong>+25~30</strong> / 모든 저항 <strong>+10</strong> / 독 저항 <strong>+70%</strong> / 독 피해 추가 / 레벨 3 독노바 충전"
   },
   {
     "id": 20008,
     "legacyKey": "배틀부츠|War Traveler",
     "name": "배틀 부츠",
     "eng": "War Traveler",
+    "aliases": ["워트", "워트래블러", "War Traveler", "WarTraveler", "WT"],
     "image": "uniques/wartraveler.png",
-    "base": "배틀 부츠",
+    "base": "배틀 부츠 (Battle Boots)",
     "drop": "지옥(헬) 메피스토, 안다리엘, 카오스",
-    "stats": "방어력상승 <strong>+190%</strong> (으뜸) / 매직 아이템 발견 확률 <strong>+50%</strong> (으뜸) / 추가 피해 15~25"
+    "stats": "방어력 상승 <strong>+150~190%</strong> / 달리기·걷기 <strong>+25%</strong> / 힘·활력 <strong>+10</strong> / 추가 피해 <strong>15~25</strong> / 매찬 <strong>+30~50%</strong> / 피격 시 반사 피해 5~10"
   },
   {
     "id": 20009,
     "legacyKey": "거인의 복수|Titan's Revenge",
     "name": "타이탄의 복수",
     "eng": "Titan's Revenge",
-    "base": "세러모니얼 재블린",
+    "aliases": ["타이탄", "Titans", "Titan's Revenge"],
+    "base": "세러모니얼 재블린 (Ceremonial Javelin)",
     "drop": "지옥(헬) 안다리엘, 메피스토, 바알 (에테 으뜸)",
-    "stats": "피해 상승 <strong>+200%</strong> (최고 으뜸) / 라이프 흡수 <strong>9%</strong> (으뜸) / 아마존 스킬 +2"
+    "stats": "피해 상승 <strong>+150~200%</strong> / 아마존 스킬 <strong>+2</strong> / 투창·창 스킬 <strong>+2</strong> / 라이프 흡수 <strong>5~9%</strong> / 힘·민첩 <strong>+20</strong> / 복구 속도 증가 / 요구치 <strong>-30%</strong>"
   },
   {
     "id": 20010,
     "legacyKey": "기드의 운|Gheed's Fortune",
     "name": "기드의 운",
     "eng": "Gheed's Fortune",
-    "base": "그랜드참",
+    "aliases": ["기드", "기드참", "Gheed", "Gheeds"],
+    "base": "그랜드참 (Grand Charm)",
     "drop": "지옥(헬) 안다리엘, 트라빈칼, 카오스 샌크츄어리",
-    "stats": "매찬 <strong>+40%</strong> / 상점 할인 <strong>-15%</strong> / 삥 <strong>+160%</strong> (으뜸)"
+    "stats": "매찬 <strong>+20~40%</strong> / 상점 가격 <strong>-10~15%</strong> / 삥 <strong>+80~160%</strong> (으뜸)"
   },
   {
     "id": 20011,
     "legacyKey": "바람살|Windforce",
     "name": "바람살",
     "eng": "Windforce",
+    "aliases": ["윈드포스", "WF", "Windforce"],
     "image": "uniques/windforce.png",
-    "base": "히드라 보우",
+    "base": "히드라 보우 (Hydra Bow)",
     "drop": "지옥(헬) 피트, 고대 하수도, 바알 등 TC85",
-    "stats": "마나 훔침 <strong>8%</strong> (으뜸) / 피해 <strong>+250%</strong> / 최대 피해 (캐릭터 레벨 비례) / 적중 시 밀어냄"
+    "stats": "피해 <strong>+250%</strong> / 마나 훔침 <strong>6~8%</strong> / 최대 피해 (캐릭터 레벨 비례) / 힘 <strong>+10</strong> / 적중 시 밀어냄 / 회복 속도 <strong>+20%</strong>"
   },
   {
     "id": 20012,
     "legacyKey": "죽음의 깊이|Death's Fathom",
     "name": "죽음의 깊이",
     "eng": "Death's Fathom",
-    "base": "디멘셔널 샤드",
+    "aliases": ["데스파덤", "데스 파버", "Deaths Fathom", "Death Fathom", "디멘셔널 샤드"],
+    "base": "디멘셔널 샤드 (Dimensional Shard)",
     "drop": "지옥(헬) 디아블로, 바알, 공포의 영역",
-    "stats": "냉기 기술 피해 <strong>+30%</strong> (으뜸) / 번개 저항 <strong>+40%</strong> (으뜸) / 화염 저항 <strong>+40%</strong> (으뜸) / 시전 속도 +20%"
+    "stats": "원소술사 스킬 <strong>+3</strong> / 시전 속도 <strong>+20%</strong> / 냉기 기술 피해 <strong>+15~30%</strong> / 번개 저항 <strong>+25~40%</strong> / 화염 저항 <strong>+25~40%</strong>"
   },
   {
     "id": 20013,
     "legacyKey": "거미그물 띠|Arachnid Mesh",
     "name": "거미그물 띠",
     "eng": "Arachnid Mesh",
+    "aliases": ["아라크", "스웹", "스파이더웹", "Arach", "Arachnid"],
     "image": "uniques/arach.png",
-    "base": "스파이더웹 새시",
+    "base": "스파이더웹 새시 (Spiderweb Sash)",
     "drop": "지옥(헬) 메피스토, 디아블로, 바알",
-    "stats": "방어력 상승 <strong>+120%</strong> (으뜸) / 모든 스킬 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 최대 마나 5% 증가"
+    "stats": "방어력 상승 <strong>+90~120%</strong> / 모든 스킬 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 최대 마나 <strong>+5%</strong> / 감속 <strong>10%</strong>"
   },
   {
     "id": 20014,
     "legacyKey": "자카룸의 전령|Herald of Zakarum",
     "name": "자카룸의 전령",
     "eng": "Herald of Zakarum",
+    "aliases": ["호즈", "HoZ", "자카룸", "Herald", "HOZ"],
     "image": "uniques/heraldofzakarum.png",
-    "base": "길디드 실드",
+    "base": "길디드 실드 (Gilded Shield)",
     "drop": "지옥(헬) 안다리엘, 메피스토, 카오스",
-    "stats": "방어력 상승 <strong>+200%</strong> (으뜸) / 성기사 기술 <strong>+2</strong> / 전투 기술 <strong>+2</strong> / 모든 저항 +50"
+    "stats": "방어력 상승 <strong>+150~200%</strong> / 성기사 스킬 <strong>+2</strong> / 전투 스킬 <strong>+2</strong> / 힘 <strong>+20</strong> / 활력 <strong>+20</strong> / 모든 저항 <strong>+50</strong> / 블럭 확률 증가"
   },
   {
     "id": 20015,
     "legacyKey": "마수|Magefist",
     "name": "마수",
     "eng": "Magefist",
+    "aliases": ["메이지피스트", "Magefist"],
     "image": "uniques/magefist.png",
-    "base": "라이트 건틀릿",
+    "base": "라이트 건틀릿 (Light Gauntlets)",
     "drop": "일반(노말) 디아블로, 바알 / 악몽(나이트) 전 지역",
-    "stats": "방어력 상승 <strong>+30%</strong> (으뜸) / 화염 기술 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 마나 재생 25%"
+    "stats": "방어력 상승 <strong>+20~30%</strong> / 화염 스킬 <strong>+1</strong> / 시전 속도 <strong>+20%</strong> / 마나 재생 <strong>25%</strong> / 화염 피해 <strong>1~6</strong>"
   },
   {
     "id": 20016,
-    "legacyKey": "슬레이어의 갈기",
-    "name": "슬레이어의 갈기",
+    "legacyKey": "아리앗의 얼굴|Arreat's Face",
+    "name": "아리앗의 얼굴",
     "eng": "Arreat's Face",
-    "base": "슬레이어 가드 (바바리안 전용 투구)",
+    "aliases": ["슬레이어의 갈기", "슬레이어", "아리앗", "Arreat", "Arreats Face"],
+    "base": "슬레이어 가드 (Slayer Guard)",
     "drop": "지옥(헬) 메피스토, 바알, 디아블로, TC85 사냥터",
-    "stats": "방어력 상승 <strong>+150~200%</strong> (으뜸 200%) / 모든 스킬 <strong>+2</strong> / 야만용사 스킬 <strong>+2</strong> / 적중 시 마나 훔침 <strong>3~6%</strong> / 모든 저항 <strong>+30</strong> / 힘 +20 / 민첩 +20"
+    "stats": "방어력 상승 <strong>+150~200%</strong> / 야만용사 스킬 <strong>+2</strong> / 전투 스킬 <strong>+2</strong> / 타격 회복 <strong>+30%</strong> / 라이프 흡수 <strong>3~6%</strong> / 모든 저항 <strong>+30</strong> / 힘·민첩 <strong>+20</strong>"
   },
   {
     "id": 20017,
     "legacyKey": "새총|Slingshot",
     "name": "새총",
     "eng": "Slingshot",
+    "aliases": ["슬링샷", "Slingshot"],
     "image": "uniques/slingshot.png",
     "base": "반지 (Ring)",
     "drop": "지옥(헬) 보스 및 공포의 영역",
-    "stats": "시전 속도 <strong>+10%</strong> / 타운 포탈(Town Portal) 1레벨 스킬 부여 / 매직 피해 감소 <strong>3~5</strong> / 에너지 <strong>+10~15</strong> / 대상 감속 <strong>15%</strong> / 매찬 <strong>+10~20%</strong>"
+    "stats": "시전 속도 <strong>+10%</strong> / 타운 포탈(Town Portal) 1레벨 스킬 부여 / 적 마법 저항 <strong>-3~5%</strong> / 에너지 <strong>+10~15</strong> / 대상 감속 <strong>15%</strong> / 매찬 <strong>+10~20%</strong>"
   },
   {
     "id": 20018,
     "legacyKey": "오팔맥|Opalmac",
     "name": "오팔맥",
     "eng": "Opalmac",
+    "aliases": ["Opalmac"],
     "base": "반지 (Ring)",
     "drop": "지옥(헬) 카오스/바알",
     "stats": "타격 시 15레벨 화염파도(신캐 스킬) 2% 확률 발동 / 시전 속도 <strong>+10%</strong> / 모든 저항 <strong>+6~8</strong> / 마나 획득(마상) <strong>+1~3</strong> / 적 처치 시 생명력 <strong>+1~3</strong>"
@@ -177,8 +195,9 @@
     "legacyKey": "지옥파수꾼의 의지|Will of Hell-Keeper",
     "name": "지옥파수꾼의 의지",
     "eng": "Will of Hell-Keeper",
+    "aliases": ["헬키퍼", "Hellkeeper", "Hell-Keeper"],
     "image": "uniques/hellkeeperswill.png",
-    "base": "데스 마스크 (Helm)",
+    "base": "데스 마스크 (Death Mask)",
     "drop": "지옥(헬) 카오스 샌크츄어리",
     "stats": "모든 스킬 <strong>+1</strong> / 적의 화염 저항 <strong>-5~8%</strong> / 적의 매직 저항 <strong>-5~8%</strong> / 시전 속도 <strong>+20%</strong> / 공격 속도 <strong>+20%</strong> / 방어력 상승 <strong>+150~215%</strong> / 마나 획득(마상) <strong>+4~6</strong>"
   },
@@ -187,96 +206,106 @@
     "legacyKey": "섀도우 댄서|Shadow Dancer",
     "name": "섀도우 댄서",
     "eng": "Shadow Dancer",
+    "aliases": ["섀댄", "쉐도우댄서", "Shadow Dancer"],
     "image": "uniques/shadowdancer.png",
-    "base": "미르미돈 그리브 (Boots)",
+    "base": "미르미돈 그리브 (Myrmidon Greaves)",
     "drop": "지옥(헬) 테러 존, 바알, 디아블로",
-    "stats": "방어력 <strong>+70~100%</strong> 증가 / 모든 그림자 단련 기술 레벨 <strong>+1~2</strong> (암살자 전용) / 달리기/걷기 속도 <strong>+30%</strong> / 타격 회복 속도 <strong>+30%</strong> / 민첩성 <strong>+15~25</strong>"
+    "stats": "방어력 상승 <strong>+70~100%</strong> / 그림자 단련 스킬 <strong>+1~2</strong> (암살자) / 달리기·걷기 <strong>+30%</strong> / 타격 회복 <strong>+30%</strong> / 민첩 <strong>+15~25</strong> / 요구치 <strong>-20%</strong>"
   },
   {
     "id": 20021,
     "legacyKey": "대군주의 분노|Highlord's Wrath",
     "name": "대군주의 분노",
     "eng": "Highlord's Wrath",
+    "aliases": ["하이로드", "대군주", "Highlord", "Highlords Wrath", "HLW"],
     "image": "uniques/highlordswrath.png",
     "base": "아뮬렛 (Amulet)",
     "drop": "지옥(헬) 메피스토, 디아블로, 바알, 테러 존",
-    "stats": "모든 스킬 레벨 <strong>+1</strong> / 공격 속도 <strong>+20%</strong> / 치명적 공격 <strong>+0.375%</strong> (캐릭터 레벨당 비례) / 번개 저항 <strong>+35%</strong> / 번개 피해 <strong>1~30</strong> 추가 / 공격 시 5% 확률로 레벨 10 낙뢰 시전"
+    "stats": "모든 스킬 <strong>+1</strong> / 공격 속도 <strong>+20%</strong> / 치명타(Deadly Strike) 레벨당 <strong>+0.375%</strong> / 번개 저항 <strong>+35%</strong> / 번개 피해 <strong>1~30</strong> / 피격 시 번개 반사 15"
   },
   {
     "id": 20022,
     "legacyKey": "드라쿨의 장갑|Dracul's Grasp",
     "name": "드라쿨의 장갑",
     "eng": "Dracul's Grasp",
+    "aliases": ["드라쿨", "Dracul", "Draculs Grasp"],
     "image": "uniques/draculsgrasp.png",
-    "base": "뱀파이어 본 글러브 (Gloves)",
+    "base": "뱀파이어본 글러브 (Vampirebone Gloves)",
     "drop": "지옥(헬) 테러 존, 디아블로, 바알, 니라트하크",
-    "stats": "방어력 <strong>+90~120%</strong> 증가 / 생명력 획득 <strong>+7~10%</strong> / 타격 시 5% 확률로 레벨 10 생명력 추출 저주 시전 / 적중당할 때마다 체력 <strong>+5~10</strong> 회복 / 힘 <strong>+10~15</strong> / 적중 시 몬스터 명중률 <strong>+25%</strong> 둔화"
+    "stats": "방어력 상승 <strong>+90~120%</strong> / 타격 시 5% 확률로 레벨 10 생명력 추출 / 라이프 흡수 <strong>7~10%</strong> / 힘 <strong>+10~15</strong> / 처치 시 생명력 <strong>+5~10</strong> / 대상 감속 <strong>25%</strong>"
   },
   {
     "id": 20023,
     "legacyKey": "밤날개의 너울|Nightwing's Veil",
     "name": "밤날개의 너울",
-    "eng": "NightwingsVeil",
+    "eng": "Nightwing's Veil",
+    "aliases": ["밤날개", "나이트윙", "Nightwing", "Nightwings Veil"],
     "image": "uniques/nightwingsveil.png",
-    "base": "스파이어드 헬름 (Helm)",
+    "base": "스파이어드 헬름 (Spired Helm)",
     "drop": "지옥(헬) 전역",
-    "stats": "+2 모든 기술 / 냉기 기술 피해 +8~15% / 민첩 +10~20 / 빙결되지 않음"
+    "stats": "모든 스킬 <strong>+2</strong> / 방어력 상승 <strong>+90~120%</strong> / 냉기 기술 피해 <strong>+8~15%</strong> / 민첩 <strong>+10~20</strong> / 냉기 흡수 <strong>5~9</strong> / 빙결 시간 반감 / 요구치 <strong>-50%</strong>"
   },
   {
     "id": 20024,
     "legacyKey": "칠흑서리|Raven Frost",
     "name": "칠흑서리",
     "eng": "Raven Frost",
+    "aliases": ["레이븐", "레이븐링", "레이븐프로스트", "Raven", "Raven Frost"],
     "image": "uniques/ravenfrost.png",
     "base": "반지 (Ring)",
     "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
-    "stats": "빙결되지 않음 / 냉기 피해 <strong>15~45</strong> / 민첩 <strong>+20</strong> (으뜸) / 매찬 <strong>+24%</strong>"
+    "stats": "명중률 <strong>+150~250</strong> / 냉기 피해 <strong>15~45</strong> / 민첩 <strong>+15~20</strong> / 마나 <strong>+40</strong> / 냉기 흡수 <strong>20%</strong> / 빙결되지 않음"
   },
   {
     "id": 20025,
     "legacyKey": "왜성반지|Dwarf Star",
     "name": "왜성반지",
     "eng": "Dwarf Star",
+    "aliases": ["드워프스타", "왜성", "Dwarf Star", "Dwarfstar"],
     "image": "uniques/dwarfstar.png",
     "base": "반지 (Ring)",
     "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
-    "stats": "화염 흡수 <strong>15%</strong> / 마법 피해 감소 <strong>12~15</strong> (으뜸) / 삥 <strong>+100%</strong> / 생명력 <strong>+40</strong>"
+    "stats": "화염 흡수 <strong>15%</strong> / 마법 피해 감소 <strong>12~15</strong> / 삥 <strong>+100%</strong> / 생명력 <strong>+40</strong> / 스태미나 <strong>+40</strong>"
   },
   {
     "id": 20026,
     "legacyKey": "자연의 평화반지|Nature's Peace",
     "name": "자연의 평화반지",
     "eng": "Nature's Peace",
+    "aliases": ["네이처스피스", "자연의평화", "Natures Peace", "Nature's Peace"],
     "image": "uniques/naturespeace.png",
     "base": "반지 (Ring)",
     "drop": "지옥(헬) TC85 사냥터",
-    "stats": "죽은 몬스터가 되살아나지 않음 / 슬로우 타겟 <strong>20%</strong> / 독 저항 <strong>+20~30%</strong>"
+    "stats": "죽은 몬스터가 되살아나지 않음 / 몬스터 회복 방지 / 독 저항 <strong>+20~30%</strong> / 피해 감소 <strong>7~11</strong> / 레벨 5 오크 세이지 충전"
   },
   {
     "id": 20027,
-    "legacyKey": "에스추타의 온도|Eschuta's Temper",
-    "name": "에스추타의 온도",
+    "legacyKey": "에슈타의 성미|Eschuta's Temper",
+    "name": "에슈타의 성미",
     "eng": "Eschuta's Temper",
+    "aliases": ["에스추타", "에슈타", "엘드리치", "Eschuta", "Eschutas Temper"],
     "image": "uniques/eschutastemper.png",
-    "base": "엘더 스태프 (Elder Staff)",
+    "base": "엘드리치 오브 (Eldritch Orb)",
     "drop": "지옥(헬) TC85 사냥터, 공포의 영역",
-    "stats": "원소 기술 피해 <strong>+3~7%</strong> / 번개 기술 피해 <strong>+10~20%</strong> (으뜸) / 화염 기술 피해 <strong>+10~20%</strong> (으뜸) / 모든 스킬 <strong>+1~3</strong>"
+    "stats": "원소술사 스킬 <strong>+1~3</strong> / 시전 속도 <strong>+40%</strong> / 화염 기술 피해 <strong>+10~20%</strong> / 번개 기술 피해 <strong>+10~20%</strong> / 에너지 <strong>+20~30</strong>"
   },
   {
     "id": 20028,
     "legacyKey": "천둥일격|Thunderstroke",
     "name": "천둥일격",
     "eng": "Thunderstroke",
+    "aliases": ["썬더스트로크", "Thunderstroke"],
     "image": "uniques/thunderstroke.png",
-    "base": "매테리얼 재블린 (Matriarchal Javelin)",
+    "base": "마트리악칼 재블린 (Matriarchal Javelin)",
     "drop": "지옥(헬) TC85 사냥터, 바알",
-    "stats": "번개 기술 피해 <strong>+10~15%</strong> / 아마존 스킬 <strong>+2</strong> / 번개 분노 <strong>+3</strong> / 번개 피해 추가"
+    "stats": "피해 상승 <strong>+150~200%</strong> / 투창·창 스킬 <strong>+2~4</strong> / 번개 화살 <strong>+3</strong> / 공격 속도 <strong>+15%</strong> / 적 번개 저항 <strong>-15%</strong> / 번개 피해 <strong>1~511</strong> / 타격 시 14레벨 번개 20% 발동"
   },
   {
     "id": 20029,
     "legacyKey": "선혈 기수|Blood Rider",
     "name": "선혈 기수",
     "eng": "Blood Rider",
+    "aliases": ["블러드라이더", "Blood Rider", "고블린토우"],
     "image": "uniques/boodrider.png",
     "base": "뼈 부츠 (Bone Boots)",
     "drop": "지옥(헬) TC85 사냥터, 공포의 영역",
@@ -287,9 +316,10 @@
     "legacyKey": "알리바바의 칼날|Blade of Ali Baba",
     "name": "알리바바의 칼날",
     "eng": "Blade of Ali Baba",
+    "aliases": ["알리바바", "Ali Baba", "Alibaba"],
     "image": "uniques/alibaba.png",
     "base": "튤워 (Tulwar)",
     "drop": "지옥(헬) 메피스토, TC85 사냥터",
-    "stats": "삥 <strong>+200%</strong> (레벨 비례) / 매찬 <strong>+50%</strong> (레벨 비례) / 마나 <strong>+20</strong>"
+    "stats": "피해 상승 <strong>+60~120%</strong> / 삥 레벨당 <strong>+2.5%</strong> / 매찬 레벨당 <strong>+1%</strong> / 민첩 <strong>+5~15</strong> / 마나 <strong>+15</strong> / 소켓 <strong>2</strong>"
   }
 ]
