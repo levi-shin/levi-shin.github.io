@@ -707,6 +707,12 @@ function copyPaperDollValue() {
         alert("복사하기 기능이 지원되지 않는 브라우저입니다.");
     }
 }
+function runewordLadderBadge(item) {
+    return (item.isLadder || item.ladder)
+        ? '<span class="ladder-badge ladder-only">🔥 래더 전용</span>'
+        : '<span class="ladder-badge ladder-ok">✨ 비래더가능</span>';
+}
+
 function openRuneModal(runewordId) {
     const item = getRecord("runeword", runewordId);
     if (!item) {
@@ -714,11 +720,14 @@ function openRuneModal(runewordId) {
         return;
     }
 
-    document.getElementById("dbModalTitle").textContent = item.name || item.legacyKey;
-    document.getElementById("dbModalSubtitle").textContent = "룬어 · " + (item.name || item.legacyKey);
+    const name = item.name || item.legacyKey;
+    const ladderBadge = runewordLadderBadge(item);
+    document.getElementById("dbModalTitle").innerHTML = `${escapeHtml(name)} ${ladderBadge}`;
+    document.getElementById("dbModalSubtitle").textContent = "룬어 · " + name;
     document.getElementById("dbModalIntro").textContent = "룬 조합 순서와 추천 종결 베이스, 그리고 으뜸 수치를 확인합니다.";
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>룬 조합 순서</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
+        `<div class="item-stat"><strong>래더 여부</strong><br>${ladderBadge}</div>
+         <div class="item-stat"><strong>룬 조합 순서</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
          <div class="item-stat"><strong>종결 권장 베이스</strong><br>${item.base}</div>
          <div class="item-stat"><strong>으뜸(최상급) 변동 옵션</strong><br>${item.stats}</div>`;
 
@@ -1106,14 +1115,12 @@ async function loadRunewords() {
         if (!tbody) return;
 
         tbody.innerHTML = runewords.map(item => {
-            const badgeHtml = item.isLadder 
-                ? '<span style="display:inline-block; margin-left:8px; padding:2px 6px; font-size:0.68rem; font-weight:normal; background:rgba(239, 68, 68, 0.15); color:#ef4444; border:1px solid rgba(239, 68, 68, 0.3); border-radius:4px; vertical-align:middle;">🔥 래더전용</span>' 
-                : '<span style="display:inline-block; margin-left:8px; padding:2px 6px; font-size:0.68rem; font-weight:normal; background:rgba(16, 185, 129, 0.15); color:#10b981; border:1px solid rgba(16, 185, 129, 0.3); border-radius:4px; vertical-align:middle;">✨ 비래더가능</span>';
+            const badgeHtml = runewordLadderBadge(item);
 
             return `
                 <tr class="searchable-item">
                     <td class="highlight">
-                        <span class="item-inline" onclick="openRuneModal(${item.id})" style="cursor:pointer; display:inline-flex; align-items:center;">
+                        <span class="item-inline" onclick="openRuneModal(${item.id})" style="cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
                             ${item.legacyKey} ${badgeHtml}
                         </span>
                     </td>
