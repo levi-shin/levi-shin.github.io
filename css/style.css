@@ -407,7 +407,8 @@ td ul li { margin-bottom: 5px; }
 
 .side-ad { width: 160px; flex: 0 0 160px; position: sticky; top: 20px; min-height: 200px; z-index: 50; display: flex; justify-content: center; }
 .side-ad-inner { width: 160px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.mobile-ad { display: none; width: 100%; margin: 15px 0; overflow: hidden; }
+.mobile-ad { display: none; width: 100%; margin: 0; padding: 0; overflow: hidden; min-height: 0; }
+ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0 !important; }
 
 /* 전역 통합 검색 결과 드롭다운 스타일 */
 #global-search-dropdown {
@@ -433,8 +434,15 @@ td ul li { margin-bottom: 5px; }
 }
 
 @media (max-width: 1200px) {
-    .side-ad { display: none !important; width: 0 !important; height: 0 !important; }
-    .mobile-ad { display: block; }
+    .side-ad { display: none !important; width: 0 !important; height: 0 !important; min-height: 0 !important; }
+    .mobile-ad { display: block; margin: 0; min-height: 0; }
+    .mobile-ad:has(ins.adsbygoogle[data-ad-status="filled"]) { margin: 10px 0; }
+    .mobile-ad:not(:has(ins.adsbygoogle[data-ad-status="filled"])) {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
     
     .page-shell { 
         display: block !important; 
