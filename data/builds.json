@@ -237,7 +237,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치(모나크 156), 나머지 생명력 올인<br><strong>⚡ 패캐:</strong> 종결 117% (9프레임) — 에슈타 40 + 그리폰 25 + 영혼 35 + 스웹 20 + 마수 20 = 140<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 번개 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 번개(20) → 번개 숙련(20) → 연쇄 번개(20) → 충전된 화살(20) → 회오리 번개(노바)<br><strong>📌 근거:</strong> Maxroll Lightning Sorceress Standard BiS · 나무위키 명굴 체라 · 인벤 에슈타+그리폰+무한 용병"
+      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치(모나크 156), 나머지 생명력 올인<br><strong>⚡ 패캐:</strong> 종결 117% (9프레임) — 에슈타 40 + 그리폰 25 + 영혼 35 + 스웹 20 + 마수 20 = 140<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 번개 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 번개(20) → 번개 숙련(20) → 연쇄 번개(20) → 충전된 화살(20) → 회오리 번개(노바)<br><strong>📌 근거:</strong> Maxroll Lightning Sorceress Standard BiS · 나무위키 명굴 체라 · 인벤 에슈타+그리폰+무한 용병",
+      "badge": "체라소서"
     },
     {
       "id": 70002,
@@ -455,7 +456,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>❄️ 패캐:</strong> 종결 105% (9프레임) — 데스파덤 20 + 영혼 35 + 스웹 20 + 마수 20 + 패캐링 10. 쌍조던만 끼면 95로 10프레임에 머무름<br><strong>🎒 인벤토리:</strong> 새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참, 애니/횃불<br><strong>❄️ 스킬:</strong> 눈보라(20), 얼음살(20), 빙하의 창(20), 냉기 숙련(20)<br><strong>📌 근거:</strong> Maxroll Blizzard Sorceress · Death's Fathom + Nightwing's Veil 종결 · 용병은 마나 유지를 위해 통찰이 표준(무한은 라깍 추가분)"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>❄️ 패캐:</strong> 종결 105% (9프레임) — 데스파덤 20 + 영혼 35 + 스웹 20 + 마수 20 + 패캐링 10. 쌍조던만 끼면 95로 10프레임에 머무름<br><strong>🎒 인벤토리:</strong> 새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참, 애니/횃불<br><strong>❄️ 스킬:</strong> 눈보라(20), 얼음살(20), 빙하의 창(20), 냉기 숙련(20)<br><strong>📌 근거:</strong> Maxroll Blizzard Sorceress · Death's Fathom + Nightwing's Veil 종결 · 용병은 마나 유지를 위해 통찰이 표준(무한은 라깍 추가분)",
+      "badge": "극블리소서"
     },
     {
       "id": 70003,
@@ -671,7 +673,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 홀리실드 켠 상태 블럭 75%까지 민첩, 나머지 생명력<br><strong>🔨 패캐:</strong> 종결 125% — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 + 패캐링 10. 호즈(자카룸) 방패를 쓰면 패캐가 빠져 75~105 구간<br><strong>🎒 인벤토리:</strong> 전투 스킬참, 애니참, 횃불참, 생명/레지 스몰참<br><strong>🔨 스킬:</strong> 축복받은 망치(20), 집중(20), 원기(20), 조준(20), 신성한 방패<br><strong>📌 근거:</strong> Maxroll / D2Runewizard Hammerdin BiS · 국내 125패캐 햄딘 표준"
+      "info": "<strong>📊 스탯:</strong> 홀리실드 켠 상태 블럭 75%까지 민첩, 나머지 생명력<br><strong>🔨 패캐:</strong> 종결 125% — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 + 패캐링 10. 호즈(자카룸) 방패를 쓰면 패캐가 빠져 75~105 구간<br><strong>🎒 인벤토리:</strong> 전투 스킬참, 애니참, 횃불참, 생명/레지 스몰참<br><strong>🔨 스킬:</strong> 축복받은 망치(20), 집중(20), 원기(20), 조준(20), 신성한 방패<br><strong>📌 근거:</strong> Maxroll / D2Runewizard Hammerdin BiS · 국내 125패캐 햄딘 표준",
+      "badge": "햄딘"
     },
     {
       "id": 70004,
@@ -883,7 +886,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 홀리실드 블럭 75%, 나머지 생명력<br><strong>🛡️ 핵심:</strong> 기욤(강타 15) + 고어(강타 15) + 고뇌로 우버 강타 스택. 배신 갑옷으로 흐리기 사전버프 후 본세팅 교체<br><strong>🎒 인벤토리:</strong> 애니참, 횃불참, 올레지/생명 스몰참, 물리 파괴참(선택)<br><strong>🛡️ 스킬:</strong> 강타(20), 신성한 방패(20), 광신(20), 돌진·구원 1씩<br><strong>📌 근거:</strong> Maxroll Uber Smiter · 고뇌+망명+기욤+드라쿨+고어 국내외 공통 종결"
+      "info": "<strong>📊 스탯:</strong> 홀리실드 블럭 75%, 나머지 생명력<br><strong>🛡️ 핵심:</strong> 기욤(강타 15) + 고어(강타 15) + 고뇌로 우버 강타 스택. 배신 갑옷으로 흐리기 사전버프 후 본세팅 교체<br><strong>🎒 인벤토리:</strong> 애니참, 횃불참, 올레지/생명 스몰참, 물리 파괴참(선택)<br><strong>🛡️ 스킬:</strong> 강타(20), 신성한 방패(20), 광신(20), 돌진·구원 1씩<br><strong>📌 근거:</strong> Maxroll Uber Smiter · 고뇌+망명+기욤+드라쿨+고어 국내외 공통 종결",
+      "badge": "슴딘"
     },
     {
       "id": 70005,
@@ -1079,7 +1083,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>💀 핵심:</strong> 본인 야수(광신) + 용병 무한(선고) + 골수걸음(해골 숙련). 대안은 1막 신념 용병 + 본인 화이트/CTA<br><strong>🎒 인벤토리:</strong> 소환 스킬참, 애니참, 횃불참<br><strong>💀 스킬:</strong> 해골 되살리기(20), 해골 숙련(20), 시체 폭발(20), 마법사 해골·부활 분배<br><strong>📌 근거:</strong> Maxroll Summon Necromancer · 야수+수수께끼+골수걸음 국내 종결"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>💀 핵심:</strong> 본인 야수(광신) + 용병 무한(선고) + 골수걸음(해골 숙련). 대안은 1막 신념 용병 + 본인 화이트/CTA<br><strong>🎒 인벤토리:</strong> 소환 스킬참, 애니참, 횃불참<br><strong>💀 스킬:</strong> 해골 되살리기(20), 해골 숙련(20), 시체 폭발(20), 마법사 해골·부활 분배<br><strong>📌 근거:</strong> Maxroll Summon Necromancer · 야수+수수께끼+골수걸음 국내 종결",
+      "badge": "조독넥"
     },
     {
       "id": 70006,
@@ -1261,7 +1266,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>💀 패캐:</strong> 125% 목표 — 화이트 20 + 영혼 35 + 스웹 20 + 트랑장 20 + 투구 20 + 목걸이/반지 10<br><strong>🎒 인벤토리:</strong> 뼈와 독 스킬참, 애니/횃불참, 마법 파괴참(선택)<br><strong>💀 스킬:</strong> 뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)<br><strong>📌 근거:</strong> Maxroll Bone Necromancer · 화이트 완드+영혼+수수께끼 종결"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>💀 패캐:</strong> 125% 목표 — 화이트 20 + 영혼 35 + 스웹 20 + 트랑장 20 + 투구 20 + 목걸이/반지 10<br><strong>🎒 인벤토리:</strong> 뼈와 독 스킬참, 애니/횃불참, 마법 파괴참(선택)<br><strong>💀 스킬:</strong> 뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)<br><strong>📌 근거:</strong> Maxroll Bone Necromancer · 화이트 완드+영혼+수수께끼 종결",
+      "badge": "본넥"
     },
     {
       "id": 70007,
@@ -1488,7 +1494,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 블럭 빌드면 민첩 75% 블럭, 관통 빌드면 장비 요구치 후 생명력<br><strong>⚡ 공속:</strong> 52% IAS 브레이크포인트 (타이탄 자체 IAS + 장갑/대군주)<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 투창 스킬참, 예비 타이탄/썬더스트로크(수량 소진 대비)<br><strong>⚡ 스킬:</strong> 번개 분노(20), 충전된 일격(20), 번개 일격(20), 관통·발키리·미끼<br><strong>📌 근거:</strong> Maxroll Lightning Fury Amazon · 에테 타이탄+그리폰+서슬꼬리+무한 용병"
+      "info": "<strong>📊 스탯:</strong> 블럭 빌드면 민첩 75% 블럭, 관통 빌드면 장비 요구치 후 생명력<br><strong>⚡ 공속:</strong> 52% IAS 브레이크포인트 (타이탄 자체 IAS + 장갑/대군주)<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 투창 스킬참, 예비 타이탄/썬더스트로크(수량 소진 대비)<br><strong>⚡ 스킬:</strong> 번개 분노(20), 충전된 일격(20), 번개 일격(20), 관통·발키리·미끼<br><strong>📌 근거:</strong> Maxroll Lightning Fury Amazon · 에테 타이탄+그리폰+서슬꼬리+무한 용병",
+      "badge": "자바마"
     },
     {
       "id": 70008,
@@ -1653,7 +1660,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 활 요구 민첩, 나머지 생명력 (극딜은 민첩 추가)<br><strong>🏹 핵심:</strong> 본인 신념(광신) + 2막 용병 자존심(집중). 자존심은 폴암이라 1막 용병이 쓸 수 없음<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분새(물리 파괴참), 맥어뎀참<br><strong>🏹 스킬:</strong> 다발 사격(20), 속사(20), 유도 화살(20), 관통·발키리<br><strong>📌 근거:</strong> Maxroll Faith Bowazon · 신념+인내+안수+고어, 용병은 2막 Pride"
+      "info": "<strong>📊 스탯:</strong> 활 요구 민첩, 나머지 생명력 (극딜은 민첩 추가)<br><strong>🏹 핵심:</strong> 본인 신념(광신) + 2막 용병 자존심(집중). 자존심은 폴암이라 1막 용병이 쓸 수 없음<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분새(물리 파괴참), 맥어뎀참<br><strong>🏹 스킬:</strong> 다발 사격(20), 속사(20), 유도 화살(20), 관통·발키리<br><strong>📌 근거:</strong> Maxroll Faith Bowazon · 신념+인내+안수+고어, 용병은 2막 Pride",
+      "badge": "활마"
     },
     {
       "id": 70009,
@@ -1843,7 +1851,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 장비 힘 여유, 오더스(CTA) 후 생명력 3천대<br><strong>⚔️ 핵심:</strong> 고뇌 쌍수로 사냥 → 알리바바 스왑 후 아이템 찾기(Hork). 갑옷은 삥 특화 부(Wealth) 또는 텔포 수수께끼<br><strong>🎒 인벤토리:</strong> 기드의 운, 삥/매찬 그랜드참<br><strong>⚔️ 스킬:</strong> 소용돌이(20), 검 숙련(20), 아이템 찾기 50%+, 전투 명령/지시<br><strong>📌 근거:</strong> Maxroll Find Item / Whirlwind Barb · 고뇌 쌍수+챈스가드+금박+왜성 삥 세팅"
+      "info": "<strong>📊 스탯:</strong> 장비 힘 여유, 오더스(CTA) 후 생명력 3천대<br><strong>⚔️ 핵심:</strong> 고뇌 쌍수로 사냥 → 알리바바 스왑 후 아이템 찾기(Hork). 갑옷은 삥 특화 부(Wealth) 또는 텔포 수수께끼<br><strong>🎒 인벤토리:</strong> 기드의 운, 삥/매찬 그랜드참<br><strong>⚔️ 스킬:</strong> 소용돌이(20), 검 숙련(20), 아이템 찾기 50%+, 전투 명령/지시<br><strong>📌 근거:</strong> Maxroll Find Item / Whirlwind Barb · 고뇌 쌍수+챈스가드+금박+왜성 삥 세팅",
+      "badge": "왚바바"
     },
     {
       "id": 70010,
@@ -2041,7 +2050,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 생명력 3천 맞춘 뒤 힘 올인 (마법 피해 버서크는 힘 계수가 없음 — 생존용 생명 우선)<br><strong>⚔️ 핵심:</strong> 버서크는 마법 피해라 물리 면역을 무시. 시너지는 포효(Howl)<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분쇄(물리 파괴참은 주력기가 마법이라 선택), 생명/레지 스몰참<br><strong>⚔️ 스킬:</strong> 광전사(20), 포효(20), 검 숙련(20), 전투 명령/지시, 아이템 찾기<br><strong>📌 근거:</strong> Maxroll Berserk Barb · 고뇌+수수께끼+아리앗+리퍼스톨 용병"
+      "info": "<strong>📊 스탯:</strong> 생명력 3천 맞춘 뒤 힘 올인 (마법 피해 버서크는 힘 계수가 없음 — 생존용 생명 우선)<br><strong>⚔️ 핵심:</strong> 버서크는 마법 피해라 물리 면역을 무시. 시너지는 포효(Howl)<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분쇄(물리 파괴참은 주력기가 마법이라 선택), 생명/레지 스몰참<br><strong>⚔️ 스킬:</strong> 광전사(20), 포효(20), 검 숙련(20), 전투 명령/지시, 아이템 찾기<br><strong>📌 근거:</strong> Maxroll Berserk Barb · 고뇌+수수께끼+아리앗+리퍼스톨 용병",
+      "badge": "버서크"
     },
     {
       "id": 70011,
@@ -2247,7 +2257,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인<br><strong>🌪️ 패캐:</strong> 99% (10프레임) 필수 — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 = 115. 163%는 9프레임이나 종결 비용 대비 99가 표준<br><strong>🎒 인벤토리:</strong> 원소 스킬참, 애니참, 횃불참<br><strong>🌪️ 스킬:</strong> 돌풍(20), 회오리바람(20), 허리케인(20), 회오리 갑옷, 참나무 현자<br><strong>📌 근거:</strong> Maxroll Wind Druid · 오심+영혼+잘랄+수수께끼"
+      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인<br><strong>🌪️ 패캐:</strong> 99% (10프레임) 필수 — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 = 115. 163%는 9프레임이나 종결 비용 대비 99가 표준<br><strong>🎒 인벤토리:</strong> 원소 스킬참, 애니참, 횃불참<br><strong>🌪️ 스킬:</strong> 돌풍(20), 회오리바람(20), 허리케인(20), 회오리 갑옷, 참나무 현자<br><strong>📌 근거:</strong> Maxroll Wind Druid · 오심+영혼+잘랄+수수께끼",
+      "badge": "엘리드루"
     },
     {
       "id": 70012,
@@ -2422,7 +2433,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 무기 민첩 요구치, 나머지 생명력<br><strong>🐺 핵심:</strong> 탈태(Metamorphosis)가 변신 드루 투구 종결(패치 3.3 강화판은 래더 전용). 본인이 리퍼(노화)를 들면 용병은 1막 신념(광신) — 자존심(폴암)을 1막에 쥐어주는 세팅은 불가<br><strong>🎒 인벤토리:</strong> 변신 스킬참, 맥어뎀/생명 스몰참<br><strong>🐺 스킬:</strong> 늑대인간(20), 변신술(20), 분노(20), 심장 강타 시너지<br><strong>📌 근거:</strong> Maxroll Fury Druid · 탈태+에테 리퍼+1막 Faith 용병"
+      "info": "<strong>📊 스탯:</strong> 무기 민첩 요구치, 나머지 생명력<br><strong>🐺 핵심:</strong> 탈태(Metamorphosis)가 변신 드루 투구 종결(패치 3.3 강화판은 래더 전용). 본인이 리퍼(노화)를 들면 용병은 1막 신념(광신) — 자존심(폴암)을 1막에 쥐어주는 세팅은 불가<br><strong>🎒 인벤토리:</strong> 변신 스킬참, 맥어뎀/생명 스몰참<br><strong>🐺 스킬:</strong> 늑대인간(20), 변신술(20), 분노(20), 심장 강타 시너지<br><strong>📌 근거:</strong> Maxroll Fury Druid · 탈태+에테 리퍼+1막 Faith 용병",
+      "badge": "늑드루"
     },
     {
       "id": 70013,
@@ -2634,7 +2646,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 장비 요구치 이후 생명력 올인<br><strong>🥋 핵심:</strong> 모자이크 쌍수로 마무리기 충전 미소모 100%. 불사조 일격의 화/냉/번 3차지 후 용의 발톱/용의 꼬리<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개) 또는 화염/물리 파괴참, 무술 스킬참<br><strong>🥋 스킬:</strong> 불사조 일격(20), 천둥의 주먹(20), 얼음 칼날(20), 용의 발톱<br><strong>📌 근거:</strong> Maxroll Phoenix Strike Mosaic · 모자이크 쌍수+수수께끼+그리폰. 패치 3.3에서 레거시 모자이크는 래더/비레더 모두 제작 가능"
+      "info": "<strong>📊 스탯:</strong> 장비 요구치 이후 생명력 올인<br><strong>🥋 핵심:</strong> 모자이크 쌍수로 마무리기 충전 미소모 100%. 불사조 일격의 화/냉/번 3차지 후 용의 발톱/용의 꼬리<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개) 또는 화염/물리 파괴참, 무술 스킬참<br><strong>🥋 스킬:</strong> 불사조 일격(20), 천둥의 주먹(20), 얼음 칼날(20), 용의 발톱<br><strong>📌 근거:</strong> Maxroll Phoenix Strike Mosaic · 모자이크 쌍수+수수께끼+그리폰. 패치 3.3에서 레거시 모자이크는 래더/비레더 모두 제작 가능",
+      "badge": "모자이크씬"
     },
     {
       "id": 70014,
@@ -2852,7 +2865,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인<br><strong>🥋 패캐:</strong> 102% (트랩 설치 체감) — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 = 115<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 덫 스킬참<br><strong>🥋 스킬:</strong> 번개 파수꾼(20), 죽음 파수꾼(20), 감전 그물(20), 충전된 화살 파수꾼 시너지<br><strong>📌 근거:</strong> Maxroll Lightning Sentry · 오심+영혼+무한 용병. 초승달은 -35 라깍 가성비"
+      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인<br><strong>🥋 패캐:</strong> 102% (트랩 설치 체감) — 오심 40 + 영혼 35 + 스웹 20 + 마수 20 = 115<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 덫 스킬참<br><strong>🥋 스킬:</strong> 번개 파수꾼(20), 죽음 파수꾼(20), 감전 그물(20), 충전된 화살 파수꾼 시너지<br><strong>📌 근거:</strong> Maxroll Lightning Sentry · 오심+영혼+무한 용병. 초승달은 -35 라깍 가성비",
+      "badge": "트랩씬"
     },
     {
       "id": 70015,
@@ -3062,7 +3076,8 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치만, 민첩/마력 0, 나머지 생명력<br><strong>⚔️ 패캐:</strong> 종결 125% — 통찰 35 + 지옥파수꾼 20 + 트랑장 20 + 스웹 20 + 패캐링 10 + 목걸이/기타 20. 메아리는 공속이 아니라 패캐 스킬<br><strong>🎒 인벤토리:</strong> 기괴 스킬참보다 생명/레지/물리 파괴참이 우선인 세팅이 많음 (인벤 메아리 글 기준)<br><strong>⚔️ 스킬:</strong> 메아리치는 타격(20), 거울상 칼날(20), 칼날 이동, 악마 속박, 소모, 무기력 1<br><strong>📌 근거:</strong> 디아2 인벤 메아리 종결 · 국내 125패캐 통찰+불사조 합의 · Maxroll Echoing Strike Warlock"
+      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치만, 민첩/마력 0, 나머지 생명력<br><strong>⚔️ 패캐:</strong> 종결 125% — 통찰 35 + 지옥파수꾼 20 + 트랑장 20 + 스웹 20 + 패캐링 10 + 목걸이/기타 20. 메아리는 공속이 아니라 패캐 스킬<br><strong>🎒 인벤토리:</strong> 기괴 스킬참보다 생명/레지/물리 파괴참이 우선인 세팅이 많음 (인벤 메아리 글 기준)<br><strong>⚔️ 스킬:</strong> 메아리치는 타격(20), 거울상 칼날(20), 칼날 이동, 악마 속박, 소모, 무기력 1<br><strong>📌 근거:</strong> 디아2 인벤 메아리 종결 · 국내 125패캐 통찰+불사조 합의 · Maxroll Echoing Strike Warlock",
+      "badge": "메아리"
     },
     {
       "id": 70016,
@@ -3297,7 +3312,8 @@
           }
         ]
       },
-      "info": "<strong>🔥 운영:</strong> 텔레포트로 밀도 중앙 진입 → 화염 고리/화염파 + 종말(아포칼립스) 난사. 워록은 양손 지팡이+그리모어/방패를 동시에 착용 가능<br><strong>🔥 패캐:</strong> 집착 65 + 꺼불/지옥파수꾼 20 + 스웹 20 + 마수 20 = 125 구간<br><strong>🎒 세팅 핵심:</strong> 꺼불(깜빡이는 불꽃)이 인벤 딜계산 기준 투구 종결. 불사조 ID는 30012 (30030은 꺼불이라 기존 데이터는 방패·투구가 뒤바뀌어 있었음)<br><strong>🔥 스킬:</strong> 종말(20), 화염파(20), 화염 인장/무기력, 소모<br><strong>📌 근거:</strong> 디아2 인벤 '종말 악마술사 종결 아이템' · Maxroll Fire Warlock · D2ItemStore Obsession+Ars Al'Diabolos"
+      "info": "<strong>🔥 운영:</strong> 텔레포트로 밀도 중앙 진입 → 화염 고리/화염파 + 종말(아포칼립스) 난사. 워록은 양손 지팡이+그리모어/방패를 동시에 착용 가능<br><strong>🔥 패캐:</strong> 집착 65 + 꺼불/지옥파수꾼 20 + 스웹 20 + 마수 20 = 125 구간<br><strong>🎒 세팅 핵심:</strong> 꺼불(깜빡이는 불꽃)이 인벤 딜계산 기준 투구 종결. 불사조 ID는 30012 (30030은 꺼불이라 기존 데이터는 방패·투구가 뒤바뀌어 있었음)<br><strong>🔥 스킬:</strong> 종말(20), 화염파(20), 화염 인장/무기력, 소모<br><strong>📌 근거:</strong> 디아2 인벤 '종말 악마술사 종결 아이템' · Maxroll Fire Warlock · D2ItemStore Obsession+Ars Al'Diabolos",
+      "badge": "종말"
     }
   ]
 }
