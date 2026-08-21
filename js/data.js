@@ -39,15 +39,16 @@ function indexRecords(type, records) {
 export async function loadData() {
     if (loadPromise) return loadPromise;
 
+    const dataVer = "10";
     loadPromise = Promise.all([
-        fetch('./data/meta.json').then(r => r.json()),
-        fetch('./data/items.json').then(r => r.json()),
-        fetch('./data/uniques.json').then(r => r.json()),
-        fetch('./data/runewords.json').then(r => r.json()),
-        fetch('./data/sunders.json').then(r => r.json()),
-        fetch('./data/charms.json').then(r => r.json()),
-        fetch('./data/ubers.json').then(r => r.json()),
-        fetch('./data/builds.json').then(r => r.json())
+        fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/uniques.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/runewords.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/sunders.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/charms.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/ubers.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/builds.json?v=${dataVer}`).then(r => r.json())
     ]).then(([meta, items, uniques, runewords, sunders, charms, ubers, builds]) => {
         DATA.meta = meta;
         DATA.items = items;

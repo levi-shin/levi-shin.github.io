@@ -42,15 +42,16 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
+    const dataVer = "10";
     loadPromise = Promise.all([
-        fetch('./data/meta.json').then(r => r.json()),
-        fetch('./data/items.json').then(r => r.json()),
-        fetch('./data/uniques.json').then(r => r.json()),
-        fetch('./data/runewords.json').then(r => r.json()),
-        fetch('./data/sunders.json').then(r => r.json()),
-        fetch('./data/charms.json').then(r => r.json()),
-        fetch('./data/ubers.json').then(r => r.json()),
-        fetch('./data/builds.json').then(r => r.json())
+        fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/uniques.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/runewords.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/sunders.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/charms.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/ubers.json?v=${dataVer}`).then(r => r.json()),
+        fetch(`./data/builds.json?v=${dataVer}`).then(r => r.json())
     ]).then(([meta, items, uniques, runewords, sunders, charms, ubers, builds]) => {
         DATA.meta = meta;
         DATA.items = items;
@@ -1051,7 +1052,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch('data/patchnotes.json');
+        const response = await fetch('data/patchnotes.json?v=10');
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1098,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json');
+        const response = await fetch('data/runewords.json?v=10');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1130,7 +1131,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json'); 
+        const response = await fetch('data/builds.json?v=10'); 
         const data = await response.json();
         const builds = data.items; 
 
