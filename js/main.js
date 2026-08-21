@@ -614,6 +614,34 @@ function renderBuildContent(content = []) {
         return escapeHtml(segment.name || segment.target || "");
     }).join("");
 }
+function renderBuildGuide(data) {
+    const rows = [];
+    const pushRow = (label, value, extraClass = "") => {
+        if (!value) return;
+        rows.push(`<div class="item-stat${extraClass ? ` ${extraClass}` : ""}"><strong>${label}</strong><br>${escapeHtml(value)}</div>`);
+    };
+
+    pushRow("📊 스탯", data.stats);
+    pushRow("🎒 인벤토리", data.inventory);
+    pushRow("⚡ 스킬", data.skills);
+    pushRow("🎮 운영법", data.playstyle, "build-playstyle");
+
+    if (rows.length) return rows.join("");
+    return `<div class="item-stat">${data.info || ""}</div>`;
+}
+
+function buildPaperDollCopyText(data) {
+    let text = `[${data.title}] ${data.subtitle}\n\n`;
+    (data.slots || []).forEach(slot => {
+        text += `● ${slot.slot}: ${(slot.content || []).map(x => x.value || x.name || x.target || "").join("")}\n`;
+    });
+    if (data.stats) text += `\n📊 스탯: ${data.stats}`;
+    if (data.inventory) text += `\n🎒 인벤토리: ${data.inventory}`;
+    if (data.skills) text += `\n⚡ 스킬: ${data.skills}`;
+    if (data.playstyle) text += `\n🎮 운영법: ${data.playstyle}`;
+    return text;
+}
+
 function openPaperDollModal(buildId) {
     const data = getRecord("build", buildId);
     if (!data) {
@@ -658,12 +686,9 @@ function openPaperDollModal(buildId) {
     }
 
     gridEl.innerHTML = htmlContent;
-    document.getElementById("pdModalStats").innerHTML = `<div class="item-stat">${data.info || ""}</div>`;
+    document.getElementById("pdModalStats").innerHTML = renderBuildGuide(data);
 
-    currentPaperDollText = `[${data.title}] ${data.subtitle}\n\n`;
-    data.slots.forEach(slot => {
-        currentPaperDollText += `● ${slot.slot}: ${slot.content.map(x => x.value || x.name || x.target || "").join("")}\n`;
-    });
+    currentPaperDollText = buildPaperDollCopyText(data);
 
     document.getElementById("paperDollModal").classList.add("open");
     document.body.style.overflow = "hidden";
