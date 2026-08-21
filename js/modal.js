@@ -159,6 +159,12 @@ export function copyPaperDollValue() {
     }
 }
 
+function runewordLadderBadge(item) {
+    return (item.isLadder || item.ladder)
+        ? '<span class="ladder-badge ladder-only">🔥 래더 전용</span>'
+        : '<span class="ladder-badge ladder-ok">✨ 비래더가능</span>';
+}
+
 export function openRuneModal(runewordId) {
     const item = getRecord("runeword", runewordId);
     if (!item) {
@@ -166,11 +172,14 @@ export function openRuneModal(runewordId) {
         return;
     }
 
-    document.getElementById("dbModalTitle").textContent = item.name || item.legacyKey;
-    document.getElementById("dbModalSubtitle").textContent = "룬어 · " + (item.name || item.legacyKey);
+    const name = item.name || item.legacyKey;
+    const ladderBadge = runewordLadderBadge(item);
+    document.getElementById("dbModalTitle").innerHTML = `${escapeHtml(name)} ${ladderBadge}`;
+    document.getElementById("dbModalSubtitle").textContent = "룬어 · " + name;
     document.getElementById("dbModalIntro").textContent = "룬 조합 순서와 추천 종결 베이스, 그리고 으뜸 수치를 확인합니다.";
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>룬 조합 순서</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
+        `<div class="item-stat"><strong>래더 여부</strong><br>${ladderBadge}</div>
+         <div class="item-stat"><strong>룬 조합 순서</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
          <div class="item-stat"><strong>종결 권장 베이스</strong><br>${item.base}</div>
          <div class="item-stat"><strong>으뜸(최상급) 변동 옵션</strong><br>${item.stats}</div>`;
 
