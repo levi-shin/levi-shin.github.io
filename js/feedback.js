@@ -7,6 +7,10 @@
 export function openFeedbackModal() {
     const modal = document.getElementById('feedbackModal');
     if (modal) modal.style.display = 'flex';
+    const nickInput = document.getElementById('fbNick');
+    if (nickInput && !nickInput.value) {
+        nickInput.value = localStorage.getItem("d2_fb_nick") || "";
+    }
 }
 
 export function closeFeedbackModal() {
@@ -39,6 +43,9 @@ export function handleFeedbackSubmit(e) {
 
     const type = document.getElementById('fbType').value;
     const content = document.getElementById('fbContent').value;
+    const nickInput = document.getElementById('fbNick');
+    const nickname = (nickInput?.value || "").trim().slice(0, 20);
+    if (nickname) localStorage.setItem("d2_fb_nick", nickname);
     
     const part1 = "https://hooks.slack.com/services/";
     const part2 = "T02Q2UZ4WAE/B083RNE4GFK/";
@@ -53,6 +60,7 @@ export function handleFeedbackSubmit(e) {
             {
                 color: "#dfb15b",
                 fields: [
+                    { title: "👤 닉네임", value: nickname || "익명", short: true },
                     { title: "📌 제보 유형", value: type, short: true },
                     { title: "⏰ 접수 시간", value: new Date().toLocaleString(), short: true },
                     { title: "📝 상세 내용", value: content, short: false }

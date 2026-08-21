@@ -578,6 +578,10 @@
         
         <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
             <div style="margin-bottom: 14px;">
+                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">닉네임 <span style="color:#888; font-weight:normal;">(선택)</span></label>
+                <input type="text" id="fbNick" maxlength="20" autocomplete="nickname" placeholder="배틀넷/인벤 닉 · 비워도 제보됩니다" style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 14px;">
                 <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">제보 유형</label>
                 <select id="fbType" required style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none;">
                     <option value="누락 정보 제보">📌 누락된 아이템/스펙/조합법 제보</option>
@@ -603,9 +607,9 @@
 <a href="#" class="top-btn" title="맨 위로 이동">▲</a>
 
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
-<script src="js/legacy-globals.js?v=7"></script>
+<script src="js/legacy-globals.js?v=8"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-<script type="module" src="js/main.js?v=7"></script>
+<script type="module" src="js/main.js?v=8"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
