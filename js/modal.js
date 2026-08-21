@@ -118,9 +118,9 @@ export function openPaperDollModal(buildId) {
 
     if (data.merc) {
         let mercHtml = `
-            <div class="merc-doll-section desktop-only" style="grid-column: 1 / -1; margin-top: 15px; border-top: 1px dashed #444; padding-top: 10px;">
-                <div style="color: var(--gold-light); font-weight: bold; margin-bottom: 8px; font-size: 0.9rem;">🛡️ ${escapeHtml(data.merc.title)}</div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">`;
+            <div class="merc-doll-section">
+                <div class="merc-doll-title">🛡️ ${escapeHtml(data.merc.title)}</div>
+                <div class="merc-doll-gear">`;
 
         data.merc.gear.forEach(gear => {
             mercHtml += `

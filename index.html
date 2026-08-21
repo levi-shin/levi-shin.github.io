@@ -11,8 +11,7 @@
     <meta property="og:image" content="https://levi-shin.github.io/images/og-thumb.png">
     <meta property="og:url" content="https://levi-shin.github.io">
     <meta property="og:type" content="website">
-</head>
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=7">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -120,7 +119,7 @@
                 <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40002)">새로워진 추위의 파열 (냉기 파괴참)</span></td><td>괴물의 냉기 면역 파괴 + FHR +20% + 적 냉기 저항 -6%</td></tr>
                 <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40003)">새로워진 천상의 틈 (번개 파괴참)</span></td><td>괴물의 번개 면역 파괴 + FHR +24% + 적 번개 저항 -9%</td></tr>
                 <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40004)">새로워진 부패의 분열 (독 파괴참)</span></td><td>괴물의 독 면역 파괴 + 적 독 저항 -6% + 모든 능력치 +5</td></tr>
-                <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40005)">새로워진 뼈의 분새 (물리 파괴참)</span></td><td>괴물의 물리 면역 파괴 + 피해 +87% 증가 + 모든 능력치 +8</td></tr>
+                <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40005)">새로워진 뼈의 분쇄 (물리 파괴참)</span></td><td>괴물의 물리 면역 파괴 + 피해 +87% 증가 + 모든 능력치 +8</td></tr>
                 <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40006)">새로워진 칠흑의 천공 (마법 파괴참)</span></td><td>괴물의 마법 면역 파괴 + 이속 +7% + 적 마법 저항 -6%</td></tr>
             </tbody>
         </table>
@@ -209,7 +208,7 @@
                     </div>
                     <div class="paperdoll-slot" onclick="openUniqueModal(20007)" style="cursor:pointer;">
                         <div class="slot-title">용병 투구</div>
-                        <div class="slot-item unique"><span class="item-inline">에테르형 안다리엘의 두개골</span></div>
+                        <div class="slot-item unique"><span class="item-inline">에테르형 안다리엘의 두건</span></div>
                     </div>
                 </div>
             </div>
@@ -221,7 +220,7 @@
                 <div style="display: grid; grid-template-columns: 1fr; gap: 8px;">
                     <div class="paperdoll-slot" onclick="openRuneModal(30009)" style="cursor:pointer;">
                         <div class="slot-title">용병 무기</div>
-                        <div class="slot-item rune"><span class="item-inline">신념 (Faith)</span> 또는 <span class="item-inline" onclick="event.stopPropagation(); openRuneModal(30021)">자존심</span></div>
+                        <div class="slot-item rune"><span class="item-inline">신념 (Faith)</span></div>
                     </div>
                     <div class="paperdoll-slot" onclick="openRuneModal(30020)" style="cursor:pointer;">
                         <div class="slot-title">용병 갑옷</div>
@@ -229,7 +228,7 @@
                     </div>
                     <div class="paperdoll-slot" onclick="openUniqueModal(20007)" style="cursor:pointer;">
                         <div class="slot-title">용병 투구</div>
-                        <div class="slot-item unique"><span class="item-inline">안다리엘의 두개골</span></div>
+                        <div class="slot-item unique"><span class="item-inline">안다리엘의 두건</span></div>
                     </div>
                 </div>
             </div>
@@ -243,9 +242,9 @@
                         <div class="slot-title">용병 무기 & 방패</div>
                         <div class="slot-item rune"><span class="item-inline">영혼 검</span> + 모나크 방패</div>
                     </div>
-                    <div class="paperdoll-slot" onclick="openRuneModal(30011)" style="cursor:pointer;">
+                    <div class="paperdoll-slot" onclick="openRuneModal(30020)" style="cursor:pointer;">
                         <div class="slot-title">용병 갑옷</div>
-                        <div class="slot-item rune">소용돌이 또는 <span class="item-inline">명예의 굴레</span></div>
+                        <div class="slot-item rune"><span class="item-inline">인내</span> 또는 <span class="item-inline" onclick="event.stopPropagation(); openRuneModal(30011)">명예의 굴레</span></div>
                     </div>
                     <div class="paperdoll-slot" onclick="openUniqueModal(20005)" style="cursor:pointer;">
                         <div class="slot-title">용병 투구</div>
@@ -269,7 +268,7 @@
                     </div>
                     <div class="paperdoll-slot" onclick="openUniqueModal(20016)" style="cursor:pointer;">
                         <div class="slot-title">용병 투구</div>
-                        <div class="slot-item unique"><span class="item-inline">슬레이어의 갈기</span> 또는 기욤</div>
+                        <div class="slot-item unique"><span class="item-inline">아리앗의 얼굴</span> 또는 <span class="item-inline" onclick="event.stopPropagation(); openUniqueModal(20033)">기욤의 얼굴</span></div>
                     </div>
                 </div>
             </div>
@@ -607,9 +606,9 @@
 <a href="#" class="top-btn" title="맨 위로 이동">▲</a>
 
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
-<script src="js/legacy-globals.js?v=8"></script>
+<script src="js/legacy-globals.js?v=9"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-<script type="module" src="js/main.js?v=8"></script>
+<script type="module" src="js/main.js?v=9"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {

@@ -391,6 +391,9 @@ tr:hover { background: #1f1f28; }
 
 .paperdoll-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
 .paperdoll-slot { background: #111115; border: 1px solid var(--card-border); border-radius: 8px; padding: 12px; transition: all 0.2s; display: flex; flex-direction: column; justify-content: center; }
+.merc-doll-section { grid-column: 1 / -1; margin-top: 15px; border-top: 1px dashed #444; padding-top: 10px; }
+.merc-doll-title { color: var(--gold-light); font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; }
+.merc-doll-gear { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .paperdoll-slot:hover { border-color: var(--gold); background: #1a1a24; }
 .slot-title { font-size: 0.75rem; color: var(--gold); font-weight: bold; margin-bottom: 6px; border-bottom: 1px solid #333; padding-bottom: 4px; letter-spacing: 0.5px; }
 .slot-item { font-size: 0.9rem; color: var(--text-bright); font-weight: 600; line-height: 1.4; }
@@ -426,6 +429,7 @@ td ul li { margin-bottom: 5px; }
 /* 미디어쿼리 반응형 */
 @media screen and (max-width: 767px) {
     .desktop-only { display: none !important; }
+    .merc-doll-gear { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1200px) {

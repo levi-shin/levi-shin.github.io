@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.4",
+  "siteVersion": "v1.0.5",
   "lastUpdated": "2026-08-21",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.5",
+      "date": "2026-08-21",
+      "desc": "노바소서·독넥 종결 추가. 모바일 용병 표시, 섹션8 용병 가이드, 빌드 필터 태그, 뼈의 분쇄 표기, 워록 유니크 옵션 교정"
+    },
     {
       "version": "v1.0.4",
       "date": "2026-08-21",

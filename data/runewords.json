@@ -457,5 +457,16 @@
     "base": "3소켓 갑옷",
     "stats": "삥 <strong>300%</strong> / 매찬 <strong>100%</strong> / 민첩 +10 / 처치 시 마나 +2",
     "isLadder": false
+  },
+  {
+    "id": 30046,
+    "legacyKey": "찔레|Bramble",
+    "name": "찔레",
+    "eng": "Bramble",
+    "aliases": ["브램블", "가시덤불", "Bramble"],
+    "recipe": "랄(Ral) + 오름(Ohm) + 수르(Sur) + 에드(Eth)",
+    "base": "4소켓 갑옷 (아콘/더스크 권장)",
+    "stats": "장착 시 가시(Thorns) 오라 <strong>15~21레벨</strong> / 타격 회복 <strong>+50%</strong> / 독 기술 피해 <strong>+25~50%</strong> / 방어력 +300 / 최대 마나 5% / 마나 재생 15% / 최대 냉기 저항 +5% / 화염 저항 +30% / 독 저항 +100% / 처치 시 생명력 +13",
+    "isLadder": false
   }
 ]

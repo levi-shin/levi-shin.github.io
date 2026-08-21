@@ -86,7 +86,7 @@ function getRecord(type, id) {
 }
 
 // 기존 빌드 데이터에 남아 있는 이름 기반/변형 표기를 안정적인 숫자 ID로 연결합니다.
-// 예: "안다리엘의 두개골 (에테)" / "에테르형 안다리엘의 두개골"
+// 예: "안다리엘의 두건 (에테)" / "에테르형 안다리엘의 두건"
 // -> uniques.json의 legacyKey "안다리엘의 두개골|Andariel's Visage" -> ID 20007
 function normalizeLookupName(value = "") {
     return String(value)
@@ -668,9 +668,9 @@ function openPaperDollModal(buildId) {
 
     if (data.merc) {
         let mercHtml = `
-            <div class="merc-doll-section desktop-only" style="grid-column: 1 / -1; margin-top: 15px; border-top: 1px dashed #444; padding-top: 10px;">
-                <div style="color: var(--gold-light); font-weight: bold; margin-bottom: 8px; font-size: 0.9rem;">🛡️ ${escapeHtml(data.merc.title)}</div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">`;
+            <div class="merc-doll-section">
+                <div class="merc-doll-title">🛡️ ${escapeHtml(data.merc.title)}</div>
+                <div class="merc-doll-gear">`;
 
         data.merc.gear.forEach(gear => {
             mercHtml += `
@@ -1139,7 +1139,11 @@ async function renderBuildCards() {
         builds.forEach(build => {
             let badgeText = build.badge || build.subtitle || build.title.split(' ')[0]; 
             let titleText = build.subtitle || build.title;
-            let descText = build.info ? build.info.replace(/<[^>]*>?/gm, '').substring(0, 45) + '...' : '클릭하여 상세 장비 세팅을 확인하세요.';
+            let descText = build.stats
+                || (build.info ? build.info.replace(/<[^>]*>?/gm, '') : '');
+            descText = descText.trim();
+            if (!descText) descText = '클릭하여 상세 장비 세팅을 확인하세요.';
+            else if (descText.length > 72) descText = descText.substring(0, 72) + '...';
 
             let tagAttr = Array.isArray(build.tags) && build.tags.length
                 ? build.tags.join(',')
