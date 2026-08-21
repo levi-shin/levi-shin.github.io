@@ -583,8 +583,21 @@ ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; height: 0
         padding-right: 4px;
     }
 
-    .dropcalc-form { flex-direction: column; align-items: stretch; }
-    .dropcalc-submit { width: 100%; height: auto; }
+    .dropcalc-form {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 12px;
+    }
+    .dropcalc-field,
+    .dropcalc-field-grow,
+    .dropcalc-submit {
+        flex: 0 0 auto;
+        min-width: 0;
+        width: 100%;
+    }
+    .dropcalc-submit { height: 42px; }
 
     .main-content { 
         width: 100% !important; 
