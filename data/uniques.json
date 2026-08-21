@@ -302,14 +302,14 @@
   },
   {
     "id": 20029,
-    "legacyKey": "선혈 기수|Blood Rider",
+    "legacyKey": "선혈 기수|Gore Rider",
     "name": "선혈 기수",
-    "eng": "Blood Rider",
-    "aliases": ["블러드라이더", "Blood Rider", "고블린토우"],
+    "eng": "Gore Rider",
+    "aliases": ["고어라이더", "고어", "Gore Rider", "GoreRider", "블러드라이더"],
     "image": "uniques/boodrider.png",
-    "base": "뼈 부츠 (Bone Boots)",
-    "drop": "지옥(헬) TC85 사냥터, 공포의 영역",
-    "stats": "달리기/걷기 속도 <strong>+30%</strong> / 생명력 흡수 <strong>+5%</strong> / 방어력 상승 <strong>+100~150%</strong>"
+    "base": "헤비 부츠 (Heavy Boots)",
+    "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+160~200%</strong> / 달리기·걷기 <strong>+30%</strong> / 강타(Crushing Blow) <strong>15%</strong> / 치명타 <strong>15%</strong> / 개방 상처 <strong>10%</strong> / 최대 스태미나 +20 / 요구치 <strong>-25%</strong>"
   },
   {
     "id": 20030,
@@ -321,5 +321,185 @@
     "base": "튤워 (Tulwar)",
     "drop": "지옥(헬) 메피스토, TC85 사냥터",
     "stats": "피해 상승 <strong>+60~120%</strong> / 삥 레벨당 <strong>+2.5%</strong> / 매찬 레벨당 <strong>+1%</strong> / 민첩 <strong>+5~15</strong> / 마나 <strong>+15</strong> / 소켓 <strong>2</strong>"
+  },
+  {
+    "id": 20031,
+    "legacyKey": "트래그울의 발톱|Trang-Oul's Claws",
+    "name": "트래그울의 발톱",
+    "eng": "Trang-Oul's Claws",
+    "aliases": ["트랑울", "트랑장", "트랑울 장갑", "Trang", "Trangs"],
+    "base": "헤비 브레이서 (Heavy Bracers)",
+    "drop": "지옥(헬) 메피스토, 세트 아이템 (트래그울의 화신)",
+    "stats": "시전 속도 <strong>+20%</strong> / 냉기 저항 <strong>+30%</strong> / 방어력 <strong>+30</strong> / 독 기술 피해 <strong>+25%</strong> / 저주 스킬 <strong>+2</strong> (강령술사)"
+  },
+  {
+    "id": 20032,
+    "legacyKey": "사신의 종소리|The Reaper's Toll",
+    "name": "사신의 종소리",
+    "eng": "The Reaper's Toll",
+    "aliases": ["리퍼스톨", "리퍼", "Reaper's Toll", "Reapers Toll"],
+    "base": "쓰레셔 (Thresher)",
+    "drop": "지옥(헬) 바알, 디아블로, TC85 사냥터 (에테 으뜸)",
+    "stats": "피해 상승 <strong>+190~240%</strong> / 대상 방어 무시 / 치명타 <strong>33%</strong> / 라이프 흡수 <strong>11~15%</strong> / 타격 시 33% 확률 1레벨 노화(Decrepify) / 요구치 <strong>-25%</strong>"
+  },
+  {
+    "id": 20033,
+    "legacyKey": "기욤의 얼굴|Guillaume's Face",
+    "name": "기욤의 얼굴",
+    "eng": "Guillaume's Face",
+    "aliases": ["기욤", "Guillaume", "Guillaumes"],
+    "base": "윙드 헬름 (Winged Helm)",
+    "drop": "지옥(헬) 메피스토, 세트 아이템 (고아의 부름)",
+    "stats": "방어력 상승 <strong>+120%</strong> / 강타 <strong>15%</strong> / 치명타 <strong>35%</strong> / 공격 속도 <strong>+30%</strong> / 힘 <strong>+15</strong>"
+  },
+  {
+    "id": 20034,
+    "legacyKey": "서슬꼬리|Razortail",
+    "name": "서슬꼬리",
+    "eng": "Razortail",
+    "aliases": ["레이저테일", "관통벨트", "관통 벨트", "Razortail"],
+    "base": "샤크스킨 벨트 (Sharkskin Belt)",
+    "drop": "지옥(헬) 메피스토, 안다리엘, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+120~150%</strong> / 관통 확률 <strong>+33%</strong> / 최대 피해 +10 / 민첩 +15 / 가시 피해 15"
+  },
+  {
+    "id": 20035,
+    "legacyKey": "폭풍막이|Stormshield",
+    "name": "폭풍막이",
+    "eng": "Stormshield",
+    "aliases": ["스톰쉴드", "Stormshield", "SS"],
+    "base": "모나크 (Monarch)",
+    "drop": "지옥(헬) 디아블로, 바알, TC85 사냥터",
+    "stats": "피해 감소 <strong>35%</strong> / 블럭 확률 증가 / 냉기 저항 +60% / 번개 저항 +25% / 힘 +30 / 피격 시 번개 반사"
+  },
+  {
+    "id": 20036,
+    "legacyKey": "골수걸음|Marrowwalk",
+    "name": "골수걸음",
+    "eng": "Marrowwalk",
+    "aliases": ["마로우워크", "Marrowwalk"],
+    "base": "본위브 부츠 (Boneweave Boots)",
+    "drop": "지옥(헬) 바알, 디아블로, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+170~200%</strong> / 해골 숙련 <strong>+1~2</strong> / 해골 되살리기 +1~2 / 힘 +20~30 / 마나 재생 10% / 달리기·걷기 +20% / 충전: 뼈 감옥·라이프 탭"
+  },
+  {
+    "id": 20037,
+    "legacyKey": "잘랄의 갈기|Jalal's Mane",
+    "name": "잘랄의 갈기",
+    "eng": "Jalal's Mane",
+    "aliases": ["잘랄", "Jalal", "Jalals Mane"],
+    "base": "토테믹 마스크 (Totemic Mask)",
+    "drop": "지옥(헬) 메피스토, 바알, TC85 사냥터",
+    "stats": "드루이드 스킬 <strong>+2</strong> / 변신 스킬 <strong>+2</strong> / 타격 회복 <strong>+30%</strong> / 방어력 상승 <strong>+150~200%</strong> / 힘·에너지 +20 / 모든 저항 +30 / 처치 시 마나 +5"
+  },
+  {
+    "id": 20038,
+    "legacyKey": "안수|Laying of Hands",
+    "name": "안수",
+    "eng": "Laying of Hands",
+    "aliases": ["레잉오브핸즈", "고무장갑", "Laying of Hands", "LoH"],
+    "base": "브램블 미튼 (Bramble Mitts)",
+    "drop": "지옥(헬) 세트 아이템 (제자의 세트)",
+    "stats": "공격 속도 <strong>+20%</strong> / 악마에게 주는 피해 <strong>+350%</strong> / 화염 저항 +50% / 타격 시 10% 확률 3레벨 신성한 볼트"
+  },
+  {
+    "id": 20039,
+    "legacyKey": "귀 꿰미|String of Ears",
+    "name": "귀 꿰미",
+    "eng": "String of Ears",
+    "aliases": ["귀꿰미", "스트링오비어스", "String of Ears", "SoE"],
+    "base": "데몬하이드 새시 (Demonhide Sash)",
+    "drop": "지옥(헬) 안다리엘, 메피스토, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+150~180%</strong> / 라이프 흡수 <strong>6~8%</strong> / 피해 감소 <strong>10~15%</strong> / 마법 피해 감소 10~15"
+  },
+  {
+    "id": 20040,
+    "legacyKey": "모래폭풍 여로|Sandstorm Trek",
+    "name": "모래폭풍 여로",
+    "eng": "Sandstorm Trek",
+    "aliases": ["샌드스톰", "유닉스캐럽", "Sandstorm Trek", "Sandstorm"],
+    "base": "스캐럽 쉘 부츠 (Scarab Husk Boots)",
+    "drop": "지옥(헬) 메피스토, 디아블로, 바알, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+140~170%</strong> / 달리기·걷기 <strong>+20%</strong> / 타격 회복 <strong>+20%</strong> / 힘·활력 +10~15 / 독 저항 +40~70% / 최대 스태미나 레벨당 +1 / 스태미나 재생 50%"
+  },
+  {
+    "id": 20041,
+    "legacyKey": "베르둔고의 튼튼한 노끈|Verdungo's Hearty Cord",
+    "name": "베르둔고의 튼튼한 노끈",
+    "eng": "Verdungo's Hearty Cord",
+    "aliases": ["베르둔고", "둔고", "미스릴 코일", "Verdungo", "Verdungos"],
+    "base": "미스릴 코일 (Mithril Coil)",
+    "drop": "지옥(헬) 바알, 디아블로, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+90~140%</strong> / 활력 <strong>+30~40</strong> / 최대 스태미나 +10~20% / 생명 재생 +10~13 / 피해 감소 <strong>10~15%</strong>"
+  },
+  {
+    "id": 20042,
+    "legacyKey": "물나그네|Waterwalk",
+    "name": "물나그네",
+    "eng": "Waterwalk",
+    "aliases": ["워터워크", "물부츠", "Waterwalk"],
+    "base": "샤크스킨 부츠 (Sharkskin Boots)",
+    "drop": "악몽~지옥 메피스토, 안다리엘",
+    "stats": "방어력 상승 <strong>+180~210%</strong> / 달리기·걷기 <strong>+20%</strong> / 최대 생명 +15~25 / 민첩 +15 / 최대 화염 저항 +5% / 스태미나 +40"
+  },
+  {
+    "id": 20043,
+    "legacyKey": "행운의 장갑|Chance Guards",
+    "name": "행운의 장갑",
+    "eng": "Chance Guards",
+    "aliases": ["챈스가드", "챈스", "Chance Guards", "Chanceguards"],
+    "base": "체인 글러브 (Chain Gloves)",
+    "drop": "악몽~지옥 전역 (매찬 장갑)",
+    "stats": "방어력 상승 <strong>+20~30%</strong> / 매찬 <strong>+25~40%</strong> / 명중률 +200 / 마나 +40 / 빛 반경 +2 / 상점가 -15%"
+  },
+  {
+    "id": 20044,
+    "legacyKey": "금박 허리띠|Goldwrap",
+    "name": "금박 허리띠",
+    "eng": "Goldwrap",
+    "aliases": ["골드랩", "Goldwrap"],
+    "base": "헤비 벨트 (Heavy Belt)",
+    "drop": "악몽~지옥 전역 (삥/매찬 벨트)",
+    "stats": "방어력 상승 <strong>+40~60%</strong> / 공격 속도 <strong>+10%</strong> / 삥 <strong>+50~80%</strong> / 매찬 <strong>+30%</strong> / 빛 반경 +2"
+  },
+  {
+    "id": 20045,
+    "legacyKey": "지옥불걸음|Infernostride",
+    "name": "지옥불걸음",
+    "eng": "Infernostride",
+    "aliases": ["인페르노스트라이드", "지옥걸음", "Infernostride"],
+    "base": "데몬하이드 부츠 (Demonhide Boots)",
+    "drop": "지옥(헬) 메피스토, TC85 사냥터",
+    "stats": "방어력 상승 <strong>+120~150%</strong> / 달리기·걷기 <strong>+20%</strong> / 최대 화염 저항 +5% / 화염 저항 +30% / 삥 <strong>+40~70%</strong> / 피격 시 화염 발동"
+  },
+  {
+    "id": 20046,
+    "legacyKey": "아르스 알디아볼로스|Ars Al'Diabolos",
+    "name": "아르스 알디아볼로스",
+    "eng": "Ars Al'Diabolos",
+    "aliases": ["알디아볼로스", "Ars Al'Diabolos", "Ars Aldiabolos"],
+    "base": "그리모어 (Grimoire, 악마술사 전용)",
+    "drop": "지옥(헬) 공포의 영역, 바알, TC85 사냥터",
+    "stats": "혼돈 스킬 <strong>+2</strong> / 시전 속도 <strong>+25%</strong> / 화염 기술 피해 <strong>+15~25%</strong> / 악마술사 전용 종결 마도서"
+  },
+  {
+    "id": 20047,
+    "legacyKey": "망 송의 가르침|Mang Song's Lesson",
+    "name": "망 송의 가르침",
+    "eng": "Mang Song's Lesson",
+    "aliases": ["망송", "Mang Song", "Mang Songs Lesson"],
+    "base": "아콘 스태프 (Archon Staff)",
+    "drop": "지옥(헬) 바알, 디아블로 (극악 드랍률)",
+    "stats": "모든 스킬 <strong>+5</strong> / 시전 속도 <strong>+30%</strong> / 적 화염·번개·냉기 저항 <strong>-7~15%</strong> / 마나 재생 10%"
+  },
+  {
+    "id": 20048,
+    "legacyKey": "망령걸음|Wraithstep",
+    "name": "망령걸음",
+    "eng": "Wraithstep",
+    "aliases": ["레이스스텝", "Wraithstep"],
+    "base": "부츠 (워록 전용 유니크)",
+    "drop": "지옥(헬) 공포의 영역, TC85 사냥터",
+    "stats": "달리기·걷기 증가 / 기괴(Eldritch) 스킬 보정 / 악마술사 전용 종결 신발"
   }
 ]

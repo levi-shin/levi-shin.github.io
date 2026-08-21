@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.3",
-  "lastUpdated": "2026-08-19",
+  "siteVersion": "v1.0.4",
+  "lastUpdated": "2026-08-21",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.4",
+      "date": "2026-08-21",
+      "desc": "종결 빌드 16종을 Maxroll·인벤·나무위키 기준으로 교차검증. 깨진 아이템 ID, 용병 무기 종류, 패캐 구간, 워록 종결 세팅 교정"
+    },
     {
       "version": "v1.0.3",
       "date": "2026-08-19",

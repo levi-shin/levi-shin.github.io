@@ -424,5 +424,38 @@
     "base": "3소켓 클럽 / 해머 / 메이스",
     "stats": "피해 <strong>+120%</strong> / 강타 <strong>40%</strong> / 공격 속도 <strong>+15%</strong> / 명중률 +200 / 냉기 피해 3~14 / 활력 +10 / 밀쳐내기 / 시체 폭발 충전",
     "isLadder": false
+  },
+  {
+    "id": 30043,
+    "legacyKey": "야수|Beast",
+    "name": "야수",
+    "eng": "Beast",
+    "aliases": ["비스트", "Beast"],
+    "recipe": "베르(Ber) + 티르(Tir) + 움(Um) + 말(Mal) + 룸(Lum)",
+    "base": "5소켓 도끼 / 셉터 / 해머",
+    "stats": "광신(Fanaticism) 오라 <strong>9레벨</strong> / 공격 속도 <strong>+40%</strong> / 피해 <strong>+240~270%</strong> / 강타 20% / 개방 상처 25% / 늑대인간·곰 +3 / 힘 +25~40",
+    "isLadder": false
+  },
+  {
+    "id": 30044,
+    "legacyKey": "화이트|White",
+    "name": "화이트",
+    "eng": "White",
+    "aliases": ["White"],
+    "recipe": "돌(Dol) + 아이오(Io)",
+    "base": "2소켓 완드 (뼈 창 +3 베이스 권장)",
+    "stats": "독·뼈 스킬 <strong>+3</strong> / 시전 속도 <strong>+20%</strong> / 뼈 창 <strong>+2</strong> / 해골 숙련 <strong>+4</strong> / 뼈 갑옷 +3 / 마법 피해 감소 4 / 처치 시 마나 +13",
+    "isLadder": false
+  },
+  {
+    "id": 30045,
+    "legacyKey": "부|Wealth",
+    "name": "부",
+    "eng": "Wealth",
+    "aliases": ["웰스", "Wealth"],
+    "recipe": "렘(Lem) + 코(Ko) + 티르(Tir)",
+    "base": "3소켓 갑옷",
+    "stats": "삥 <strong>300%</strong> / 매찬 <strong>100%</strong> / 민첩 +10 / 처치 시 마나 +2",
+    "isLadder": false
   }
 ]

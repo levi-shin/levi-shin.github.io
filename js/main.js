@@ -1108,9 +1108,9 @@ async function renderBuildCards() {
             let titleText = build.subtitle || build.title;
             let descText = build.info ? build.info.replace(/<[^>]*>?/gm, '').substring(0, 45) + '...' : '클릭하여 상세 장비 세팅을 확인하세요.';
 
-            let tagAttr = 'farm,magic';
-            if (build.id === 70004 || build.id === 70010 || build.id === 70012) tagAttr = 'boss,physical';
-            if (build.id === 70005 || build.id === 70015 || build.id === 70016) tagAttr = 'summon,magic,boss,farm';
+            let tagAttr = Array.isArray(build.tags) && build.tags.length
+                ? build.tags.join(',')
+                : 'farm,magic';
 
             const card = document.createElement('div');
             card.className = 'card searchable-item';
