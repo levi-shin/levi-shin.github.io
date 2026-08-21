@@ -42,7 +42,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "10";
+    const dataVer = "11";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1052,7 +1052,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch('data/patchnotes.json?v=10');
+        const response = await fetch('data/patchnotes.json?v=11');
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1099,7 +1099,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=10');
+        const response = await fetch('data/runewords.json?v=11');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1131,7 +1131,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json?v=10'); 
+        const response = await fetch('data/builds.json?v=11'); 
         const data = await response.json();
         const builds = data.items; 
 
