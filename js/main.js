@@ -725,7 +725,7 @@ function openRuneModal(runewordId) {
     const name = item.name || item.legacyKey;
     const eng = item.eng ? `<span class="item-modal-eng">(${escapeHtml(item.eng)})</span>` : "";
     const ladderBadge = runewordLadderBadge(item);
-    document.getElementById("dbModalTitle").innerHTML = `${escapeHtml(name)} ${eng} ${ladderBadge}`;
+    document.getElementById("dbModalTitle").innerHTML = `${escapeHtml(name)} ${eng}`;
     document.getElementById("dbModalSubtitle").textContent = "룬어 · " + (item.eng || name);
     document.getElementById("dbModalIntro").textContent = "룬 조합 순서와 추천 종결 베이스, 그리고 으뜸 수치를 확인합니다.";
     document.getElementById("dbModalStats").innerHTML =
