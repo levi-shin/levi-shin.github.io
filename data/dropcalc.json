@@ -1,0 +1,188 @@
+{
+  "notes": [
+    "유니크/세트/레어 확률은 매찬 체감(유효 매찬) 공식으로 0매찬 대비 배율을 적용합니다.",
+    "룬은 아이템 품질이 아니라 재료 드랍이라 매찬이 올라도 확률이 변하지 않습니다.",
+    "수치는 솔로(플레이어 1) 1킬 기준 예상치입니다. 액트 보스는 본인 드랍에 플레이어 수 영향이 거의 없습니다."
+  ],
+  "sources": [
+    {
+      "id": "hell-meph",
+      "name": "헬 메피스토",
+      "note": "국민 매찬 앵벌. 샤코·배틀 부츠·거미그물 띠를 노리실 때 가장 무난합니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "샤코", "id": 20005, "oneIn0": 771 },
+        { "name": "거미그물 띠", "id": 20013, "oneIn0": 1114 },
+        { "name": "배틀 부츠", "id": 20008, "oneIn0": 1592 },
+        { "name": "자카룸의 전령", "id": 20014, "oneIn0": 3010 },
+        { "name": "마라의 만화경", "id": 20003, "oneIn0": 3848 },
+        { "name": "기드의 운", "id": 20010, "oneIn0": 513 },
+        { "name": "요르단(조단)의 반지", "id": 20001, "oneIn0": 7568 },
+        { "name": "불카토스의 결혼반지", "id": 20002, "oneIn0": 7568 }
+      ],
+      "runes": [
+        { "name": "이스트(Ist)", "oneIn0": 420 },
+        { "name": "굴(Gul)", "oneIn0": 840 },
+        { "name": "벡스(Vex)", "oneIn0": 1260 },
+        { "name": "오움(Ohm)", "oneIn0": 1680 },
+        { "name": "로(Lo)", "oneIn0": 2520 },
+        { "name": "수르(Sur)", "oneIn0": 3780 },
+        { "name": "베르(Ber)", "oneIn0": 7560 },
+        { "name": "자(Jah)", "oneIn0": 7560 }
+      ]
+    },
+    {
+      "id": "hell-andy",
+      "name": "헬 안다리엘",
+      "note": "메피보다 동선이 짧습니다. 샤코·기드·배틀 부츠 계열을 빠르게 굴리실 때 좋습니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "기드의 운", "id": 20010, "oneIn0": 139 },
+        { "name": "샤코", "id": 20005, "oneIn0": 752 },
+        { "name": "배틀 부츠", "id": 20008, "oneIn0": 1487 },
+        { "name": "요르단(조단)의 반지", "id": 20001, "oneIn0": 2656 },
+        { "name": "불카토스의 결혼반지", "id": 20002, "oneIn0": 2656 },
+        { "name": "자카룸의 전령", "id": 20014, "oneIn0": 6389 }
+      ],
+      "runes": [
+        { "name": "말(Mal)", "oneIn0": 980 },
+        { "name": "이스트(Ist)", "oneIn0": 1470 },
+        { "name": "굴(Gul)", "oneIn0": 2940 },
+        { "name": "벡스(Vex)", "oneIn0": 4410 }
+      ]
+    },
+    {
+      "id": "nm-andy",
+      "name": "악몽 안다리엘",
+      "note": "조단링 파밍의 정석입니다. 헬보다 동선이 짧고, 반지 유니크 풀이 얇습니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "요르단(조단)의 반지", "id": 20001, "oneIn0": 1616 },
+        { "name": "불카토스의 결혼반지", "id": 20002, "oneIn0": 1616 }
+      ],
+      "runes": []
+    },
+    {
+      "id": "hell-diablo",
+      "name": "헬 디아블로",
+      "note": "카오스 클리어 후 디아 처치 기준입니다. 메피보다 종결급 유니크 풀이 넓습니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "샤코", "id": 20005, "oneIn0": 792 },
+        { "name": "거미그물 띠", "id": 20013, "oneIn0": 1144 },
+        { "name": "배틀 부츠", "id": 20008, "oneIn0": 1634 },
+        { "name": "밤날개의 너울", "id": 20023, "oneIn0": 3501 },
+        { "name": "마라의 만화경", "id": 20003, "oneIn0": 3763 },
+        { "name": "기드의 운", "id": 20010, "oneIn0": 502 }
+      ],
+      "runes": [
+        { "name": "이스트(Ist)", "oneIn0": 220 },
+        { "name": "굴(Gul)", "oneIn0": 440 },
+        { "name": "벡스(Vex)", "oneIn0": 660 },
+        { "name": "오움(Ohm)", "oneIn0": 880 },
+        { "name": "로(Lo)", "oneIn0": 1320 },
+        { "name": "수르(Sur)", "oneIn0": 1980 },
+        { "name": "베르(Ber)", "oneIn0": 3960 },
+        { "name": "자(Jah)", "oneIn0": 3960 },
+        { "name": "참(Cham)", "oneIn0": 7920 },
+        { "name": "조드(Zod)", "oneIn0": 39600 }
+      ]
+    },
+    {
+      "id": "hell-baal",
+      "name": "헬 바알",
+      "note": "종결 유니크·상위 룬 풀이 가장 넓습니다. 킬 타임이 길어서 매찬보다 클리어 속도가 더 중요합니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "거미그물 띠", "id": 20013, "oneIn0": 1156 },
+        { "name": "배틀 부츠", "id": 20008, "oneIn0": 1651 },
+        { "name": "밤날개의 너울", "id": 20023, "oneIn0": 2458 },
+        { "name": "마라의 만화경", "id": 20003, "oneIn0": 3701 },
+        { "name": "기드의 운", "id": 20010, "oneIn0": 493 },
+        { "name": "그리폰의 눈", "id": 20006, "oneIn0": 19000 },
+        { "name": "섀도우 댄서", "id": 20020, "oneIn0": 19000 },
+        { "name": "바람살", "id": 20011, "oneIn0": 15000 },
+        { "name": "죽음의 깊이", "id": 20012, "oneIn0": 28000 },
+        { "name": "어둠의 종자", "id": 20051, "oneIn0": 35000 },
+        { "name": "죽음의 거미줄", "id": 20049, "oneIn0": 47000 },
+        { "name": "티리얼의 권능", "id": 20004, "oneIn0": 173000 }
+      ],
+      "runes": [
+        { "name": "이스트(Ist)", "oneIn0": 190 },
+        { "name": "굴(Gul)", "oneIn0": 380 },
+        { "name": "벡스(Vex)", "oneIn0": 570 },
+        { "name": "오움(Ohm)", "oneIn0": 760 },
+        { "name": "로(Lo)", "oneIn0": 1140 },
+        { "name": "수르(Sur)", "oneIn0": 1710 },
+        { "name": "베르(Ber)", "oneIn0": 3420 },
+        { "name": "자(Jah)", "oneIn0": 3420 },
+        { "name": "참(Cham)", "oneIn0": 6840 },
+        { "name": "조드(Zod)", "oneIn0": 34200 }
+      ]
+    },
+    {
+      "id": "hell-pindle",
+      "name": "헬 핀들스킨",
+      "note": "동선이 매우 짧습니다. 개별 유니크 확률은 보스보다 낮고, 횟수로 승부하시는 사냥터입니다.",
+      "scaleWithPlayers": false,
+      "items": [
+        { "name": "기드의 운", "id": 20010, "oneIn0": 4903 },
+        { "name": "샤코", "id": 20005, "oneIn0": 9649 },
+        { "name": "배틀 부츠", "id": 20008, "oneIn0": 19000 },
+        { "name": "그리폰의 눈", "id": 20006, "oneIn0": 25000 },
+        { "name": "섀도우 댄서", "id": 20020, "oneIn0": 25000 },
+        { "name": "바람살", "id": 20011, "oneIn0": 21000 },
+        { "name": "죽음의 깊이", "id": 20012, "oneIn0": 39000 },
+        { "name": "죽음의 거미줄", "id": 20049, "oneIn0": 65000 }
+      ],
+      "runes": [
+        { "name": "이스트(Ist)", "oneIn0": 2400 },
+        { "name": "벡스(Vex)", "oneIn0": 7200 },
+        { "name": "로(Lo)", "oneIn0": 14400 },
+        { "name": "베르(Ber)", "oneIn0": 28800 },
+        { "name": "자(Jah)", "oneIn0": 28800 }
+      ]
+    },
+    {
+      "id": "hell-countess",
+      "name": "헬 카운테스",
+      "note": "중간 룬(이스트까지) 파밍용입니다. 특별 룬 드랍은 이스트가 상한이고, 그 위는 일반 드랍이라 확률이 크게 떨어집니다.",
+      "scaleWithPlayers": false,
+      "items": [],
+      "runes": [
+        { "name": "팔(Fal)", "oneIn0": 66 },
+        { "name": "렘(Lem)", "oneIn0": 99 },
+        { "name": "풀(Pul)", "oneIn0": 130 },
+        { "name": "움(Um)", "oneIn0": 195 },
+        { "name": "말(Mal)", "oneIn0": 191 },
+        { "name": "이스트(Ist)", "oneIn0": 287 },
+        { "name": "굴(Gul)", "oneIn0": 21434 },
+        { "name": "벡스(Vex)", "oneIn0": 32150 },
+        { "name": "오움(Ohm)", "oneIn0": 30519 },
+        { "name": "로(Lo)", "oneIn0": 45779 }
+      ]
+    },
+    {
+      "id": "hell-trav",
+      "name": "헬 트라빈칼 (의회원 3인)",
+      "note": "상위 룬 파밍 명소입니다. 의회원 3인 합산 1킬 기준이며, 플레이어 수가 늘면 룬 확률이 조금 올라갑니다.",
+      "scaleWithPlayers": true,
+      "items": [
+        { "name": "마라의 만화경", "id": 20003, "oneIn0": 4200 },
+        { "name": "기드의 운", "id": 20010, "oneIn0": 1800 }
+      ],
+      "runes": [
+        { "name": "이스트(Ist)", "oneIn0": 380 },
+        { "name": "굴(Gul)", "oneIn0": 760 },
+        { "name": "벡스(Vex)", "oneIn0": 1140 },
+        { "name": "오움(Ohm)", "oneIn0": 1520 },
+        { "name": "로(Lo)", "oneIn0": 2280 },
+        { "name": "수르(Sur)", "oneIn0": 3420 },
+        { "name": "베르(Ber)", "oneIn0": 6840 },
+        { "name": "자(Jah)", "oneIn0": 6840 },
+        { "name": "참(Cham)", "oneIn0": 13680 },
+        { "name": "조드(Zod)", "oneIn0": 68400 }
+      ]
+    }
+  ]
+}

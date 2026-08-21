@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.5",
+  "siteVersion": "v1.0.6",
   "lastUpdated": "2026-08-21",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.6",
+      "date": "2026-08-21",
+      "desc": "매찬 입력 후 사냥터별 유니크·룬 드랍 확률을 계산하는 기능 추가. 룬은 매찬 영향이 없음을 함께 표시"
+    },
     {
       "version": "v1.0.5",
       "date": "2026-08-21",

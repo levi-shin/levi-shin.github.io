@@ -1,3 +1,5 @@
+import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=1';
+
 /* ===== data.js ===== */
 /**
  * 악군 데이터 로더
@@ -42,7 +44,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "11";
+    const dataVer = "12";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -985,6 +987,8 @@ function bindGlobalFunctions() {
     window.handleFeedbackSubmit = handleFeedbackSubmit;
     window.openHistoryModal = openHistoryModal;
     window.closeHistoryModal = closeHistoryModal;
+    window.calculateDropOdds = calculateDropOdds;
+    window.setDropCalcMf = setDropCalcMf;
 }
 
 bindGlobalFunctions();
@@ -1038,6 +1042,7 @@ async function initialize() {
         await loadData();
         renderUniqueTable();
         renderSiteMetadata();
+        await initDropCalc();
     } catch (error) {
         console.error('악군 데이터 초기화 실패:', error);
 
@@ -1052,7 +1057,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch('data/patchnotes.json?v=11');
+        const response = await fetch('data/patchnotes.json?v=12');
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1099,7 +1104,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=11');
+        const response = await fetch('data/runewords.json?v=12');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
