@@ -416,6 +416,7 @@ tr:hover { background: #1f1f28; }
     min-width: 140px;
     flex: 1 1 140px;
 }
+.dropcalc-field-grow { flex: 2 1 220px; }
 .dropcalc-field span {
     font-size: 0.8rem;
     color: var(--gold-light);

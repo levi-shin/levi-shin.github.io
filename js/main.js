@@ -1,4 +1,4 @@
-import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=1';
+import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=2';
 
 /* ===== data.js ===== */
 /**

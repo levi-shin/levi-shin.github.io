@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="직접 파밍하고 정리한 실전 디아 2 백과 사전">
     <meta name="twitter:image" content="https://levi-shin.github.io/images/og-thumb.jpg?v=2">
     <link rel="canonical" href="https://levi-shin.github.io/">
-    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=11">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -476,9 +476,9 @@
     <section id="dropcalc" class="content-section">
         <h2 class="section-title">🎯 15. 매찬 대비 드랍 확률 계산기</h2>
         <div class="item-click-hint">
-            매찬 수치를 넣고 계산하시면, 선택한 사냥터의 <b>유니크 아이템</b>과 <b>룬</b> 확률이 아래에 나옵니다.
-            유니크는 매찬이 오를수록 확률이 올라가지만 체감 효율은 점점 줄어듭니다.
-            <b>룬은 매찬 영향을 받지 않습니다.</b> 수치는 1킬 기준 예상치이며, 절반 확률 킬수는 그 아이템이 나올 확률이 50%가 되는 대략적인 횟수입니다.
+            매찬 수치를 넣고 계산하시면, 주요 유니크별 드랍 확률이 아래에 나옵니다.
+            유니크는 매찬이 오를수록 확률이 올라가지만, 체감 효율은 점점 줄어듭니다.
+            각 아이템은 가장 잘 나오는 기준(1킬)으로 계산합니다.
         </div>
 
         <form id="dropcalcForm" class="dropcalc-form" onsubmit="calculateDropOdds(event)">
@@ -486,20 +486,9 @@
                 <span>내 매찬 (%)</span>
                 <input type="number" id="dropcalcMf" name="mf" min="0" max="2000" step="1" value="250" inputmode="numeric" required>
             </label>
-            <label class="dropcalc-field">
-                <span>사냥터</span>
-                <select id="dropcalcSource" name="source">
-                    <option value="hell-meph">헬 메피스토</option>
-                </select>
-            </label>
-            <label class="dropcalc-field">
-                <span>플레이어 수</span>
-                <select id="dropcalcPlayers" name="players">
-                    <option value="1" selected>1인</option>
-                    <option value="3">3인</option>
-                    <option value="5">5인</option>
-                    <option value="7">7인</option>
-                </select>
+            <label class="dropcalc-field dropcalc-field-grow">
+                <span>아이템 검색</span>
+                <input type="text" id="dropcalcItemFilter" name="item" placeholder="예: 샤코, 그리폰, 조단">
             </label>
             <button type="submit" class="dropcalc-submit">계산하기</button>
         </form>
@@ -663,7 +652,7 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="js/legacy-globals.js?v=11"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-<script type="module" src="js/main.js?v=12"></script>
+<script type="module" src="js/main.js?v=13"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
