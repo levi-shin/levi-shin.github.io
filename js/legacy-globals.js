@@ -21,7 +21,7 @@
     });
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     document.querySelectorAll('#buildCardsGrid .card').forEach(function (card) {
-      var tags = card.getAttribute('data-tags') || '';
+      var tags = (card.getAttribute('data-tags') || '').split(',').map(function (t) { return t.trim(); }).filter(Boolean);
       card.style.display = (tag === 'all' || tags.indexOf(tag) !== -1) ? 'flex' : 'none';
     });
   };

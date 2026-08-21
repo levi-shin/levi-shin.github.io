@@ -359,6 +359,7 @@ tr:hover { background: #1f1f28; }
 .item-detail p { margin: 0 0 14px; color: var(--text-color); }
 .item-stats { border: 1px solid var(--card-border); border-radius: 9px; overflow: hidden; margin-bottom: 16px; }
 .item-stat { padding: 9px 12px; border-bottom: 1px solid var(--card-border); color: #d9d9df; background: rgba(255,255,255,.015); }
+.item-stat.build-playstyle { background: rgba(223, 177, 91, 0.08); border-left: 3px solid var(--gold); color: #ececf1; line-height: 1.55; }
 
 .item-action { 
     display: inline-flex; 

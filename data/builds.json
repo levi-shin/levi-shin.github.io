@@ -2,32 +2,39 @@
   "meta": {
     "dataVersion": "1.3",
     "patchVersion": "3.3",
-    "verificationStatus": "Needs Verification"
+    "verificationStatus": "Verified",
+    "lastVerified": "2026-08-21",
+    "basis": "Maxroll Season 14/15 BiS, 디아2 인벤, 나무위키, D2Runewizard 교차검증"
   },
   "items": [
     {
       "id": 70001,
       "legacyKey": "sorc_light",
       "title": "원소술사 (Sorceress)",
-      "subtitle": "체라소서 (연쇄 번개)",
+      "subtitle": "체라소서 (번개 / 연쇄 번개)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
+              "type": "link",
+              "name": "에슈타의 성미",
+              "dataType": "unique",
+              "id": 20027
+            },
+            {
               "type": "text",
-              "value": "엘드리치 오브 ["
+              "value": " [+3스킬 / 5/5 번개 주얼 또는 감시자의 천둥]  · 대안: "
             },
             {
               "type": "link",
-              "name": "주얼작",
-              "unresolved": true,
-              "target": "감시자의 천둥",
-              "dataType": "unique"
-            },
-            {
-              "type": "text",
-              "value": "]"
+              "name": "초승달",
+              "dataType": "runeword",
+              "id": 30041
             }
           ]
         },
@@ -36,9 +43,13 @@
           "content": [
             {
               "type": "link",
-              "name": "그리폰의 눈 다이어뎀",
+              "name": "그리폰의 눈",
               "dataType": "unique",
               "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " [5/5 번개 주얼작, 으뜸 15/20 라깍]"
             }
           ]
         },
@@ -47,13 +58,19 @@
           "content": [
             {
               "type": "link",
-              "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "name": "명예의 굴레",
+              "dataType": "runeword",
+              "id": 30011
             },
             {
               "type": "text",
-              "value": " (메이지 플레이트)"
+              "value": " (더스크/아콘)  · 기동 대안: "
+            },
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -68,7 +85,13 @@
             },
             {
               "type": "text",
-              "value": " 모나크 (35% 패캐)"
+              "value": " 모나크 (35% 패캐)  · 마나/생존: "
+            },
+            {
+              "type": "link",
+              "name": "불사조",
+              "dataType": "runeword",
+              "id": 30012
             }
           ]
         },
@@ -90,6 +113,16 @@
               "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
             }
           ]
         },
@@ -98,7 +131,7 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
@@ -108,28 +141,67 @@
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "마라의 만화경",
               "dataType": "unique",
               "id": 20003
             },
             {
               "type": "text",
-              "value": " / 조던 쌍"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " 쌍 (117 패캐 달성)"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (전투 명령/전투 지시)"
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 통찰/무한 용병",
+        "title": "ACT 2 위세 무한 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
+                "name": "무한",
                 "dataType": "runeword",
                 "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
               }
             ]
           },
@@ -138,9 +210,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골 (에테)",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
                 "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
               }
             ]
           },
@@ -149,30 +225,47 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 번개 스킬참<br><strong>⚡ 스킬:</strong> 번개 줄기(20), 번개(20), 연쇄 번개(20), 번개 숙련(20)"
+      "info": "<strong>📊 스탯:</strong> 힘 156(모나크), 생명력 올인 · 패캐 117%(9프레임)<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 번개 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 번개 줄기(20), 번개(20), 연쇄 번개(20), 번개 숙련(20)<br><strong>🎮 운영법:</strong> CTA로 전투 명령/지시를 켠 뒤 텔레포트로 밀도·엘리트에 진입한다. 뭉친 몹은 연쇄 번개, 일렬·단일 대상은 번개 줄기로 저격하고, 보스는 스태틱으로 피를 깎은 다음 충전된 화살을 넣는다. 무한 용병의 선고가 켜진 상태에서 파괴참으로 번개 면역을 밀어붙인다.",
+      "badge": "체라소서",
+      "stats": "힘 156(모나크), 생명력 올인 · 패캐 117%(9프레임)",
+      "inventory": "새로워진 천상의 틈(번개 파괴참), 번개 스킬참, 애니참, 횃불참",
+      "skills": "번개 줄기(20), 번개(20), 연쇄 번개(20), 번개 숙련(20)",
+      "playstyle": "CTA로 전투 명령/지시를 켠 뒤 텔레포트로 밀도·엘리트에 진입한다. 뭉친 몹은 연쇄 번개, 일렬·단일 대상은 번개 줄기로 저격하고, 보스는 스태틱으로 피를 깎은 다음 충전된 화살을 넣는다. 무한 용병의 선고가 켜진 상태에서 파괴참으로 번개 면역을 밀어붙인다."
     },
     {
       "id": 70002,
       "legacyKey": "sorc_cold",
       "title": "원소술사 (Sorceress)",
       "subtitle": "극블리소서 (눈보라)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "데스 파버 오브",
+              "name": "죽음의 깊이",
               "dataType": "unique",
               "id": 20012
+            },
+            {
+              "type": "text",
+              "value": " [냉기 주얼작]"
             }
           ]
         },
@@ -181,19 +274,19 @@
           "content": [
             {
               "type": "link",
-              "name": "샤코",
-              "dataType": "unique",
-              "id": 20005
-            },
-            {
-              "type": "text",
-              "value": " 또는 "
-            },
-            {
-              "type": "link",
               "name": "밤날개의 너울",
               "dataType": "unique",
               "id": 20023
+            },
+            {
+              "type": "text",
+              "value": " [냉기 주얼작]  · 생존: "
+            },
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
             }
           ]
         },
@@ -208,7 +301,7 @@
             },
             {
               "type": "text",
-              "value": " 또는 "
+              "value": "  · 기동: "
             },
             {
               "type": "link",
@@ -251,6 +344,16 @@
               "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
             }
           ]
         },
@@ -259,7 +362,7 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
@@ -269,28 +372,59 @@
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "마라의 만화경",
               "dataType": "unique",
               "id": 20003
             },
             {
               "type": "text",
-              "value": " / 조던링 쌍"
+              "value": " / 10% 패캐링 + "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 통찰 용병",
+        "title": "ACT 2 신성한 빙결 통찰 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "통찰 (Insight)",
+                "name": "통찰",
                 "dataType": "runeword",
                 "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (에테 크립틱 액스)"
               }
             ]
           },
@@ -299,9 +433,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
                 "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -310,21 +448,34 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참<br><strong>❄️ 스킬:</strong> 블리자드(20), 얼음 폭풍(20), 빙하의 창(20), 냉기 숙련"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인 · 패캐 105%(9프레임)<br><strong>🎒 인벤토리:</strong> 새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 눈보라(20), 얼음살(20), 빙하의 창(20), 냉기 숙련(20)<br><strong>🎮 운영법:</strong> 냉기 면역이 없는 고대 터널·메피부터 돈다. 텔레포트로 시야 밖에서 눈보라를 깔고, 몹이 눈보라 판정 안으로 들어오게 유도한다. 보스는 스태틱 후 눈보라. 냉기 파괴참으로 면역 구간만 통과하고, 마나는 통찰 용병에 맡긴다.",
+      "badge": "극블리소서",
+      "stats": "힘 156, 생명력 올인 · 패캐 105%(9프레임)",
+      "inventory": "새로워진 추위의 파열(냉기 파괴참), 냉기 스킬참, 애니참, 횃불참",
+      "skills": "눈보라(20), 얼음살(20), 빙하의 창(20), 냉기 숙련(20)",
+      "playstyle": "냉기 면역이 없는 고대 터널·메피부터 돈다. 텔레포트로 시야 밖에서 눈보라를 깔고, 몹이 눈보라 판정 안으로 들어오게 유도한다. 보스는 스태틱 후 눈보라. 냉기 파괴참으로 면역 구간만 통과하고, 마나는 통찰 용병에 맡긴다."
     },
     {
       "id": 70003,
       "legacyKey": "pala_ham",
       "title": "성기사 (Paladin)",
       "subtitle": "축복받은 망치 (햄딘)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
@@ -337,7 +488,7 @@
             },
             {
               "type": "text",
-              "value": " (오심)"
+              "value": " (플레일 베이스, 40% 패캐)"
             }
           ]
         },
@@ -362,12 +513,12 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             },
             {
               "type": "text",
-              "value": " (아콘 플레이트)"
+              "value": " (메이지 플레이트 — 힘 요구 최저)"
             }
           ]
         },
@@ -382,7 +533,13 @@
             },
             {
               "type": "text",
-              "value": " 세타 (올레지 45)"
+              "value": " 세크리드 타지 (35% 패캐, 올레지 45)  · 생존: "
+            },
+            {
+              "type": "link",
+              "name": "자카룸의 전령",
+              "dataType": "unique",
+              "id": 20014
             }
           ]
         },
@@ -401,6 +558,16 @@
             },
             {
               "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
               "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
@@ -412,7 +579,7 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
@@ -422,28 +589,63 @@
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "마라의 만화경",
               "dataType": "unique",
               "id": 20003
             },
             {
               "type": "text",
-              "value": " / 조던링 + 발카링"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + 10% 패캐링"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 통찰 용병",
+        "title": "ACT 2 신성한 빙결 통찰 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "통찰 (Insight)",
+                "name": "통찰",
                 "dataType": "runeword",
                 "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (에테 크립틱 액스)"
               }
             ]
           },
@@ -452,9 +654,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -463,30 +669,47 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 홀리실드 켜고 블럭 75%, 생명력 올인<br><strong>🎒 인벤토리:</strong> 전투 스킬참, 애니참, 횃불참<br><strong>🔨 스킬:</strong> 축복받은 망치(20), 집중(20), 원기(20), 조준(20)"
+      "info": "<strong>📊 스탯:</strong> 홀리실드 켠 상태 블럭 75%까지 민첩, 나머지 생명력 · 패캐 125%<br><strong>🎒 인벤토리:</strong> 전투 스킬참, 애니참, 횃불참, 생명/레지 스몰참<br><strong>⚡ 스킬:</strong> 축복받은 망치(20), 집중(20), 원기(20), 조준(20)<br><strong>🎮 운영법:</strong> 집중 오라를 유지한 채 텔레포트로 몹 한가운데 착지한다. 망치가 나선형으로 깔리도록 제자리 또는 소폭 이동하며 연사하고, 카오스·테러존은 밀도 중앙에서 갈아준다. 홀리실드 블럭 75%와 CTA 오더스를 항상 유지한다.",
+      "badge": "햄딘",
+      "stats": "홀리실드 켠 상태 블럭 75%까지 민첩, 나머지 생명력 · 패캐 125%",
+      "inventory": "전투 스킬참, 애니참, 횃불참, 생명/레지 스몰참",
+      "skills": "축복받은 망치(20), 집중(20), 원기(20), 조준(20)",
+      "playstyle": "집중 오라를 유지한 채 텔레포트로 몹 한가운데 착지한다. 망치가 나선형으로 깔리도록 제자리 또는 소폭 이동하며 연사하고, 카오스·테러존은 밀도 중앙에서 갈아준다. 홀리실드 블럭 75%와 CTA 오더스를 항상 유지한다."
     },
     {
       "id": 70004,
       "legacyKey": "pala_smite",
       "title": "성기사 (Paladin)",
       "subtitle": "슴딘 (우버/횃불 특화)",
+      "tags": [
+        "boss",
+        "physical"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "슬픔 (고뇌 페이즈 블레이드)",
+              "name": "고뇌",
               "dataType": "runeword",
               "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " (페이즈 블레이드)"
             }
           ]
         },
@@ -494,8 +717,14 @@
           "slot": "투구 (Helm)",
           "content": [
             {
+              "type": "link",
+              "name": "기욤의 얼굴",
+              "dataType": "unique",
+              "id": 20033
+            },
+            {
               "type": "text",
-              "value": "기욤의 얼굴 [공속/올저 주얼작]"
+              "value": " [15/40 강타·증뎀 주얼작]"
             }
           ]
         },
@@ -510,13 +739,23 @@
             },
             {
               "type": "text",
-              "value": " (흐리기 스위치) / "
+              "value": " (흐리기 사전버프) → 전투 중 "
             },
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "인내",
+              "dataType": "runeword",
+              "id": 30020
             }
           ]
         },
@@ -531,7 +770,7 @@
             },
             {
               "type": "text",
-              "value": " (에테 엘리트 팔라 방패)"
+              "value": " (에테 세크리드 타지)"
             }
           ]
         },
@@ -539,8 +778,20 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "드라쿨의 장갑",
+              "dataType": "unique",
+              "id": 20022
+            },
+            {
               "type": "text",
-              "value": "뱀파이어 본 글러브(드라쿨) / 고어 라이더"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "선혈 기수",
+              "dataType": "unique",
+              "id": 20029
             }
           ]
         },
@@ -548,24 +799,74 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "베르둔고의 튼튼한 노끈",
+              "dataType": "unique",
+              "id": 20041
+            },
+            {
               "type": "text",
-              "value": "미스릴 코일 / 대군주의 분노 / 레이븐링 쌍"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + 흡혈/강타링"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 사막 용병",
+        "title": "ACT 2 위세 용병 (노화)",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "리퍼스 톨 (사형수의 자비)",
-                "unresolved": true,
-                "target": "사형수의 자비",
-                "dataType": "runeword"
+                "name": "사신의 종소리",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (에테, 샤엘/옴작)"
               }
             ]
           },
@@ -574,9 +875,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -585,7 +890,7 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
               }
@@ -593,13 +898,24 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 블럭 75%, 생명력 올인<br><strong>🎒 인벤토리:</strong> 애니참, 횃불참, 올레지/피 스몰참 도배<br><strong>🛡️ 스킬:</strong> 강타(20), 신성한 방패(20), 파나티시즘(20)"
+      "info": "<strong>📊 스탯:</strong> 홀리실드 블럭 75%, 나머지 생명력<br><strong>🎒 인벤토리:</strong> 애니참, 횃불참, 올레지/생명 스몰참, 물리 파괴참(선택)<br><strong>⚡ 스킬:</strong> 강타(20), 신성한 방패(20), 광신(20)<br><strong>🎮 운영법:</strong> 마을에서 배신 갑옷으로 흐리기를 사전버프한 뒤 본세팅으로 갈아탄다. 우버는 릴리스 → 듀리엘 → 이즈얼 → 트리스트럼 순으로 강타하고, 드라쿨 라이프 탭이 뜬 뒤에 연타한다. 구원으로 독·저주를 지우고, 리퍼 용병의 노화가 꺼지지 않게 용병을 살린다.",
+      "badge": "슴딘",
+      "stats": "홀리실드 블럭 75%, 나머지 생명력",
+      "inventory": "애니참, 횃불참, 올레지/생명 스몰참, 물리 파괴참(선택)",
+      "skills": "강타(20), 신성한 방패(20), 광신(20)",
+      "playstyle": "마을에서 배신 갑옷으로 흐리기를 사전버프한 뒤 본세팅으로 갈아탄다. 우버는 릴리스 → 듀리엘 → 이즈얼 → 트리스트럼 순으로 강타하고, 드라쿨 라이프 탭이 뜬 뒤에 연타한다. 구원으로 독·저주를 지우고, 리퍼 용병의 노화가 꺼지지 않게 용병을 살린다."
     },
     {
       "id": 70005,
       "legacyKey": "necro_summon",
       "title": "강령술사 (Necromancer)",
       "subtitle": "조독넥 (해골 소환)",
+      "tags": [
+        "summon",
+        "magic",
+        "boss",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
@@ -607,13 +923,12 @@
             {
               "type": "link",
               "name": "야수",
-              "unresolved": true,
-              "target": "야수",
-              "dataType": "runeword"
+              "dataType": "runeword",
+              "id": 30043
             },
             {
               "type": "text",
-              "value": " (광신 오라 룬어)"
+              "value": " (광신 9레벨 오라, 셉터/도끼)"
             }
           ]
         },
@@ -625,6 +940,10 @@
               "name": "샤코",
               "dataType": "unique",
               "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [참룬작]"
             }
           ]
         },
@@ -634,8 +953,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             },
             {
               "type": "text",
@@ -662,8 +981,24 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "트래그울의 발톱",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
               "type": "text",
-              "value": "트랑울 장갑 / 골수걸음"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "골수걸음",
+              "dataType": "unique",
+              "id": 20036
+            },
+            {
+              "type": "text",
+              "value": " (해골 숙련 +1~2)"
             }
           ]
         },
@@ -672,34 +1007,63 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
             {
               "type": "text",
-              "value": " / 2스킬 패캐 아뮬 / "
+              "value": " / +2 강령 패캐 아뮬 / "
             },
             {
               "type": "link",
-              "name": "조던 쌍",
+              "name": "요르단(조단)의 반지",
               "dataType": "unique",
               "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " 쌍"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 무한 용병",
+        "title": "ACT 2 위세 무한 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
+                "name": "무한",
                 "dataType": "runeword",
                 "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
               }
             ]
           },
@@ -708,9 +1072,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
               }
             ]
           },
@@ -719,28 +1087,47 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 소환 스킬참, 애니참, 횃불참<br><strong>💀 스킬:</strong> 해골 되살리기(20), 해골 숙련(20), 시체 폭발(20)"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 소환 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 해골 되살리기(20), 해골 숙련(20), 시체 폭발(20)<br><strong>🎮 운영법:</strong> 해골·마법사를 풀소환한 뒤 텔레포트로 무리를 옮긴다. 밀도는 시체 폭발로 지우고, 보스·면역은 소환수가 때리게 둔다. 피해 증폭(앰플) 저주를 건 다음 CE를 넣고, 본인 야수(광신)와 용병 무한(선고)이 꺼지지 않았는지 확인한다.",
+      "badge": "조독넥",
+      "stats": "힘 156, 생명력 올인",
+      "inventory": "소환 스킬참, 애니참, 횃불참",
+      "skills": "해골 되살리기(20), 해골 숙련(20), 시체 폭발(20)",
+      "playstyle": "해골·마법사를 풀소환한 뒤 텔레포트로 무리를 옮긴다. 밀도는 시체 폭발로 지우고, 보스·면역은 소환수가 때리게 둔다. 피해 증폭(앰플) 저주를 건 다음 CE를 넣고, 본인 야수(광신)와 용병 무한(선고)이 꺼지지 않았는지 확인한다."
     },
     {
       "id": 70006,
       "legacyKey": "necro_bone",
       "title": "강령술사 (Necromancer)",
       "subtitle": "본넥 (뼈 창)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
+              "type": "link",
+              "name": "화이트",
+              "dataType": "runeword",
+              "id": 30044
+            },
+            {
               "type": "text",
-              "value": "화이트 완드 (+3 뼈 창 베이스)"
+              "value": " (+3 뼈 창 베이스 완드)"
             }
           ]
         },
@@ -749,7 +1136,13 @@
           "content": [
             {
               "type": "text",
-              "value": "2강령 20패캐 서클릿"
+              "value": "2강령 20패캐 서클릿  · 대안: "
+            },
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
             }
           ]
         },
@@ -759,8 +1152,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -775,7 +1168,7 @@
             },
             {
               "type": "text",
-              "value": " 모나크"
+              "value": " 모나크 (35% 패캐)"
             }
           ]
         },
@@ -783,8 +1176,14 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "트래그울의 발톱",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
               "type": "text",
-              "value": "트랑울 장갑 / "
+              "value": " / "
             },
             {
               "type": "link",
@@ -799,28 +1198,59 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
             {
               "type": "text",
-              "value": " / 패캐링"
+              "value": " / 2스킬 패캐 아뮬 / 패캐링 + "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 통찰 용병",
+        "title": "ACT 2 신성한 빙결 통찰 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "통찰 (Insight)",
+                "name": "통찰",
                 "dataType": "runeword",
                 "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (에테 크립틱 액스)"
               }
             ]
           },
@@ -829,9 +1259,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -840,30 +1274,53 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 뼈와 독 스킬참, 애니/횃불참<br><strong>💀 스킬:</strong> 뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)"
+      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인 · 패캐 125%<br><strong>🎒 인벤토리:</strong> 뼈와 독 스킬참, 애니참, 횃불참, 마법 파괴참(선택)<br><strong>⚡ 스킬:</strong> 뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)<br><strong>🎮 운영법:</strong> 텔레포트로 각을 잡은 뒤 일직선은 뼈 창, 산개한 몹은 뼈 영혼으로 지운다. 맞아 죽지 않게 뼈 갑옷을 유지하고, 위기는 뼈 감옥으로 끊는다. 마나는 통찰 용병에 맡기고 CTA 오더스를 주기적으로 갱신한다.",
+      "badge": "본넥",
+      "stats": "힘 156, 생명력 올인 · 패캐 125%",
+      "inventory": "뼈와 독 스킬참, 애니참, 횃불참, 마법 파괴참(선택)",
+      "skills": "뼈 창(20), 뼈 영혼(20), 뼈 벽(20), 뼈 감옥(20)",
+      "playstyle": "텔레포트로 각을 잡은 뒤 일직선은 뼈 창, 산개한 몹은 뼈 영혼으로 지운다. 맞아 죽지 않게 뼈 갑옷을 유지하고, 위기는 뼈 감옥으로 끊는다. 마나는 통찰 용병에 맡기고 CTA 오더스를 주기적으로 갱신한다."
     },
     {
       "id": 70007,
       "legacyKey": "ama_jav",
       "title": "아마존 (Amazon)",
       "subtitle": "자바마 (번개 분노)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "거인의 복수 (타이탄)",
+              "name": "타이탄의 복수",
               "dataType": "unique",
-              "id": "타이탄의 복수"
+              "id": 20009
+            },
+            {
+              "type": "text",
+              "value": " (에테 업글 권장)  · 보스딜 대안: "
+            },
+            {
+              "type": "link",
+              "name": "천둥일격",
+              "dataType": "unique",
+              "id": 20028
             }
           ]
         },
@@ -872,9 +1329,13 @@
           "content": [
             {
               "type": "link",
-              "name": "그리폰의 눈 다이어뎀",
+              "name": "그리폰의 눈",
               "dataType": "unique",
               "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " [5/5 번개 주얼작]"
             }
           ]
         },
@@ -884,12 +1345,22 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             },
             {
               "type": "text",
-              "value": " 또는 "
+              "value": " (텔포)  · 딜: "
+            },
+            {
+              "type": "link",
+              "name": "명예의 굴레",
+              "dataType": "runeword",
+              "id": 30011
+            },
+            {
+              "type": "text",
+              "value": " / "
             },
             {
               "type": "link",
@@ -904,9 +1375,29 @@
           "content": [
             {
               "type": "link",
-              "name": "불사조 모나크",
+              "name": "불사조",
               "dataType": "runeword",
               "id": 30012
+            },
+            {
+              "type": "text",
+              "value": " 모나크  · 생존: "
+            },
+            {
+              "type": "link",
+              "name": "폭풍막이",
+              "dataType": "unique",
+              "id": 20035
+            },
+            {
+              "type": "text",
+              "value": "  · 패캐: "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         },
@@ -915,13 +1406,23 @@
           "content": [
             {
               "type": "text",
-              "value": "+2투창 20공속 레어 장갑 / "
+              "value": "+2 투창 20공속 레어/크래프트 장갑 / "
             },
             {
               "type": "link",
-              "name": "워 트래블러",
+              "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
             }
           ]
         },
@@ -929,23 +1430,59 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "서슬꼬리",
+              "dataType": "unique",
+              "id": 20034
+            },
+            {
               "type": "text",
-              "value": "관통 벨트 / 대군주의 분노 / 레이븐링 쌍"
+              "value": " (관통 33%) / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 무한 용병",
+        "title": "ACT 2 위세 무한 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
+                "name": "무한",
                 "dataType": "runeword",
                 "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
               }
             ]
           },
@@ -954,9 +1491,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
               }
             ]
           },
@@ -965,30 +1506,47 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 민첩 블럭 75%, 남은 스탯 생명력<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 투창 스킬참<br><strong>⚡ 스킬:</strong> 번개 분노(20), 번개 일격(20), 전기 일격(20)"
+      "info": "<strong>📊 스탯:</strong> 블럭 빌드면 민첩 75% 블럭, 관통 빌드면 장비 요구치 후 생명력 · 공속 52%<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 투창 스킬참, 예비 타이탄/썬더스트로크<br><strong>⚡ 스킬:</strong> 번개 분노(20), 충전된 일격(20), 번개 일격(20)<br><strong>🎮 운영법:</strong> 서슬꼬리 관통이 핵심이다. 카우·피트 같은 밀도는 번개 분노, 보스는 붙어서 충전된 일격. 발키리와 미끼로 어그로를 빼고, 타이탄 수량이 떨어지면 예비 창으로 바꾼다. 무한 용병 선고가 켜진 상태에서 분노를 던진다.",
+      "badge": "자바마",
+      "stats": "블럭 빌드면 민첩 75% 블럭, 관통 빌드면 장비 요구치 후 생명력 · 공속 52%",
+      "inventory": "새로워진 천상의 틈(번개 파괴참), 투창 스킬참, 예비 타이탄/썬더스트로크",
+      "skills": "번개 분노(20), 충전된 일격(20), 번개 일격(20)",
+      "playstyle": "서슬꼬리 관통이 핵심이다. 카우·피트 같은 밀도는 번개 분노, 보스는 붙어서 충전된 일격. 발키리와 미끼로 어그로를 빼고, 타이탄 수량이 떨어지면 예비 창으로 바꾼다. 무한 용병 선고가 켜진 상태에서 분노를 던진다."
     },
     {
       "id": 70008,
       "legacyKey": "ama_bow",
       "title": "아마존 (Amazon)",
-      "subtitle": "신뢰 활마 (다발 사격)",
+      "subtitle": "신념 활마 (다발 사격)",
+      "tags": [
+        "physical",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "신뢰 (그랜드 매이트런)",
+              "name": "신념",
               "dataType": "runeword",
               "id": 30009
+            },
+            {
+              "type": "text",
+              "value": " (그랜드 매이트런 보우, 광신 12~15)"
             }
           ]
         },
@@ -999,7 +1557,11 @@
               "type": "link",
               "name": "안다리엘의 두건",
               "dataType": "unique",
-              "id": "안다리엘의 두건"
+              "id": 20007
+            },
+            {
+              "type": "text",
+              "value": " [15/40 주얼작]"
             }
           ]
         },
@@ -1008,9 +1570,13 @@
           "content": [
             {
               "type": "link",
-              "name": "인내 (Fortitude)",
+              "name": "인내",
               "dataType": "runeword",
               "id": 30020
+            },
+            {
+              "type": "text",
+              "value": " (아콘 플레이트)"
             }
           ]
         },
@@ -1019,7 +1585,7 @@
           "content": [
             {
               "type": "text",
-              "value": "사용 불가 (양손 무기)"
+              "value": "사용 불가 (양손 활)"
             }
           ]
         },
@@ -1027,8 +1593,20 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "안수",
+              "dataType": "unique",
+              "id": 20038
+            },
+            {
               "type": "text",
-              "value": "안수 (고무장갑) / 고어 라이더"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "선혈 기수",
+              "dataType": "unique",
+              "id": 20029
             }
           ]
         },
@@ -1036,23 +1614,53 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "서슬꼬리",
+              "dataType": "unique",
+              "id": 20034
+            },
+            {
               "type": "text",
-              "value": "관통 벨트 / 대군주의 분노 / 레이븐 + 듀얼링"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + 듀얼 흡혈링"
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 1 신념/자존심 용병",
+        "title": "ACT 2 위세 자존심 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "자존심 (Pride)",
+                "name": "자존심",
                 "dataType": "runeword",
                 "id": 30021
+              },
+              {
+                "type": "text",
+                "value": " (에테 폴암, 집중 오라)"
               }
             ]
           },
@@ -1061,9 +1669,9 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
               }
             ]
           },
@@ -1072,7 +1680,7 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
               }
@@ -1080,26 +1688,35 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 생명력 최소, 남은 스탯 민첩 올인 (극딜)<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분새(물리), 맥어뎀참 도배<br><strong>🏹 스킬:</strong> 다발 사격, 속사(20), 유도 화살(20)"
+      "info": "<strong>📊 스탯:</strong> 활 요구 민첩, 나머지 생명력 (극딜은 민첩 추가)<br><strong>🎒 인벤토리:</strong> 새로워진 뼈의 분새(물리 파괴참), 맥어뎀참<br><strong>⚡ 스킬:</strong> 다발 사격(20), 속사(20), 유도 화살(20)<br><strong>🎮 운영법:</strong> 본인 신념(광신)과 2막 용병 자존심(집중)을 켜 둔 채 다발 사격으로 밀도를 지운다. 보스는 유도 화살·속사로 바꾸고, 관통 벨트로 화살이 여러 마리에게 꽂히게 한다. 물리 파괴참으로 면역만 벗겨 가며 엘리트를 저격한다.",
+      "badge": "활마",
+      "stats": "활 요구 민첩, 나머지 생명력 (극딜은 민첩 추가)",
+      "inventory": "새로워진 뼈의 분새(물리 파괴참), 맥어뎀참",
+      "skills": "다발 사격(20), 속사(20), 유도 화살(20)",
+      "playstyle": "본인 신념(광신)과 2막 용병 자존심(집중)을 켜 둔 채 다발 사격으로 밀도를 지운다. 보스는 유도 화살·속사로 바꾸고, 관통 벨트로 화살이 여러 마리에게 꽂히게 한다. 물리 파괴참으로 면역만 벗겨 가며 엘리트를 저격한다."
     },
     {
       "id": 70009,
       "legacyKey": "barb_whirl",
       "title": "야만용사 (Barbarian)",
-      "subtitle": "왚바바 (삥바바)",
+      "subtitle": "왚바바 / 삥바바 (소용돌이)",
+      "tags": [
+        "farm",
+        "physical"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "슬픔 (고뇌 페이즈 블레이드)",
+              "name": "고뇌",
               "dataType": "runeword",
               "id": 30013
             },
             {
               "type": "text",
-              "value": " 쌍수"
+              "value": " 페이즈 블레이드 쌍수"
             }
           ]
         },
@@ -1107,8 +1724,14 @@
           "slot": "투구 (Helm)",
           "content": [
             {
+              "type": "link",
+              "name": "아리앗의 얼굴",
+              "dataType": "unique",
+              "id": 20016
+            },
+            {
               "type": "text",
-              "value": "슬레이어의 갈기 [렘룬작]"
+              "value": " [렘룬작 — 삥]"
             }
           ]
         },
@@ -1117,13 +1740,19 @@
           "content": [
             {
               "type": "link",
-              "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "name": "부",
+              "dataType": "runeword",
+              "id": 30045
             },
             {
               "type": "text",
-              "value": " 또는 부 (Wealth)"
+              "value": " (삥/매찬)  · 기동: "
+            },
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -1132,7 +1761,7 @@
           "content": [
             {
               "type": "text",
-              "value": "쌍수 착용"
+              "value": "쌍수 착용 (방패 없음)"
             }
           ]
         },
@@ -1140,8 +1769,20 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "행운의 장갑",
+              "dataType": "unique",
+              "id": 20043
+            },
+            {
               "type": "text",
-              "value": "챈스가드 / 지옥걸음"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "지옥불걸음",
+              "dataType": "unique",
+              "id": 20045
             }
           ]
         },
@@ -1149,23 +1790,68 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "금박 허리띠",
+              "dataType": "unique",
+              "id": 20044
+            },
+            {
               "type": "text",
-              "value": "금박 허리띠 / 초승달 아뮬 / 왜성 반지 쌍"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "왜성반지",
+              "dataType": "unique",
+              "id": 20025
+            },
+            {
+              "type": "text",
+              "value": " 쌍"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "알리바바의 칼날",
+              "dataType": "unique",
+              "id": 20030
+            },
+            {
+              "type": "text",
+              "value": " (아이템 찾기 시 삥/매찬)"
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 위압 용병",
+        "title": "ACT 2 위세 용병 (노화)",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
-                "dataType": "runeword",
-                "id": 30008
+                "name": "사신의 종소리",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (에테, 샤엘/옴작)"
               }
             ]
           },
@@ -1174,9 +1860,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -1185,7 +1875,7 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
               }
@@ -1193,26 +1883,41 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 넉넉히, 오더스 후 생명력 3천<br><strong>🎒 인벤토리:</strong> 삥참(골드 증가율) 및 기드의 운 참 도배<br><strong>⚔️ 스킬:</strong> 소용돌이(20), 검 숙련(20), 아이템 찾기(50%이상)"
+      "info": "<strong>📊 스탯:</strong> 장비 힘 여유, 오더스(CTA) 후 생명력 3천대<br><strong>🎒 인벤토리:</strong> 기드의 운, 삥/매찬 그랜드참<br><strong>⚡ 스킬:</strong> 소용돌이(20), 검 숙련(20), 아이템 찾기(50% 이상)<br><strong>🎮 운영법:</strong> CTA 오더스를 켠 뒤 고뇌 쌍수로 소용돌이하며 밀도를 통과한다. 잡몹을 지운 다음 알리바바로 스왑해 시체에 아이템 찾기(혹)를 쓴다. 삥 루트는 카우·밀도 높은 테러존이 효율적이고, 상점 매찬까지 챙긴다.",
+      "badge": "왚바바",
+      "stats": "장비 힘 여유, 오더스(CTA) 후 생명력 3천대",
+      "inventory": "기드의 운, 삥/매찬 그랜드참",
+      "skills": "소용돌이(20), 검 숙련(20), 아이템 찾기(50% 이상)",
+      "playstyle": "CTA 오더스를 켠 뒤 고뇌 쌍수로 소용돌이하며 밀도를 통과한다. 잡몹을 지운 다음 알리바바로 스왑해 시체에 아이템 찾기(혹)를 쓴다. 삥 루트는 카우·밀도 높은 테러존이 효율적이고, 상점 매찬까지 챙긴다."
     },
     {
       "id": 70010,
       "legacyKey": "barb_ber",
       "title": "야만용사 (Barbarian)",
       "subtitle": "버서크 바바",
+      "tags": [
+        "boss",
+        "physical"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "슬픔 (고뇌 페이즈)",
+              "name": "고뇌",
               "dataType": "runeword",
               "id": 30013
             },
             {
               "type": "text",
-              "value": " + 알리바바"
+              "value": " (페이즈 블레이드) + 스왑 "
+            },
+            {
+              "type": "link",
+              "name": "알리바바의 칼날",
+              "dataType": "unique",
+              "id": 20030
             }
           ]
         },
@@ -1220,8 +1925,14 @@
           "slot": "투구 (Helm)",
           "content": [
             {
+              "type": "link",
+              "name": "아리앗의 얼굴",
+              "dataType": "unique",
+              "id": 20016
+            },
+            {
               "type": "text",
-              "value": "슬레이어의 갈기 [참룬작]"
+              "value": " [참룬작]"
             }
           ]
         },
@@ -1231,8 +1942,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -1241,7 +1952,13 @@
           "content": [
             {
               "type": "text",
-              "value": "쌍수"
+              "value": "쌍수 시 방패 없음 · 단일 고뇌 시 "
+            },
+            {
+              "type": "link",
+              "name": "폭풍막이",
+              "dataType": "unique",
+              "id": 20035
             }
           ]
         },
@@ -1249,12 +1966,18 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "안수",
+              "dataType": "unique",
+              "id": 20038
+            },
+            {
               "type": "text",
-              "value": "안수 / "
+              "value": " / "
             },
             {
               "type": "link",
-              "name": "워 트래블러",
+              "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
             }
@@ -1264,24 +1987,74 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "베르둔고의 튼튼한 노끈",
+              "dataType": "unique",
+              "id": 20041
+            },
+            {
               "type": "text",
-              "value": "미스릴 코일 / 대군주 / 레이븐링 + 마흡"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + 흡혈링"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "알리바바의 칼날",
+              "dataType": "unique",
+              "id": 20030
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 사막 용병",
+        "title": "ACT 2 위세 용병 (노화)",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "리퍼스 톨",
-                "unresolved": true,
-                "target": "사형수의 자비",
-                "dataType": "runeword"
+                "name": "사신의 종소리",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (에테, 샤엘/옴작)"
               }
             ]
           },
@@ -1290,9 +2063,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -1301,7 +2078,7 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
               }
@@ -1309,13 +2086,22 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 생명력 3천 맞추고 올 힘 (극딜)<br><strong>🎒 인벤토리:</strong> 뼈의 분새(물리 파괴참), 맥어뎀/피참 도배<br><strong>⚔️ 스킬:</strong> 광전사(20), 검 숙련(20), 포효(20)"
+      "info": "<strong>📊 스탯:</strong> 생명력 3천을 맞춘 뒤 힘 투자 (버서크는 마법 피해라 힘 계수 없음)<br><strong>🎒 인벤토리:</strong> 생명/레지 스몰참, 물리 파괴참은 선택 (주력기가 마법 피해)<br><strong>⚡ 스킬:</strong> 광전사(20), 포효(20), 검 숙련(20)<br><strong>🎮 운영법:</strong> 버서크는 마법 피해라 물리 면역을 무시한다. 한 대씩 끊어서 때리고 포효 시너지를 유지한 채 보스·우버를 단타로 잡는다. 리퍼 용병 노화가 뜬 뒤에 딜을 넣고, 텔레포트로 위험한 투사체를 피한다.",
+      "badge": "버서크",
+      "stats": "생명력 3천을 맞춘 뒤 힘 투자 (버서크는 마법 피해라 힘 계수 없음)",
+      "inventory": "생명/레지 스몰참, 물리 파괴참은 선택 (주력기가 마법 피해)",
+      "skills": "광전사(20), 포효(20), 검 숙련(20)",
+      "playstyle": "버서크는 마법 피해라 물리 면역을 무시한다. 한 대씩 끊어서 때리고 포효 시너지를 유지한 채 보스·우버를 단타로 잡는다. 리퍼 용병 노화가 뜬 뒤에 딜을 넣고, 텔레포트로 위험한 투사체를 피한다."
     },
     {
       "id": 70011,
       "legacyKey": "dru_ele",
       "title": "드루이드 (Druid)",
-      "subtitle": "엘리드루 (풍수)",
+      "subtitle": "엘리드루 (풍수 / 토네이도)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
@@ -1325,6 +2111,10 @@
               "name": "오크의 심장",
               "dataType": "runeword",
               "id": 30019
+            },
+            {
+              "type": "text",
+              "value": " (플레일)"
             }
           ]
         },
@@ -1332,8 +2122,14 @@
           "slot": "투구 (Helm)",
           "content": [
             {
+              "type": "link",
+              "name": "잘랄의 갈기",
+              "dataType": "unique",
+              "id": 20037
+            },
+            {
               "type": "text",
-              "value": "잘랄의 갈기"
+              "value": "  · 대안: 2드루 20패캐 서클릿"
             }
           ]
         },
@@ -1343,8 +2139,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -1378,9 +2174,19 @@
             },
             {
               "type": "link",
-              "name": "워 트래블러",
+              "name": "배틀 부츠",
               "dataType": "unique",
               "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
             }
           ]
         },
@@ -1389,7 +2195,7 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
@@ -1399,7 +2205,7 @@
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "마라의 만화경",
               "dataType": "unique",
               "id": 20003
             },
@@ -1409,24 +2215,53 @@
             },
             {
               "type": "link",
-              "name": "조던 쌍",
+              "name": "요르단(조단)의 반지",
               "dataType": "unique",
               "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " 쌍"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 통찰 용병",
+        "title": "ACT 2 신성한 빙결 통찰 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "통찰 (Insight)",
+                "name": "통찰",
                 "dataType": "runeword",
                 "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (에테 크립틱 액스)"
               }
             ]
           },
@@ -1435,9 +2270,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테)"
               }
             ]
           },
@@ -1446,28 +2285,47 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 모나크 힘(156), 생명력 올인<br><strong>🎒 인벤토리:</strong> 원소 스킬참, 애니참, 횃불참<br><strong>🌪️ 스킬:</strong> 돌풍(20), 회오리바람(20), 허리케인(20)"
+      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인 · 패캐 99%(10프레임)<br><strong>🎒 인벤토리:</strong> 원소 스킬참, 애니참, 횃불참, 새로워진 뼈의 분새(물리 파괴참)<br><strong>⚡ 스킬:</strong> 돌풍(20), 회오리바람(20), 허리케인(20)<br><strong>🎮 운영법:</strong> 허리케인·회오리 갑옷·참나무 현자를 켠 뒤 텔레포트로 자리를 잡는다. 돌풍(토네이도)은 몹이 걸어올 동선에 미리 깔고, 허리케인 냉기로 잔몹을 묶는다. 토네이도는 물리 피해라 물리 파괴참이 있으면 면역 구간이 한결 수월하다.",
+      "badge": "엘리드루",
+      "stats": "모나크 힘 156, 생명력 올인 · 패캐 99%(10프레임)",
+        "inventory": "원소 스킬참, 애니참, 횃불참, 새로워진 뼈의 분새(물리 파괴참)",
+      "skills": "돌풍(20), 회오리바람(20), 허리케인(20)",
+      "playstyle": "허리케인·회오리 갑옷·참나무 현자를 켠 뒤 텔레포트로 자리를 잡는다. 돌풍(토네이도)은 몹이 걸어올 동선에 미리 깔고, 허리케인 냉기로 잔몹을 묶는다. 토네이도는 물리 피해라 물리 파괴참이 있으면 면역 구간이 한결 수월하다."
     },
     {
       "id": 70012,
       "legacyKey": "dru_wolf",
       "title": "드루이드 (Druid)",
       "subtitle": "퓨리 늑드루",
+      "tags": [
+        "boss",
+        "physical"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
+              "type": "link",
+              "name": "사신의 종소리",
+              "dataType": "unique",
+              "id": 20032
+            },
+            {
               "type": "text",
-              "value": "에테 리퍼스 톨 [조드룬작]"
+              "value": " (에테, 조드룬작)"
             }
           ]
         },
@@ -1475,8 +2333,24 @@
           "slot": "투구 (Helm)",
           "content": [
             {
+              "type": "link",
+              "name": "탈태",
+              "dataType": "runeword",
+              "id": 30034
+            },
+            {
               "type": "text",
-              "value": "잘랄의 갈기 [공속/올저 주얼작]"
+              "value": " (변신 +5, 2.6+ 종결)  · 대안: "
+            },
+            {
+              "type": "link",
+              "name": "잘랄의 갈기",
+              "dataType": "unique",
+              "id": 20037
+            },
+            {
+              "type": "text",
+              "value": " [공속 주얼작]"
             }
           ]
         },
@@ -1485,9 +2359,13 @@
           "content": [
             {
               "type": "link",
-              "name": "인내 (Fortitude)",
+              "name": "인내",
               "dataType": "runeword",
               "id": 30020
+            },
+            {
+              "type": "text",
+              "value": " (에테 아콘)"
             }
           ]
         },
@@ -1496,7 +2374,7 @@
           "content": [
             {
               "type": "text",
-              "value": "양손 무기"
+              "value": "양손 무기 (방패 없음)"
             }
           ]
         },
@@ -1504,8 +2382,20 @@
           "slot": "장갑 / 신발",
           "content": [
             {
+              "type": "link",
+              "name": "드라쿨의 장갑",
+              "dataType": "unique",
+              "id": 20022
+            },
+            {
               "type": "text",
-              "value": "드라쿨의 장갑 / 고어 라이더"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "선혈 기수",
+              "dataType": "unique",
+              "id": 20029
             }
           ]
         },
@@ -1513,23 +2403,53 @@
           "slot": "벨트 / 장신구",
           "content": [
             {
+              "type": "link",
+              "name": "귀 꿰미",
+              "dataType": "unique",
+              "id": 20039
+            },
+            {
               "type": "text",
-              "value": "귀꿰미 / 대군주의 분노 / 레이븐 + 듀얼"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + 듀얼 흡혈"
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 1 자존심 용병",
+        "title": "ACT 1 신념 용병 (광신 오라)",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "자존심 (Pride)",
+                "name": "신념",
                 "dataType": "runeword",
-                "id": 30021
+                "id": 30009
+              },
+              {
+                "type": "text",
+                "value": " (활 베이스)"
               }
             ]
           },
@@ -1538,9 +2458,9 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
               }
             ]
           },
@@ -1549,7 +2469,7 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
               }
@@ -1557,20 +2477,37 @@
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 무기 요구치 민첩, 생명력 올인<br><strong>🎒 인벤토리:</strong> 변신 스킬참, 맥어뎀/피참 도배<br><strong>🐺 스킬:</strong> 늑대인간(20), 변신술(20), 분노(20)"
+      "info": "<strong>📊 스탯:</strong> 무기 민첩 요구치, 나머지 생명력<br><strong>🎒 인벤토리:</strong> 변신 스킬참, 맥어뎀/생명 스몰참<br><strong>⚡ 스킬:</strong> 늑대인간(20), 변신술(20), 분노(20)<br><strong>🎮 운영법:</strong> 늑대 변신을 유지한 채 분노(퓨리)를 연속으로 넣는다. 에테 리퍼의 노화가 발동했는지 확인하고, 1막 신념 용병의 광신이 켜져 있어야 공속이 나온다. 흡혈이 끊기면 한 발 빠져 드라쿨을 다시 띄운 다음 붙는다.",
+      "badge": "늑드루",
+      "stats": "무기 민첩 요구치, 나머지 생명력",
+      "inventory": "변신 스킬참, 맥어뎀/생명 스몰참",
+      "skills": "늑대인간(20), 변신술(20), 분노(20)",
+      "playstyle": "늑대 변신을 유지한 채 분노(퓨리)를 연속으로 넣는다. 에테 리퍼의 노화가 발동했는지 확인하고, 1막 신념 용병의 광신이 켜져 있어야 공속이 나온다. 흡혈이 끊기면 한 발 빠져 드라쿨을 다시 띄운 다음 붙는다."
     },
     {
       "id": 70013,
       "legacyKey": "sin_mosaic",
       "title": "암살자 (Assassin)",
-      "subtitle": "모자이크씬 (무술)",
+      "subtitle": "모자이크씬 (불사조 일격)",
+      "tags": [
+        "physical",
+        "magic",
+        "farm",
+        "boss"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
+              "type": "link",
+              "name": "모자이크",
+              "dataType": "runeword",
+              "id": 30031
+            },
+            {
               "type": "text",
-              "value": "쌍 모자이크 룬어 클러"
+              "value": " 룬어 클러 쌍수 (충전 미소모 100%)"
             }
           ]
         },
@@ -1579,9 +2516,19 @@
           "content": [
             {
               "type": "link",
-              "name": "그리폰의 눈 다이어뎀",
+              "name": "그리폰의 눈",
               "dataType": "unique",
               "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " (번개 차지)  · 범용: "
+            },
+            {
+              "type": "link",
+              "name": "샤코",
+              "dataType": "unique",
+              "id": 20005
             }
           ]
         },
@@ -1591,8 +2538,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -1601,7 +2548,7 @@
           "content": [
             {
               "type": "text",
-              "value": "쌍수 무기 장착"
+              "value": "쌍수 클로 (방패 없음)"
             }
           ]
         },
@@ -1610,7 +2557,13 @@
           "content": [
             {
               "type": "text",
-              "value": "+2무술 20공속 레어 장갑 / 섀도우 댄서"
+              "value": "+2 무술 20공속 레어 장갑 / "
+            },
+            {
+              "type": "link",
+              "name": "섀도우 댄서",
+              "dataType": "unique",
+              "id": 20020
             }
           ]
         },
@@ -1619,19 +2572,19 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
             {
               "type": "text",
-              "value": " / "
+              "value": " 또는 "
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "귀 꿰미",
               "dataType": "unique",
-              "id": 20003
+              "id": 20039
             },
             {
               "type": "text",
@@ -1639,24 +2592,73 @@
             },
             {
               "type": "link",
-              "name": "조던 쌍",
+              "name": "대군주의 분노",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "칠흑서리",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
               "dataType": "unique",
               "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (텔포 패캐용)"
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 무한 용병",
+        "title": "ACT 2 위세 무한 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
+                "name": "무한",
                 "dataType": "runeword",
                 "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
               }
             ]
           },
@@ -1665,9 +2667,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
-                "id": "안다리엘의 두건"
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
               }
             ]
           },
@@ -1676,21 +2682,34 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 장비 요구치 이후 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 무술 스킬참<br><strong>🥋 스킬:</strong> 불사조 일격(20), 천둥의 손톱(20), 얼음 손톱(20)"
+      "info": "<strong>📊 스탯:</strong> 장비 요구치 이후 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개) 또는 화염/물리 파괴참, 무술 스킬참<br><strong>⚡ 스킬:</strong> 불사조 일격(20), 천둥의 주먹(20), 얼음 칼날(20)<br><strong>🎮 운영법:</strong> 불사조 일격으로 화염·냉기·번개 차지를 3중으로 쌓은 뒤 용의 발톱이나 용의 꼬리로 방출한다. 모자이크 쌍수라 차지가 안 깎이므로 마무리기를 연타해도 된다. 이동은 CTA+영혼 스왑 텔레포트로 하고, 다시 클로로 바꿔 싸운다.",
+      "badge": "모자이크씬",
+      "stats": "장비 요구치 이후 생명력 올인",
+      "inventory": "새로워진 천상의 틈(번개) 또는 화염/물리 파괴참, 무술 스킬참",
+      "skills": "불사조 일격(20), 천둥의 주먹(20), 얼음 칼날(20)",
+      "playstyle": "불사조 일격으로 화염·냉기·번개 차지를 3중으로 쌓은 뒤 용의 발톱이나 용의 꼬리로 방출한다. 모자이크 쌍수라 차지가 안 깎이므로 마무리기를 연타해도 된다. 이동은 CTA+영혼 스왑 텔레포트로 하고, 다시 클로로 바꿔 싸운다."
     },
     {
       "id": 70014,
       "legacyKey": "sin_trap",
       "title": "암살자 (Assassin)",
-      "subtitle": "트랩씬 (번개 파수기)",
+      "subtitle": "트랩씬 (번개 파수꾼)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
@@ -1700,6 +2719,16 @@
               "name": "오크의 심장",
               "dataType": "runeword",
               "id": 30019
+            },
+            {
+              "type": "text",
+              "value": "  · 라깍 특화: "
+            },
+            {
+              "type": "link",
+              "name": "초승달",
+              "dataType": "runeword",
+              "id": 30041
             }
           ]
         },
@@ -1714,7 +2743,13 @@
             },
             {
               "type": "text",
-              "value": " 또는 2어쌔 20패캐 서클릿"
+              "value": " 또는 2어쌔 20패캐 서클릿  · 번개: "
+            },
+            {
+              "type": "link",
+              "name": "그리폰의 눈",
+              "dataType": "unique",
+              "id": 20006
             }
           ]
         },
@@ -1724,8 +2759,8 @@
             {
               "type": "link",
               "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
+              "dataType": "runeword",
+              "id": 30022
             }
           ]
         },
@@ -1740,7 +2775,7 @@
             },
             {
               "type": "text",
-              "value": " 모나크"
+              "value": " 모나크 (35% 패캐)"
             }
           ]
         },
@@ -1755,7 +2790,23 @@
             },
             {
               "type": "text",
-              "value": " / 물부츠"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "물나그네",
+              "dataType": "unique",
+              "id": 20042
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "섀도우 댄서",
+              "dataType": "unique",
+              "id": 20020
             }
           ]
         },
@@ -1764,7 +2815,7 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
@@ -1774,7 +2825,7 @@
             },
             {
               "type": "link",
-              "name": "마라",
+              "name": "마라의 만화경",
               "dataType": "unique",
               "id": 20003
             },
@@ -1784,158 +2835,53 @@
             },
             {
               "type": "link",
-              "name": "조던",
+              "name": "요르단(조단)의 반지",
               "dataType": "unique",
               "id": 20001
-            }
-          ]
-        }
-      ],
-      "merc": {
-        "title": "ACT 2 무한 용병",
-        "gear": [
-          {
-            "slot": "용병 무기",
-            "content": [
-              {
-                "type": "link",
-                "name": "무한 (Infinity)",
-                "dataType": "runeword",
-                "id": 30008
-              }
-            ]
-          },
-          {
-            "slot": "용병 투구",
-            "content": [
-              {
-                "type": "link",
-                "name": "안다리엘의 두개골",
-                "dataType": "unique",
-                "id": "안다리엘의 두건"
-              }
-            ]
-          },
-          {
-            "slot": "용병 갑옷",
-            "content": [
-              {
-                "type": "link",
-                "name": "인내 (Fortitude)",
-                "dataType": "runeword",
-                "id": 30020
-              }
-            ]
-          }
-        ]
-      },
-      "info": "<strong>📊 스탯:</strong> 모나크 힘(156), 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개), 덫(트랩) 스킬참<br><strong>🥋 스킬:</strong> 번개 파수기(20), 죽음 파수기(20), 감전 그물(20)"
-    },
-    {
-      "id": 70015,
-      "legacyKey": "demo",
-      "title": "악마술사 (Demonologist)",
-      "subtitle": "악마 소환 & 화염 변신",
-      "slots": [
-        {
-          "slot": "무기 (Weapon)",
-          "content": [
-            {
-              "type": "link",
-              "name": "야수",
-              "unresolved": true,
-              "target": "야수",
-              "dataType": "runeword"
             },
             {
               "type": "text",
-              "value": " (광신 오라)"
+              "value": " + 패캐링"
             }
           ]
         },
         {
-          "slot": "투구 (Helm)",
+          "slot": "스왑 (Weapon Swap)",
           "content": [
             {
               "type": "link",
-              "name": "샤코",
-              "dataType": "unique",
-              "id": 20005
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
             },
             {
               "type": "text",
-              "value": " [보호자의 불꽃 화염 주얼작]"
-            }
-          ]
-        },
-        {
-          "slot": "갑옷 (Armor)",
-          "content": [
-            {
-              "type": "link",
-              "name": "수수께끼",
-              "dataType": "item",
-              "id": "enigma"
-            }
-          ]
-        },
-        {
-          "slot": "방패 (Shield)",
-          "content": [
+              "value": " + "
+            },
             {
               "type": "link",
               "name": "영혼",
               "dataType": "runeword",
               "id": 30007
-            },
-            {
-              "type": "text",
-              "value": " 모나크"
-            }
-          ]
-        },
-        {
-          "slot": "장갑 / 신발",
-          "content": [
-            {
-              "type": "text",
-              "value": "트랑울 장갑 / 섀도우 댄서"
-            }
-          ]
-        },
-        {
-          "slot": "벨트 / 장신구",
-          "content": [
-            {
-              "type": "link",
-              "name": "스파이더웹",
-              "dataType": "unique",
-              "id": 20013
-            },
-            {
-              "type": "text",
-              "value": " / 3소환 아뮬 / "
-            },
-            {
-              "type": "link",
-              "name": "조던 쌍",
-              "dataType": "unique",
-              "id": 20001
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 무한 용병",
+        "title": "ACT 2 위세 무한 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한 (Infinity)",
+                "name": "무한",
                 "dataType": "runeword",
                 "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
               }
             ]
           },
@@ -1944,9 +2890,13 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
                 "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
               }
             ]
           },
@@ -1955,34 +2905,49 @@
             "content": [
               {
                 "type": "link",
-                "name": "인내 (Fortitude)",
+                "name": "인내",
                 "dataType": "runeword",
                 "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
               }
             ]
           }
         ]
       },
-      "info": "<strong>📊 스탯:</strong> 힘 156, 생명력 올인<br><strong>🎒 인벤토리:</strong> 새로워진 불길의 균열(화염 파괴참), 소환 스킬참<br><strong>🔥 스킬:</strong> 지옥의 악마 소환(20), 지옥불(20), 소환수 강화(20)"
+      "info": "<strong>📊 스탯:</strong> 모나크 힘 156, 생명력 올인 · 패캐 102%+<br><strong>🎒 인벤토리:</strong> 새로워진 천상의 틈(번개 파괴참), 덫 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 번개 파수꾼(20), 죽음 파수꾼(20), 감전 그물(20)<br><strong>🎮 운영법:</strong> 텔레포트로 진입해 번개 파수꾼 5개를 깔고, 죽음 파수꾼으로 시체를 터뜨린다. 그림자 전령으로 어그로를 뺀 뒤 다음 팩으로 바로 이동한다. 무한 용병 선고가 닿는 거리에서 덫을 설치하는 것이 딜의 핵심이다.",
+      "badge": "트랩씬",
+      "stats": "모나크 힘 156, 생명력 올인 · 패캐 102%+",
+      "inventory": "새로워진 천상의 틈(번개 파괴참), 덫 스킬참, 애니참, 횃불참",
+      "skills": "번개 파수꾼(20), 죽음 파수꾼(20), 감전 그물(20)",
+      "playstyle": "텔레포트로 진입해 번개 파수꾼 5개를 깔고, 죽음 파수꾼으로 시체를 터뜨린다. 그림자 전령으로 어그로를 뺀 뒤 다음 팩으로 바로 이동한다. 무한 용병 선고가 닿는 거리에서 덫을 설치하는 것이 딜의 핵심이다."
     },
     {
-      "id": 70016,
-      "legacyKey": "demo_endgame",
-      "title": "악마술사 (종결 화염 장판 빌드)",
-      "subtitle": "집착 & 불사조 하이엔드 세팅",
+      "id": 70015,
+      "legacyKey": "demo_echo",
+      "title": "악마술사 (Warlock)",
+      "subtitle": "메아리치는 타격 (125 패캐)",
+      "tags": [
+        "physical",
+        "magic",
+        "farm",
+        "boss"
+      ],
       "slots": [
         {
           "slot": "무기 (Weapon)",
           "content": [
             {
               "type": "link",
-              "name": "집착",
+              "name": "통찰",
               "dataType": "runeword",
-              "id": 30040
+              "id": 30018
             },
             {
               "type": "text",
-              "value": " [6소켓 에테 스태프 베이스]"
+              "value": " (에테 크립틱 액스/콜로서스 불즈, 35% 패캐 + 명상)"
             }
           ]
         },
@@ -1993,11 +2958,11 @@
               "type": "link",
               "name": "지옥파수꾼의 의지",
               "dataType": "unique",
-              "id": 20050
+              "id": 20019
             },
             {
               "type": "text",
-              "value": " [화염 주얼 2작]"
+              "value": " [증뎀 주얼작]  · 대안: 2스킬 20패캐 서클릿"
             }
           ]
         },
@@ -2019,11 +2984,11 @@
               "type": "link",
               "name": "불사조",
               "dataType": "runeword",
-              "id": 30030
+              "id": 30012
             },
             {
               "type": "text",
-              "value": " (모나크 베이스)"
+              "value": " 모나크 (속죄 오라 + 증뎀) — 워록은 양손 무기+방패 동시 착용 가능"
             }
           ]
         },
@@ -2032,13 +2997,29 @@
           "content": [
             {
               "type": "link",
-              "name": "트랑울의 발톱",
+              "name": "트래그울의 발톱",
               "dataType": "unique",
-              "id": 20040
+              "id": 20031
             },
             {
               "type": "text",
-              "value": " / 섀도우 댄서"
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "망령걸음",
+              "dataType": "unique",
+              "id": 20048
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "모래폭풍 여로",
+              "dataType": "unique",
+              "id": 20040
             }
           ]
         },
@@ -2047,34 +3028,73 @@
           "content": [
             {
               "type": "link",
-              "name": "스파이더웹",
+              "name": "거미그물 띠",
               "dataType": "unique",
               "id": 20013
             },
             {
               "type": "text",
-              "value": " / 화염 크래프트 아뮬 / "
+              "value": " / "
             },
             {
               "type": "link",
-              "name": "조던 쌍",
+              "name": "마라의 만화경",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
               "dataType": "unique",
               "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + 10% 패캐링"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
             }
           ]
         }
       ],
       "merc": {
-        "title": "ACT 2 무한 용병",
+        "title": "ACT 2 위세 자존심 용병",
         "gear": [
           {
             "slot": "용병 무기",
             "content": [
               {
                 "type": "link",
-                "name": "무한",
+                "name": "자존심",
                 "dataType": "runeword",
-                "id": 30008
+                "id": 30021
+              },
+              {
+                "type": "text",
+                "value": " (에테 폴암, 집중 오라)"
               }
             ]
           },
@@ -2083,7 +3103,17 @@
             "content": [
               {
                 "type": "link",
-                "name": "안다리엘의 두개골",
+                "name": "치료",
+                "dataType": "runeword",
+                "id": 30025
+              },
+              {
+                "type": "text",
+                "value": " 또는 "
+              },
+              {
+                "type": "link",
+                "name": "안다리엘의 두건",
                 "dataType": "unique",
                 "id": 20007
               }
@@ -2102,7 +3132,252 @@
           }
         ]
       },
-      "info": "<strong>🔥 운영법:</strong> 텔레포트로 몹 중앙 진입 -> 불사조 속죄 오라로 마나 무한 수급하며 집착의 65패캐로 장판기 연사. <strong>🎒 세팅 핵심:</strong> 무한(용병) + 불사조(방패)의 이중 화염 저항 깎기로 헬 난이도 화염 면역까지 무시하며 밀어버림."
+      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치만, 민첩/마력 0, 나머지 생명력 · 패캐 125%<br><strong>🎒 인벤토리:</strong> 생명/레지 스몰참, 물리 파괴참, 애니참, 횃불참 (기괴 스킬참은 후순위)<br><strong>⚡ 스킬:</strong> 메아리치는 타격(20), 거울상 칼날(20), 칼날 이동, 악마 속박, 소모<br><strong>🎮 운영법:</strong> 메아리는 공속이 아니라 패캐 스킬이므로 125 구간을 맞춘 뒤 난사한다. 에테 통찰+불사조라 마나와 속죄가 동시에 돌아간다. 속박한 악마(선고·증폭)를 앞세우고 밀도 중앙에서 메아리를 갈기고, 보스는 무기력 저주 후 딜을 넣는다.",
+      "badge": "메아리",
+      "stats": "장비 힘 요구치만, 민첩/마력 0, 나머지 생명력 · 패캐 125%",
+      "inventory": "생명/레지 스몰참, 물리 파괴참, 애니참, 횃불참 (기괴 스킬참은 후순위)",
+      "skills": "메아리치는 타격(20), 거울상 칼날(20), 칼날 이동, 악마 속박, 소모",
+      "playstyle": "메아리는 공속이 아니라 패캐 스킬이므로 125 구간을 맞춘 뒤 난사한다. 에테 통찰+불사조라 마나와 속죄가 동시에 돌아간다. 속박한 악마(선고·증폭)를 앞세우고 밀도 중앙에서 메아리를 갈기고, 보스는 무기력 저주 후 딜을 넣는다."
+    },
+    {
+      "id": 70016,
+      "legacyKey": "demo_endgame",
+      "title": "악마술사 (Warlock)",
+      "subtitle": "종말 / 화염 장판 (아포칼립스)",
+      "tags": [
+        "magic",
+        "farm",
+        "boss"
+      ],
+      "slots": [
+        {
+          "slot": "무기 (Weapon)",
+          "content": [
+            {
+              "type": "link",
+              "name": "집착",
+              "dataType": "runeword",
+              "id": 30040
+            },
+            {
+              "type": "text",
+              "value": " (6소켓 지팡이, 65% 패캐)  · 대안: "
+            },
+            {
+              "type": "link",
+              "name": "망 송의 가르침",
+              "dataType": "unique",
+              "id": 20047
+            }
+          ]
+        },
+        {
+          "slot": "투구 (Helm)",
+          "content": [
+            {
+              "type": "link",
+              "name": "깜빡이는 불꽃",
+              "dataType": "runeword",
+              "id": 30030
+            },
+            {
+              "type": "text",
+              "value": " (화염 종결, 꺼불)  · 딜: 3혼돈 20패캐 2소켓 서클릿+파다이  · 가성비: "
+            },
+            {
+              "type": "link",
+              "name": "지옥파수꾼의 의지",
+              "dataType": "unique",
+              "id": 20019
+            }
+          ]
+        },
+        {
+          "slot": "갑옷 (Armor)",
+          "content": [
+            {
+              "type": "link",
+              "name": "수수께끼",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "방패 (Shield)",
+          "content": [
+            {
+              "type": "link",
+              "name": "아르스 알디아볼로스",
+              "dataType": "unique",
+              "id": 20046
+            },
+            {
+              "type": "text",
+              "value": " (혼돈 +2 / 25패캐)  · 생존·마나: "
+            },
+            {
+              "type": "link",
+              "name": "불사조",
+              "dataType": "runeword",
+              "id": 30012
+            }
+          ]
+        },
+        {
+          "slot": "장갑 / 신발",
+          "content": [
+            {
+              "type": "link",
+              "name": "마수",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "트래그울의 발톱",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "망령걸음",
+              "dataType": "unique",
+              "id": 20048
+            },
+            {
+              "type": "text",
+              "value": " 또는 "
+            },
+            {
+              "type": "link",
+              "name": "섀도우 댄서",
+              "dataType": "unique",
+              "id": 20020
+            }
+          ]
+        },
+        {
+          "slot": "벨트 / 장신구",
+          "content": [
+            {
+              "type": "link",
+              "name": "거미그물 띠",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 화염 크래프트 아뮬 또는 "
+            },
+            {
+              "type": "link",
+              "name": "마라의 만화경",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "요르단(조단)의 반지",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " 쌍"
+            }
+          ]
+        },
+        {
+          "slot": "스왑 (Weapon Swap)",
+          "content": [
+            {
+              "type": "link",
+              "name": "콜투암스",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "영혼",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "ACT 2 위세 무한 용병",
+        "gear": [
+          {
+            "slot": "용병 무기",
+            "content": [
+              {
+                "type": "link",
+                "name": "무한",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (에테 쓰레셔/맨캐쳐)"
+              }
+            ]
+          },
+          {
+            "slot": "용병 투구",
+            "content": [
+              {
+                "type": "link",
+                "name": "안다리엘의 두건",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (에테, 루비 주얼작)"
+              }
+            ]
+          },
+          {
+            "slot": "용병 갑옷",
+            "content": [
+              {
+                "type": "link",
+                "name": "인내",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (에테 아콘/더스크)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 스탯:</strong> 장비 힘 요구치, 생명력 올인 · 패캐 125%(집착 65 포함)<br><strong>🎒 인벤토리:</strong> 새로워진 불길의 균열(화염 파괴참), 혼돈/화염 스킬참, 애니참, 횃불참<br><strong>⚡ 스킬:</strong> 종말(20), 화염파(20), 화염 인장·무기력, 소모<br><strong>🎮 운영법:</strong> 텔레포트로 밀도 중앙에 들어가 화염 고리·화염파를 깔고 종말(아포칼립스)을 연사한다. 워록은 양손 집착 지팡이와 그리모어/불사조를 동시에 착용할 수 있다. 꺼불과 무한 용병으로 화염 저항을 깎고, 파괴참으로 면역까지 밀어버린다.",
+      "badge": "종말",
+      "stats": "장비 힘 요구치, 생명력 올인 · 패캐 125%(집착 65 포함)",
+      "inventory": "새로워진 불길의 균열(화염 파괴참), 혼돈/화염 스킬참, 애니참, 횃불참",
+      "skills": "종말(20), 화염파(20), 화염 인장·무기력, 소모",
+      "playstyle": "텔레포트로 밀도 중앙에 들어가 화염 고리·화염파를 깔고 종말(아포칼립스)을 연사한다. 워록은 양손 집착 지팡이와 그리모어/불사조를 동시에 착용할 수 있다. 꺼불과 무한 용병으로 화염 저항을 깎고, 파괴참으로 면역까지 밀어버린다."
     }
   ]
 }

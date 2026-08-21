@@ -162,17 +162,17 @@ function toggleAccordion(headerEl) {
  * @description 전역 DATA 객체 기반 실시간 통합 검색 (룬어, 유니크, 연관 빌드 매칭) 및 태그 필터
  * @author LEVI SHIN (악군 패키지 백과사전 프로젝트)
  */
+function cardHasTag(card, tag) {
+    const tags = (card.getAttribute('data-tags') || '').split(',').map(t => t.trim()).filter(Boolean);
+    return tags.includes(tag);
+}
+
 function filterBuilds(evt, tag) {
     document.querySelectorAll('.filter-tags .filter-btn').forEach(b => b.classList.remove('active'));
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     const cards = document.querySelectorAll('#buildCardsGrid .card');
     cards.forEach(card => {
-        const tags = card.getAttribute('data-tags');
-        if (tag === 'all' || (tags && tags.includes(tag))) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+        card.style.display = (tag === 'all' || cardHasTag(card, tag)) ? 'flex' : 'none';
     });
 }
 
@@ -614,6 +614,34 @@ function renderBuildContent(content = []) {
         return escapeHtml(segment.name || segment.target || "");
     }).join("");
 }
+function renderBuildGuide(data) {
+    const rows = [];
+    const pushRow = (label, value, extraClass = "") => {
+        if (!value) return;
+        rows.push(`<div class="item-stat${extraClass ? ` ${extraClass}` : ""}"><strong>${label}</strong><br>${escapeHtml(value)}</div>`);
+    };
+
+    pushRow("📊 스탯", data.stats);
+    pushRow("🎒 인벤토리", data.inventory);
+    pushRow("⚡ 스킬", data.skills);
+    pushRow("🎮 운영법", data.playstyle, "build-playstyle");
+
+    if (rows.length) return rows.join("");
+    return `<div class="item-stat">${data.info || ""}</div>`;
+}
+
+function buildPaperDollCopyText(data) {
+    let text = `[${data.title}] ${data.subtitle}\n\n`;
+    (data.slots || []).forEach(slot => {
+        text += `● ${slot.slot}: ${(slot.content || []).map(x => x.value || x.name || x.target || "").join("")}\n`;
+    });
+    if (data.stats) text += `\n📊 스탯: ${data.stats}`;
+    if (data.inventory) text += `\n🎒 인벤토리: ${data.inventory}`;
+    if (data.skills) text += `\n⚡ 스킬: ${data.skills}`;
+    if (data.playstyle) text += `\n🎮 운영법: ${data.playstyle}`;
+    return text;
+}
+
 function openPaperDollModal(buildId) {
     const data = getRecord("build", buildId);
     if (!data) {
@@ -658,12 +686,9 @@ function openPaperDollModal(buildId) {
     }
 
     gridEl.innerHTML = htmlContent;
-    document.getElementById("pdModalStats").innerHTML = `<div class="item-stat">${data.info || ""}</div>`;
+    document.getElementById("pdModalStats").innerHTML = renderBuildGuide(data);
 
-    currentPaperDollText = `[${data.title}] ${data.subtitle}\n\n`;
-    data.slots.forEach(slot => {
-        currentPaperDollText += `● ${slot.slot}: ${slot.content.map(x => x.value || x.name || x.target || "").join("")}\n`;
-    });
+    currentPaperDollText = buildPaperDollCopyText(data);
 
     document.getElementById("paperDollModal").classList.add("open");
     document.body.style.overflow = "hidden";
@@ -1104,13 +1129,13 @@ async function renderBuildCards() {
         gridContainer.innerHTML = '';
 
         builds.forEach(build => {
-            let badgeText = build.title.split(' ')[0]; 
+            let badgeText = build.badge || build.subtitle || build.title.split(' ')[0]; 
             let titleText = build.subtitle || build.title;
             let descText = build.info ? build.info.replace(/<[^>]*>?/gm, '').substring(0, 45) + '...' : '클릭하여 상세 장비 세팅을 확인하세요.';
 
-            let tagAttr = 'farm,magic';
-            if (build.id === 70004 || build.id === 70010 || build.id === 70012) tagAttr = 'boss,physical';
-            if (build.id === 70005 || build.id === 70015 || build.id === 70016) tagAttr = 'summon,magic,boss,farm';
+            let tagAttr = Array.isArray(build.tags) && build.tags.length
+                ? build.tags.join(',')
+                : 'farm,magic';
 
             const card = document.createElement('div');
             card.className = 'card searchable-item';

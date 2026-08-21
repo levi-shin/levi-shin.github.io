@@ -170,7 +170,10 @@ window.closeGlobalSearch = () => { window.clearSearchResultsUI(); const i = docu
 window.filterBuilds = (evt, tag) => {
     document.querySelectorAll('.filter-tags .filter-btn').forEach(b => b.classList.remove('active'));
     if (evt?.currentTarget) evt.currentTarget.classList.add('active');
-    document.querySelectorAll('#buildCardsGrid .card').forEach(c => c.style.display = (tag === 'all' || c.getAttribute('data-tags')?.includes(tag)) ? 'flex' : 'none');
+    document.querySelectorAll('#buildCardsGrid .card').forEach(c => {
+        const tags = (c.getAttribute('data-tags') || '').split(',').map(t => t.trim()).filter(Boolean);
+        c.style.display = (tag === 'all' || tags.includes(tag)) ? 'flex' : 'none';
+    });
 };
 
 // ==========================================
