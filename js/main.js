@@ -45,7 +45,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "14";
+    const dataVer = "15";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1246,7 +1246,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=14');
+        const response = await fetch('data/leveling.json?v=15');
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1260,7 +1260,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=13');
+        const response = await fetch('data/runewords.json?v=15');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1290,7 +1290,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json?v=11'); 
+        const response = await fetch('data/builds.json?v=15'); 
         const data = await response.json();
         const builds = data.items; 
 

@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.7",
+  "siteVersion": "v1.0.8",
   "lastUpdated": "2026-08-23",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.8",
+      "date": "2026-08-23",
+      "desc": "연기 룬어 추가. 종결 권장 베이스를 실전 베이스로 구체화"
+    },
     {
       "version": "v1.0.7",
       "date": "2026-08-23",
