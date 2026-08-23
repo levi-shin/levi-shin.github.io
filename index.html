@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="직접 파밍하고 정리한 실전 디아 2 백과 사전">
     <meta name="twitter:image" content="https://levi-shin.github.io/images/og-thumb.jpg?v=2">
     <link rel="canonical" href="https://levi-shin.github.io/">
-    <link rel="stylesheet" href="css/style.css?v=13">
+    <link rel="stylesheet" href="css/style.css?v=14">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -52,8 +52,9 @@
             <li><button class="nav-btn" onclick="switchSection(event, 'bus')">11. 버스 가이드</button></li>
             <li><button class="nav-btn" onclick="switchSection(event, 'farming')">12. TC85 사냥터</button></li>
             <li><button class="nav-btn" onclick="switchSection(event, 'ladder')">13. 래더 시즌 소식</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'dropcalc')">14. 매찬 계산기</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'feedback')">15. 피드백/제보</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'leveling')">14. 육성 가이드</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'dropcalc')">15. 매찬 계산기</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'feedback')">16. 피드백/제보</button></li>
         </ul>
     </aside>
 
@@ -74,7 +75,7 @@
 
     <section id="builds" class="content-section active">
         <h2 class="section-title">🛡️ 1. 직업별 상세 종결 빌드 가이드</h2>
-        <div class="item-click-hint">💡 상단의 필터를 활용하거나, 카드를 클릭하여 <b>인게임 장비 슬롯(페이퍼돌)</b> 종결 세팅을 확인하세요.</div>
+        <div class="item-click-hint">💡 상단의 필터를 활용하거나, 카드를 클릭하여 <b>인게임 장비 슬롯(페이퍼돌)</b> 종결 세팅을 확인하세요. 시즌을 처음부터 키우실 때는 <span class="item-inline" onclick="event.stopPropagation(); switchSection(null, 'leveling')">14. 육성 가이드</span>를 먼저 보시면 됩니다.</div>
         
         <div class="filter-tags">
             <button class="filter-btn active" onclick="filterBuilds(event, 'all')">전체보기</button>
@@ -465,7 +466,7 @@
 
     <section id="ladder" class="content-section">
         <h2 class="section-title">🔥 13. 디아블로 2 레저렉션 패치 노트 아카이브</h2>
-        <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">과거부터 현재까지의 상세 패치 내역을 확인하세요.</p>
+        <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">과거부터 현재까지의 상세 패치 내역을 확인하세요. 시즌 초 육성은 <span class="item-inline" onclick="switchSection(null, 'leveling')">14. 육성 가이드</span>를 보시면 됩니다.</p>
         
         <!-- 자바스크립트가 patchnotes.json을 읽어와서 이 안에 자동으로 꽂아넣습니다 -->
         <div id="patch-notes-container">
@@ -473,8 +474,14 @@
         </div>
     </section>
 
+    <section id="leveling" class="content-section">
+        <h2 class="section-title">🌱 14. 처음부터 따라가는 육성 가이드</h2>
+        <div class="item-click-hint">💡 룬어 이름을 클릭하면 조합식과 권장 베이스를 볼 수 있습니다. 직업 카드의 종결 버튼은 1번 메뉴 페이퍼돌로 이어집니다.</div>
+        <div id="levelingRoot"></div>
+    </section>
+
     <section id="dropcalc" class="content-section">
-        <h2 class="section-title">🎯 14. 매찬 대비 드랍 확률 계산기</h2>
+        <h2 class="section-title">🎯 15. 매찬 대비 드랍 확률 계산기</h2>
         <div class="item-click-hint">
             매찬 수치를 넣고 계산하시면, 주요 유니크별 드랍 확률이 아래에 나옵니다.
             유니크는 매찬이 오를수록 확률이 올라가지만, 체감 효율은 점점 줄어듭니다.
@@ -506,7 +513,7 @@
     </section>
 
     <section id="feedback" class="content-section">
-        <h2 class="section-title">📩 15. 백과사전 피드백 및 정보 제보</h2>
+        <h2 class="section-title">📩 16. 백과사전 피드백 및 정보 제보</h2>
         <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
             <h3 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 8px;">💡 빠진 정보가 있거나 잘못된 정보가 있나요?</h3>
             <p style="font-size: 0.9rem; color: var(--text-color); margin-bottom: 18px; word-break: keep-all;">
@@ -652,7 +659,7 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="js/legacy-globals.js?v=11"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-<script type="module" src="js/main.js?v=15"></script>
+    <script type="module" src="js/main.js?v=16"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
