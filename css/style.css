@@ -295,6 +295,20 @@ tr:hover { background: #1f1f28; }
     font-size: 0.9rem;
     word-break: keep-all;
 }
+.leveling-class-card .btn-detail + .btn-detail {
+    margin-top: 6px;
+}
+.leveling-stage-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+.leveling-stage-actions .btn-detail {
+    width: auto;
+    min-width: 160px;
+    flex: 1 1 160px;
+}
 .leveling-subhead {
     color: var(--gold);
     font-size: 1.05rem;

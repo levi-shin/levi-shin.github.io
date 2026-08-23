@@ -45,7 +45,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "13";
+    const dataVer = "14";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1155,6 +1155,15 @@ function levelingRuneLabel(id, name) {
     return `<span class="rune">${name}</span>`;
 }
 
+function levelingBuildButtons(entry) {
+    const buttons = Array.isArray(entry.buildIds) && entry.buildIds.length
+        ? entry.buildIds
+        : (entry.buildId ? [{ id: entry.buildId, label: '종결 세팅 보기' }] : []);
+    return buttons.map(btn => `
+        <button type="button" class="btn-detail" onclick="switchSection(null, 'builds'); openPaperDollModal(${Number(btn.id)})">${btn.label}</button>
+    `).join('');
+}
+
 function renderLevelingGuide(guide) {
     const root = document.getElementById('levelingRoot');
     if (!root || !guide) return;
@@ -1164,7 +1173,7 @@ function renderLevelingGuide(guide) {
             <span class="leveling-class-badge">${cls.badge}</span>
             <h3>${cls.name}</h3>
             <p>${cls.text}</p>
-            <button type="button" class="btn-detail" onclick="switchSection(null, 'builds'); openPaperDollModal(${Number(cls.buildId)})">종결 세팅 보기</button>
+            ${levelingBuildButtons(cls)}
         </div>
     `).join('');
 
@@ -1173,6 +1182,7 @@ function renderLevelingGuide(guide) {
             <h3>${stage.title}</h3>
             <p class="leveling-goal">${stage.goal}</p>
             <ol>${(stage.steps || []).map(step => `<li>${step}</li>`).join('')}</ol>
+            ${stage.buildIds ? `<div class="leveling-stage-actions">${levelingBuildButtons(stage)}</div>` : ''}
         </article>
     `).join('');
 
@@ -1236,7 +1246,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=13');
+        const response = await fetch('data/leveling.json?v=14');
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
