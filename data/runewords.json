@@ -6,7 +6,7 @@
     "eng": "Steel",
     "aliases": ["Steel"],
     "recipe": "티르(Tir) + 엘(El)",
-    "base": "2소켓 검 / 도끼 / 메이스 (렙제: 13)",
+    "base": "레벨링: 2소켓 크리스탈 소드 / 플레일",
     "stats": "공격 속도 <strong>+25%</strong> / 피해 <strong>+20%</strong> / 명중률 <strong>+50</strong> / 개방 상처 50% / 처치 시 마나 +2 / 빛 반경 +1",
     "isLadder": false
   },
@@ -17,8 +17,19 @@
     "eng": "Stealth",
     "aliases": ["스텔스", "Stealth"],
     "recipe": "탈(Tal) + 에드(Eth)",
-    "base": "2소켓 갑옷 (렙제: 17)",
+    "base": "레벨링: 2소켓 메이지 플레이트 · 초반: 브레스트 플레이트",
     "stats": "마법 피해 감소 <strong>3</strong> / 시전 속도 <strong>+25%</strong> / 타격 회복 <strong>+25%</strong> / 달리기·걷기 <strong>+25%</strong> / 덱스 +6 / 최대 스태미나 +15 / 독 저항 +30% / 마나 재생 15%",
+    "isLadder": false
+  },
+  {
+    "id": 30036,
+    "legacyKey": "연기|Smoke",
+    "name": "연기",
+    "eng": "Smoke",
+    "aliases": ["스모크", "Smoke", "연기"],
+    "recipe": "네프(Nef) + 룸(Lum)",
+    "base": "종결: 2소켓 메이지 플레이트 · 방어: 더스크 슈라우드",
+    "stats": "타격 회복 <strong>+20%</strong> / 방어력 <strong>+75%</strong> / 원거리 방어 <strong>+280</strong> / 에너지 +10 / 모든 저항 <strong>+50</strong> / 빛 반경 -1 / 약화 충전 18회",
     "isLadder": false
   },
   {
@@ -28,7 +39,7 @@
     "eng": "Leaf",
     "aliases": ["Leaf"],
     "recipe": "티르(Tir) + 랄(Ral)",
-    "base": "2소켓 지팡이(스태프) (렙제: 19)",
+    "base": "종결: +3 화염 스킬 숏 스태프 (온기·파이어볼 스태프모드)",
     "stats": "화염 스킬 <strong>+3</strong> / 온기 <strong>+3</strong> (화염 계열) / 방어력 <strong>+20~30%</strong> / 적 화염 저항 <strong>-20~30%</strong> / 냉기 저항 +33% / 처치 시 마나 +2",
     "isLadder": false
   },
@@ -39,7 +50,7 @@
     "eng": "Ancient's Pledge",
     "aliases": ["고대서약", "Ancients Pledge"],
     "recipe": "랄(Ral) + 오르트(Ort) + 탈(Tal)",
-    "base": "3소켓 방패 (렙제: 21)",
+    "base": "종결: 올레지 45 세크리드 타지 · 공용: 3소켓 라지 실드",
     "stats": "방어력 <strong>+50%</strong> / 냉기 저항 <strong>+43%</strong> / 화염·번개·독 저항 <strong>+48%</strong> / 피해 10% 마나로 전환",
     "isLadder": false
   },
@@ -50,7 +61,7 @@
     "eng": "Lore",
     "aliases": ["로어", "Lore"],
     "recipe": "오르트(Ort) + 솔(Sol)",
-    "base": "2소켓 투구 (렙제: 27)",
+    "base": "종결: +스킬 2소켓 서클릿 / 다이어뎀 · 무난: 2소켓 마스크",
     "stats": "모든 스킬 <strong>+1</strong> / 에너지 +10 / 번개 저항 <strong>+30%</strong> / 피해 감소 7 / 처치 시 마나 +2 / 빛 반경 +2",
     "isLadder": false
   },
@@ -62,7 +73,7 @@
     "aliases": ["CTA", "소집", "콜투암스", "Call to Arms"],
     "image": "runes/calltoarms.png",
     "recipe": "앰(Amn) + 랄(Ral) + 말(Mal) + 아이스트(Ist) + 오움(Ohm)",
-    "base": "5소켓 무기 (크리스탈 소드 / 프레일 / 셉터)",
+    "base": "종결: 5소켓 크리스탈 소드 · 성기사: 5소켓 플레일",
     "stats": "모든 스킬 <strong>+1</strong> / 공격 속도 <strong>+40%</strong> / 피해 <strong>+250~290%</strong> / 전투 명령 <strong>+2~6</strong> / 전투 지시(BO) <strong>+1~6</strong> / 전투의 외침 <strong>+1~4</strong> (으뜸 예: 6/6/4) / 매찬 30%",
     "isLadder": false
   },
@@ -74,7 +85,7 @@
     "aliases": ["스피릿", "Spirit"],
     "image": "runes/spirit.png",
     "recipe": "탈(Tal) + 주울(Thul) + 오르트(Ort) + 앰(Amn)",
-    "base": "4소켓 검 / 모나크 방패 / 팔라딘 방패",
+    "base": "검: 4소켓 크리스탈 소드 · 방패 종결: 35패캐 모나크 · 성기사: 35패캐 올레지 45 세크리드 타지",
     "stats": "모든 스킬 <strong>+2</strong> / 시전 속도 <strong>+25~35%</strong> (으뜸 35) / 타격 회복 <strong>+55%</strong> / 마나 <strong>+89~112</strong> / 활력 +22 / 마법 흡수 <strong>3~8%</strong> (방패: 독·냉·번 저항 +35%)",
     "isLadder": false
   },
@@ -85,7 +96,7 @@
     "eng": "Infinity",
     "aliases": ["인피", "Infinity"],
     "recipe": "베르(Ber) + 말(Mal) + 베르(Ber) + 아이스트(Ist)",
-    "base": "4소켓 폴암 / 창 (용병: 에테 맨캐쳐·쓰레셔 등)",
+    "base": "용병 종결: 에테 자이언트 쓰레셔 / 에테 크립틱 액스 · 가성비: 에테 쓰레셔 / 4소켓 콜로서스 불즈",
     "stats": "선고(Conviction) 오라 <strong>12레벨</strong> / 적 번개 저항 <strong>-45~55%</strong> / 피해 <strong>+255~325%</strong> / 달리기·걷기 +35% / 강타 40% / 매찬 30%",
     "isLadder": false
   },
@@ -96,7 +107,7 @@
     "eng": "Faith",
     "aliases": ["페이스", "Faith"],
     "recipe": "오움(Ohm) + 자(Jah) + 렘(Lem) + 엘드(Eld)",
-    "base": "4소켓 미사일 무기 (엘리트 활 등)",
+    "base": "아마존 종결: +3 활/석궁 그랜드 매트론 보우 · 1막 용병: 히드라 보우 / 그레이트 보우",
     "stats": "광신(Fanaticism) 오라 <strong>12~15레벨</strong> / 모든 스킬 +1~2 / 피해 <strong>+280~330%</strong> / 명중률 보너스 / 화염 저항 +15% / 처치 시 생명력 회복",
     "isLadder": false
   },
@@ -107,7 +118,7 @@
     "eng": "Dream",
     "aliases": ["드림", "Dream"],
     "recipe": "아이오(Io) + 자(Jah) + 풀(Pul)",
-    "base": "3소켓 투구 / 3소켓 팔라딘 전용 방패",
+    "base": "투구 종결: 3소켓 다이어뎀 · 성기사 방패: 올레지 45 세크리드 타지",
     "stats": "신성한 충격(Holy Shock) 오라 <strong>10~15레벨</strong> / 타격 회복 +20~30% / 방어력 <strong>+20~30%</strong> / 모든 저항 <strong>+5~20</strong> / 마나 12~25% / 처치 시 생명력",
     "isLadder": false
   },
@@ -118,7 +129,7 @@
     "eng": "Chains of Honor",
     "aliases": ["CoH", "COH", "명예", "Chains of Honor"],
     "recipe": "돌(Dol) + 움(Um) + 베르(Ber) + 아이스트(Ist)",
-    "base": "4소켓 갑옷 (더스크 슈라우드 / 메이지 플레이트 등)",
+    "base": "종결: 더스크 슈라우드 / 아콘 플레이트 · 저힘: 메이지 플레이트",
     "stats": "모든 스킬 <strong>+2</strong> / 모든 저항 <strong>+65</strong> / 피해 감소 <strong>8%</strong> / 악마·언데드 피해 증가 / 라이프 흡수 7% / 매찬 25%",
     "isLadder": false
   },
@@ -129,7 +140,7 @@
     "eng": "Phoenix",
     "aliases": ["피닉스", "Phoenix"],
     "recipe": "벡스(Vex) + 벡스(Vex) + 로(Lo) + 자(Jah)",
-    "base": "4소켓 무기 / 방패 (모나크 속죄 오라용)",
+    "base": "방패 종결: 모나크 (자바·캐스터) · 성기사: 세크리드 타지 · 무기: 페이즈 블레이드",
     "stats": "속죄(Redemption) 오라 <strong>10~15레벨</strong> / 화염 기술 피해 <strong>+350~400%</strong> (무기) 또는 적 화염 저항 <strong>-28%</strong> (방패) / 방어력 상승 가변 / 처치 시 화염 폭풍",
     "isLadder": false
   },
@@ -140,7 +151,7 @@
     "eng": "Grief",
     "aliases": ["그리프", "Grief"],
     "recipe": "에드(Eth) + 티르(Tir) + 로(Lo) + 말(Mal) + 랄(Ral)",
-    "base": "5소켓 검 / 도끼 (페이즈 블레이드 / 버서커 액스)",
+    "base": "종결: 페이즈 블레이드 · 극딜: 에테 버서커 액스",
     "stats": "추가 피해 <strong>+340~400</strong> / 공격 속도 <strong>+30~40%</strong> / 대상 방어 무시 / 적 독 저항 -20~25% / 치명타 20% / 처치 시 생명력·마나",
     "isLadder": false
   },
@@ -151,7 +162,7 @@
     "eng": "Exile",
     "aliases": ["엑자일", "Exile"],
     "recipe": "벡스(Vex) + 오움(Ohm) + 아이스트(Ist) + 돌(Dol)",
-    "base": "4소켓 팔라딘 전용 방패 (에테 세크리드 타지 등)",
+    "base": "종결: 에테 올레지 45 세크리드 타지",
     "stats": "방어(Defiance) 오라 <strong>13~16레벨</strong> / 방어력 <strong>+220~260%</strong> / 프리즈 타겟 / 라이프 흡수 7% / 매찬 15% / 생명 재생",
     "isLadder": false
   },
@@ -162,7 +173,7 @@
     "eng": "Sanctuary",
     "aliases": ["생츄어리", "Sanctuary"],
     "recipe": "코(Ko) + 코(Ko) + 말(Mal)",
-    "base": "3소켓 방패 (모나크 / 팔라딘 방패)",
+    "base": "종결: 모나크 · 성기사: 세크리드 타지",
     "stats": "타격 회복 <strong>+20%</strong> / 방어력 <strong>+130~250%</strong> / 모든 저항 <strong>+50~70</strong> / 언데드 피해·명중 증가 / 블럭 속도 +20%",
     "isLadder": false
   },
@@ -173,7 +184,7 @@
     "eng": "Obedience",
     "aliases": ["오비디언스", "Obedience"],
     "recipe": "헬(Hel) + 코(Ko) + 주울(Thul) + 에드(Eth) + 팔(Fal)",
-    "base": "5소켓 폴암 / 창 (에테 쓰레셔 등)",
+    "base": "용병 종결: 에테 쓰레셔 / 에테 크립틱 액스",
     "stats": "피해 <strong>+370%</strong> / 적 화염 저항 <strong>-25%</strong> / 강타 40% / 타격 회복 +40% / 방어력 +200~300 / 모든 저항 +20~30 / 요구치 -20%",
     "isLadder": false
   },
@@ -185,7 +196,7 @@
     "aliases": ["트리셔리", "Treachery"],
     "image": "runes/treachery.png",
     "recipe": "샤엘(Shael) + 주울(Thul) + 렘(Lem)",
-    "base": "3소켓 갑옷",
+    "base": "종결: 메이지 플레이트 (흐리기 프리버프) · 착용: 더스크 슈라우드",
     "stats": "암살자 스킬 <strong>+2</strong> / 공격 속도 <strong>+45%</strong> / 타격 회복 <strong>+20%</strong> / 피격 시 5% 확률 15레벨 흐리기 / 타격 시 25% 확률 15레벨 맹독 / 냉기 저항 +30% / 삥 50%",
     "isLadder": false
   },
@@ -196,7 +207,7 @@
     "eng": "Insight",
     "aliases": ["인사이트", "Insight"],
     "recipe": "랄(Ral) + 티르(Tir) + 탈(Tal) + 솔(Sol)",
-    "base": "4소켓 폴암 / 스태프 / 미사일 무기",
+    "base": "용병 종결: 에테 크립틱 액스 / 에테 자이언트 쓰레셔 · 본인: +3 명상 4소켓 스태프",
     "stats": "명상(Meditation) 오라 <strong>12~17레벨</strong> / 피해 <strong>+200~260%</strong> / 시전 속도 +35% / 치명타 1~6 / 모든 저항 +5 / 처치 시 마나 +2",
     "isLadder": false
   },
@@ -208,7 +219,7 @@
     "aliases": ["HOTO", "호토", "오심", "Heart of the Oak"],
     "image": "runes/oaktheheart.png",
     "recipe": "코(Ko) + 벡스(Vex) + 풀(Pul) + 주울(Thul)",
-    "base": "4소켓 메이스 / 스태프 (프레일)",
+    "base": "종결: 플레일 (패캐 40) · 스킬: +3 스킬 4소켓 스태프",
     "stats": "모든 스킬 <strong>+3</strong> / 시전 속도 <strong>+40%</strong> / 모든 저항 <strong>+30~40</strong> / 최대 마나 +15% / 마나 훔침 7% / 덱스 +10 / 오크 세이지·레이븐 충전",
     "isLadder": false
   },
@@ -219,7 +230,7 @@
     "eng": "Fortitude",
     "aliases": ["포티", "Fortitude"],
     "recipe": "엘(El) + 솔(Sol) + 돌(Dol) + 로(Lo)",
-    "base": "4소켓 무기 또는 갑옷",
+    "base": "용병 종결: 에테 아콘 플레이트 · 본인: 메이지 플레이트 / 더스크 슈라우드",
     "stats": "피해 <strong>+300%</strong> (고정) / 방어력 <strong>+200%</strong> / 시전 속도 +25% / 모든 저항 <strong>+25~30</strong> / 레벨 비례 생명력 / 갑옷: 최대 번저 +5% · 피해감소 7",
     "isLadder": false
   },
@@ -230,7 +241,7 @@
     "eng": "Pride",
     "aliases": ["프라이드", "Pride"],
     "recipe": "참(Cham) + 수르(Sur) + 아이오(Io) + 로(Lo)",
-    "base": "4소켓 폴암 / 창",
+    "base": "용병 종결: 에테 자이언트 쓰레셔 / 에테 크립틱 액스",
     "stats": "집중(Concentration) 오라 <strong>16~20레벨</strong> / 명중률 보너스 <strong>+260~300%</strong> / 번개 피해 50~280 / 치명타 20% / 피격 시 방화벽 / 레벨 비례 악마 피해",
     "isLadder": false
   },
@@ -242,7 +253,7 @@
     "aliases": ["에니그마", "수수께끼", "Enigma"],
     "image": "runes/enigma.png",
     "recipe": "자(Jah) + 아이드(Ith) + 베르(Ber)",
-    "base": "3소켓 갑옷 (메이지 플레이트 / 더스크 슈라우드 등)",
+    "base": "종결: 메이지 플레이트 (힘 55) · 방어: 더스크 슈라우드 / 아콘 플레이트",
     "stats": "모든 스킬 <strong>+2</strong> / 텔레포트 <strong>+1</strong> / 달리기·걷기 <strong>+45%</strong> / 힘 (레벨당 +0.75) / 매찬 (레벨당 +1%) / 피해 감소 8% / 최대 생명 +5%",
     "isLadder": false
   },
@@ -253,7 +264,7 @@
     "eng": "Delirium",
     "aliases": ["딜리리움", "Delirium"],
     "recipe": "렘(Lem) + 코(Ko) + 아이스트(Ist)",
-    "base": "3소켓 투구",
+    "base": "종결: +스킬 3소켓 서클릿 / 다이어뎀",
     "stats": "모든 스킬 <strong>+2</strong> / 피격 시 공포·정신폭발·디리리움 변신 / 타격 시 혼란 / 방어력 +261 / 활력 +10 / 삥·매찬 / 어트랙트 충전",
     "isLadder": false
   },
@@ -264,7 +275,7 @@
     "eng": "Edge",
     "aliases": ["Edge"],
     "recipe": "티르(Tir) + 탈(Tal) + 앰(Amn)",
-    "base": "3소켓 미사일 무기 (활 / 쇠뇌)",
+    "base": "종결: 마트리알칼 보우 / 그랜드 매트론 보우",
     "stats": "가시(Thorns) 오라 <strong>15레벨</strong> / 상점가 <strong>-15%</strong> / 피해 +320~380% / 악마 피해 +280% / 언데드 명중·피해 / 처치 시 모든 능력치 방지 회복 / 처치 시 마나 +2",
     "isLadder": false
   },
@@ -276,7 +287,7 @@
     "aliases": ["큐어", "Cure"],
     "image": "runes/cure.png",
     "recipe": "샤엘(Shael) + 아이오(Io) + 탈(Tal)",
-    "base": "3소켓 투구",
+    "base": "용병: 3소켓 본 비사지 · 본인: 3소켓 서클릿 / 다이어뎀",
     "stats": "정화(Cleansing) 오라 <strong>1레벨</strong> / 타격 회복 <strong>+20%</strong> / 방어력 <strong>+75~100%</strong> / 활력 +10 / 최대 생명 +5% / 독 저항 <strong>+40~60%</strong> / 독 지속시간 -50%",
     "isLadder": false
   },
@@ -287,7 +298,7 @@
     "eng": "Bulwark",
     "aliases": ["벌워크", "Bulwark", "방책"],
     "recipe": "샤엘(Shael) + 아이오(Io) + 솔(Sol)",
-    "base": "3소켓 투구",
+    "base": "용병: 3소켓 본 비사지 · 본인: 3소켓 서클릿 / 다이어뎀",
     "stats": "타격 회복 <strong>+20%</strong> / 라이프 흡수 <strong>4~6%</strong> / 방어력 <strong>+75~100%</strong> / 활력 +10 / 최대 생명 +5% / 생명 재생 +30 / 피해 감소 7 / 물리 피해 감소 <strong>10~15%</strong>",
     "isLadder": true
   },
@@ -298,7 +309,7 @@
     "eng": "Ground",
     "aliases": ["Ground", "접지(번개)"],
     "recipe": "샤엘(Shael) + 아이오(Io) + 오르트(Ort)",
-    "base": "3소켓 투구",
+    "base": "용병: 3소켓 본 비사지 · 본인: 3소켓 서클릿 / 다이어뎀",
     "stats": "타격 회복 <strong>+20%</strong> / 방어력 <strong>+75~100%</strong> / 활력 +10 / 최대 생명 +5% / 번개 저항 <strong>+40~60%</strong> / 번개 흡수 <strong>10~15</strong>",
     "isLadder": true
   },
@@ -309,7 +320,7 @@
     "eng": "Hearth",
     "aliases": ["Hearth", "난로"],
     "recipe": "샤엘(Shael) + 아이오(Io) + 주울(Thul)",
-    "base": "3소켓 투구",
+    "base": "용병: 3소켓 본 비사지 · 본인: 3소켓 서클릿 / 다이어뎀",
     "stats": "타격 회복 <strong>+20%</strong> / 방어력 <strong>+75~100%</strong> / 활력 +10 / 최대 생명 +5% / 냉기 저항 <strong>+40~60%</strong> / 냉기 흡수 <strong>10~15</strong> / 빙결되지 않음",
     "isLadder": true
   },
@@ -320,7 +331,7 @@
     "eng": "Temper",
     "aliases": ["Temper"],
     "recipe": "샤엘(Shael) + 아이오(Io) + 랄(Ral)",
-    "base": "3소켓 투구",
+    "base": "용병: 3소켓 본 비사지 · 본인: 3소켓 서클릿 / 다이어뎀",
     "stats": "타격 회복 <strong>+20%</strong> / 방어력 <strong>+75~100%</strong> / 활력 +10 / 최대 생명 +5% / 화염 저항 <strong>+40~60%</strong> / 화염 흡수 <strong>10~15</strong>",
     "isLadder": true
   },
@@ -331,7 +342,7 @@
     "eng": "Flickering Flame",
     "aliases": ["플리커링", "Flickering Flame", "화로"],
     "recipe": "네프(Nef) + 풀(Pul) + 벡스(Vex)",
-    "base": "3소켓 투구",
+    "base": "종결: +3 화염 스킬 다이어뎀 / 서클릿",
     "stats": "화염 저항 오라 <strong>4~8레벨</strong> / 화염 스킬 <strong>+3</strong> / 적 화염 저항 <strong>-10~15%</strong> / 방어력 +30% / 마나 +50~75 / 최대 화염 저항 +5% / 빙결 반감",
     "isLadder": false
   },
@@ -342,7 +353,7 @@
     "eng": "Mosaic",
     "aliases": ["모자이크", "Mosaic"],
     "recipe": "말(Mal) + 굴(Gul) + 앰(Amn)",
-    "base": "3소켓 암살자 전용 손톱(클로)",
+    "base": "종결: +3 불사조 일격 루닉 탤런 쌍수 · 저힘: +3 불사조 일격 그레이터 탤런",
     "stats": "마무리 기술 충전 미소모 <strong>50%</strong> / 무술 스킬 <strong>+2</strong> / 공격 속도 <strong>+20%</strong> / 피해 <strong>+200~250%</strong> / 라이프 흡수 7% / 냉·번·화 기술 피해 <strong>+8~15%</strong>",
     "isLadder": true
   },
@@ -353,7 +364,7 @@
     "eng": "Lawbringer",
     "aliases": ["로브링어", "Lawbringer"],
     "recipe": "앰(Amn) + 움(Um) + 코(Ko)",
-    "base": "3소켓 검 / 해머 / 셉터",
+    "base": "종결: 페이즈 블레이드",
     "stats": "타격 시 20% 확률 15레벨 노화 / 성역 오라 <strong>16~18레벨</strong> / 대상 방어 -50% / 화염·냉기 피해 추가 / 라이프 흡수 7% / 죽은 몬스터 부활 없음",
     "isLadder": false
   },
@@ -364,7 +375,7 @@
     "eng": "Passion",
     "aliases": ["Passion"],
     "recipe": "돌(Dol) + 오르트(Ort) + 엘드(Eld) + 렘(Lem)",
-    "base": "4소켓 무기",
+    "base": "종결: 버서커 액스 / 페이즈 블레이드",
     "stats": "질주(Zeal) <strong>+1</strong> / 광폭(Berserk) <strong>+1</strong> / 피해 <strong>+210~340%</strong> / 공격 속도 +25% / 히트 블라인드 / 몬스터 회복 방지 / 삥 75%",
     "isLadder": false
   },
@@ -375,7 +386,7 @@
     "eng": "Metamorphosis",
     "aliases": ["탈퇴", "Metamorphosis"],
     "recipe": "아이오(Io) + 참(Cham) + 팔(Fal)",
-    "base": "3소켓 투구",
+    "base": "종결: +3 변신 +3 분노 블러드 스피릿 / 어스 스피릿",
     "stats": "변신 스킬 <strong>+5</strong> (드루이드) / 늑대·곰 징표 부여 / 강타 25% / 방어력 +50~80% / 힘·활력 +10 / 모든 저항 +10 / 빙결되지 않음",
     "isLadder": true
   },
@@ -386,7 +397,7 @@
     "eng": "Hustle",
     "aliases": ["허슬", "Hustle"],
     "recipe": "샤엘(Shael) + 코(Ko) + 엘드(Eld)",
-    "base": "3소켓 무기 또는 갑옷",
+    "base": "갑옷 종결: 메이지 플레이트 (이속) · 무기: 페이즈 블레이드",
     "stats": "무기: 광신 오라 1레벨 / 공격 속도 +30% / 피해 +180~200% / 타격 시 버스트 오브 스피드<br>갑옷: 달리기·걷기 <strong>+65%</strong> / 공격 속도 +40% / 타격 회복 +20% / 덱스 +10 / 모든 저항 +10",
     "isLadder": true
   },
@@ -396,7 +407,7 @@
     "name": "집착",
     "eng": "Obsession",
     "aliases": ["옵세션", "Obsession"],
-    "base": "6소켓 지팡이",
+    "base": "종결: +4 모든 스킬 아콘 스태프 (패캐·스킬모드)",
     "recipe": "조드(Zod) + 아이스트(Ist) + 렘(Lem) + 룸(Lum) + 아이오(Io) + 네프(Nef)",
     "stats": "파괴 불가 / 모든 스킬 <strong>+4</strong> / 시전 속도 <strong>+65%</strong> / 타격 회복 <strong>+60%</strong> / 모든 저항 <strong>+60~70</strong> / 최대 생명·마나 재생 증가 / 매찬 30% / 삥 75%",
     "isLadder": true
@@ -409,7 +420,7 @@
     "aliases": ["크레센트", "초승달", "Crescent Moon"],
     "image": "runes/crescentmoon.png",
     "recipe": "샤엘(Shael) + 움(Um) + 티르(Tir)",
-    "base": "3소켓 도끼 / 폴암 / 검",
+    "base": "종결: 페이즈 블레이드 · 폴암: 에테 크립틱 액스",
     "stats": "적 번개 저항 <strong>-35%</strong> / 공격 속도 <strong>+20%</strong> / 피해 <strong>+180~220%</strong> / 타격 시 체인 라이트닝·스태틱 필드 / 마법 흡수 9~11 / 개방 상처 25%",
     "isLadder": false
   },
@@ -421,7 +432,7 @@
     "aliases": ["블랙", "Black", "어둠"],
     "image": "runes/darkness.png",
     "recipe": "주울(Thul) + 아이오(Io) + 네프(Nef)",
-    "base": "3소켓 클럽 / 해머 / 메이스",
+    "base": "종결: 플레일 (강타 40%)",
     "stats": "피해 <strong>+120%</strong> / 강타 <strong>40%</strong> / 공격 속도 <strong>+15%</strong> / 명중률 +200 / 냉기 피해 3~14 / 활력 +10 / 밀쳐내기 / 시체 폭발 충전",
     "isLadder": false
   },
@@ -432,7 +443,7 @@
     "eng": "Beast",
     "aliases": ["비스트", "Beast"],
     "recipe": "베르(Ber) + 티르(Tir) + 움(Um) + 말(Mal) + 룸(Lum)",
-    "base": "5소켓 도끼 / 셉터 / 해머",
+    "base": "종결: 버서커 액스 · 성기사: 5소켓 워 셉터",
     "stats": "광신(Fanaticism) 오라 <strong>9레벨</strong> / 공격 속도 <strong>+40%</strong> / 피해 <strong>+240~270%</strong> / 강타 20% / 개방 상처 25% / 늑대인간·곰 +3 / 힘 +25~40",
     "isLadder": false
   },
@@ -443,7 +454,7 @@
     "eng": "White",
     "aliases": ["White"],
     "recipe": "돌(Dol) + 아이오(Io)",
-    "base": "2소켓 완드 (뼈 창 +3 베이스 권장)",
+    "base": "종결: +3 뼈 창 언어스드 원드 (독·뼈 스태프모드)",
     "stats": "독·뼈 스킬 <strong>+3</strong> / 시전 속도 <strong>+20%</strong> / 뼈 창 <strong>+2</strong> / 해골 숙련 <strong>+4</strong> / 뼈 갑옷 +3 / 마법 피해 감소 4 / 처치 시 마나 +13",
     "isLadder": false
   },
@@ -454,7 +465,7 @@
     "eng": "Wealth",
     "aliases": ["웰스", "Wealth"],
     "recipe": "렘(Lem) + 코(Ko) + 티르(Tir)",
-    "base": "3소켓 갑옷",
+    "base": "종결: 샤크투스 아머 · 저힘: 메이지 플레이트",
     "stats": "삥 <strong>300%</strong> / 매찬 <strong>100%</strong> / 민첩 +10 / 처치 시 마나 +2",
     "isLadder": false
   },
@@ -464,8 +475,8 @@
     "name": "찔레",
     "eng": "Bramble",
     "aliases": ["브램블", "가시덤불", "Bramble"],
-    "recipe": "랄(Ral) + 오름(Ohm) + 수르(Sur) + 에드(Eth)",
-    "base": "4소켓 갑옷 (아콘/더스크 권장)",
+    "recipe": "랄(Ral) + 오움(Ohm) + 수르(Sur) + 에드(Eth)",
+    "base": "종결: 아콘 플레이트 / 더스크 슈라우드 · 저힘: 메이지 플레이트",
     "stats": "장착 시 가시(Thorns) 오라 <strong>15~21레벨</strong> / 타격 회복 <strong>+50%</strong> / 독 기술 피해 <strong>+25~50%</strong> / 방어력 +300 / 최대 마나 5% / 마나 재생 15% / 최대 냉기 저항 +5% / 화염 저항 +30% / 독 저항 +100% / 처치 시 생명력 +13",
     "isLadder": false
   }

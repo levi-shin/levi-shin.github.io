@@ -44,7 +44,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "12";
+    const dataVer = "13";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1114,7 +1114,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=12');
+        const response = await fetch('data/runewords.json?v=13');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1144,7 +1144,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json?v=11'); 
+        const response = await fetch('data/builds.json?v=13'); 
         const data = await response.json();
         const builds = data.items; 
 
