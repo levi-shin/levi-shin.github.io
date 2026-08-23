@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.8",
+  "siteVersion": "v1.0.9",
   "lastUpdated": "2026-08-23",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.9",
+      "date": "2026-08-23",
+      "desc": "룬 번호표 1~33 전체 나열. 육성 가이드 룬어 이름 클릭 시 상세 창 연결"
+    },
     {
       "version": "v1.0.8",
       "date": "2026-08-23",

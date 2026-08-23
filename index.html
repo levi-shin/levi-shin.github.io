@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="직접 파밍하고 정리한 실전 디아 2 백과 사전">
     <meta name="twitter:image" content="https://levi-shin.github.io/images/og-thumb.jpg?v=2">
     <link rel="canonical" href="https://levi-shin.github.io/">
-    <link rel="stylesheet" href="css/style.css?v=15">
+    <link rel="stylesheet" href="css/style.css?v=16">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -182,22 +182,14 @@
 
     <section id="runelist" class="content-section">
         <h2 class="section-title">🔢 7. 룬 번호, 등급 및 상위 룬 합성 공식</h2>
+        <div class="item-click-hint">💡 1번 엘부터 33번 조드까지 전부 나열합니다. 합성 공식은 <b>그 룬을 만들기 위한</b> 큐브 재료입니다.</div>
+        <div class="leveling-table-wrap">
         <table>
             <thead><tr><th>룬 번호</th><th>룬 명칭</th><th>룬 등급</th><th>상위 룬 합성 공식 (큐빙 재료)</th><th>주요 쓰임새</th></tr></thead>
-            <tbody>
-                <tr class="searchable-item"><td>1~10번</td><td>엘~주울 룬</td><td><span class="badge" style="background:#1e293b; color:#94a3b8; border-color:#475569;">하급 룬</span></td><td>동일 룬 3개 조합 (보석 불필요)</td><td>초반 가성비 룬어 제작용</td></tr>
-                <tr class="searchable-item"><td>11~15번</td><td>앰~헬 룬</td><td><span class="badge" style="background:#1e293b; color:#94a3b8; border-color:#475569;">하급 룬</span></td><td>동일 룬 3개 조합 (보석 불필요)</td><td>영혼, 통찰, 리셋(헬룬)용</td></tr>
-                <tr class="searchable-item"><td>16~21번</td><td>이오~풀 룬</td><td><span class="badge" style="background:#172554; color:#60a5fa; border-color:#2563eb;">중급 룬</span></td><td>각 룬 3개 + 하급 보석 (사파이어/루비 등)</td><td>중반 가성비 장비 재료</td></tr>
-                <tr class="searchable-item"><td>22~25번</td><td>움~굴 룬</td><td><span class="badge" style="background:#172554; color:#60a5fa; border-color:#2563eb;">중급 룬</span></td><td>각 룬 2개 + 하급 보석 (토파즈/자수정 등)</td><td>명굴, 오심, 올저항 소켓용</td></tr>
-                <tr class="searchable-item"><td>26번</td><td class="rune">벡스 (Vex)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>말 룬 2개 + 최상급 루비</td><td>오크의 촛대(오심) 필수 룬</td></tr>
-                <tr class="searchable-item"><td>27번</td><td class="rune">오름 (Ohm)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>벡스 룬 2개 + 최상급 가넷</td><td>소명/창조 룬어 재료</td></tr>
-                <tr class="searchable-item"><td>28번</td><td class="rune">로 (Lo)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>오름 룬 2개 + 최상급 토파즈</td><td>슬픔(고뇌), 인내 필수 룬</td></tr>
-                <tr class="searchable-item"><td>29번</td><td class="rune">수르 (Sur)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>로 룬 2개 + 최상급 자수정</td><td>베르 룬 조합용 중간단계 룬</td></tr>
-                <tr class="searchable-item"><td>30번</td><td class="rune">베르 (Ber)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>수르 룬 2개 + 최상급 사파이어</td><td>수수께끼, 무한(무공) 최상위 룬</td></tr>
-                <tr class="searchable-item"><td>31번</td><td class="rune">자 (Jah)</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>베르 룬 2개 + 최상급 에메랄드</td><td>수수께끼, 신념 필수 룬</td></tr>
-                <tr class="searchable-item"><td>32~33번</td><td class="rune">참 / 조드</td><td><span class="badge" style="background:#3f1d0b; color:#fb923c; border-color:#c2410c;">고급 룬</span></td><td>자/참 룬 2개 + 최상급 다이아몬드</td><td>최상위 내구도 무한 룬</td></tr>
+            <tbody id="runeListTbody">
             </tbody>
         </table>
+        </div>
     </section>
 
 <section id="merc" class="content-section">
@@ -659,7 +651,7 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="js/legacy-globals.js?v=11"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-    <script type="module" src="js/main.js?v=18"></script>
+    <script type="module" src="js/main.js?v=19"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {

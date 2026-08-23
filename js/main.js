@@ -15,6 +15,7 @@ const DATA = {
     ubers: [],
     builds: [],
     leveling: null,
+    runes: [],
     indexes: {
         item: new Map(),
         unique: new Map(),
@@ -45,7 +46,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "15";
+    const dataVer = "16";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1069,9 +1070,10 @@ async function initialize() {
 
     try {
         await loadData();
+        runewordLinkNeedles = null;
         renderUniqueTable();
         renderSiteMetadata();
-        await loadLevelingGuide();
+        await Promise.all([loadLevelingGuide(), loadRuneList()]);
         await initDropCalc();
     } catch (error) {
         console.error('악군 데이터 초기화 실패:', error);
@@ -1155,6 +1157,93 @@ function levelingRuneLabel(id, name) {
     return `<span class="rune">${name}</span>`;
 }
 
+function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+let runewordLinkNeedles = null;
+
+function getRunewordLinkNeedles() {
+    if (runewordLinkNeedles) return runewordLinkNeedles;
+
+    const seen = new Map();
+    const add = (needle, id) => {
+        if (!needle || String(needle).length < 2) return;
+        if (!seen.has(needle)) seen.set(needle, id);
+    };
+
+    (DATA.runewords || []).forEach(rw => {
+        add(rw.name, rw.id);
+        (rw.aliases || []).forEach(alias => add(alias, rw.id));
+    });
+
+    [
+        ['호토', 30019],
+        ['오심', 30019],
+        ['HOTO', 30019],
+        ['CTA', 30006],
+        ['서약', 30004],
+        ['꺼불', 30030],
+        ['에니그마', 30022]
+    ].forEach(([needle, id]) => add(needle, id));
+
+    runewordLinkNeedles = [...seen.entries()]
+        .sort((a, b) => b[0].length - a[0].length)
+        .map(([needle, id]) => ({ needle, id, escaped: escapeRegExp(needle) }));
+
+    return runewordLinkNeedles;
+}
+
+function linkRunewordsInText(text) {
+    const raw = String(text || '');
+    const needles = getRunewordLinkNeedles();
+    if (!raw || !needles.length) return raw;
+
+    const pattern = new RegExp(needles.map(n => n.escaped).join('|'), 'g');
+    const lookup = Object.fromEntries(needles.map(n => [n.needle, n.id]));
+
+    return raw.replace(pattern, matched => {
+        const id = lookup[matched];
+        const item = typeof getRecord === 'function' ? getRecord('runeword', id) : null;
+        if (!item) return matched;
+        return `<span class="item-inline rune" onclick="openRuneModal(${Number(id)})">${matched}</span>`;
+    });
+}
+
+function runeTierBadge(tier) {
+    if (tier === 'high') {
+        return '<span class="badge rune-tier-high">고급 룬</span>';
+    }
+    if (tier === 'mid') {
+        return '<span class="badge rune-tier-mid">중급 룬</span>';
+    }
+    return '<span class="badge rune-tier-low">하급 룬</span>';
+}
+
+async function loadRuneList() {
+    try {
+        const response = await fetch('data/runes.json?v=16');
+        const runes = await response.json();
+        DATA.runes = runes;
+        if (window.DATA) window.DATA.runes = runes;
+
+        const tbody = document.getElementById('runeListTbody');
+        if (!tbody) return;
+
+        tbody.innerHTML = runes.map(rune => `
+            <tr class="searchable-item">
+                <td>${rune.num}번</td>
+                <td class="rune">${rune.name} (${rune.eng})</td>
+                <td>${runeTierBadge(rune.tier)}</td>
+                <td>${rune.upgrade}</td>
+                <td>${rune.use}</td>
+            </tr>
+        `).join('');
+    } catch (error) {
+        console.error('룬 번호표를 불러오지 못했습니다:', error);
+    }
+}
+
 function levelingBuildButtons(entry) {
     const buttons = Array.isArray(entry.buildIds) && entry.buildIds.length
         ? entry.buildIds
@@ -1172,7 +1261,7 @@ function renderLevelingGuide(guide) {
         <div class="leveling-class-card searchable-item">
             <span class="leveling-class-badge">${cls.badge}</span>
             <h3>${cls.name}</h3>
-            <p>${cls.text}</p>
+            <p>${linkRunewordsInText(cls.text)}</p>
             ${levelingBuildButtons(cls)}
         </div>
     `).join('');
@@ -1180,8 +1269,8 @@ function renderLevelingGuide(guide) {
     const stages = (guide.stages || []).map(stage => `
         <article class="leveling-stage searchable-item" id="leveling-${stage.id}">
             <h3>${stage.title}</h3>
-            <p class="leveling-goal">${stage.goal}</p>
-            <ol>${(stage.steps || []).map(step => `<li>${step}</li>`).join('')}</ol>
+            <p class="leveling-goal">${linkRunewordsInText(stage.goal)}</p>
+            <ol>${(stage.steps || []).map(step => `<li>${linkRunewordsInText(step)}</li>`).join('')}</ol>
             ${stage.buildIds ? `<div class="leveling-stage-actions">${levelingBuildButtons(stage)}</div>` : ''}
         </article>
     `).join('');
@@ -1198,18 +1287,18 @@ function renderLevelingGuide(guide) {
         <tr class="searchable-item">
             <td class="highlight">${row.diff}</td>
             <td>${row.runes}</td>
-            <td>${row.tip}</td>
+            <td>${linkRunewordsInText(row.tip)}</td>
         </tr>
     `).join('');
 
     const socketRows = (guide.sockets || []).map(row => `
         <tr class="searchable-item">
             <td class="highlight">${row.diff}</td>
-            <td>${row.use}</td>
+            <td>${linkRunewordsInText(row.use)}</td>
         </tr>
     `).join('');
 
-    const tips = (guide.tips || []).map(tip => `<li class="searchable-item">${tip}</li>`).join('');
+    const tips = (guide.tips || []).map(tip => `<li class="searchable-item">${linkRunewordsInText(tip)}</li>`).join('');
 
     root.innerHTML = `
         <div class="leveling-note searchable-item">${guide.intro}</div>
@@ -1246,7 +1335,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=15');
+        const response = await fetch('data/leveling.json?v=16');
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1260,7 +1349,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=15');
+        const response = await fetch('data/runewords.json?v=16');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1290,7 +1379,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json?v=15'); 
+        const response = await fetch('data/builds.json?v=16'); 
         const data = await response.json();
         const builds = data.items; 
 
