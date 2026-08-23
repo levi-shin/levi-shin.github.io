@@ -46,7 +46,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "17";
+    const dataVer = "18";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1247,7 +1247,7 @@ function runeTierBadge(tier) {
 
 async function loadRuneList() {
     try {
-        const response = await fetch('data/runes.json?v=17');
+        const response = await fetch('data/runes.json?v=18');
         const runes = await response.json();
         DATA.runes = runes;
         if (window.DATA) window.DATA.runes = runes;
@@ -1391,7 +1391,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=17');
+        const response = await fetch('data/leveling.json?v=18');
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1405,7 +1405,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=17');
+        const response = await fetch('data/runewords.json?v=18');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');

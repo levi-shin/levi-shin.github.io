@@ -1,7 +1,7 @@
 [
   { "num": 1, "name": "엘", "eng": "El", "tier": "low", "upgrade": "합성 시작 룬 (하위 재료 없음)", "use": "강철, 인내" },
   { "num": 2, "name": "엘드", "eng": "Eld", "tier": "low", "upgrade": "엘 룬 3개", "use": "신념, 투지" },
-  { "num": 3, "name": "티르", "eng": "Tir", "tier": "low", "upgrade": "엘드 룬 3개", "use": "강철, 꽃잎, 통찰, 부" },
+  { "num": 3, "name": "티르", "eng": "Tir", "tier": "low", "upgrade": "엘드 룬 3개", "use": "강철, 힘, 꽃잎, 통찰, 부" },
   { "num": 4, "name": "네프", "eng": "Nef", "tier": "low", "upgrade": "티르 룬 3개", "use": "연기, 어둠, 집착" },
   { "num": 5, "name": "에드", "eng": "Eth", "tier": "low", "upgrade": "네프 룬 3개", "use": "잠행, 고뇌, 찔레" },
   { "num": 6, "name": "아이드", "eng": "Ith", "tier": "low", "upgrade": "에드 룬 3개", "use": "수수께끼" },
@@ -9,7 +9,7 @@
   { "num": 8, "name": "랄", "eng": "Ral", "tier": "low", "upgrade": "탈 룬 3개", "use": "꽃잎, 콜투암스, 통찰, 고대인의 서약, 찔레" },
   { "num": 9, "name": "오르트", "eng": "Ort", "tier": "low", "upgrade": "랄 룬 3개", "use": "고대인의 서약, 영혼, 학식, 발작" },
   { "num": 10, "name": "주울", "eng": "Thul", "tier": "low", "upgrade": "오르트 룬 3개", "use": "영혼, 배신, 오크의 심장, 어둠, 접지" },
-  { "num": 11, "name": "앰", "eng": "Amn", "tier": "low", "upgrade": "주울 룬 3개 + 최하급 토파즈", "use": "콜투암스, 영혼, 모자이크, 집행자" },
+  { "num": 11, "name": "앰", "eng": "Amn", "tier": "low", "upgrade": "주울 룬 3개 + 최하급 토파즈", "use": "힘, 콜투암스, 영혼, 모자이크, 집행자" },
   { "num": 12, "name": "솔", "eng": "Sol", "tier": "low", "upgrade": "앰 룬 3개 + 최하급 자수정", "use": "학식, 통찰, 인내, 방벽" },
   { "num": 13, "name": "샤엘", "eng": "Shael", "tier": "low", "upgrade": "솔 룬 3개 + 최하급 사파이어", "use": "배신, 치료, 투지, 초승달" },
   { "num": 14, "name": "돌", "eng": "Dol", "tier": "low", "upgrade": "샤엘 룬 3개 + 최하급 루비", "use": "명예의 굴레, 화이트, 열정" },
