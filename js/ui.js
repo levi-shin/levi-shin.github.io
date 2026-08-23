@@ -6,7 +6,13 @@
 
 export function switchSection(evt, sectionId) {
     document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-    document.querySelectorAll('.nav-menu button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.nav-menu button').forEach(btn => {
+        btn.classList.remove('active');
+        const onclick = btn.getAttribute('onclick') || '';
+        if (onclick.includes(`'${sectionId}'`) || onclick.includes(`"${sectionId}"`)) {
+            btn.classList.add('active');
+        }
+    });
     document.getElementById(sectionId)?.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });

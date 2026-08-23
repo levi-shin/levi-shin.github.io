@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.6",
-  "lastUpdated": "2026-08-21",
+  "siteVersion": "v1.0.7",
+  "lastUpdated": "2026-08-23",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.7",
+      "date": "2026-08-23",
+      "desc": "래더 시즌 초 육성 가이드 추가. 악마술사(워록) 메아리·종말 육성 순서 보강"
+    },
     {
       "version": "v1.0.6",
       "date": "2026-08-21",

@@ -14,6 +14,7 @@ const DATA = {
     charms: [],
     ubers: [],
     builds: [],
+    leveling: null,
     indexes: {
         item: new Map(),
         unique: new Map(),
@@ -44,7 +45,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "12";
+    const dataVer = "14";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -149,7 +150,13 @@ function resolveSegmentIds() {
  */
 function switchSection(evt, sectionId) {
     document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-    document.querySelectorAll('.nav-menu button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.nav-menu button').forEach(btn => {
+        btn.classList.remove('active');
+        const onclick = btn.getAttribute('onclick') || '';
+        if (onclick.includes(`'${sectionId}'`) || onclick.includes(`"${sectionId}"`)) {
+            btn.classList.add('active');
+        }
+    });
     document.getElementById(sectionId)?.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -380,7 +387,18 @@ function filterContent() {
         });
     }
 
-    // 7. 연관 빌드 탐색 ('햄' 입력 시 햄딘 빌드 수집)
+    // 7. 육성 가이드
+    if (DATA.leveling && levelingGuideMatches(DATA.leveling, filter)) {
+        primaryMatches.push({
+            type: 'leveling',
+            title: DATA.leveling.title,
+            category: '육성 가이드',
+            highlight: '노말부터 지옥 자립 순서',
+            id: 0
+        });
+    }
+
+    // 8. 연관 빌드 탐색 ('햄' 입력 시 햄딘 빌드 수집)
     const relatedBuilds = (typeof findRelatedBuilds === 'function') ? findRelatedBuilds(filter) : [];
 
     // 8. 드롭다운 결과 렌더링 (메인 화면 카드는 절대 건드리지 않음)
@@ -429,6 +447,7 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
             else if (item.type === 'sunder') clickAction = `openSunderModal(${item.id})`;
             else if (item.type === 'charm') clickAction = `openCharmModal(${item.id})`;
             else if (item.type === 'uber') clickAction = `openUberModal(${item.id})`;
+            else if (item.type === 'leveling') clickAction = `switchSection(null, 'leveling')`;
 
             // 🌟 래더 전용 여부 확인 및 배지 생성 (item 데이터에 isLadder 또는 ladder 속성이 true일 때)
             let ladderBadge = '';
@@ -1052,6 +1071,7 @@ async function initialize() {
         await loadData();
         renderUniqueTable();
         renderSiteMetadata();
+        await loadLevelingGuide();
         await initDropCalc();
     } catch (error) {
         console.error('악군 데이터 초기화 실패:', error);
@@ -1110,11 +1130,137 @@ async function loadPatchNotes() {
     }
 }
 
+function levelingGuideMatches(guide, filter) {
+    if (!guide || !filter) return false;
+    const haystack = [
+        guide.title,
+        guide.intro,
+        guide.seasonNote,
+        ...(guide.aliases || []),
+        ...(guide.classes || []).flatMap(c => [c.name, c.badge, c.text]),
+        ...(guide.stages || []).flatMap(s => [s.title, s.goal, ...(s.steps || [])]),
+        ...(guide.runewords || []).flatMap(r => [r.name, r.when, r.why]),
+        ...(guide.countess || []).flatMap(c => [c.diff, c.runes, c.tip]),
+        ...(guide.sockets || []).flatMap(s => [s.diff, s.use]),
+        ...(guide.tips || [])
+    ].join(' ').toLowerCase();
+    return haystack.includes(filter);
+}
+
+function levelingRuneLabel(id, name) {
+    const item = typeof getRecord === 'function' ? getRecord('runeword', id) : null;
+    if (item) {
+        return `<span class="item-inline rune" onclick="openRuneModal(${Number(id)})">${name}</span>`;
+    }
+    return `<span class="rune">${name}</span>`;
+}
+
+function levelingBuildButtons(entry) {
+    const buttons = Array.isArray(entry.buildIds) && entry.buildIds.length
+        ? entry.buildIds
+        : (entry.buildId ? [{ id: entry.buildId, label: '종결 세팅 보기' }] : []);
+    return buttons.map(btn => `
+        <button type="button" class="btn-detail" onclick="switchSection(null, 'builds'); openPaperDollModal(${Number(btn.id)})">${btn.label}</button>
+    `).join('');
+}
+
+function renderLevelingGuide(guide) {
+    const root = document.getElementById('levelingRoot');
+    if (!root || !guide) return;
+
+    const classCards = (guide.classes || []).map(cls => `
+        <div class="leveling-class-card searchable-item">
+            <span class="leveling-class-badge">${cls.badge}</span>
+            <h3>${cls.name}</h3>
+            <p>${cls.text}</p>
+            ${levelingBuildButtons(cls)}
+        </div>
+    `).join('');
+
+    const stages = (guide.stages || []).map(stage => `
+        <article class="leveling-stage searchable-item" id="leveling-${stage.id}">
+            <h3>${stage.title}</h3>
+            <p class="leveling-goal">${stage.goal}</p>
+            <ol>${(stage.steps || []).map(step => `<li>${step}</li>`).join('')}</ol>
+            ${stage.buildIds ? `<div class="leveling-stage-actions">${levelingBuildButtons(stage)}</div>` : ''}
+        </article>
+    `).join('');
+
+    const runeRows = (guide.runewords || []).map(rw => `
+        <tr class="searchable-item">
+            <td>${levelingRuneLabel(rw.id, rw.name)}</td>
+            <td>${rw.when}</td>
+            <td>${rw.why}</td>
+        </tr>
+    `).join('');
+
+    const countessRows = (guide.countess || []).map(row => `
+        <tr class="searchable-item">
+            <td class="highlight">${row.diff}</td>
+            <td>${row.runes}</td>
+            <td>${row.tip}</td>
+        </tr>
+    `).join('');
+
+    const socketRows = (guide.sockets || []).map(row => `
+        <tr class="searchable-item">
+            <td class="highlight">${row.diff}</td>
+            <td>${row.use}</td>
+        </tr>
+    `).join('');
+
+    const tips = (guide.tips || []).map(tip => `<li class="searchable-item">${tip}</li>`).join('');
+
+    root.innerHTML = `
+        <div class="leveling-note searchable-item">${guide.intro}</div>
+        <div class="leveling-note season searchable-item">${guide.seasonNote}</div>
+        <h3 class="leveling-subhead">직업별 시즌 초 운영</h3>
+        <div class="leveling-class-grid">${classCards}</div>
+        ${stages}
+        <h3 class="leveling-subhead">만들 순서 (룬어)</h3>
+        <div class="leveling-table-wrap">
+            <table>
+                <thead><tr><th>룬어</th><th>구간</th><th>왜 만드나</th></tr></thead>
+                <tbody>${runeRows}</tbody>
+            </table>
+        </div>
+        <h3 class="leveling-subhead">카운테스 룬 구간</h3>
+        <div class="leveling-table-wrap">
+            <table>
+                <thead><tr><th>난이도</th><th>드랍 룬</th><th>쓰임</th></tr></thead>
+                <tbody>${countessRows}</tbody>
+            </table>
+        </div>
+        <h3 class="leveling-subhead">라주크 소켓은 아껴 두세요</h3>
+        <div class="leveling-table-wrap">
+            <table>
+                <thead><tr><th>난이도</th><th>권장 사용</th></tr></thead>
+                <tbody>${socketRows}</tbody>
+            </table>
+        </div>
+        <h3 class="leveling-subhead">놓치기 쉬운 점</h3>
+        <ul style="margin: 0 0 12px 1.2rem; font-size: 0.9rem; word-break: keep-all;">${tips}</ul>
+        <div class="leveling-note">버스는 <span class="item-inline" onclick="switchSection(null, 'bus')">11. 버스 가이드</span>, 퀘스트 보상은 <span class="item-inline" onclick="switchSection(null, 'quest')">10. 영구보상 퀘스트</span>, 용병은 <span class="item-inline" onclick="switchSection(null, 'merc')">8. 용병 세팅</span>을 이어서 보시면 됩니다.</div>
+    `;
+}
+
+async function loadLevelingGuide() {
+    try {
+        const response = await fetch('data/leveling.json?v=14');
+        const guide = await response.json();
+        DATA.leveling = guide;
+        if (window.DATA) window.DATA.leveling = guide;
+        renderLevelingGuide(guide);
+    } catch (error) {
+        console.error('육성 가이드를 불러오지 못했습니다:', error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=12');
+        const response = await fetch('data/runewords.json?v=13');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');

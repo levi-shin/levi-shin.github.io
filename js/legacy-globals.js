@@ -8,6 +8,10 @@
     });
     document.querySelectorAll('.nav-menu button').forEach(function (btn) {
       btn.classList.remove('active');
+      var onclick = btn.getAttribute('onclick') || '';
+      if (onclick.indexOf("'" + sectionId + "'") !== -1 || onclick.indexOf('"' + sectionId + '"') !== -1) {
+        btn.classList.add('active');
+      }
     });
     var section = document.getElementById(sectionId);
     if (section) section.classList.add('active');
