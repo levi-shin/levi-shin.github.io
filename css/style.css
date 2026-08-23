@@ -207,6 +207,9 @@ h1 {
 .card p { font-size: 0.85rem; color: #a1a1aa; margin-bottom: 12px; line-height: 1.4; flex-grow: 1; }
 
 .badge { display: inline-block; background: #282110; color: var(--gold-light); font-size: 0.72rem; padding: 3px 8px; border-radius: 12px; margin-bottom: 8px; border: 1px solid var(--gold); font-weight: bold; align-self: flex-start; }
+.rune-tier-low { background: #1e293b; color: #94a3b8; border-color: #475569; margin-bottom: 0; }
+.rune-tier-mid { background: #172554; color: #60a5fa; border-color: #2563eb; margin-bottom: 0; }
+.rune-tier-high { background: #3f1d0b; color: #fb923c; border-color: #c2410c; margin-bottom: 0; }
 .btn-detail { width: 100%; background: #211b0f; color: var(--gold-light); border: 1px solid var(--gold); padding: 8px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.2s; font-size: 0.85rem; }
 .btn-detail:hover { background: #2d2515; }
 
