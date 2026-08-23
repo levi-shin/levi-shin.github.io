@@ -11,6 +11,17 @@
     "isLadder": false
   },
   {
+    "id": 30037,
+    "legacyKey": "힘|Strength",
+    "name": "힘",
+    "eng": "Strength",
+    "aliases": ["스트렝스", "Strength", "힘룬어"],
+    "recipe": "앰(Amn) + 티르(Tir)",
+    "base": "용병 초반: 2소켓 폴암 / 창",
+    "stats": "피해 <strong>+35%</strong> / 라이프 흡수 <strong>7%</strong> / 강타 <strong>25%</strong> / 힘 +20 / 활력 +10 / 처치 시 마나 +2",
+    "isLadder": false
+  },
+  {
     "id": 30002,
     "legacyKey": "잠행|Stealth",
     "name": "잠행",

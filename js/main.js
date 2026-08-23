@@ -46,7 +46,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "16";
+    const dataVer = "17";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
@@ -1144,7 +1144,11 @@ function levelingGuideMatches(guide, filter) {
         ...(guide.runewords || []).flatMap(r => [r.name, r.when, r.why]),
         ...(guide.countess || []).flatMap(c => [c.diff, c.runes, c.tip]),
         ...(guide.sockets || []).flatMap(s => [s.diff, s.use]),
-        ...(guide.tips || [])
+        ...(guide.tips || []),
+        guide.mercTree?.title,
+        guide.mercTree?.goal,
+        ...(guide.mercTree?.rows || []).flatMap(r => [r.when, r.hire, r.weapon, r.armor, r.helm]),
+        ...(guide.mercTree?.steps || [])
     ].join(' ').toLowerCase();
     return haystack.includes(filter);
 }
@@ -1184,7 +1188,9 @@ function getRunewordLinkNeedles() {
         ['CTA', 30006],
         ['서약', 30004],
         ['꺼불', 30030],
-        ['에니그마', 30022]
+        ['에니그마', 30022],
+        ['스트렝스', 30037],
+        ['힘룬어', 30037]
     ].forEach(([needle, id]) => add(needle, id));
 
     runewordLinkNeedles = [...seen.entries()]
@@ -1210,6 +1216,25 @@ function linkRunewordsInText(text) {
     });
 }
 
+function linkUniquesInText(text) {
+    const raw = String(text || '');
+    const pairs = [
+        ['안다리엘의 두건', 20007],
+        ['기욤의 얼굴', 20033],
+        ['샤코', 20005]
+    ].sort((a, b) => b[0].length - a[0].length);
+    const pattern = new RegExp(pairs.map(p => escapeRegExp(p[0])).join('|'), 'g');
+    const lookup = Object.fromEntries(pairs);
+    return raw.replace(pattern, matched => {
+        const id = lookup[matched];
+        return `<span class="item-inline unique" onclick="openUniqueModal(${Number(id)})">${matched}</span>`;
+    });
+}
+
+function linkGuideTerms(text) {
+    return linkUniquesInText(linkRunewordsInText(text));
+}
+
 function runeTierBadge(tier) {
     if (tier === 'high') {
         return '<span class="badge rune-tier-high">고급 룬</span>';
@@ -1222,7 +1247,7 @@ function runeTierBadge(tier) {
 
 async function loadRuneList() {
     try {
-        const response = await fetch('data/runes.json?v=16');
+        const response = await fetch('data/runes.json?v=17');
         const runes = await response.json();
         DATA.runes = runes;
         if (window.DATA) window.DATA.runes = runes;
@@ -1244,6 +1269,36 @@ async function loadRuneList() {
     }
 }
 
+function renderMercTree(merc) {
+    if (!merc) return '';
+
+    const rows = (merc.rows || []).map(row => `
+        <tr class="searchable-item">
+            <td class="highlight">${row.when}</td>
+            <td>${linkGuideTerms(row.hire)}</td>
+            <td>${linkGuideTerms(row.weapon)}</td>
+            <td>${linkGuideTerms(row.armor)}</td>
+            <td>${linkGuideTerms(row.helm)}</td>
+        </tr>
+    `).join('');
+
+    const steps = (merc.steps || []).map(step => `<li>${linkGuideTerms(step)}</li>`).join('');
+
+    return `
+        <article class="leveling-stage searchable-item" id="leveling-merc">
+            <h3>${merc.title}</h3>
+            <p class="leveling-goal">${linkGuideTerms(merc.goal)}</p>
+            <div class="leveling-table-wrap">
+                <table>
+                    <thead><tr><th>구간</th><th>고용</th><th>무기</th><th>갑옷</th><th>투구</th></tr></thead>
+                    <tbody>${rows}</tbody>
+                </table>
+            </div>
+            <ol>${steps}</ol>
+        </article>
+    `;
+}
+
 function levelingBuildButtons(entry) {
     const buttons = Array.isArray(entry.buildIds) && entry.buildIds.length
         ? entry.buildIds
@@ -1261,7 +1316,7 @@ function renderLevelingGuide(guide) {
         <div class="leveling-class-card searchable-item">
             <span class="leveling-class-badge">${cls.badge}</span>
             <h3>${cls.name}</h3>
-            <p>${linkRunewordsInText(cls.text)}</p>
+            <p>${linkGuideTerms(cls.text)}</p>
             ${levelingBuildButtons(cls)}
         </div>
     `).join('');
@@ -1269,8 +1324,8 @@ function renderLevelingGuide(guide) {
     const stages = (guide.stages || []).map(stage => `
         <article class="leveling-stage searchable-item" id="leveling-${stage.id}">
             <h3>${stage.title}</h3>
-            <p class="leveling-goal">${linkRunewordsInText(stage.goal)}</p>
-            <ol>${(stage.steps || []).map(step => `<li>${linkRunewordsInText(step)}</li>`).join('')}</ol>
+            <p class="leveling-goal">${linkGuideTerms(stage.goal)}</p>
+            <ol>${(stage.steps || []).map(step => `<li>${linkGuideTerms(step)}</li>`).join('')}</ol>
             ${stage.buildIds ? `<div class="leveling-stage-actions">${levelingBuildButtons(stage)}</div>` : ''}
         </article>
     `).join('');
@@ -1287,18 +1342,18 @@ function renderLevelingGuide(guide) {
         <tr class="searchable-item">
             <td class="highlight">${row.diff}</td>
             <td>${row.runes}</td>
-            <td>${linkRunewordsInText(row.tip)}</td>
+            <td>${linkGuideTerms(row.tip)}</td>
         </tr>
     `).join('');
 
     const socketRows = (guide.sockets || []).map(row => `
         <tr class="searchable-item">
             <td class="highlight">${row.diff}</td>
-            <td>${linkRunewordsInText(row.use)}</td>
+            <td>${linkGuideTerms(row.use)}</td>
         </tr>
     `).join('');
 
-    const tips = (guide.tips || []).map(tip => `<li class="searchable-item">${linkRunewordsInText(tip)}</li>`).join('');
+    const tips = (guide.tips || []).map(tip => `<li class="searchable-item">${linkGuideTerms(tip)}</li>`).join('');
 
     root.innerHTML = `
         <div class="leveling-note searchable-item">${guide.intro}</div>
@@ -1306,6 +1361,7 @@ function renderLevelingGuide(guide) {
         <h3 class="leveling-subhead">직업별 시즌 초 운영</h3>
         <div class="leveling-class-grid">${classCards}</div>
         ${stages}
+        ${renderMercTree(guide.mercTree)}
         <h3 class="leveling-subhead">만들 순서 (룬어)</h3>
         <div class="leveling-table-wrap">
             <table>
@@ -1335,7 +1391,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=16');
+        const response = await fetch('data/leveling.json?v=17');
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1349,7 +1405,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=16');
+        const response = await fetch('data/runewords.json?v=17');
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
