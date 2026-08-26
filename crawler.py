@@ -121,15 +121,14 @@ def parse_patch_detail(url):
     if not article_body:
         article_body = soup.body
 
-    # 전체 텍스트 수집
-    raw_lines = [clean_text(line) for line in article_body.get_text("\n").splitlines()]
-    lines = [l for l in raw_lines if l and len(l) > 1]
-    full_text = " ".join(lines)
-
     # 1. 버전 및 시즌 번호 동적 파싱
     h1 = soup.select_one("h1, .Article-title")
     title_text = clean_text(h1.get_text()) if h1 else ""
     
+    raw_lines = [clean_text(line) for line in article_body.get_text("\n").splitlines()]
+    lines = [l for l in raw_lines if l and len(l) > 1]
+    full_text = " ".join(lines)
+
     version_match = re.search(r'(\d+\.\d+(\.\d+)?)', title_text + " " + full_text[:1000])
     version_num = version_match.group(1) if version_match else "최신"
 
@@ -145,13 +144,12 @@ def parse_patch_detail(url):
     season_str = f" (래더 시즌 {season_num} 적용)" if season_num else ""
     version_title = f"{version_num} 패치{season_str}"
 
-    # 2. 일정(Schedule) 동적 추출
+    # 2. 일정(Schedule) 추출
     schedules = []
     for line in lines:
         if len(line) < 10 or any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:", "시작되는 래더"]):
             continue
         
-        # '종료', '배포', '시작' 키워드와 함께 실제 시간/날짜가 들어있는 행 추출
         if ("종료" in line or "배포" in line or "시작" in line) and any(d in line for d in ["월", "일", "/", "시", "오전", "오후", "PDT"]):
             clean_s = line.strip()
             if "시작" in clean_s and "배포" not in clean_s:
@@ -162,47 +160,50 @@ def parse_patch_detail(url):
         if len(schedules) >= 3:
             break
 
-    # 3. 주요 변경 사항(Changes) 실제 페이지 내용 기반 동적 추출
+    # 3. 주요 변경 사항(Changes) 정밀 문맥 파싱
     changes = []
     
-    # 본문 내의 li 태그나 단락(p)들을 순회하며 실제 변경 문장을 추출
-    elements = article_body.find_all(['h2', 'h3', 'h4', 'p', 'li'])
-    current_category = ""
+    # 룬워드/비래더 이관 문구 처리 (본문에 있으면 최우선 배치)
+    if "비래더" in full_text and "이용할 수 있습니다" in full_text:
+        changes.append("<b>비래더 이관:</b> 이전 래더 전용 아이템 및 룬어의 비래더(스탠다드) 제작·사용 해제")
 
-    for el in elements:
-        text = clean_text(el.get_text())
-        if not text or len(text) < 4 or any(bad in text for bad in ["목차", "댓글", "디아블로", "블리자드", "일정"]):
+    # 줄 단위로 순회하며 (아이템명/대상명 + 변경설명) 매칭
+    last_item_name = ""
+    for i, line in enumerate(lines):
+        # 제외 대상 필터링
+        if any(bad in line for bad in ["목차", "댓글", "디아블로", "블리자드", "일정", "패치 노트", "시즌 지금 진행"]):
             continue
 
-        # 소제목 카테고리 감지 (아이템, 버그 수정, 편의성 개선 등)
-        if el.name in ['h2', 'h3', 'h4'] or (len(text) <= 15 and not any(punc in text for punc in ['.', ':', '다'])):
-            if any(k in text for k in ["아이템", "공포의 영역", "버그 수정", "직업", "밸런스", "품질", "시스템", "래더", "룬"]):
-                current_category = text
+        # 짧은 단독 명사 줄 (예: 유혈자, 전투가지, 도적의 활, 공포의 영역, 버그 수정 등)
+        is_short_label = len(line) <= 20 and not any(verb in line for verb in ["했습니다", "되었습니다", "있습니다", "위해", "부터"])
+        if is_short_label:
+            last_item_name = line
             continue
 
-        # 변경 항목 문장 선별
-        is_change_statement = any(verb in text for verb in [
+        # 변경 설명 서술문 매칭
+        is_change_desc = any(verb in line for verb in [
             "추가했습니다", "감소했습니다", "증가했습니다", "제거했습니다", 
-            "수정했습니다", "개선되었습니다", "변경되었습니다", "이용할 수 있습니다", "적용됩니다"
+            "수정했습니다", "개선되었습니다", "떨어집니다", "변경되었습니다"
         ])
 
-        if is_change_statement:
-            # 카테고리가 있으면 카테고리 볼드 태그 추가
-            prefix = f"<b>{current_category}:</b> " if current_category else "<b>주요 변경:</b> "
-            formatted_change = f"{prefix}{text}"
-            
-            # 중복 방지 및 최대 6개 추출
-            if formatted_change not in changes and len(changes) < 6:
-                changes.append(formatted_change)
+        if is_change_desc:
+            # 바로 앞의 아이템/항목명이 있으면 결합, 없으면 문장 자체 사용
+            if last_item_name and last_item_name not in ["래더 15시즌", "래더", "패치", "일정"]:
+                formatted = f"<b>{last_item_name}:</b> {line}"
+            else:
+                formatted = f"<b>주요 변경:</b> {line}"
 
-    # 본문 구조가 달라서 못 찾았을 경우 대비한 백업 텍스트 파싱
-    if not changes:
+            if formatted not in changes and len(changes) < 6:
+                changes.append(formatted)
+                # 동일 항목 내 여러 옵션이 있을 수 있으므로 유지하되 너무 중복되지 않게 조절
+
+    # 만약 위에서 충분히 못 뽑았을 때 백업
+    if len(changes) < 3:
         for line in lines:
-            if any(verb in line for verb in ["추가했습니다", "감소했습니다", "증가했습니다", "수정했습니다", "개선되었습니다"]):
-                if len(line) > 10 and line not in changes:
-                    changes.append(f"<b>주요 내용:</b> {line}")
-                if len(changes) >= 5:
-                    break
+            if any(verb in line for verb in ["수정했습니다", "개선되었습니다", "추가했습니다"]) and len(line) > 15:
+                fmt = f"<b>주요 변경:</b> {line}"
+                if fmt not in changes and len(changes) < 6:
+                    changes.append(fmt)
 
     return {
         "version": version_title,
@@ -234,7 +235,7 @@ def main():
 
     patches.insert(0, new_patch)
     save_patch_notes(patches)
-    print(f"🎉 성공: '{new_patch['version']}' 항목이 실제 데이터 기반으로 추가되었습니다!")
+    print(f"🎉 성공: '{new_patch['version']}' 항목이 추가되었습니다!")
 
     send_slack_notification(new_patch)
 
