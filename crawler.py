@@ -42,25 +42,16 @@ def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 def strip_html_tags(text):
-    """HTML 태그(<b> 등)를 슬랙 마크다운 볼드(*)로 변환"""
     text = re.sub(r'<b>(.*?)</b>', r'*\1*', text)
     return re.sub(r'<[^>]+>', '', text).strip()
 
 def send_slack_notification(patch_data):
-    """새로운 패치 노트를 슬랙으로 전송"""
     if not SLACK_WEBHOOK_URL:
         print("⚠️ SLACK_WEBHOOK_URL이 설정되지 않아 슬랙 알림을 건너뜁니다.")
         return
 
-    # 일정 포맷팅
     schedule_lines = "\n".join([f"• {strip_html_tags(s)}" for s in patch_data.get("schedule", [])])
-    if not schedule_lines:
-        schedule_lines = "• 별도 일정 공지 없음"
-
-    # 변경 사항 포맷팅
     changes_lines = "\n".join([f"• {strip_html_tags(c)}" for c in patch_data.get("changes", [])])
-    if not changes_lines:
-        changes_lines = "• 상세 내용은 링크를 확인하세요."
 
     slack_message = {
         "text": f"🚀 *디아블로 II: 레저렉션 신규 패치 노트 등록!*\n*{patch_data['version']}*",
@@ -110,10 +101,8 @@ def send_slack_notification(patch_data):
         resp = requests.post(SLACK_WEBHOOK_URL, json=slack_message, timeout=10)
         if resp.status_code == 200:
             print("🔔 Slack 알림 전송 성공!")
-        else:
-            print(f"⚠️ Slack 알림 전송 실패: {resp.status_code} - {resp.text}")
     except Exception as e:
-        print(f"⚠️ Slack 전송 중 에러 발생: {e}")
+        print(f"⚠️ Slack 전송 중 에러: {e}")
 
 def parse_patch_detail(url):
     print(f"🔍 본문 상세 파싱 중: {url}")
@@ -130,6 +119,7 @@ def parse_patch_detail(url):
     lines = [clean_text(line) for line in article_body.get_text("\n").splitlines()]
     lines = [l for l in lines if l and len(l) > 1]
 
+    # 버전 번호 추출
     h1 = soup.select_one("h1, .Article-title")
     title_text = clean_text(h1.get_text()) if h1 else ""
     version_match = re.search(r'(\d+\.\d+(\.\d+)?)', title_text + " " + " ".join(lines[:30]))
@@ -139,19 +129,25 @@ def parse_patch_detail(url):
     season_str = f" (래더 시즌 {season_match.group(1)} 적용)" if season_match else ""
     version_title = f"{version_num} 패치{season_str}"
 
+    # 1. 일정(Schedule) 정밀 파싱: 날짜/시간이 포함된 실제 일정 문장만 필터링
     schedules = []
     for line in lines:
-        if any(k in line for k in ["시즌 종료", "패치 배포", "시즌 시작", "일정:"]):
-            if any(bad in line for bad in ["window.", "dataLayer", "function", "var ", "{", "}"]):
+        # "일정:", "래더 15시즌" 같은 단순 제목 행 제외하고 실제 일정(종료/배포/시작 + 날짜 표기)만 수집
+        if any(term in line for term in ["종료", "배포", "시작"]) and any(d in line for d in ["월", "일", "/", "시"]):
+            if any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:"]):
                 continue
-            clean_s = line.replace("일정:", "").strip()
+            
+            clean_s = line.strip()
+            # 가장 중요한 시즌 시작 일정은 볼드 처리
             if "시작" in clean_s:
                 schedules.append(f"<b>{clean_s}</b>")
             else:
                 schedules.append(clean_s)
+        
         if len(schedules) >= 3:
             break
 
+    # 2. 변경 사항(Changes) 파싱
     changes = []
     if "비래더" in " ".join(lines) or "스탠다드" in " ".join(lines):
         runewords = [w for w in ["광기", "발작", "탈태", "접지", "담금질", "화로", "치료", "방벽"] if w in " ".join(lines)]
@@ -199,7 +195,6 @@ def main():
     save_patch_notes(patches)
     print(f"🎉 성공: '{new_patch['version']}' 항목이 추가되었습니다!")
 
-    # 슬랙으로 URL 및 패치 상세 내용 전송
     send_slack_notification(new_patch)
 
 if __name__ == "__main__":
