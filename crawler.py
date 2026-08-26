@@ -52,21 +52,18 @@ def send_slack_notification(patch_data):
     if not schedule_lines:
         schedule_lines = "• 별도 공지 일정 없음"
 
-    # Slack 메시지 길이 제한(4000자) 고려하여 본문 포맷팅
-    changes_preview = "\n".join([f"• {strip_html_tags(c)}" for c in patch_data.get("changes", [])[:20]])
-    if len(patch_data.get("changes", [])) > 20:
-        changes_preview += f"\n• ... 외 {len(patch_data['changes']) - 20}개 변경 사항 (링크 확인)"
+    changes_lines = "\n".join([f"• {strip_html_tags(c)}" for c in patch_data.get("changes", [])])
 
     slack_message = {
-        "text": f"🚀 *디아블로 II: 레저렉션 신규 패치 노트 등록!*\n*{patch_data['version']}*",
+        "text": f"🚀 *디아블로 II: 레저렉션 신규 패치 등록!*\n*{patch_data['version']}*",
         "blocks": [
             {
                 "type": "header",
-                "text": {"type": "plain_text", "text": f"🚀 {patch_data['version']} 업데이트", "emoji": True}
+                "text": {"type": "plain_text", "text": f"🚀 {patch_data['version']} 핵심 브리핑", "emoji": True}
             },
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"🔗 *공식 공지 바로가기:*\n<{patch_data['link']}|{patch_data['link']}>"}
+                "text": {"type": "mrkdwn", "text": f"🔗 *공식 공지 전문 확인:*\n<{patch_data['link']}|{patch_data['link']}>"}
             },
             {
                 "type": "section",
@@ -74,7 +71,7 @@ def send_slack_notification(patch_data):
             },
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"🛡️ *주요 변경 사항*\n{changes_preview}"}
+                "text": {"type": "mrkdwn", "text": f"🛡️ *핵심 주요 변경 사항 요약*\n{changes_lines}"}
             },
             {
                 "type": "context",
@@ -88,22 +85,20 @@ def send_slack_notification(patch_data):
         print(f"Slack 에러: {e}")
 
 def parse_patch_detail(url):
-    print(f"🔍 본문 파싱 중: {url}")
+    print(f"🔍 본문 분석 중: {url}")
     res = requests.get(url, headers=HEADERS, timeout=15)
     soup = BeautifulSoup(res.text, "html.parser")
 
-    # 스크립트/불필요 태그 제거
     for tag in soup(["script", "style", "noscript", "iframe", "header", "footer", "nav"]):
         tag.decompose()
 
     article_body = soup.select_one(".Article-content, .NewsBlog-content, article, main") or soup.body
 
-    # 줄바꿈 단위로 텍스트 분리
     raw_lines = [clean_text(line) for line in article_body.get_text("\n").splitlines()]
     lines = [l for l in raw_lines if l and len(l) > 1]
     full_text = " ".join(lines)
 
-    # 1. 버전 및 시즌 번호 추출
+    # 1. 버전 및 시즌 번호
     h1 = soup.select_one("h1, .Article-title")
     title_text = clean_text(h1.get_text()) if h1 else ""
     version_match = re.search(r'(\d+\.\d+(\.\d+)?)', title_text + " " + full_text[:1000])
@@ -117,7 +112,7 @@ def parse_patch_detail(url):
     # 2. 일정 파싱 (종료/배포/시작 문장)
     schedules = []
     for line in lines:
-        if len(line) < 8 or any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:", "시작되는 래더"]):
+        if len(line) < 8 or any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:", "시작되는 래더", "유럽", "북미", "PDT", "BST"]):
             continue
         if any(term in line for term in ["종료", "배포", "시작"]) and any(d in line for d in ["월", "일", "/", "시"]):
             if "시작" in line and "배포" not in line:
@@ -127,27 +122,54 @@ def parse_patch_detail(url):
         if len(schedules) >= 3:
             break
 
-    # 3. 본문 패치 노트 전체를 그대로 수집
+    # 3. 핵심 4대 카테고리 자동 압축 요약
     changes = []
-    start_collecting = False
+    
+    # ① 비래더/룬어 이관 자동 요약
+    for idx, line in enumerate(lines):
+        if "비래더" in line and any(v in line for v in ["이용할 수 있습니다", "적용됩니다", "이관"]):
+            unlocked = []
+            for sub in lines[idx + 1:idx + 15]:
+                if len(sub) > 10 or any(stop in sub for stop in ["변경된 아이템", "공포의 영역", "버그 수정", "추가했습니다", "감소했습니다"]):
+                    break
+                unlocked.append(sub)
+            
+            if unlocked:
+                changes.append(f"<b>비레더(스탠다드) 이관:</b> 이전 래더 전용 아이템/룬어({', '.join(unlocked)})를 이제 비레더 환경에서도 제작 및 사용 가능")
+            else:
+                changes.append("<b>비레더(스탠다드) 이관:</b> 이전 래더 전용 아이템 및 룬어의 비래더(스탠다드) 제작 및 사용 가능")
+            break
 
+    # ② 변경된 아이템들 자동 수집 후 1줄 요약
+    changed_items = []
+    for i, line in enumerate(lines):
+        if 2 <= len(line) <= 12 and not any(k in line for k in ["아이템", "공포", "버그", "패치", "시즌", "일정", "보너스"]):
+            if i + 1 < len(lines):
+                next_l = lines[i + 1]
+                if any(verb in next_l for verb in ["추가했습니다", "감소했습니다", "증가했습니다", "제거했습니다"]):
+                    clean_name = line.replace("의 형상", "").replace(" 치유 반지", "").strip()
+                    if clean_name not in changed_items and clean_name not in ["광기", "발작", "탈태", "접지", "담금질", "화로", "치료", "방벽"]:
+                        changed_items.append(clean_name)
+
+    if changed_items:
+        items_preview = ", ".join(changed_items[:4])
+        changes.append(f"<b>장비 및 세트 밸런스 개편:</b> 일부 고유 장비({items_preview} 등) 및 세트 아이템 옵션/요구레벨 상향 조정")
+    elif "아이템" in full_text and any(v in full_text for v in ["추가했습니다", "감소했습니다"]):
+        changes.append("<b>아이템 밸런스 조정:</b> 일부 고유 및 세트 장비의 옵션 상향과 요구 레벨 조정 적용")
+
+    # ③ 공포의 영역 / 파괴참 / 드랍 시스템 1줄 요약
     for line in lines:
-        # 본문 패치 노트 시작 지점 감지
-        if "패치 노트" in line or "아이템" in line:
-            start_collecting = True
+        if any(k in line for k in ["파괴 부적", "파괴참", "전령", "세계석"]):
+            if any(verb in line for verb in ["증가했습니다", "감소했습니다", "떨어집니다", "변경되었습니다"]):
+                changes.append(f"<b>공포의 영역/드랍 조정:</b> {line}")
+                break
 
-        if not start_collecting:
-            continue
-
-        # 목차나 날짜 안내 같은 불필요한 메타 줄 제외
-        if any(bad in line for bad in ["목차", "댓글", "디아블로 II: 레저렉션 래더", "지금 진행 중", "일정:"]):
-            continue
-
-        # 소제목(아이템, 공포의 영역, 버그 수정, 유혈자 등 단독 명사)은 굵게 표시
-        if len(line) <= 20 and not any(v in line for v in ["했습니다", "있습니다", "됩니다", "않음", "경우"]):
-            changes.append(f"<b>{line}</b>")
-        else:
-            changes.append(line)
+    # ④ 버그 수정 및 시스템 안정성 1줄 요약
+    for line in lines:
+        if "버그 수정" in line or "문제를 수정했습니다" in line or "성능이 다양하게" in line:
+            if len(line) > 10 and not any(bad in line for bad in ["목차", "댓글"]):
+                changes.append(f"<b>시스템 및 버그 수정:</b> {line}")
+                break
 
     return {
         "version": version_title,
@@ -183,7 +205,7 @@ def main():
 
     patches.insert(0, new_patch)
     save_patch_notes(patches)
-    print(f"🎉 성공: '{new_patch['version']}' 본문 전체가 그대로 data/patchnotes.json에 추가되었습니다!")
+    print(f"🎉 성공: '{new_patch['version']}' 핵심 요약 데이터가 추가되었습니다!")
 
     send_slack_notification(new_patch)
 
