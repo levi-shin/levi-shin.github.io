@@ -2,8 +2,7 @@ name: Auto Update Patch Notes
 
 on:
   schedule:
-    # 한국 시간(KST) 매일 오전 6:00 (UTC 21:00)
-    - cron: '0 21 * * *'
+    - cron: '0 21 * * *'  # 한국 시간 매일 오전 6시
   workflow_dispatch:       # 수동 실행
 
 jobs:
@@ -23,15 +22,15 @@ jobs:
 
       - name: 의존성 패키지 설치
         run: |
-          pip install curl_cffi beautifulsoup4 requests
+          pip install requests beautifulsoup4
 
-      - name: 크롤러 실행
+      - name: 크롤러 실행 (데이터 갱신 및 Slack 알림)
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           python crawler.py
 
-      - name: Git 커밋, 푸시 및 Slack 알림
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Git 커밋 및 푸시
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -41,11 +40,6 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "feat: 최신 패치 노트 자동 갱신 (data/patchnotes.json)"
             git push
-            
-            # Slack 알림 전송
-            curl -X POST -H 'Content-type: application/json' \
-              --data '{"text":"🚀 *디아블로 II: 레저렉션 최신 패치 노트 업데이트 완료!*\n`data/patchnotes.json` 파일이 최신 정보로 갱신되었습니다."}' \
-              $SLACK_WEBHOOK_URL
           else
             echo "새로운 패치 노트가 없습니다."
           fi
