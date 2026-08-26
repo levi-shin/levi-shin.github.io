@@ -2,8 +2,9 @@ name: Auto Update Patch Notes
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # 6시간마다 실행
-  workflow_dispatch:       # 수동 실행 활성화
+    # 한국 시간(KST) 매일 오전 6:00 (UTC 21:00)
+    - cron: '0 21 * * *'
+  workflow_dispatch:       # 수동 실행
 
 jobs:
   update-json:
@@ -22,7 +23,7 @@ jobs:
 
       - name: 의존성 패키지 설치
         run: |
-          pip install requests beautifulsoup4
+          pip install curl_cffi beautifulsoup4 requests
 
       - name: 크롤러 실행
         run: |
@@ -35,7 +36,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 경로를 data/patchnotes.json 으로 지정
           git add data/patchnotes.json
           
           if ! git diff --cached --quiet; then
