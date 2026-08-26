@@ -59,7 +59,7 @@ def send_slack_notification(patch_data):
         "blocks": [
             {
                 "type": "header",
-                "text": {"type": "plain_text", "text": f"🚀 {patch_data['version']} 핵심 브리핑", "emoji": True}
+                "text": {"type": "plain_text", "text": f"🚀 {patch_data['version']}", "emoji": True}
             },
             {
                 "type": "section",
@@ -98,16 +98,24 @@ def parse_patch_detail(url):
     lines = [l for l in raw_lines if l and len(l) > 1]
     full_text = " ".join(lines)
 
-    # 1. 버전 및 시즌 번호
-    h1 = soup.select_one("h1, .Article-title")
-    title_text = clean_text(h1.get_text()) if h1 else ""
+    # 1. 실제 글 제목 및 버전 동적 추출
+    title_el = soup.select_one("h1, .Article-title, .NewsBlog-title, .article-headline, header h1")
+    title_text = clean_text(title_el.get_text()) if title_el else ""
+    
+    if not title_text and soup.title:
+        title_text = clean_text(soup.title.get_text().split(" - ")[0].split(" — ")[0])
+
     version_match = re.search(r'(\d+\.\d+(\.\d+)?)', title_text + " " + full_text[:1000])
     version_num = version_match.group(1) if version_match else "3.3"
 
     season_match = re.search(r'(?:래더\s*(\d+)\s*시즌|시즌\s*(\d+)|-(\d+)$)', title_text + " " + url)
     season_num = season_match.group(1) if season_match else ""
     season_str = f" (래더 시즌 {season_num} 적용)" if season_num else ""
-    version_title = f"{version_num} 패치{season_str}"
+
+    if title_text and title_text != f"{version_num} 패치":
+        version_title = f"{version_num} 패치{season_str} - {title_text}"
+    else:
+        version_title = f"{version_num} 패치{season_str}"
 
     # 2. 일정 파싱 (종료/배포/시작 문장)
     schedules = []
@@ -205,7 +213,7 @@ def main():
 
     patches.insert(0, new_patch)
     save_patch_notes(patches)
-    print(f"🎉 성공: '{new_patch['version']}' 핵심 요약 데이터가 추가되었습니다!")
+    print(f"🎉 성공: '{new_patch['version']}' 항목이 완벽하게 추가되었습니다!")
 
     send_slack_notification(new_patch)
 
