@@ -47,7 +47,7 @@ def strip_html_tags(text):
 
 def send_slack_notification(patch_data):
     if not SLACK_WEBHOOK_URL:
-        print("⚠️ SLACK_WEBHOOK_URL이 설정되지 않아 슬랙 알림을 건너뜁니다.")
+        print("⚠️ SLACK_WEBHOOK_URL이 설정되지 않아 알림을 건너뜁니다.")
         return
 
     schedule_lines = "\n".join([f"• {strip_html_tags(s)}" for s in patch_data.get("schedule", [])])
@@ -110,7 +110,7 @@ def send_slack_notification(patch_data):
         print(f"⚠️ Slack 전송 중 에러: {e}")
 
 def parse_patch_detail(url):
-    print(f"🔍 본문 상세 파싱 중: {url}")
+    print(f"🔍 본문 파싱 중: {url}")
     res = requests.get(url, headers=HEADERS, timeout=15)
     soup = BeautifulSoup(res.text, "html.parser")
 
@@ -121,13 +121,10 @@ def parse_patch_detail(url):
     if not article_body:
         article_body = soup.body
 
-    # 1. 버전 및 시즌 번호 동적 파싱
+    # 1. 버전 및 시즌 번호 동적 추출
     h1 = soup.select_one("h1, .Article-title")
     title_text = clean_text(h1.get_text()) if h1 else ""
-    
-    raw_lines = [clean_text(line) for line in article_body.get_text("\n").splitlines()]
-    lines = [l for l in raw_lines if l and len(l) > 1]
-    full_text = " ".join(lines)
+    full_text = clean_text(article_body.get_text(" "))
 
     version_match = re.search(r'(\d+\.\d+(\.\d+)?)', title_text + " " + full_text[:1000])
     version_num = version_match.group(1) if version_match else "최신"
@@ -144,66 +141,72 @@ def parse_patch_detail(url):
     season_str = f" (래더 시즌 {season_num} 적용)" if season_num else ""
     version_title = f"{version_num} 패치{season_str}"
 
-    # 2. 일정(Schedule) 추출
+    # 2. 일정 동적 추출 (키워드 + 날짜 포맷 검증)
     schedules = []
+    lines = [clean_text(line) for line in article_body.get_text("\n").splitlines() if clean_text(line)]
     for line in lines:
-        if len(line) < 10 or any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:", "시작되는 래더"]):
+        if len(line) < 8 or any(bad in line for bad in ["window.", "dataLayer", "목차", "일정:", "시작되는 래더"]):
             continue
-        
         if ("종료" in line or "배포" in line or "시작" in line) and any(d in line for d in ["월", "일", "/", "시", "오전", "오후", "PDT"]):
-            clean_s = line.strip()
-            if "시작" in clean_s and "배포" not in clean_s:
-                schedules.append(f"<b>{clean_s}</b>")
+            if "시작" in line and "배포" not in line:
+                schedules.append(f"<b>{line}</b>")
             else:
-                schedules.append(clean_s)
-
+                schedules.append(line)
         if len(schedules) >= 3:
             break
 
-    # 3. 주요 변경 사항(Changes) 정밀 문맥 파싱
-    changes = []
-    
-    # 룬워드/비래더 이관 문구 처리 (본문에 있으면 최우선 배치)
-    if "비래더" in full_text and "이용할 수 있습니다" in full_text:
-        changes.append("<b>비래더 이관:</b> 이전 래더 전용 아이템 및 룬어의 비래더(스탠다드) 제작·사용 해제")
+    # 3. HTML DOM 구조 기반 동적 섹션 분석 (하드코딩 제거)
+    sections = {}
+    current_section = "주요 변경"
 
-    # 줄 단위로 순회하며 (아이템명/대상명 + 변경설명) 매칭
-    last_item_name = ""
-    for i, line in enumerate(lines):
-        # 제외 대상 필터링
-        if any(bad in line for bad in ["목차", "댓글", "디아블로", "블리자드", "일정", "패치 노트", "시즌 지금 진행"]):
+    for elem in article_body.find_all(['h2', 'h3', 'h4', 'p', 'li']):
+        text = clean_text(elem.get_text())
+        if not text or len(text) < 3 or any(bad in text for bad in ["목차", "댓글", "디아블로", "블리자드", "일정"]):
             continue
 
-        # 짧은 단독 명사 줄 (예: 유혈자, 전투가지, 도적의 활, 공포의 영역, 버그 수정 등)
-        is_short_label = len(line) <= 20 and not any(verb in line for verb in ["했습니다", "되었습니다", "있습니다", "위해", "부터"])
-        if is_short_label:
-            last_item_name = line
+        # 대분류 섹션 헤더 감지 (H2~H4 또는 패치노트 전형적인 소제목)
+        if elem.name in ['h2', 'h3', 'h4']:
+            if not any(stop in text for stop in ["목차", "일정", "래더", "패치 노트"]):
+                current_section = text
+                if current_section not in sections:
+                    sections[current_section] = []
             continue
 
-        # 변경 설명 서술문 매칭
-        is_change_desc = any(verb in line for verb in [
+        # 변경 서술문 수집
+        is_change_desc = any(verb in text for verb in [
             "추가했습니다", "감소했습니다", "증가했습니다", "제거했습니다", 
-            "수정했습니다", "개선되었습니다", "떨어집니다", "변경되었습니다"
+            "수정했습니다", "개선되었습니다", "이용할 수 있습니다", "적용됩니다", "떨어집니다"
         ])
 
         if is_change_desc:
-            # 바로 앞의 아이템/항목명이 있으면 결합, 없으면 문장 자체 사용
-            if last_item_name and last_item_name not in ["래더 15시즌", "래더", "패치", "일정"]:
-                formatted = f"<b>{last_item_name}:</b> {line}"
-            else:
-                formatted = f"<b>주요 변경:</b> {line}"
+            if current_section not in sections:
+                sections[current_section] = []
+            if text not in sections[current_section] and len(sections[current_section]) < 3:
+                sections[current_section].append(text)
 
-            if formatted not in changes and len(changes) < 6:
-                changes.append(formatted)
-                # 동일 항목 내 여러 옵션이 있을 수 있으므로 유지하되 너무 중복되지 않게 조절
+    # 섹션별 대표 변경점 1~2개씩 균형 있게 조립
+    changes = []
+    for sec_title, descs in sections.items():
+        if not descs:
+            continue
+        
+        # 첫 번째 핵심 문장 추출
+        main_desc = descs[0]
+        # 문장이 너무 길면 간결하게 자름
+        if len(main_desc) > 90:
+            main_desc = main_desc[:90] + "..."
+            
+        changes.append(f"<b>{sec_title}:</b> {main_desc}")
+        if len(changes) >= 5:
+            break
 
-    # 만약 위에서 충분히 못 뽑았을 때 백업
-    if len(changes) < 3:
+    # 섹션 분리가 안 되는 플랫 구조일 경우 폴백
+    if not changes:
         for line in lines:
-            if any(verb in line for verb in ["수정했습니다", "개선되었습니다", "추가했습니다"]) and len(line) > 15:
-                fmt = f"<b>주요 변경:</b> {line}"
-                if fmt not in changes and len(changes) < 6:
-                    changes.append(fmt)
+            if any(verb in line for verb in ["수정했습니다", "추가했습니다", "개선되었습니다"]) and len(line) > 15:
+                changes.append(f"<b>주요 변경:</b> {line}")
+                if len(changes) >= 4:
+                    break
 
     return {
         "version": version_title,
@@ -235,7 +238,7 @@ def main():
 
     patches.insert(0, new_patch)
     save_patch_notes(patches)
-    print(f"🎉 성공: '{new_patch['version']}' 항목이 추가되었습니다!")
+    print(f"🎉 성공: '{new_patch['version']}' 항목이 실제 데이터 기반으로 추가되었습니다!")
 
     send_slack_notification(new_patch)
 
