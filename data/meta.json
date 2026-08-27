@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.10",
-  "lastUpdated": "2026-08-23",
+  "siteVersion": "v1.0.11",
+  "lastUpdated": "2026-08-27",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.11",
+      "date": "2026-08-27",
+      "desc": "Google Analytics(gtag) 측정 코드 추가"
+    },
     {
       "version": "v1.0.10",
       "date": "2026-08-23",
@@ -48,7 +53,7 @@
     {
       "version": "v1.0.2",
       "date": "2026-08-18",
-      "desc": "사이트 푸터 버전 클릭 시 패치 히스토리 모달 팝업 기능 추가 및 모듈 연동 고도화"
+      "desc": "사이트 푸터 버전 클릭 시 패치 히스토리 모달 팝업 기능 추가 및 데이터 연동 고도화"
     },
     {
       "version": "v1.0.1",

@@ -46,7 +46,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "18";
+    const dataVer = "19";
     loadPromise = Promise.all([
         fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
         fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
