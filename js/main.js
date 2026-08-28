@@ -954,7 +954,7 @@ function handleFeedbackSubmit(e) {
     
     const part1 = "https://hooks.slack.com/services/";
     const part2 = "T02Q2UZ4WAE/B083RNE4GFK/";
-    const part3 = "Dmve8CyTAJwHKFYZ2UGk4hbs";
+    const part3 = "02V4MZCllgY6Vb1tC8oHM9fR";
     const SLACK_WEBHOOK_URL = part1 + part2 + part3;
 
     const nextCount = currentCount + 1;
