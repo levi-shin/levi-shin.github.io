@@ -227,7 +227,7 @@
     "image": "uniques/heraldofzakarum.png",
     "base": "Gilded Shield",
     "drop": "Hell Andariel, Mephisto, Chaos",
-    "stats": "Enhanced Defense <strong>+150~200%</strong> / Paladin Skills <strong>+2</strong> / Combat Skills <strong>+2</strong> / Strength <strong>+20</strong> / Vitality <strong>+20</strong> / All Resistances <strong>+50</strong> / Chance of Blocking 증가"
+    "stats": "Enhanced Defense <strong>+150~200%</strong> / Paladin Skills <strong>+2</strong> / Combat Skills <strong>+2</strong> / Strength <strong>+20</strong> / Vitality <strong>+20</strong> / All Resistances <strong>+50</strong> / Chance of Blocking Increased"
   },
   {
     "id": 20015,
@@ -271,7 +271,7 @@
     "image": "uniques/slingshot.png",
     "base": "Ring",
     "drop": "Hell bosses and Terror Zones",
-    "stats": "Faster Cast Rate <strong>+10%</strong> / 타운 포탈(Town Portal) 1Level Skills 부여 / 적 마법 저항 <strong>-3~5%</strong> / Energy <strong>+10~15</strong> / 대상 Slow <strong>15%</strong> / Magic Find <strong>+10~20%</strong>"
+    "stats": "Faster Cast Rate <strong>+10%</strong> / Town Portal Level 1 Skills / Enemy Magic Resist <strong>-3~5%</strong> / Energy <strong>+10~15</strong> / Slows Target <strong>15%</strong> / Magic Find <strong>+10~20%</strong>"
   },
   {
     "id": 20018,
@@ -283,7 +283,7 @@
     ],
     "base": "Ring",
     "drop": "Hell Chaos/Baal",
-    "stats": "타격 시 15Level 화염파도(신캐 Skills) 2% 확률 발동 / Faster Cast Rate <strong>+10%</strong> / All Resistances <strong>+6~8</strong> / Mana 획득(마상) <strong>+1~3</strong> / 적 Life after each Kill <strong>+1~3</strong>"
+    "stats": "On striking Level 15 Fire Wave(new-class skills) 2% chance to proc / Faster Cast Rate <strong>+10%</strong> / All Resistances <strong>+6~8</strong> / Damage Taken Goes To Mana <strong>+1~3</strong> / Enemy Life after each Kill <strong>+1~3</strong>"
   },
   {
     "id": 20019,
@@ -298,7 +298,7 @@
     "image": "uniques/hellkeeperswill.png",
     "base": "Death Mask",
     "drop": "Hell Chaos Sanctuary",
-    "stats": "All Skills <strong>+1</strong> / 적의 Fire Resist <strong>-5~8%</strong> / 적의 매직 저항 <strong>-5~8%</strong> / Faster Cast Rate <strong>+20%</strong> / Increased Attack Speed <strong>+20%</strong> / Enhanced Defense <strong>+150~215%</strong> / Mana 획득(마상) <strong>+4~6</strong>"
+    "stats": "All Skills <strong>+1</strong> / Enemy Fire Resist <strong>-5~8%</strong> / Enemy Magic Resist <strong>-5~8%</strong> / Faster Cast Rate <strong>+20%</strong> / Increased Attack Speed <strong>+20%</strong> / Enhanced Defense <strong>+150~215%</strong> / Damage Taken Goes To Mana <strong>+4~6</strong>"
   },
   {
     "id": 20020,
@@ -313,7 +313,7 @@
     "image": "uniques/shadowdancer.png",
     "base": "Myrmidon Greaves",
     "drop": "Hell 테러 존, Baal, Diablo",
-    "stats": "Enhanced Defense <strong>+70~100%</strong> / 그림자 단련 Skills <strong>+1~2</strong> (암살자) / Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+30%</strong> / Dexterity <strong>+15~25</strong> / Requirements <strong>-20%</strong>"
+    "stats": "Enhanced Defense <strong>+70~100%</strong> / Shadow Disciplines Skills <strong>+1~2</strong> (Assassin) / Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+30%</strong> / Dexterity <strong>+15~25</strong> / Requirements <strong>-20%</strong>"
   },
   {
     "id": 20021,
@@ -330,7 +330,7 @@
     "image": "uniques/highlordswrath.png",
     "base": "Amulet",
     "drop": "Hell Mephisto, Diablo, Baal, 테러 존",
-    "stats": "All Skills <strong>+1</strong> / Increased Attack Speed <strong>+20%</strong> / Deadly Strike(Deadly Strike) Level당 <strong>+0.375%</strong> / Lightning Resist <strong>+35%</strong> / Lightning Damage <strong>1~30</strong> / When Struck 번개 반사 15"
+    "stats": "All Skills <strong>+1</strong> / Increased Attack Speed <strong>+20%</strong> / Deadly Strike(Deadly Strike) per Level <strong>+0.375%</strong> / Lightning Resist <strong>+35%</strong> / Lightning Damage <strong>1~30</strong> / When Struck Lightning bolt 15"
   },
   {
     "id": 20022,
@@ -345,7 +345,7 @@
     "image": "uniques/draculsgrasp.png",
     "base": "Vampirebone Gloves",
     "drop": "Hell 테러 존, Diablo, Baal, 니라트하크",
-    "stats": "Enhanced Defense <strong>+90~120%</strong> / 타격 시 5% 확률로 Level 10 Life 추출 / Life Steal <strong>7~10%</strong> / Strength <strong>+10~15</strong> / Life after each Kill <strong>+5~10</strong> / 대상 Slow <strong>25%</strong>"
+    "stats": "Enhanced Defense <strong>+90~120%</strong> / On striking 5% chance to Level 10 Life Drain / Life Steal <strong>7~10%</strong> / Strength <strong>+10~15</strong> / Life after each Kill <strong>+5~10</strong> / Slows Target <strong>25%</strong>"
   },
   {
     "id": 20023,
@@ -361,7 +361,7 @@
     "image": "uniques/nightwingsveil.png",
     "base": "Spired Helm",
     "drop": "Hell 전역",
-    "stats": "All Skills <strong>+2</strong> / Enhanced Defense <strong>+90~120%</strong> / Cold Skill Damage <strong>+8~15%</strong> / Dexterity <strong>+10~20</strong> / 냉기 흡수 <strong>5~9</strong> / 빙결 시간 반감 / Requirements <strong>-50%</strong>"
+    "stats": "All Skills <strong>+2</strong> / Enhanced Defense <strong>+90~120%</strong> / Cold Skill Damage <strong>+8~15%</strong> / Dexterity <strong>+10~20</strong> / Cold Absorb <strong>5~9</strong> / Half Freeze Duration / Requirements <strong>-50%</strong>"
   },
   {
     "id": 20024,
@@ -378,7 +378,7 @@
     "image": "uniques/ravenfrost.png",
     "base": "Ring",
     "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
-    "stats": "Attack Rating <strong>+150~250</strong> / Cold Damage <strong>15~45</strong> / Dexterity <strong>+15~20</strong> / Mana <strong>+40</strong> / 냉기 흡수 <strong>20%</strong> / Cannot Be Frozen"
+    "stats": "Attack Rating <strong>+150~250</strong> / Cold Damage <strong>15~45</strong> / Dexterity <strong>+15~20</strong> / Mana <strong>+40</strong> / Cold Absorb <strong>20%</strong> / Cannot Be Frozen"
   },
   {
     "id": 20025,
@@ -394,7 +394,7 @@
     "image": "uniques/dwarfstar.png",
     "base": "Ring",
     "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
-    "stats": "화염 흡수 <strong>15%</strong> / Magic Damage Reduced <strong>12~15</strong> / Gold Find <strong>+100%</strong> / Life <strong>+40</strong> / 스태미나 <strong>+40</strong>"
+    "stats": "Fire Absorb <strong>15%</strong> / Magic Damage Reduced <strong>12~15</strong> / Gold Find <strong>+100%</strong> / Life <strong>+40</strong> / Stamina <strong>+40</strong>"
   },
   {
     "id": 20026,
@@ -410,7 +410,7 @@
     "image": "uniques/naturespeace.png",
     "base": "Ring",
     "drop": "Hell TC85 farming spots",
-    "stats": "죽은 몬스터가 되살아나지 않음 / 몬스터 Replenish 방지 / Poison Resist <strong>+20~30%</strong> / Damage Reduced <strong>7~11</strong> / Level 5 오크 세이지 충전"
+    "stats": "Slain Monsters Rest in Peace / Prevent Monster Heal / Poison Resist <strong>+20~30%</strong> / Damage Reduced <strong>7~11</strong> / Level 5 오크 세이지 충전"
   },
   {
     "id": 20027,
@@ -441,7 +441,7 @@
     "image": "uniques/thunderstroke.png",
     "base": "Matriarchal Javelin",
     "drop": "Hell TC85 farming spots, Baal",
-    "stats": "Enhanced Damage <strong>+150~200%</strong> / Javelin and Spear Skills <strong>+2~4</strong> / 번개 화살 <strong>+3</strong> / Increased Attack Speed <strong>+15%</strong> / Enemy Lightning Resist <strong>-15%</strong> / Lightning Damage <strong>1~511</strong> / 타격 시 14Level 번개 20% 발동"
+    "stats": "Enhanced Damage <strong>+150~200%</strong> / Javelin and Spear Skills <strong>+2~4</strong> / 번개 화살 <strong>+3</strong> / Increased Attack Speed <strong>+15%</strong> / Enemy Lightning Resist <strong>-15%</strong> / Lightning Damage <strong>1~511</strong> / On striking 14Level 번개 20% proc"
   },
   {
     "id": 20029,
@@ -473,7 +473,7 @@
     "image": "uniques/alibaba.png",
     "base": "Tulwar",
     "drop": "Hell Mephisto, TC85 farming spots",
-    "stats": "Enhanced Damage <strong>+60~120%</strong> / Gold Find Level당 <strong>+2.5%</strong> / Magic Find Level당 <strong>+1%</strong> / Dexterity <strong>+5~15</strong> / Mana <strong>+15</strong> / 소켓 <strong>2</strong>"
+    "stats": "Enhanced Damage <strong>+60~120%</strong> / Gold Find per Level <strong>+2.5%</strong> / Magic Find per Level <strong>+1%</strong> / Dexterity <strong>+5~15</strong> / Mana <strong>+15</strong> / socket <strong>2</strong>"
   },
   {
     "id": 20031,
@@ -489,7 +489,7 @@
     ],
     "base": "Heavy Bracers",
     "drop": "Hell Mephisto, 세트 아이템 (트래그울의 화신)",
-    "stats": "Faster Cast Rate <strong>+20%</strong> / Cold Resist <strong>+30%</strong> / Defense <strong>+30</strong> / Poison Skill Damage <strong>+25%</strong> / 저주 Skills <strong>+2</strong> (강령술사)"
+    "stats": "Faster Cast Rate <strong>+20%</strong> / Cold Resist <strong>+30%</strong> / Defense <strong>+30</strong> / Poison Skill Damage <strong>+25%</strong> / Curses Skills <strong>+2</strong> (Necromancer)"
   },
   {
     "id": 20032,
@@ -504,7 +504,7 @@
     ],
     "base": "Thresher",
     "drop": "Hell Baal, Diablo, TC85 farming spots (eth perfect)",
-    "stats": "Enhanced Damage <strong>+190~240%</strong> / 대상 방어 무시 / Deadly Strike <strong>33%</strong> / Life Steal <strong>11~15%</strong> / 타격 시 33% 확률 1Level 노화(Decrepify) / Requirements <strong>-25%</strong>"
+    "stats": "Enhanced Damage <strong>+190~240%</strong> / Ignore Target's Defense / Deadly Strike <strong>33%</strong> / Life Steal <strong>11~15%</strong> / On striking 33% chance Level 1 Decrepify(Decrepify) / Requirements <strong>-25%</strong>"
   },
   {
     "id": 20033,
@@ -533,7 +533,7 @@
     ],
     "base": "Sharkskin Belt",
     "drop": "Hell Mephisto, Andariel, TC85 farming spots",
-    "stats": "Enhanced Defense <strong>+120~150%</strong> / 관통 확률 <strong>+33%</strong> / Maximum Damage +10 / Dexterity +15 / 가시 Damage 15"
+    "stats": "Enhanced Defense <strong>+120~150%</strong> / Pierce chance <strong>+33%</strong> / Maximum Damage +10 / Dexterity +15 / 가시 Damage 15"
   },
   {
     "id": 20035,
@@ -547,7 +547,7 @@
     ],
     "base": "Monarch",
     "drop": "Hell Diablo, Baal, TC85 farming spots",
-    "stats": "Damage Reduced <strong>35%</strong> / Chance of Blocking 증가 / Cold Resist +60% / Lightning Resist +25% / Strength +30 / When Struck 번개 반사"
+    "stats": "Damage Reduced <strong>35%</strong> / Chance of Blocking Increased / Cold Resist +60% / Lightning Resist +25% / Strength +30 / When Struck Lightning bolt"
   },
   {
     "id": 20036,
@@ -560,7 +560,7 @@
     ],
     "base": "Boneweave Boots",
     "drop": "Hell Baal, Diablo, TC85 farming spots",
-    "stats": "Enhanced Defense <strong>+170~200%</strong> / 해골 숙련 <strong>+1~2</strong> / 해골 되살리기 +1~2 / Strength +20~30 / Replenish Mana 10% / Faster Run/Walk +20% / 충전: 뼈 감옥·라이프 탭"
+    "stats": "Enhanced Defense <strong>+170~200%</strong> / Skeleton Mastery <strong>+1~2</strong> / Raise Skeleton +1~2 / Strength +20~30 / Replenish Mana 10% / Faster Run/Walk +20% / 충전: Bone Prison·Life Tap"
   },
   {
     "id": 20037,
@@ -574,7 +574,7 @@
     ],
     "base": "Totemic Mask",
     "drop": "Hell Mephisto, Baal, TC85 farming spots",
-    "stats": "드루이드 Skills <strong>+2</strong> / 변신 Skills <strong>+2</strong> / Faster Hit Recovery <strong>+30%</strong> / Enhanced Defense <strong>+150~200%</strong> / Strength·Energy +20 / All Resistances +30 / Mana after each Kill +5"
+    "stats": "Druid Skills <strong>+2</strong> / shapeshift Skills <strong>+2</strong> / Faster Hit Recovery <strong>+30%</strong> / Enhanced Defense <strong>+150~200%</strong> / Strength·Energy +20 / All Resistances +30 / Mana after each Kill +5"
   },
   {
     "id": 20038,
@@ -589,7 +589,7 @@
     ],
     "base": "Bramble Mitts",
     "drop": "Hell 세트 아이템 (제자의 세트)",
-    "stats": "Increased Attack Speed <strong>+20%</strong> / Damage to Demons <strong>+350%</strong> / Fire Resist +50% / 타격 시 10% 확률 3Level 신성한 볼트"
+    "stats": "Increased Attack Speed <strong>+20%</strong> / Damage to Demons <strong>+350%</strong> / Fire Resist +50% / On striking 10% chance 3Level 신성한 볼트"
   },
   {
     "id": 20039,
@@ -619,7 +619,7 @@
     ],
     "base": "Scarab Husk Boots",
     "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
-    "stats": "Enhanced Defense <strong>+140~170%</strong> / Faster Run/Walk <strong>+20%</strong> / Faster Hit Recovery <strong>+20%</strong> / Strength and Vitality +10~15 / Poison Resist +40~70% / Max Stamina Level당 +1 / 스태미나 재생 50%"
+    "stats": "Enhanced Defense <strong>+140~170%</strong> / Faster Run/Walk <strong>+20%</strong> / Faster Hit Recovery <strong>+20%</strong> / Strength and Vitality +10~15 / Poison Resist +40~70% / Max Stamina per Level +1 / Stamina 재생 50%"
   },
   {
     "id": 20041,
@@ -649,7 +649,7 @@
     ],
     "base": "Sharkskin Boots",
     "drop": "악몽~지옥 Mephisto, Andariel",
-    "stats": "Enhanced Defense <strong>+180~210%</strong> / Faster Run/Walk <strong>+20%</strong> / 최대 생명 +15~25 / Dexterity +15 / 최대 Fire Resist +5% / 스태미나 +40"
+    "stats": "Enhanced Defense <strong>+180~210%</strong> / Faster Run/Walk <strong>+20%</strong> / 최대 생명 +15~25 / Dexterity +15 / Maximum Fire Resist +5% / Stamina +40"
   },
   {
     "id": 20043,
@@ -691,7 +691,7 @@
     ],
     "base": "Demonhide Boots",
     "drop": "Hell Mephisto, TC85 farming spots",
-    "stats": "Enhanced Defense <strong>+120~150%</strong> / Faster Run/Walk <strong>+20%</strong> / 최대 Fire Resist +5% / Fire Resist +30% / Gold Find <strong>+40~70%</strong> / When Struck 화염 발동"
+    "stats": "Enhanced Defense <strong>+120~150%</strong> / Faster Run/Walk <strong>+20%</strong> / Maximum Fire Resist +5% / Fire Resist +30% / Gold Find <strong>+40~70%</strong> / When Struck 화염 proc"
   },
   {
     "id": 20046,
@@ -705,7 +705,7 @@
     ],
     "base": "그리모어 (Grimoire, 악마술사 전용)",
     "drop": "Hell Terror Zones, Baal, TC85 farming spots",
-    "stats": "When Struck 15% 확률로 공포 1Level / 혼돈 Skills <strong>+2</strong> (악마술사) / Faster Cast Rate <strong>+25%</strong> / Fire Skill Damage <strong>+15~25%</strong> / 종말 <strong>+3~5</strong> / Enhanced Defense <strong>+170~200%</strong> / Fire Resist <strong>+20~30%</strong> / Mana after each Kill <strong>+5~10</strong> / Light Radius +5~10"
+    "stats": "When Struck 15% chance to 공포 Level 1 / Chaos Skills <strong>+2</strong> (Warlock) / Faster Cast Rate <strong>+25%</strong> / Fire Skill Damage <strong>+15~25%</strong> / Apocalypse <strong>+3~5</strong> / Enhanced Defense <strong>+170~200%</strong> / Fire Resist <strong>+20~30%</strong> / Mana after each Kill <strong>+5~10</strong> / Light Radius +5~10"
   },
   {
     "id": 20047,
@@ -732,7 +732,7 @@
     ],
     "base": "미러드 부츠 (Mirrored Boots, 악마술사 전용)",
     "drop": "Hell Terror Zones, TC85 farming spots",
-    "stats": "Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+40~60</strong> / Dexterity <strong>+10~15</strong> / 마력 <strong>+10~15</strong> / 혼돈 Skills <strong>+1</strong> (악마술사 전용)"
+    "stats": "Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+40~60</strong> / Dexterity <strong>+10~15</strong> / 마력 <strong>+10~15</strong> / Chaos Skills <strong>+1</strong> (Warlock 전용)"
   },
   {
     "id": 20049,
@@ -747,7 +747,7 @@
     ],
     "base": "Unearthed Wand",
     "drop": "Hell Baal, Diablo, TC87 farming spots (극악 드랍률)",
-    "stats": "All Skills <strong>+2</strong> / 독·뼈 Skills <strong>+1~2</strong> (강령술사) / Enemy Poison Resist <strong>-40~50%</strong> / Life after each Kill <strong>+7~12</strong> / Mana after each Kill <strong>+7~12</strong> / 언데드 Damage +50%"
+    "stats": "All Skills <strong>+2</strong> / Poison & Bone Skills <strong>+1~2</strong> (Necromancer) / Enemy Poison Resist <strong>-40~50%</strong> / Life after each Kill <strong>+7~12</strong> / Mana after each Kill <strong>+7~12</strong> / Undead Damage +50%"
   },
   {
     "id": 20050,
@@ -758,9 +758,9 @@
       "호문",
       "Homunculus"
     ],
-    "base": "하이어러팬트 트로피 (Hierophant Trophy, 강령술사 전용)",
+    "base": "하이어러팬트 트로피 (Hierophant Trophy, Necromancer 전용)",
     "drop": "악몽~지옥 전역 (강령 방패)",
-    "stats": "강령술사 Skills <strong>+2</strong> / 저주 <strong>+2</strong> / 막기 속도 <strong>+30%</strong> / 막기 확률 <strong>+40%</strong> / Enhanced Defense <strong>+150~200%</strong> / 마력 +20 / Replenish Mana 33% / All Resistances <strong>+40</strong> / Mana after each Kill +5"
+    "stats": "Necromancer Skills <strong>+2</strong> / Curses <strong>+2</strong> / 막기 속도 <strong>+30%</strong> / 막기 chance <strong>+40%</strong> / Enhanced Defense <strong>+150~200%</strong> / 마력 +20 / Replenish Mana 33% / All Resistances <strong>+40</strong> / Mana after each Kill +5"
   },
   {
     "id": 20051,
@@ -772,9 +772,9 @@
       "다크포스 스폰",
       "Darkforce Spawn"
     ],
-    "base": "블러드로드 스컬 (Bloodlord Skull, 강령술사 전용)",
+    "base": "블러드로드 스컬 (Bloodlord Skull, Necromancer 전용)",
     "drop": "Hell Baal, Diablo, TC87 farming spots",
-    "stats": "소환 Skills <strong>+1~3</strong> / 독·뼈 Skills <strong>+1~3</strong> / 저주 <strong>+1~3</strong> (강령술사) / Faster Cast Rate <strong>+30%</strong> / Enhanced Defense <strong>+140~180%</strong> / Max Mana 10% 증가"
+    "stats": "소환 Skills <strong>+1~3</strong> / Poison & Bone Skills <strong>+1~3</strong> / Curses <strong>+1~3</strong> (Necromancer) / Faster Cast Rate <strong>+30%</strong> / Enhanced Defense <strong>+140~180%</strong> / Max Mana 10% Increased"
   },
   {
     "id": 20052,

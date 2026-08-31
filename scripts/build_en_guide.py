@@ -1,98 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5Y0ZFS04L"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V5Y0ZFS04L');
-    </script>
-    <meta name="google-adsense-account" content="ca-pub-8514352833859910">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>DIABLO II RESURRECTED - Endgame Encyclopedia | 1125 Labs</title>
-    <!-- Stylesheet -->
-    <meta property="og:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
-    <meta property="og:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="1125 Labs">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="ko_KR">
-    <meta property="og:url" content="https://diablo.1125labs.com/en/">
-    <meta property="og:image" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
-    <meta property="og:image:secure_url" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
-    <meta name="twitter:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
-    <meta name="twitter:image" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
-    <link rel="canonical" href="https://diablo.1125labs.com/en/">
-    <link rel="alternate" hreflang="ko" href="https://diablo.1125labs.com/">
-    <link rel="alternate" hreflang="en" href="https://diablo.1125labs.com/en/">
-    <link rel="alternate" hreflang="x-default" href="https://diablo.1125labs.com/">
-    <link rel="stylesheet" href="/css/style.css?v=18">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
-</head>
-<body>
+#!/usr/bin/env python3
+"""Rewrite en/index.html guide sections (4–12) and modal chrome to English."""
+from __future__ import annotations
 
-<div class="page-shell">
+import re
+from pathlib import Path
 
-    <aside class="left-sidebar" aria-label="Sidebar navigation">
-        <div class="sidebar-logo" id="sidebarLogo" style="cursor: pointer;">
-            ⚔️ DIABLO II RESURRECTED<br>
-            <span style="font-size:0.75rem; color:var(--gold-light);">Diablo II Encyclopedia</span>
-        </div>
-        <nav class="lang-switcher" aria-label="Language">
-            <a href="/" lang="ko" hreflang="ko">한국어</a>
-            <a href="/en/" class="active" lang="en" hreflang="en">English</a>
-        </nav>
-        <div class="sidebar-search">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="Search..." oninput="filterContent()">
-        </div>
-        <ul class="nav-menu">
-            <li><button class="nav-btn active" onclick="switchSection(event, 'builds')">1. Endgame Builds</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'uniques')">2. Perfect Uniques</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'runes')">3. Runewords</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'charms')">4. Sunder Charms</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'uber')">5. Uber / Jewels</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'cubing')">6. Cubing & Crafting</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'runelist')">7. Rune List</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'merc')">8. Mercenary Setups</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'frame')">9. Breakpoints</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'quest')">10. Permanent Quests</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'bus')">11. Bus Guide</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'farming')">12. TC85 Farming</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'ladder')">13. Ladder Season</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'leveling')">14. Leveling Guide</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'dropcalc')">15. MF Calculator</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'feedback')">16. Feedback</button></li>
-        </ul>
-    </aside>
+ROOT = Path(__file__).resolve().parents[1]
+EN_HTML = ROOT / "en" / "index.html"
 
-    <main class="main-content">
+SECTIONS: dict[str, str] = {}
 
-        <div class="mobile-ad mobile-top-ad" aria-label="Mobile top ad">
-            <div class="mobile-ad-inner">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8514352833859910" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
-
-        <header class="desktop-only">
-            <h1>⚔️ DIABLO II RESURRECTED - Endgame Encyclopedia (ULTIMATE EDITION) ⚔️</h1>
-        </header>
-
-        <div class="container">
-
-    <div class="lang-rollout-note" role="status">
-English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling, MF calculator, and patch notes. Some long guide tables may still mix Korean phrases — polish continues.
-    </div>
-    <section id="builds" class="content-section active">
+SECTIONS["builds"] = """
         <h2 class="section-title">🛡️ 1. Endgame Build Guides</h2>
         <div class="item-click-hint">💡 Use the filters above or click a card to open the <b>in-game paperdoll</b> endgame setup. New season? Start with <span class="item-inline" onclick="event.stopPropagation(); switchSection(null, 'leveling')">14. Leveling Guide</span>.</div>
         
@@ -108,40 +26,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
         <div class="grid-cards" id="buildCardsGrid">
             
         </div>
-</section>
+"""
 
-    <div class="mobile-ad mobile-mid-ad" aria-label="Mobile in-content ad">
-        <div class="mobile-ad-inner">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8514352833859910" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-    </div>
-
-    <section id="uniques" class="content-section">
-        <h2 class="section-title">💎 2. Key Unique Items & Drop Tips</h2>
-    <div class="item-click-hint">🟠 Click a unique name for perfect rolls and details.</div>
-        <table>
-            <thead><tr><th>Item</th><th>Base</th><th>Drop sources / tips</th></tr></thead>
-            <tbody id="uniqueTbody"></tbody>
-        </table>
-    </section>
-
-<section id="runes" class="content-section">
-    <h2 class="section-title">📜 3. Core Runeword Recipes</h2>
-    <div class="item-click-hint">💡 <b>Click a runeword name</b> for bases, rune order, and perfect mods.</div>
-    
-    <!-- 룬어 테이블이 동적으로 렌더링될 영역 -->
-    <table id="runewordsTable">
-        <thead>
-            <tr><th>Runeword</th><th>Rune order</th></tr>
-        </thead>
-        <tbody id="runewordsTbody">
-            <!-- JS가 runewords.json을 읽어와서 여기에 <tr>들을 꽂아넣습니다 -->
-        </tbody>
-    </table>
-</section>
-
-    <section id="charms" class="content-section">
+SECTIONS["charms"] = """
         <h2 class="section-title">🔮 4. Sunder Charm Upgrades & New Sunder Recipes</h2>
         <div class="item-click-hint">✨ Click a Sunder Charm name for <b>drop zones</b>, cube recipes, and full stats.</div>
         <table>
@@ -155,9 +42,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 <tr class="searchable-item"><td class="unique"><span class="item-inline" onclick="openSunderModal(40006)">Black Cleft (Magic Sunder)</span></td><td>Breaks Magic Immunity + Faster Run/Walk +7% + Enemy Magic Resist -6%</td></tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="uber" class="content-section">
+SECTIONS["uber"] = """
         <h2 class="section-title">💀 5. Uber Events, Torch Quest & Organ Drops</h2>
         <h3 style="color: var(--gold); margin-top: 10px; margin-bottom: 10px;">🛡️ Endgame charms (Anni / Torch)</h3>
         <div class="item-click-hint">🟠 Click a charm name for stats and how to obtain it.</div>
@@ -179,9 +66,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 <tr class="searchable-item"><td class="highlight"><span class="item-inline" onclick="openUberModal(60003)">Korlic</span></td><td>❄️ Cold / ⚔️ Physical</td><td>Protector's Frost (Cold) jewel and exclusive physical endgame charm</td></tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="cubing" class="content-section">
+SECTIONS["cubing"] = """
         <h2 class="section-title">🧪 6. Horadric Cube, Skill Charm Rerolls & Crafting</h2>
         <table>
             <thead><tr><th>Purpose / type</th><th>Recipe (materials)</th><th>Endgame target (perfect rolls)</th></tr></thead>
@@ -197,9 +84,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 <tr class="searchable-item"><td class="highlight">Remove socketed runes/jewels</td><td>Socketed item + <span class="rune">Hel Rune + Town Portal scroll</span></td><td>Keeps item; destroys socketed runes/jewels only</td></tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="runelist" class="content-section">
+SECTIONS["runelist"] = """
         <h2 class="section-title">🔢 7. Rune Numbers, Tiers & Upgrade Recipes</h2>
         <div class="item-click-hint">💡 Runes #1 El through #33 Zod. Upgrade recipes show materials to <b>craft that rune</b>.</div>
         <div class="leveling-table-wrap">
@@ -209,9 +96,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
             </tbody>
         </table>
         </div>
-</section>
+"""
 
-<section id="merc" class="content-section">
+SECTIONS["merc"] = """
         <h2 class="section-title">🗡️ 8. Mercenary Endgame Setups</h2>
         <div class="item-click-hint">💡 Click each gear slot for perfect rolls and details.</div>
         
@@ -294,9 +181,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
             </div>
 
         </div>
-</section>
-            
-    <section id="frame" class="content-section">
+"""
+
+SECTIONS["frame"] = """
         <h2 class="section-title">⚡ 9. FCR / FHR / IAS Breakpoint Tables</h2>
         <table>
             <thead><tr><th>Type</th><th>Class</th><th>Target frame</th><th>Required %</th></tr></thead>
@@ -308,9 +195,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 <tr class="searchable-item"><td class="highlight">IAS</td><td>Javazon (Lightning Fury frames)</td><td>9 frame / 8 frame</td><td>52% / <span class="highlight">89%</span></td></tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="quest" class="content-section">
+SECTIONS["quest"] = """
         <h2 class="section-title">📜 10. Permanent Quest Rewards by Difficulty</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--gold); border-radius: 4px;">
             <span class="highlight">💡 Required quest checkpoints:</span> Clear these on Normal, Nightmare, and Hell to earn permanent skill points, stats, all-resist bonuses, socket rewards, and Personalize. Each reward applies once per difficulty (up to 3 times per character).
@@ -355,9 +242,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 </tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="bus" class="content-section">
+SECTIONS["bus"] = """
         <h2 class="section-title">🚌 11. Acts 1–5 Quests, Waypoints & Rush Guide</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--magic-blue); border-radius: 4px;">
             <span class="highlight">⏱️ Rush ETA per difficulty (Acts 1–5):</span> 
@@ -424,9 +311,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 </tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="farming" class="content-section">
+SECTIONS["farming"] = """
         <h2 class="section-title">🎯 12. TC85 Farms, Terror Zones & Herald Tiers</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--gold); border-radius: 4px;">
             <span class="highlight">⚠️ Hell default resist penalty:</span> All resistances start at <b>-100%</b>, so you need <b>+175% total</b> from gear to cap at 75%.<br><br>
@@ -446,22 +333,22 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 <tr class="searchable-item"><td>Act 5</td><td class="highlight">Worldstone Keep, Throne of Destruction, Baal room</td><td>Best uniques/runes and <b>Tier 3+ Heralds / regional bosses</b> — endgame destination</td></tr>
             </tbody>
         </table>
-</section>
+"""
 
-    <section id="ladder" class="content-section">
+SECTIONS["ladder"] = """
         <h2 class="section-title">🔥 13. D2R Patch Notes Archive</h2>
         <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">Browse detailed patch history. For a fresh season start, see <span class="item-inline" onclick="switchSection(null, 'leveling')">14. Leveling Guide</span>.</p>
         <div id="patch-notes-container">
         </div>
-</section>
+"""
 
-    <section id="leveling" class="content-section">
+SECTIONS["leveling"] = """
         <h2 class="section-title">🌱 14. Leveling Guide from Scratch</h2>
         <div class="item-click-hint">💡 Click runeword names for recipes and bases. Endgame buttons on class cards open section 1 paperdolls.</div>
         <div id="levelingRoot"></div>
-</section>
+"""
 
-    <section id="dropcalc" class="content-section">
+SECTIONS["dropcalc"] = """
         <h2 class="section-title">🎯 15. Magic Find Drop Calculator</h2>
         <div class="item-click-hint">
             Enter your Magic Find to see unique drop odds.
@@ -491,9 +378,9 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
         </div>
 
         <div id="dropcalcResults" class="dropcalc-results" hidden></div>
-</section>
+"""
 
-    <section id="feedback" class="content-section">
+SECTIONS["feedback"] = """
         <h2 class="section-title">📩 16. Feedback & Reports</h2>
         <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
             <h3 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 8px;">💡 Missing or incorrect info?</h3>
@@ -505,178 +392,56 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
                 ✍️ Send feedback
             </button>
         </div>
-</section>
+"""
 
-        </div>
-    </main>
+MODAL_REPLACEMENTS = [
+    ('id="dbModalTitle" class="item-modal-title">아이템 상세', 'id="dbModalTitle" class="item-modal-title">Item details'),
+    ('aria-label="닫기"', 'aria-label="Close"'),
+    ('<h4 id="dbModalSubtitle">상세 정보</h4>', '<h4 id="dbModalSubtitle">Details</h4>'),
+    ('copyDatabaseValue()">📋 정보 복사', 'copyDatabaseValue()">📋 Copy info'),
+    ('id="itemModalTitle" class="item-modal-title">아이템 상세', 'id="itemModalTitle" class="item-modal-title">Item details'),
+    ('aria-label="수수께끼 아이템 이미지"', 'aria-label="Enigma item image"'),
+    ('alt="수수께끼"', 'alt="Enigma"'),
+    ('<h4 id="itemModalSubtitle">수수께끼 · Enigma</h4>', '<h4 id="itemModalSubtitle">Enigma</h4>'),
+    ('<p id="itemModalIntro">3Sockets 갑옷에 자 + 아이드 + 베르 순서로 넣어 만드는 대표적인 종결 룬어입니다.</p>',
+     '<p id="itemModalIntro">Classic endgame runeword: Jah + Ith + Ber in a 3-socket armor.</p>'),
+    ('copyItemRecipe()">📋 룬 조합 순서 복사', 'copyItemRecipe()">📋 Copy rune order'),
+    ('<div id="pdModalTitle" class="item-modal-title">직업 종결 빌드 가이드</div>',
+     '<div id="pdModalTitle" class="item-modal-title">Endgame build guide</div>'),
+    ('<p style="margin-bottom: 15px; color: #a1a1aa; font-size: 0.85rem;">💡 아래 인벤토리 장비 슬롯을 참고하여 종결 스펙을 세팅하세요.</p>',
+     '<p style="margin-bottom: 15px; color: #a1a1aa; font-size: 0.85rem;">💡 Use the inventory slots below as an endgame gear checklist.</p>'),
+    ('copyPaperDollValue();">\n                📋 빌드 내용 복사하기',
+     'copyPaperDollValue();">\n                📋 Copy build'),
+    ('aria-label="모바일 본문 중간 광고"', 'aria-label="Mobile in-content ad"'),
+    ('aria-label="우측 광고"', 'aria-label="Right sidebar ad"'),
+    ('console.log("🔍 Global search listener가 정상 부착되었습니다.");',
+     'console.log("🔍 Global search listener attached.");'),
+]
 
-    <aside class="side-ad right-ad" aria-label="Right sidebar ad">
-        <div class="side-ad-inner">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:160px;height:600px"
-                 data-ad-client="ca-pub-8514352833859910"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </aside>
 
-</div>
+def replace_section(html: str, section_id: str, new_body: str) -> str:
+    pattern = rf'(<section id="{re.escape(section_id)}"[^>]*>)(.*?)(</section>)'
+    if not re.search(pattern, html, flags=re.DOTALL):
+        raise SystemExit(f"section not found: {section_id}")
+    return re.sub(
+        pattern,
+        lambda m: m.group(1) + new_body + m.group(3),
+        html,
+        count=1,
+        flags=re.DOTALL,
+    )
 
-<div id="databaseItemModal" class="item-modal" role="dialog" aria-modal="true">
-    <div class="item-modal-panel" onclick="event.stopPropagation()">
-        <div class="item-modal-head">
-            <div id="dbModalTitle" class="item-modal-title">Item details</div>
-            <button class="item-modal-close" onclick="closeDatabaseModal()" aria-label="Close">&times;</button>
-        </div>
-        <div class="item-modal-body">
-            <div class="item-art-wrap" id="dbModalArt">
-                <div class="d2-item-art">
-                    <div class="d2-armor"></div>
-                </div>
-            </div>
-            <div class="item-detail">
-                <h4 id="dbModalSubtitle">Details</h4>
-                <p id="dbModalIntro"></p>
-                <div class="item-stats" id="dbModalStats"></div>
-                <button id="dbModalRecipeBtn" class="item-action" onclick="copyDatabaseValue()">📋 Copy info</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div id="itemModal" class="item-modal" role="dialog" aria-modal="true" aria-labelledby="itemModalTitle">
-    <div class="item-modal-panel" onclick="event.stopPropagation()">
-        <div class="item-modal-head">
-            <div id="itemModalTitle" class="item-modal-title">Item details</div>
-            <button class="item-modal-close" onclick="closeItemModal()" aria-label="Close">&times;</button>
-        </div>
-        <div class="item-modal-body">
-            <div class="item-art-wrap">
-                <div class="d2-item-art" aria-label="Enigma item image">
-                    <div class="d2-armor-image-container">
-                        <img src="images/items/runes/enigma.png" 
-                             alt="Enigma" 
-                             onerror="this.style.display='none'; document.getElementById('fallback-center-box').style.display='flex';">
-                    </div>
-                    <div id="fallback-center-box" class="fallback-center-wrap" style="display: none;">
-                        <div class="d2-armor"></div>
-                        <div class="rune-sequence">
-                            <span class="rune-gem">JAH</span>
-                            <span class="rune-gem">ITH</span>
-                            <span class="rune-gem">BER</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item-detail">
-                <h4 id="itemModalSubtitle">Enigma</h4>
-                <p id="itemModalIntro">Classic endgame runeword: Jah + Ith + Ber in a 3-socket armor.</p>
-                <div class="item-stats" id="itemModalStats"></div>
-                <button class="item-action" onclick="copyItemRecipe()">📋 Copy rune order</button>
-                <div id="itemModalNote" style="margin-top:14px; color:#858590; font-size:.78rem;"></div>
-            </div>
-        </div>
-    </div>
-</div>
+def main() -> None:
+    html = EN_HTML.read_text(encoding="utf-8")
+    for sid, body in SECTIONS.items():
+        html = replace_section(html, sid, body)
+    for old, new in MODAL_REPLACEMENTS:
+        html = html.replace(old, new)
+    EN_HTML.write_text(html, encoding="utf-8")
+    hangul = len(re.findall(r"[가-힣]", html))
+    print(f"updated {EN_HTML} — hangul chars remaining: {hangul}")
 
-<div id="paperDollModal" class="item-modal" role="dialog" aria-modal="true">
-    <div class="item-modal-panel" onclick="event.stopPropagation()">
-        <div class="item-modal-head">
-            <div>
-                <div id="pdModalTitle" class="item-modal-title">Endgame build guide</div>
-                <div id="pdModalSubtitle" style="color:var(--gold-light); font-size:0.85rem; margin-top:2px;"></div>
-            </div>
-            <button class="item-modal-close" onclick="closePaperDollModal()">&times;</button>
-        </div>
-        <div style="padding: 10px;">
-            <p style="margin-bottom: 15px; color: #a1a1aa; font-size: 0.85rem;">💡 Use the inventory slots below as an endgame gear checklist.</p>
-            <div class="paperdoll-grid" id="pdModalGrid"></div>
-            <div style="margin-top: 20px;" id="pdModalStats"></div>
-            <button class="item-action" onclick="event.stopPropagation(); copyPaperDollValue();">
-                📋 Copy build
-            </button>
-        </div>
-    </div>
-</div>
 
-<div id="feedbackModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: 10000; justify-content: center; align-items: center; padding: 15px; backdrop-filter: blur(5px);">
-    <div style="background: var(--card-bg); border: 2px solid var(--gold); padding: 25px; border-radius: 12px; width: 100%; max-width: 500px; color: var(--text-bright); box-shadow: 0 10px 30px rgba(0,0,0,0.9); position: relative;">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 12px; margin-bottom: 18px;">
-            <h3 style="color: var(--gold); font-size: 1.2rem; margin: 0;">📩 Feedback & reports</h3>
-            <span onclick="closeFeedbackModal()" style="color: #aaa; font-size: 1.5rem; font-weight: bold; cursor: pointer; line-height: 1;">&times;</span>
-        </div>
-        
-        <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
-            <div style="margin-bottom: 14px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Nickname <span style="color:#888; font-weight:normal;">(optional)</span></label>
-                <input type="text" id="fbNick" maxlength="20" autocomplete="nickname" placeholder="Battle.net nick · optional" style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 14px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Report type</label>
-                <select id="fbType" required style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none;">
-                    <option value="Missing info">📌 Missing item / mods / recipe</option>
-                    <option value="Correction">✏️ Typo or incorrect info</option>
-                    <option value="Feature request">💡 Feature / UX idea</option>
-                    <option value="Other">💬 Other</option>
-                </select>
-            </div>
-
-            <div style="margin-bottom: 18px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Details</label>
-                <textarea id="fbContent" required rows="5" style="width: 100%; padding: 12px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; resize: vertical;" placeholder="e.g. The Flame Rift sunder recipe lists the wrong rune. Please check."></textarea>
-            </div>
-
-            <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                <button type="button" onclick="closeFeedbackModal()" style="padding: 10px 20px; background: #22222a; color: var(--text-color); border: 1px solid var(--card-border); border-radius: 6px; cursor: pointer; font-size: 0.88rem;">Cancel</button>
-                <button type="submit" style="padding: 10px 22px; background: var(--gold); color: #0b0b0e; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 0.88rem;">Submit</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<a href="#" class="top-btn" title="Back to top">▲</a>
-
-<!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
-<script src="/js/legacy-globals.js?v=12"></script>
-<!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-    <script type="module" src="/js/main.js?v=27"></script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("searchInput");
-        if (searchInput) {
-            // 기존 onkeyup 속성이 있든 없든 강제로 이벤트 리스너를 장착합니다.
-            searchInput.addEventListener("input", function() {
-                if (typeof filterContent === "function") {
-                    filterContent();
-                } else {
-                    console.error("filterContent is not available.");
-                }
-            });
-            console.log("🔍 Global search listener attached.");
-        } else {
-            console.error("searchInput element not found.");
-        }
-    });
-</script>
-
-<footer style="text-align: center; padding: 20px; font-size: 0.75rem; color: #666; border-top: 1px solid #262630; margin-top: 50px;">
-    <p>© LEVI SHIN. All rights reserved. | <span id="siteVersionDisplay"></span></p>
-    <p style="margin-top: 5px;">
-        This site uses Google AdSense and may use cookies for personalized ads.
-        | <a href="https://policies.google.com/technologies/ads?hl=en" target="_blank" style="color: #888; text-decoration: underline;">Google Ads Privacy</a>
-    </p>
-</footer>
-
-<!-- 패치 히스토리 모달 -->
-<div id="historyModal" class="database-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
-    <div class="modal-content" style="background:#15151b; border:1px solid #333; padding:25px; width:90%; max-width:500px; border-radius:8px; color:#ddd; position:relative;">
-        <h3 style="color:var(--gold-light, #dfb15b); margin-bottom:15px;">📜 Site Patch History</h3>
-        <div id="historyModalBody" style="max-height:300px; overflow-y:auto; font-size:0.9rem; line-height:1.6;"></div>
-        <button onclick="closeHistoryModal()" style="margin-top:20px; width:100%; padding:10px; background:#262630; border:1px solid #444; color:#fff; cursor:pointer; border-radius:4px;">Close</button>
-    </div>
-</div>
-
-</body>
-</html>
+if __name__ == "__main__":
+    main()

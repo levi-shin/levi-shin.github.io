@@ -13,7 +13,10 @@ const LOCALIZED_DATA_FILES = new Set([
     'builds.json',
     'leveling.json',
     'dropcalc.json',
-    'patchnotes.json'
+    'patchnotes.json',
+    'sunders.json',
+    'charms.json',
+    'ubers.json'
 ]);
 
 function detectLang() {

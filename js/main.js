@@ -1,5 +1,5 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=4';
-import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=3';
+import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=4';
 
 /* ===== data.js ===== */
 /**
@@ -47,7 +47,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "20";
+    const dataVer = "21";
     loadPromise = Promise.all([
         fetch(dataUrl('meta.json', dataVer)).then(r => r.json()),
         fetch(dataUrl('items.json', dataVer)).then(r => r.json()),

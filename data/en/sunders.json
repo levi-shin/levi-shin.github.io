@@ -1,0 +1,56 @@
+[
+  {
+    "id": 40001,
+    "legacyKey": "화염",
+    "name": "Flame Rift (Fire)",
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Fire Sunder Charm + Io Rune (#16) + Perfect Ruby + xa4(Deep Worldstone Shard)",
+    "stats": "Breaks Fire Immunity + Enemy Fire Resist -7% + All Attributes +4 + Mana +66 + Fire Resist -72% + Magic Damage Reduced by 6 + Gold Find +22%"
+  },
+  {
+    "id": 40002,
+    "legacyKey": "냉기",
+    "name": "Cold Rupture (Cold)",
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Cold Sunder Charm + Lum Rune (#17) + Perfect Sapphire + xa2(Eastern Worldstone Shard)",
+    "stats": "Breaks Cold Immunity + Faster Hit Recovery +20% + Enemy Cold Resist -6% + Mana +74 + Cold Resist -84% + Damage Reduced by 5 + Magic Find +19%"
+  },
+  {
+    "id": 40003,
+    "legacyKey": "번개",
+    "name": "Crack of the Heavens (Lightning)",
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Lightning Sunder Charm + Fal Rune (#19) + Perfect Topaz + xa3(Southern Worldstone Shard)",
+    "stats": "Breaks Lightning Immunity + Faster Hit Recovery +24% + Enemy Lightning Resist -9% + Mana +72 + Lightning Resist -70% + Damage Reduced by 5 + Gold Find +51%"
+  },
+  {
+    "id": 40004,
+    "legacyKey": "독",
+    "name": "Rotting Fissure (Poison)",
+    "image": "sunders/rottingfissure.png",
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Poison Sunder Charm + Ko Rune (#18) + Perfect Emerald + xa1(Western Worldstone Shard)",
+    "stats": "Breaks Poison Immunity + Enemy Poison Resist -6% + All Attributes +5 + Mana +45 + Poison Resist -77% + Magic Damage Reduced by 7 + Gold Find +34%"
+  },
+  {
+    "id": 40005,
+    "legacyKey": "물리",
+    "name": "Bone Break (Physical)",
+    "aliases": [
+      "뼈의 분새",
+      "물파참",
+      "Bone Break"
+    ],
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Physical Sunder Charm + Pul Rune (#21) + Perfect Amethyst + xa5(Northern Worldstone Shard)",
+    "stats": "Breaks Physical Immunity + Enhanced Damage +87% + All Attributes +8 + Life +17 + Damage Reduced by 6 + Physical Damage Taken +20% + Gold Find +25%"
+  },
+  {
+    "id": 40006,
+    "legacyKey": "마법",
+    "name": "Black Cleft (Magic)",
+    "drop": "Hell Terror Zone act bosses and champions",
+    "recipe": "Dormant Magic Sunder Charm + Mal Rune (#23) + Perfect Diamond + xa3 + xa4 + xa5 (three Worldstone Shard types)",
+    "stats": "Breaks Magic Immunity + Faster Run/Walk +7% + Enemy Magic Resist -6% + Mana +58 + Magic Resist -55% + Damage Reduced by 9 + Magic Find +19%"
+  }
+]

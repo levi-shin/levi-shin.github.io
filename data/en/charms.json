@@ -1,0 +1,18 @@
+[
+  {
+    "id": 50001,
+    "legacyKey": "애니참",
+    "name": "Annihilus",
+    "image": "charms/anni.png",
+    "drop": "Uber Diablo (Diablo Clone) — 100% drop on kill",
+    "stats": "Fixed rolls: <strong>+1 All Skills</strong> / <strong>All Attributes +20</strong> (perfect) / <strong>All Resistances +20</strong> (perfect) / <strong>+10% Experience Gained</strong>"
+  },
+  {
+    "id": 50002,
+    "legacyKey": "횃불참",
+    "name": "Hellfire Torch",
+    "image": "charms/hellfiretorch.png",
+    "drop": "Uber Tristram Torch quest (defeat Mephisto, Diablo, and Baal)",
+    "stats": "Fixed rolls: <strong>+3 [Character Class Skills]</strong> / <strong>All Attributes +20</strong> (perfect) / <strong>All Resistances +20</strong> (perfect) / Level 8 <strong>Firestorm</strong> 5% chance on striking"
+  }
+]

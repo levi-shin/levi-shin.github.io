@@ -1,0 +1,23 @@
+[
+  {
+    "id": 60001,
+    "legacyKey": "마더크",
+    "name": "Madawc (Lightning / Magic)",
+    "summon": "Cube five Barbarian statue pieces → obtain the Key to the Pinnacle of Passage → open the portal",
+    "stats": "<strong>Watcher's Thunder (Lightning):</strong> +5~10% Lightning Skills, -5~10% Enemy Lightning Resist, 1% chance to cast Level 25 Cyclone Armor when struck, 15~35% Magic Find, 25~50% Extra Gold, +3~5% Experience<br><br><strong>Guardian's Light (Magic):</strong> +5~10% Magic Skills, -5~10% Enemy Magic Resist, 15~35% Magic Find, 25~50% Extra Gold, +3~5% Experience"
+  },
+  {
+    "id": 60002,
+    "legacyKey": "탈릭",
+    "name": "Talic (Fire / Poison)",
+    "summon": "Cube five Barbarian statue pieces → obtain the Key to the Pinnacle of Passage → open the portal",
+    "stats": "<strong>Guardian's Vengeance (Poison):</strong> +5~10% Poison Skills, -5~10% Enemy Poison Resist, 1% chance to cast Level 25 Bone Armor when struck, 15~35% Magic Find, 25~50% Extra Gold, +3~5% Experience<br><br><strong>Protector's Flame (Fire):</strong> +5~10% Fire Skills, -5~10% Enemy Fire Resist, 15~35% Magic Find, 25~50% Extra Gold, +3~5% Experience"
+  },
+  {
+    "id": 60003,
+    "legacyKey": "콜릭",
+    "name": "Korlic (Cold / Physical)",
+    "summon": "Cube five Barbarian statue pieces → obtain the Key to the Pinnacle of Passage → open the portal",
+    "stats": "<strong>Protector's Frost (Cold):</strong> +5~10% Cold Skills, -5~10% Enemy Cold Resist, 1% chance to cast Level 25 Frozen Armor when struck, 15~35% Magic Find, 25~50% Extra Gold, +3~5% Experience<br><br><strong>Physical charm:</strong> exclusive endgame charm with enhanced physical damage plus Crushing Blow / Deadly Strike"
+  }
+]

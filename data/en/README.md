@@ -8,6 +8,7 @@
 ## Localized files
 - uniques.json, runewords.json, runes.json
 - builds.json, leveling.json, dropcalc.json, patchnotes.json
+- sunders.json, charms.json, ubers.json
 
 ## Regenerate
 ```bash
@@ -22,5 +23,5 @@ python3 scripts/build_en_content.py   # builds / leveling / dropcalc / patchnote
 4. Add a `meta.json` history line
 
 ## Not fully automated
-- Long HTML guide tables in `en/index.html` (sections 4–12) — glossary-assisted; polish manually when needed
-- Sunders / charms / ubers still share KO JSON (Phase 2+ DB only covered core item DBs)
+- Long HTML guide tables in `en/index.html` — run `build_en_guide.py` after KO guide edits
+- Unique/runeword stat lines may retain minor Hangul until glossary is extended
