@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.15",
+  "siteVersion": "v1.0.16",
   "lastUpdated": "2026-08-31",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.16",
+      "date": "2026-08-31",
+      "desc": "영문 /en/ UI: 모달·검색·빌드 카드·히스토리 영문화"
+    },
     {
       "version": "v1.0.15",
       "date": "2026-08-31",

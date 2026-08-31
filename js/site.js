@@ -16,7 +16,8 @@ const LOCALIZED_DATA_FILES = new Set([
     'patchnotes.json',
     'sunders.json',
     'charms.json',
-    'ubers.json'
+    'ubers.json',
+    'meta.json'
 ]);
 
 function detectLang() {
@@ -65,7 +66,8 @@ const UI = {
             socketCols: ['난이도', '권장 사용'],
             tipsHead: '놓치기 쉬운 점',
             buildBtn: '종결 세팅 보기',
-            mercCols: ['구간', '고용', '무기', '갑옷', '투구']
+            mercCols: ['구간', '고용', '무기', '갑옷', '투구'],
+            footerNote: '버스는 <span class="item-inline" onclick="switchSection(null, \'bus\')">11. 버스 가이드</span>, 퀘스트 보상은 <span class="item-inline" onclick="switchSection(null, \'quest\')">10. 영구보상 퀘스트</span>, 용병은 <span class="item-inline" onclick="switchSection(null, \'merc\')">8. 용병 세팅</span>을 이어서 보시면 됩니다.'
         },
         feedback: {
             limit: (n) => `⚠️ 오늘의 제보 한도(${n}회)를 모두 사용하셨습니다.\n내일 자정 이후 다시 제보해 주세요. 감사합니다!`,
@@ -110,7 +112,52 @@ const UI = {
             copy: '📋 아이템 정보 복사'
         },
         copyGeneric: '📋 정보 복사',
-        copyCube: '📋 큐빙 공식 복사'
+        copyCube: '📋 큐빙 공식 복사',
+        searchPrimary: '✨ 핵심 정보 (조합 및 스펙)',
+        searchCat: {
+            runeword: '룬어 조합식',
+            unique: '유니크 아이템',
+            sunder: '신 파괴참',
+            charm: '종결 부적',
+            uber: '우버 바바/주얼',
+            leveling: '육성 가이드'
+        },
+        searchHighlight: {
+            recipe: (v) => `조합: ${v}`,
+            base: (v) => `베이스: ${v}`,
+            drop: (v) => `드랍: ${v}`,
+            obtain: (v) => `획득: ${v}`,
+            summon: (v) => `소환/효과: ${v}`,
+            leveling: '노말부터 지옥 자립 순서'
+        },
+        sunderModal: {
+            subtitle: (key) => `신 파괴참 · ${key} 속성`,
+            intro: (drop) => `드랍 장소: ${drop}`,
+            recipe: '업그레이드 큐빙 공식 (호라드림의 함)',
+            stats: '새로워진 파괴참 상세 스펙',
+            copyPrefix: (name) => `${name} 공식`
+        },
+        charmModal: {
+            subtitle: '종결 부적 정보',
+            intro: (drop) => `획득 방법: ${drop}`,
+            stats: '부적 고유 옵션 스펙'
+        },
+        uberModal: {
+            subtitle: '우버 바바 · 전용 주얼 족보',
+            stats: '드랍 주얼 및 부적 상세 스펙',
+            copySuffix: '드랍 보상 스펙 정보'
+        },
+        buildGuide: {
+            stats: '📊 스탯',
+            inventory: '🎒 인벤토리',
+            skills: '⚡ 스킬',
+            playstyle: '🎮 운영법'
+        },
+        buildCard: {
+            clickHint: '클릭하여 상세 장비 세팅을 확인하세요.',
+            viewSlots: '장비 슬롯 보기'
+        },
+        ladderOnlyShort: '래더전용'
     },
     en: {
         ladderOnly: '🔥 Ladder only',
@@ -142,7 +189,8 @@ const UI = {
             socketCols: ['Difficulty', 'Recommended use'],
             tipsHead: 'Easy to miss',
             buildBtn: 'View endgame setup',
-            mercCols: ['Stage', 'Hire', 'Weapon', 'Armor', 'Helm']
+            mercCols: ['Stage', 'Hire', 'Weapon', 'Armor', 'Helm'],
+            footerNote: 'Continue with <span class="item-inline" onclick="switchSection(null, \'bus\')">11. Bus Guide</span>, <span class="item-inline" onclick="switchSection(null, \'quest\')">10. Permanent Quests</span>, and <span class="item-inline" onclick="switchSection(null, \'merc\')">8. Mercenary Setups</span>.'
         },
         feedback: {
             limit: (n) => `⚠️ Daily report limit (${n}) used.\nPlease try again after midnight. Thanks!`,
@@ -187,7 +235,52 @@ const UI = {
             copy: '📋 Copy item info'
         },
         copyGeneric: '📋 Copy info',
-        copyCube: '📋 Copy cube recipe'
+        copyCube: '📋 Copy cube recipe',
+        searchPrimary: '✨ Key info (recipes & specs)',
+        searchCat: {
+            runeword: 'Runeword',
+            unique: 'Unique',
+            sunder: 'Sunder Charm',
+            charm: 'Endgame charm',
+            uber: 'Uber Barb / Jewel',
+            leveling: 'Leveling guide'
+        },
+        searchHighlight: {
+            recipe: (v) => `Recipe: ${v}`,
+            base: (v) => `Base: ${v}`,
+            drop: (v) => `Drop: ${v}`,
+            obtain: (v) => `Obtain: ${v}`,
+            summon: (v) => `Summon: ${v}`,
+            leveling: 'Normal through Hell progression'
+        },
+        sunderModal: {
+            subtitle: (key) => `Sunder Charm · ${key}`,
+            intro: (drop) => `Drop zone: ${drop}`,
+            recipe: 'Upgrade cube recipe (Horadric Cube)',
+            stats: 'Upgraded Sunder Charm stats',
+            copyPrefix: (name) => `${name} recipe`
+        },
+        charmModal: {
+            subtitle: 'Endgame charm',
+            intro: (drop) => `How to obtain: ${drop}`,
+            stats: 'Charm mods'
+        },
+        uberModal: {
+            subtitle: 'Uber Barb · exclusive jewels',
+            stats: 'Jewel & charm drop specs',
+            copySuffix: 'drop reward specs'
+        },
+        buildGuide: {
+            stats: '📊 Stats',
+            inventory: '🎒 Inventory',
+            skills: '⚡ Skills',
+            playstyle: '🎮 Playstyle'
+        },
+        buildCard: {
+            clickHint: 'Click to view the full gear setup.',
+            viewSlots: 'View gear slots'
+        },
+        ladderOnlyShort: 'Ladder only'
     }
 };
 

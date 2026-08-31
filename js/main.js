@@ -1,5 +1,7 @@
-import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=4';
-import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=4';
+import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=5';
+import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=5';
+
+const DATA_VER = '22';
 
 /* ===== data.js ===== */
 /**
@@ -47,7 +49,7 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "21";
+    const dataVer = DATA_VER;
     loadPromise = Promise.all([
         fetch(dataUrl('meta.json', dataVer)).then(r => r.json()),
         fetch(dataUrl('items.json', dataVer)).then(r => r.json()),
@@ -249,7 +251,7 @@ window.renderGlobalSearchResults = function(keyword, primaries, builds) {
         
         // 1. 유니크 / 룬어 아이템 결과
         if (primaries.length > 0) {
-            html += `<div style="font-size: 0.75rem; color: var(--gold); margin: 6px 4px 4px; font-weight: bold;">✨ 핵심 정보 (조합 및 스크립트)</div>`;
+            html += `<div style="font-size: 0.75rem; color: var(--gold); margin: 6px 4px 4px; font-weight: bold;">${t().searchPrimary}</div>`;
             primaries.forEach(item => {
                 html += `
                 <div onclick="open${item.type === 'runeword' ? 'Rune' : 'Unique'}Modal(${item.id}); window.closeGlobalSearch();" 
@@ -300,6 +302,7 @@ function filterContent() {
 
     if (!window.DATA) return;
 
+    const ui = t();
     const primaryMatches = [];
 
     // 2. 룬어 검색
@@ -308,9 +311,9 @@ function filterContent() {
             if (matchesSearchText(rw, filter)) {
                 primaryMatches.push({
                     type: 'runeword',
-                    title: rw.legacyKey || rw.name,
-                    category: '룬어 조합식',
-                    highlight: `조합: ${rw.recipe || '-'}`,
+                    title: SITE_LANG === 'en' ? (rw.name || rw.eng || rw.legacyKey) : (rw.legacyKey || rw.name),
+                    category: ui.searchCat.runeword,
+                    highlight: ui.searchHighlight.recipe(rw.recipe || '-'),
                     id: rw.id,
                     isLadder: rw.isLadder
                 });
@@ -325,8 +328,8 @@ function filterContent() {
                 primaryMatches.push({
                     type: 'unique',
                     title: uni.name || uni.legacyKey,
-                    category: '유니크 아이템',
-                    highlight: `베이스: ${uni.base || '-'}`,
+                    category: ui.searchCat.unique,
+                    highlight: ui.searchHighlight.base(uni.base || '-'),
                     id: uni.id
                 });
             }
@@ -344,8 +347,8 @@ function filterContent() {
                 primaryMatches.push({
                     type: 'sunder',
                     title: item.name,
-                    category: '신 파괴참',
-                    highlight: `드랍: ${item.drop || '-'}`,
+                    category: ui.searchCat.sunder,
+                    highlight: ui.searchHighlight.drop(item.drop || '-'),
                     id: item.id
                 });
             }
@@ -362,8 +365,8 @@ function filterContent() {
                 primaryMatches.push({
                     type: 'charm',
                     title: item.name,
-                    category: '종결 부적',
-                    highlight: `획득: ${item.drop || '-'}`,
+                    category: ui.searchCat.charm,
+                    highlight: ui.searchHighlight.obtain(item.drop || '-'),
                     id: item.id
                 });
             }
@@ -381,8 +384,8 @@ function filterContent() {
                 primaryMatches.push({
                     type: 'uber',
                     title: item.name,
-                    category: '우버 바바/주얼',
-                    highlight: `소환/효과: ${item.summon || '-'}`,
+                    category: ui.searchCat.uber,
+                    highlight: ui.searchHighlight.summon(item.summon || '-'),
                     id: item.id
                 });
             }
@@ -394,8 +397,8 @@ function filterContent() {
         primaryMatches.push({
             type: 'leveling',
             title: DATA.leveling.title,
-            category: '육성 가이드',
-            highlight: '노말부터 지옥 자립 순서',
+            category: ui.searchCat.leveling,
+            highlight: ui.searchHighlight.leveling,
             id: 0
         });
     }
@@ -441,7 +444,7 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
     let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">${t().searchHeader(keyword)}</div>`;
 
     if (primaries.length > 0) {
-        html += `<div style="margin-bottom: 8px;"><div style="font-size: 0.75rem; color: var(--gold-light, #f3e5ab); font-weight: bold; margin-bottom: 4px;">✨ 핵심 정보 (조합 및 스펙)</div>`;
+        html += `<div style="margin-bottom: 8px;"><div style="font-size: 0.75rem; color: var(--gold-light, #f3e5ab); font-weight: bold; margin-bottom: 4px;">${t().searchPrimary}</div>`;
         primaries.slice(0, 5).forEach(item => {
             // 🌟 아이템 타입별 올바른 모달 함수 매핑
             let clickAction = `openUniqueModal(${item.id})`;
@@ -454,7 +457,7 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
             // 🌟 래더 전용 여부 확인 및 배지 생성 (item 데이터에 isLadder 또는 ladder 속성이 true일 때)
             let ladderBadge = '';
             if (item.isLadder || item.ladder) {
-                ladderBadge = `<span style="font-size: 0.65rem; background: #7f1d1d; color: #fca5a5; padding: 1px 5px; border-radius: 4px; margin-left: 6px; font-weight: normal; vertical-align: middle;">래더전용</span>`;
+                ladderBadge = `<span style="font-size: 0.65rem; background: #7f1d1d; color: #fca5a5; padding: 1px 5px; border-radius: 4px; margin-left: 6px; font-weight: normal; vertical-align: middle;">${t().ladderOnlyShort}</span>`;
             }
 
             html += `
@@ -639,30 +642,32 @@ function renderBuildContent(content = []) {
     }).join("");
 }
 function renderBuildGuide(data) {
+    const bg = t().buildGuide;
     const rows = [];
     const pushRow = (label, value, extraClass = "") => {
         if (!value) return;
         rows.push(`<div class="item-stat${extraClass ? ` ${extraClass}` : ""}"><strong>${label}</strong><br>${escapeHtml(value)}</div>`);
     };
 
-    pushRow("📊 스탯", data.stats);
-    pushRow("🎒 인벤토리", data.inventory);
-    pushRow("⚡ 스킬", data.skills);
-    pushRow("🎮 운영법", data.playstyle, "build-playstyle");
+    pushRow(bg.stats, data.stats);
+    pushRow(bg.inventory, data.inventory);
+    pushRow(bg.skills, data.skills);
+    pushRow(bg.playstyle, data.playstyle, "build-playstyle");
 
     if (rows.length) return rows.join("");
     return `<div class="item-stat">${data.info || ""}</div>`;
 }
 
 function buildPaperDollCopyText(data) {
+    const bg = t().buildGuide;
     let text = `[${data.title}] ${data.subtitle}\n\n`;
     (data.slots || []).forEach(slot => {
         text += `● ${slot.slot}: ${(slot.content || []).map(x => x.value || x.name || x.target || "").join("")}\n`;
     });
-    if (data.stats) text += `\n📊 스탯: ${data.stats}`;
-    if (data.inventory) text += `\n🎒 인벤토리: ${data.inventory}`;
-    if (data.skills) text += `\n⚡ 스킬: ${data.skills}`;
-    if (data.playstyle) text += `\n🎮 운영법: ${data.playstyle}`;
+    if (data.stats) text += `\n${bg.stats}: ${data.stats}`;
+    if (data.inventory) text += `\n${bg.inventory}: ${data.inventory}`;
+    if (data.skills) text += `\n${bg.skills}: ${data.skills}`;
+    if (data.playstyle) text += `\n${bg.playstyle}: ${data.playstyle}`;
     return text;
 }
 
@@ -789,15 +794,17 @@ function openSunderModal(sunderId) {
     const item = getRecord("sunder", sunderId);
     if (!item) return;
 
+    const ui = t().sunderModal;
+    const typeLabel = SITE_LANG === 'en' ? (item.name || item.legacyKey) : item.legacyKey;
     document.getElementById("dbModalTitle").textContent = item.name;
-    document.getElementById("dbModalSubtitle").textContent = "신 파괴참 · " + item.legacyKey + " 속성";
-    document.getElementById("dbModalIntro").textContent = "드랍 장소: " + item.drop;
+    document.getElementById("dbModalSubtitle").textContent = ui.subtitle(typeLabel);
+    document.getElementById("dbModalIntro").textContent = ui.intro(item.drop);
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>업그레이드 큐빙 공식 (호라드림의 함)</strong><br><span style="color:var(--rune-orange);">${item.recipe}</span></div>
-         <div class="item-stat"><strong>새로워진 파괴참 상세 스펙</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
+        `<div class="item-stat"><strong>${ui.recipe}</strong><br><span style="color:var(--rune-orange);">${item.recipe}</span></div>
+         <div class="item-stat"><strong>${ui.stats}</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
 
     document.getElementById("dbModalRecipeBtn").textContent = t().copyCube;
-    databaseCopyText = `${item.name} 공식: ${item.recipe}`;
+    databaseCopyText = `${ui.copyPrefix(item.name)}: ${item.recipe}`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
@@ -806,11 +813,12 @@ function openCharmModal(charmId) {
     const item = getRecord("charm", charmId);
     if (!item) return;
 
+    const ui = t().charmModal;
     document.getElementById("dbModalTitle").textContent = item.name;
-    document.getElementById("dbModalSubtitle").textContent = "종결 부적 정보";
-    document.getElementById("dbModalIntro").textContent = "획득 방법: " + item.drop;
+    document.getElementById("dbModalSubtitle").textContent = ui.subtitle;
+    document.getElementById("dbModalIntro").textContent = ui.intro(item.drop);
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>부적 고유 옵션 스펙</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
+        `<div class="item-stat"><strong>${ui.stats}</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
 
     document.getElementById("dbModalRecipeBtn").textContent = t().copyGeneric;
     databaseCopyText = `${item.name} - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
@@ -822,14 +830,15 @@ function openUberModal(uberId) {
     const item = getRecord("uber", uberId);
     if (!item) return;
 
+    const ui = t().uberModal;
     document.getElementById("dbModalTitle").textContent = item.name;
-    document.getElementById("dbModalSubtitle").textContent = "우버 바바 · 전용 주얼 족보";
+    document.getElementById("dbModalSubtitle").textContent = ui.subtitle;
     document.getElementById("dbModalIntro").textContent = item.summon;
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>드랍 주얼 및 부적 상세 스펙</strong><br>${item.stats}</div>`;
+        `<div class="item-stat"><strong>${ui.stats}</strong><br>${item.stats}</div>`;
 
     document.getElementById("dbModalRecipeBtn").textContent = t().copyGeneric;
-    databaseCopyText = `${item.name} - 드랍 보상 스펙 정보`;
+    databaseCopyText = `${item.name} - ${ui.copySuffix}`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
     openDatabaseModal();
@@ -902,7 +911,7 @@ function copyItemRecipe() {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(recipe).then(() => {
             alert(t().copyRecipeOk(recipe));
-        }).catch(() => alert(`조합 순서: ${recipe}`));
+        }).catch(() => alert(t().copyRecipeFallback(recipe)));
     } else {
         alert(t().copyRecipeFallback(recipe));
     }
@@ -1094,7 +1103,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch(dataUrl('patchnotes.json', 20));
+        const response = await fetch(dataUrl('patchnotes.json', DATA_VER));
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1223,11 +1232,19 @@ function linkRunewordsInText(text) {
 
 function linkUniquesInText(text) {
     const raw = String(text || '');
-    const pairs = [
-        ['안다리엘의 두건', 20007],
-        ['기욤의 얼굴', 20033],
-        ['샤코', 20005]
-    ].sort((a, b) => b[0].length - a[0].length);
+    const pairs = (SITE_LANG === 'en'
+        ? [
+            ["Andariel's Visage", 20007],
+            ["Guillaume's Face", 20033],
+            ['Harlequin Crest', 20005],
+            ['Shako', 20005]
+        ]
+        : [
+            ['안다리엘의 두건', 20007],
+            ['기욤의 얼굴', 20033],
+            ['샤코', 20005]
+        ]
+    ).sort((a, b) => b[0].length - a[0].length);
     const pattern = new RegExp(pairs.map(p => escapeRegExp(p[0])).join('|'), 'g');
     const lookup = Object.fromEntries(pairs);
     return raw.replace(pattern, matched => {
@@ -1253,7 +1270,7 @@ function runeTierBadge(tier) {
 
 async function loadRuneList() {
     try {
-        const response = await fetch(dataUrl('runes.json', 20));
+        const response = await fetch(dataUrl('runes.json', DATA_VER));
         const runes = await response.json();
         DATA.runes = runes;
         if (window.DATA) window.DATA.runes = runes;
@@ -1265,7 +1282,7 @@ async function loadRuneList() {
         tbody.innerHTML = runes.map(rune => `
             <tr class="searchable-item">
                 <td>${ui.runeNum(rune.num)}</td>
-                <td class="rune">${rune.name} (${rune.eng})</td>
+                <td class="rune">${SITE_LANG === 'en' ? rune.name : `${rune.name} (${rune.eng})`}</td>
                 <td>${runeTierBadge(rune.tier)}</td>
                 <td>${rune.upgrade}</td>
                 <td>${rune.use}</td>
@@ -1392,13 +1409,13 @@ function renderLevelingGuide(guide) {
         </div>
         <h3 class="leveling-subhead">${t().leveling.tipsHead}</h3>
         <ul style="margin: 0 0 12px 1.2rem; font-size: 0.9rem; word-break: keep-all;">${tips}</ul>
-        <div class="leveling-note">버스는 <span class="item-inline" onclick="switchSection(null, 'bus')">11. 버스 가이드</span>, 퀘스트 보상은 <span class="item-inline" onclick="switchSection(null, 'quest')">10. 영구보상 퀘스트</span>, 용병은 <span class="item-inline" onclick="switchSection(null, 'merc')">8. 용병 세팅</span>을 이어서 보시면 됩니다.</div>
+        <div class="leveling-note">${t().leveling.footerNote}</div>
     `;
 }
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch(dataUrl('leveling.json', 20));
+        const response = await fetch(dataUrl('leveling.json', DATA_VER));
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1412,7 +1429,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch(dataUrl('runewords.json', 20));
+        const response = await fetch(dataUrl('runewords.json', DATA_VER));
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1445,7 +1462,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch(dataUrl('builds.json', 20)); 
+        const response = await fetch(dataUrl('builds.json', DATA_VER)); 
         const data = await response.json();
         const builds = data.items; 
 
@@ -1457,7 +1474,7 @@ async function renderBuildCards() {
             let descText = build.stats
                 || (build.info ? build.info.replace(/<[^>]*>?/gm, '') : '');
             descText = descText.trim();
-            if (!descText) descText = '클릭하여 상세 장비 세팅을 확인하세요.';
+            if (!descText) descText = t().buildCard.clickHint;
             else if (descText.length > 72) descText = descText.substring(0, 72) + '...';
 
             let tagAttr = Array.isArray(build.tags) && build.tags.length
@@ -1473,7 +1490,7 @@ async function renderBuildCards() {
                 <span class="badge">${badgeText}</span>
                 <h3>${titleText}</h3>
                 <p>${descText}</p>
-                <button class="btn-detail">장비 슬롯 보기</button>
+                <button class="btn-detail">${t().buildCard.viewSlots}</button>
             `;
 
             gridContainer.appendChild(card);

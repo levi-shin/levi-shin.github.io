@@ -2,12 +2,12 @@
  * 매찬 대비 유니크 드랍 확률 계산기
  * 매찬을 입력하면 아이템별 확률이 목록으로 나옵니다.
  */
-import { dataUrl, t } from './site.js';
+import { dataUrl, t } from './site.js?v=5';
 
 const UNIQUE_MF_FACTOR = 250;
 const SET_MF_FACTOR = 500;
 const RARE_MF_FACTOR = 600;
-const DROP_CALC_VER = "20";
+const DROP_CALC_VER = "22";
 
 let dropCalcData = null;
 

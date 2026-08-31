@@ -1,0 +1,89 @@
+{
+  "projectName": "D2R Endgame Encyclopedia",
+  "siteVersion": "v1.0.16",
+  "lastUpdated": "2026-08-31",
+  "author": "LEVI SHIN",
+  "verificationStatus": "Verified",
+  "history": [
+    {
+      "version": "v1.0.16",
+      "date": "2026-08-31",
+      "desc": "English UI: modals, search, build cards, and meta history on /en/"
+    },
+    {
+      "version": "v1.0.15",
+      "date": "2026-08-31",
+      "desc": "EN polish: sunders/charms/ubers JSON, guide HTML, stats glossary"
+    },
+    {
+      "version": "v1.0.13",
+      "date": "2026-08-31",
+      "desc": "English Phase 2: unique, runeword, and rune table EN data"
+    },
+    {
+      "version": "v1.0.12",
+      "date": "2026-08-31",
+      "desc": "English Phase 1: /en/ route, language switch, absolute asset paths"
+    },
+    {
+      "version": "v1.0.11",
+      "date": "2026-08-27",
+      "desc": "Google Analytics (gtag) added"
+    },
+    {
+      "version": "v1.0.10",
+      "date": "2026-08-23",
+      "desc": "Leveling guide: early-game merc gear tree by runeword timing"
+    },
+    {
+      "version": "v1.0.9",
+      "date": "2026-08-23",
+      "desc": "Full rune list #1–33; runeword names link to detail modals in leveling guide"
+    },
+    {
+      "version": "v1.0.8",
+      "date": "2026-08-23",
+      "desc": "Smoke runeword added; endgame base recommendations refined"
+    },
+    {
+      "version": "v1.0.7",
+      "date": "2026-08-23",
+      "desc": "Ladder season leveling guide; Warlock Resonating Blow / Apocalypse path"
+    },
+    {
+      "version": "v1.0.6",
+      "date": "2026-08-21",
+      "desc": "Magic Find drop calculator for unique odds"
+    },
+    {
+      "version": "v1.0.5",
+      "date": "2026-08-21",
+      "desc": "Nova Sorc & Poison Necro builds; mobile merc display; section 8 merc guide; build filter tags"
+    },
+    {
+      "version": "v1.0.4",
+      "date": "2026-08-21",
+      "desc": "16 endgame builds data accuracy pass"
+    },
+    {
+      "version": "v1.0.3",
+      "date": "2026-08-19",
+      "desc": "Global search and type-specific detail modals"
+    },
+    {
+      "version": "v1.0.2",
+      "date": "2026-08-18",
+      "desc": "Footer version opens patch history modal"
+    },
+    {
+      "version": "v1.0.1",
+      "date": "2026-08-18",
+      "desc": "Dynamic unique table rendering and modal ID fixes"
+    },
+    {
+      "version": "v1.0.0",
+      "date": "2026-08-10",
+      "desc": "Static framework refactor: data and UI split"
+    }
+  ]
+}
