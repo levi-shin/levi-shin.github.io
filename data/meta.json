@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.11",
-  "lastUpdated": "2026-08-27",
+  "siteVersion": "v1.0.12",
+  "lastUpdated": "2026-08-31",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.12",
+      "date": "2026-08-31",
+      "desc": "영문 /en/ Phase 1: 언어 전환, hreflang, 절대 경로 자산 로딩"
+    },
     {
       "version": "v1.0.11",
       "date": "2026-08-27",

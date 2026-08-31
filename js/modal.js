@@ -3,6 +3,7 @@
  * 데이터는 JSON에서 로드되며, 화면 간 연결은 숫자 ID를 사용합니다.
  */
 import { DATA, getRecord } from './data.js';
+import { itemImageUrl } from './site.js';
 
 let currentPaperDollText = "";
 let databaseCopyText = "";
@@ -31,7 +32,7 @@ function setDbModalImage(imagePath) {
 
     const img = document.createElement("img");
     img.className = "db-modal-img";
-    img.src = `items/${imagePath}`;
+    img.src = itemImageUrl(imagePath);
     img.alt = "";
     img.onerror = fallback;
     artEl.innerHTML = "";

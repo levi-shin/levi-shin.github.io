@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
@@ -12,25 +12,25 @@
     </script>
     <meta name="google-adsense-account" content="ca-pub-8514352833859910">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>DIABLO II RESURRECTED - 악군 패키지 마스터 종결 백과사전 (ULTIMATE EDITION)</title>
-    <!-- 외부 스타일시트 연결 -->
-    <meta property="og:title" content="디아블로 디아 2 백과 사전 | 1125 Labs">
-    <meta property="og:description" content="직접 파밍하고 정리한 실전 디아 2 백과 사전">
+    <title>DIABLO II RESURRECTED - Endgame Encyclopedia | 1125 Labs</title>
+    <!-- Stylesheet -->
+    <meta property="og:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
+    <meta property="og:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="1125 Labs">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:url" content="https://diablo.1125labs.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:url" content="https://diablo.1125labs.com/en/">
     <meta property="og:image" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
     <meta property="og:image:secure_url" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="디아블로 디아 2 백과 사전 | 1125 Labs">
-    <meta name="twitter:description" content="직접 파밍하고 정리한 실전 디아 2 백과 사전">
+    <meta name="twitter:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
+    <meta name="twitter:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
     <meta name="twitter:image" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
-    <link rel="canonical" href="https://diablo.1125labs.com/">
+    <link rel="canonical" href="https://diablo.1125labs.com/en/">
     <link rel="alternate" hreflang="ko" href="https://diablo.1125labs.com/">
     <link rel="alternate" hreflang="en" href="https://diablo.1125labs.com/en/">
     <link rel="alternate" hreflang="x-default" href="https://diablo.1125labs.com/">
@@ -41,36 +41,36 @@
 
 <div class="page-shell">
 
-    <aside class="left-sidebar" aria-label="사이드바 네비게이션">
+    <aside class="left-sidebar" aria-label="Sidebar navigation">
         <div class="sidebar-logo" id="sidebarLogo" style="cursor: pointer;">
             ⚔️ DIABLO II RESURRECTED<br>
-            <span style="font-size:0.75rem; color:var(--gold-light);">악군 패키지 마스터 백과사전</span>
+            <span style="font-size:0.75rem; color:var(--gold-light);">Diablo II Encyclopedia</span>
         </div>
-        <nav class="lang-switcher" aria-label="언어 선택">
-            <a href="/" class="active" lang="ko" hreflang="ko">한국어</a>
-            <a href="/en/" lang="en" hreflang="en">English</a>
+        <nav class="lang-switcher" aria-label="Language">
+            <a href="/" lang="ko" hreflang="ko">한국어</a>
+            <a href="/en/" class="active" lang="en" hreflang="en">English</a>
         </nav>
         <div class="sidebar-search">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="검색어 입력..." oninput="filterContent()">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search..." oninput="filterContent()">
         </div>
         <ul class="nav-menu">
-            <li><button class="nav-btn active" onclick="switchSection(event, 'builds')">1. 종결 빌드</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'uniques')">2. 유니크 으뜸</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'runes')">3. 룬어 족보</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'charms')">4. 신 파괴참</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'uber')">5. 우버 바바/주얼</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'cubing')">6. 큐빙&크래프트</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'runelist')">7. 룬 번호표</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'merc')">8. 용병 세팅</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'frame')">9. 프레임 표</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'quest')">10. 영구보상 퀘스트</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'bus')">11. 버스 가이드</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'farming')">12. TC85 사냥터</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'ladder')">13. 래더 시즌 소식</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'leveling')">14. 육성 가이드</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'dropcalc')">15. 매찬 계산기</button></li>
-            <li><button class="nav-btn" onclick="switchSection(event, 'feedback')">16. 피드백/제보</button></li>
+            <li><button class="nav-btn active" onclick="switchSection(event, 'builds')">1. Endgame Builds</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'uniques')">2. Perfect Uniques</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'runes')">3. Runewords</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'charms')">4. Sunder Charms</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'uber')">5. Uber / Jewels</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'cubing')">6. Cubing & Crafting</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'runelist')">7. Rune List</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'merc')">8. Mercenary Setups</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'frame')">9. Breakpoints</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'quest')">10. Permanent Quests</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'bus')">11. Bus Guide</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'farming')">12. TC85 Farming</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'ladder')">13. Ladder Season</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'leveling')">14. Leveling Guide</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'dropcalc')">15. MF Calculator</button></li>
+            <li><button class="nav-btn" onclick="switchSection(event, 'feedback')">16. Feedback</button></li>
         </ul>
     </aside>
 
@@ -84,22 +84,25 @@
         </div>
 
         <header class="desktop-only">
-            <h1>⚔️ DIABLO II RESURRECTED - 악군 패키지 마스터 종결 백과사전 (ULTIMATE EDITION) ⚔️</h1>
+            <h1>⚔️ DIABLO II RESURRECTED - Endgame Encyclopedia (ULTIMATE EDITION) ⚔️</h1>
         </header>
 
         <div class="container">
 
+    <div class="lang-rollout-note" role="status">
+        English UI chrome is live (nav, SEO, language switch). Guide tables and Korean JSON content are still rolling out in later phases — builds, uniques, and leveling text will be translated next.
+    </div>
     <section id="builds" class="content-section active">
-        <h2 class="section-title">🛡️ 1. 직업별 상세 종결 빌드 가이드</h2>
+        <h2 class="section-title">🛡️ 1. Endgame Build Guides</h2>
         <div class="item-click-hint">💡 상단의 필터를 활용하거나, 카드를 클릭하여 <b>인게임 장비 슬롯(페이퍼돌)</b> 종결 세팅을 확인하세요. 시즌을 처음부터 키우실 때는 <span class="item-inline" onclick="event.stopPropagation(); switchSection(null, 'leveling')">14. 육성 가이드</span>를 먼저 보시면 됩니다.</div>
         
         <div class="filter-tags">
-            <button class="filter-btn active" onclick="filterBuilds(event, 'all')">전체보기</button>
-            <button class="filter-btn" onclick="filterBuilds(event, 'magic')">⚡ 원소 마법</button>
-            <button class="filter-btn" onclick="filterBuilds(event, 'physical')">⚔️ 물리 타격</button>
-            <button class="filter-btn" onclick="filterBuilds(event, 'summon')">💀 소환형</button>
-            <button class="filter-btn" onclick="filterBuilds(event, 'farm')">🌾 앵벌/카우방</button>
-            <button class="filter-btn" onclick="filterBuilds(event, 'boss')">🔥 횃불/우버 킬러</button>
+            <button class="filter-btn active" onclick="filterBuilds(event, 'all')">All</button>
+            <button class="filter-btn" onclick="filterBuilds(event, 'magic')">⚡ Caster / Elemental</button>
+            <button class="filter-btn" onclick="filterBuilds(event, 'physical')">⚔️ Physical</button>
+            <button class="filter-btn" onclick="filterBuilds(event, 'summon')">💀 Summon</button>
+            <button class="filter-btn" onclick="filterBuilds(event, 'farm')">🌾 Farming / Cows</button>
+            <button class="filter-btn" onclick="filterBuilds(event, 'boss')">🔥 Torch / Uber</button>
         </div>
 
         <div class="grid-cards" id="buildCardsGrid">
@@ -115,7 +118,7 @@
     </div>
 
     <section id="uniques" class="content-section">
-        <h2 class="section-title">💎 2. 주요 유니크 아이템 핵심 요약 및 드랍 장소</h2>
+        <h2 class="section-title">💎 2. Key Unique Items & Drop Tips</h2>
         <div class="item-click-hint">🟠 유니크 이름을 클릭하면 상세 옵션 및 으뜸 수치 팝업을 확인할 수 있습니다.</div>
         <table>
             <thead><tr><th>아이템 명칭</th><th>기본 베이스</th><th>대표 주요 드랍 장소 / 팁</th></tr></thead>
@@ -124,7 +127,7 @@
     </section>
 
 <section id="runes" class="content-section">
-    <h2 class="section-title">📜 3. 핵심 룬어 조합법 족보</h2>
+    <h2 class="section-title">📜 3. Core Runeword Recipes</h2>
     <div class="item-click-hint">💡 <b>아이템명을 클릭하면</b> 상세 베이스, 조합 순서 및 으뜸 수치를 볼 수 있습니다.</div>
     
     <!-- 룬어 테이블이 동적으로 렌더링될 영역 -->
@@ -139,7 +142,7 @@
 </section>
 
     <section id="charms" class="content-section">
-        <h2 class="section-title">🔮 4. '잠복하는 파괴참' 업그레이드 및 '새로워진 파괴참' 6종 족보</h2>
+        <h2 class="section-title">🔮 4. Sunder Charm Upgrades & New Sunder Recipes</h2>
         <div class="item-click-hint">✨ 파괴참 이름을 클릭하면 <b>드랍 장소</b>, 상세 큐빙 공식과 확장 스펙을 확인할 수 있습니다.</div>
         <table>
             <thead><tr><th>파괴참 명칭 (속성)</th><th>핵심 요약 정보</th></tr></thead>
@@ -155,7 +158,7 @@
     </section>
 
     <section id="uber" class="content-section">
-        <h2 class="section-title">💀 5. 우버 이벤트, 횃불 퀘스트 및 악군 전용 우버 바바(삼형제 동상) 드랍 족보</h2>
+        <h2 class="section-title">💀 5. Uber Events, Torch Quest & Organ Drops</h2>
         <h3 style="color: var(--gold); margin-top: 10px; margin-bottom: 10px;">🛡️ 종결 부적(애니참/횃불) 획득 족보</h3>
         <div class="item-click-hint">🟠 부적 이름을 클릭하면 상세 옵션 및 획득 방법을 확인할 수 있습니다.</div>
         <table>
@@ -179,7 +182,7 @@
     </section>
 
     <section id="cubing" class="content-section">
-        <h2 class="section-title">🧪 6. 호라드림의 함 필수 큐빙, 스킬참 돌리기 및 크래프트 족보</h2>
+        <h2 class="section-title">🧪 6. Horadric Cube, Skill Charm Rerolls & Crafting</h2>
         <table>
             <thead><tr><th>목적 / 종류</th><th>조합 공식 (재료)</th><th>종결 목표 옵션 (으뜸 족보)</th></tr></thead>
             <tbody>
@@ -197,7 +200,7 @@
     </section>
 
     <section id="runelist" class="content-section">
-        <h2 class="section-title">🔢 7. 룬 번호, 등급 및 상위 룬 합성 공식</h2>
+        <h2 class="section-title">🔢 7. Rune Numbers, Tiers & Upgrade Recipes</h2>
         <div class="item-click-hint">💡 1번 엘부터 33번 조드까지 전부 나열합니다. 합성 공식은 <b>그 룬을 만들기 위한</b> 큐브 재료입니다.</div>
         <div class="leveling-table-wrap">
         <table>
@@ -209,7 +212,7 @@
     </section>
 
 <section id="merc" class="content-section">
-        <h2 class="section-title">🗡️ 8. 용병 종결 세팅 가이드</h2>
+        <h2 class="section-title">🗡️ 8. Mercenary Endgame Setups</h2>
         <div class="item-click-hint">💡 각 장비 슬롯 박스를 클릭하면 상세 옵션 및 으뜸 수치 팝업을 확인할 수 있습니다.</div>
         
         <div class="grid-cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -298,7 +301,7 @@
     </section>
             
     <section id="frame" class="content-section">
-        <h2 class="section-title">⚡ 9. 주요 직업 FCR / FHR / IAS 프레임 표</h2>
+        <h2 class="section-title">⚡ 9. FCR / FHR / IAS Breakpoint Tables</h2>
         <table>
             <thead><tr><th>구분</th><th>직업 (Class)</th><th>목표 프레임</th><th>필요 수치 (%)</th></tr></thead>
             <tbody>
@@ -312,7 +315,7 @@
     </section>
 
     <section id="quest" class="content-section">
-        <h2 class="section-title">📜 10. 난이도별 영구 보상 퀘스트 족보 (스킬/스탯/저항/소켓/개인화)</h2>
+        <h2 class="section-title">📜 10. Permanent Quest Rewards by Difficulty</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--gold); border-radius: 4px;">
             <span class="highlight">💡 필수 퀘스트 체크포인트:</span> 디아블로 2는 노말, 악몽, 지옥 난이도별로 아래 퀘스트들을 반드시 클리어해야 영구적인 스킬 포인트, 스탯, 모든 저항, 그리고 장비 소켓과 마법부여(개인화) 혜택을 챙길 수 있습니다. (캐릭터당 난이도별 총 3회 반복 가능)
         </div>
@@ -359,7 +362,7 @@
     </section>
 
     <section id="bus" class="content-section">
-        <h2 class="section-title">🚌 11. Act 1~5 필수 퀘스트, 웨이포인트 위치 및 버스(Rush) 가이드</h2>
+        <h2 class="section-title">🚌 11. Acts 1–5 Quests, Waypoints & Rush Guide</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--magic-blue); border-radius: 4px;">
             <span class="highlight">⏱️ 난이도별(Act 1~5) 총 돌파 소요 시간:</span> 
             템과 기사 스펙이 받쳐줄 때 일반적인 쾌속 버스로 난이도 하나(노말/나이트/헬)를 뚫는 데 걸리는 총 시간은 <b>약 20분 ~ 30분 내외</b>입니다. (Act 2 지팡이 스킵 및 텔포 소서 기사 기준 / Act 3 장기 퀘스트는 필수) <br>
@@ -451,7 +454,7 @@
     </section>
 
     <section id="farming" class="content-section">
-        <h2 class="section-title">🎯 12. TC 85 주요 사냥터 및 공포의 영역(Terror Zones) & 전령 등급별 가이드</h2>
+        <h2 class="section-title">🎯 12. TC85 Farms, Terror Zones & Herald Tiers</h2>
         <div style="margin-bottom: 15px; font-size: 0.95rem; background: var(--card-bg); padding: 12px; border-left: 3px solid var(--gold); border-radius: 4px;">
             <span class="highlight">⚠️ 지옥(Hell) 난이도 기본 저항력:</span> 기본적으로 모든 저항력이 <b>-100% 감쇄</b>되므로, 황금 저항(75%)을 맞추기 위해서는 아이템으로 총 +175%의 저항을 챙겨야 합니다.<br><br>
             <span class="highlight">🌀 공포의 영역 (Terror Zones) & 전령 (Herald) 등급 메커니즘:</span> 
@@ -473,7 +476,7 @@
     </section>
 
     <section id="ladder" class="content-section">
-        <h2 class="section-title">🔥 13. 디아블로 2 레저렉션 패치 노트 아카이브</h2>
+        <h2 class="section-title">🔥 13. D2R Patch Notes Archive</h2>
         <p style="font-size: 0.9rem; color: #a1a1aa; margin-bottom: 15px;">과거부터 현재까지의 상세 패치 내역을 확인하세요. 시즌 초 육성은 <span class="item-inline" onclick="switchSection(null, 'leveling')">14. 육성 가이드</span>를 보시면 됩니다.</p>
         
         <!-- 자바스크립트가 patchnotes.json을 읽어와서 이 안에 자동으로 꽂아넣습니다 -->
@@ -483,13 +486,13 @@
     </section>
 
     <section id="leveling" class="content-section">
-        <h2 class="section-title">🌱 14. 처음부터 따라가는 육성 가이드</h2>
+        <h2 class="section-title">🌱 14. Leveling Guide from Scratch</h2>
         <div class="item-click-hint">💡 룬어 이름을 클릭하면 조합식과 권장 베이스를 볼 수 있습니다. 직업 카드의 종결 버튼은 1번 메뉴 페이퍼돌로 이어집니다.</div>
         <div id="levelingRoot"></div>
     </section>
 
     <section id="dropcalc" class="content-section">
-        <h2 class="section-title">🎯 15. 매찬 대비 드랍 확률 계산기</h2>
+        <h2 class="section-title">🎯 15. Magic Find Drop Calculator</h2>
         <div class="item-click-hint">
             매찬 수치를 넣고 계산하시면, 주요 유니크별 드랍 확률이 아래에 나옵니다.
             유니크는 매찬이 오를수록 확률이 올라가지만, 체감 효율은 점점 줄어듭니다.
@@ -521,7 +524,7 @@
     </section>
 
     <section id="feedback" class="content-section">
-        <h2 class="section-title">📩 16. 백과사전 피드백 및 정보 제보</h2>
+        <h2 class="section-title">📩 16. Feedback & Reports</h2>
         <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">
             <h3 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 8px;">💡 빠진 정보가 있거나 잘못된 정보가 있나요?</h3>
             <p style="font-size: 0.9rem; color: var(--text-color); margin-bottom: 18px; word-break: keep-all;">
@@ -636,11 +639,11 @@
         
         <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
             <div style="margin-bottom: 14px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">닉네임 <span style="color:#888; font-weight:normal;">(선택)</span></label>
-                <input type="text" id="fbNick" maxlength="20" autocomplete="nickname" placeholder="배틀넷/인벤 닉 · 비워도 제보됩니다" style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; box-sizing: border-box;">
+                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Nickname <span style="color:#888; font-weight:normal;">(optional)</span></label>
+                <input type="text" id="fbNick" maxlength="20" autocomplete="nickname" placeholder="Battle.net nick · optional" style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 14px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">제보 유형</label>
+                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Report type</label>
                 <select id="fbType" required style="width: 100%; padding: 10px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none;">
                     <option value="누락 정보 제보">📌 누락된 아이템/스펙/조합법 제보</option>
                     <option value="오류 수정">✏️ 오타 및 잘못된 정보 수정 요청</option>
@@ -650,19 +653,19 @@
             </div>
 
             <div style="margin-bottom: 18px;">
-                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">상세 제보 내용</label>
+                <label style="display: block; font-size: 0.85rem; color: var(--gold-light); margin-bottom: 6px; font-weight: bold;">Details</label>
                 <textarea id="fbContent" required rows="5" style="width: 100%; padding: 12px; background: #111115; color: var(--text-bright); border: 1px solid var(--card-border); border-radius: 6px; font-size: 0.9rem; outline: none; resize: vertical;" placeholder="예) 새로워진 불길의 균열 파괴참 조합법에서 이오룬 대신 다른 룬으로 기재되어 있습니다. 확인 부탁드립니다!"></textarea>
             </div>
 
             <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                <button type="button" onclick="closeFeedbackModal()" style="padding: 10px 20px; background: #22222a; color: var(--text-color); border: 1px solid var(--card-border); border-radius: 6px; cursor: pointer; font-size: 0.88rem;">취소</button>
-                <button type="submit" style="padding: 10px 22px; background: var(--gold); color: #0b0b0e; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 0.88rem;">제출하기</button>
+                <button type="button" onclick="closeFeedbackModal()" style="padding: 10px 20px; background: #22222a; color: var(--text-color); border: 1px solid var(--card-border); border-radius: 6px; cursor: pointer; font-size: 0.88rem;">Cancel</button>
+                <button type="submit" style="padding: 10px 22px; background: var(--gold); color: #0b0b0e; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; font-size: 0.88rem;">Submit</button>
             </div>
         </form>
     </div>
 </div>
 
-<a href="#" class="top-btn" title="맨 위로 이동">▲</a>
+<a href="#" class="top-btn" title="Back to top">▲</a>
 
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="/js/legacy-globals.js?v=12"></script>
@@ -678,12 +681,12 @@
                 if (typeof filterContent === "function") {
                     filterContent();
                 } else {
-                    console.error("filterContent 함수를 찾을 수 없습니다.");
+                    console.error("filterContent is not available.");
                 }
             });
-            console.log("🔍 악군 백과사전 전역 검색 감지기가 정상 부착되었습니다.");
+            console.log("🔍 Global search listener가 정상 부착되었습니다.");
         } else {
-            console.error("searchInput 요소를 찾지 못했습니다.");
+            console.error("searchInput element not found.");
         }
     });
 </script>
@@ -691,17 +694,17 @@
 <footer style="text-align: center; padding: 20px; font-size: 0.75rem; color: #666; border-top: 1px solid #262630; margin-top: 50px;">
     <p>© LEVI SHIN. All rights reserved. | <span id="siteVersionDisplay"></span></p>
     <p style="margin-top: 5px;">
-        본 사이트는 구글 애드센스를 통해 광고를 제공하며, 맞춤형 광고 제공을 위해 쿠키(Cookie)를 사용할 수 있습니다. 
-        | <a href="https://policies.google.com/technologies/ads?hl=ko" target="_blank" style="color: #888; text-decoration: underline;">구글 개인정보처리방침 확인</a>
+        This site uses Google AdSense and may use cookies for personalized ads.
+        | <a href="https://policies.google.com/technologies/ads?hl=en" target="_blank" style="color: #888; text-decoration: underline;">Google Ads Privacy</a>
     </p>
 </footer>
 
 <!-- 패치 히스토리 모달 -->
 <div id="historyModal" class="database-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
     <div class="modal-content" style="background:#15151b; border:1px solid #333; padding:25px; width:90%; max-width:500px; border-radius:8px; color:#ddd; position:relative;">
-        <h3 style="color:var(--gold-light, #dfb15b); margin-bottom:15px;">📜 사이트 패치 히스토리</h3>
+        <h3 style="color:var(--gold-light, #dfb15b); margin-bottom:15px;">📜 Site Patch History</h3>
         <div id="historyModalBody" style="max-height:300px; overflow-y:auto; font-size:0.9rem; line-height:1.6;"></div>
-        <button onclick="closeHistoryModal()" style="margin-top:20px; width:100%; padding:10px; background:#262630; border:1px solid #444; color:#fff; cursor:pointer; border-radius:4px;">닫기</button>
+        <button onclick="closeHistoryModal()" style="margin-top:20px; width:100%; padding:10px; background:#262630; border:1px solid #444; color:#fff; cursor:pointer; border-radius:4px;">Close</button>
     </div>
 </div>
 

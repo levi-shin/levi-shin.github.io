@@ -2,6 +2,7 @@
  * 악군 데이터 로더
  * GitHub Pages의 정적 환경에서 JSON만 읽어 사이트 데이터를 구성합니다.
  */
+import { dataUrl } from './site.js';
 
 export const DATA = {
     meta: null,
@@ -39,16 +40,16 @@ function indexRecords(type, records) {
 export async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "19";
+    const dataVer = "20";
     loadPromise = Promise.all([
-        fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/uniques.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/runewords.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/sunders.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/charms.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/ubers.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/builds.json?v=${dataVer}`).then(r => r.json())
+        fetch(dataUrl('meta.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('items.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('uniques.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('runewords.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('sunders.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('charms.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('ubers.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('builds.json', dataVer)).then(r => r.json())
     ]).then(([meta, items, uniques, runewords, sunders, charms, ubers, builds]) => {
         DATA.meta = meta;
         DATA.items = items;

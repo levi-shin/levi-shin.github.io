@@ -1,4 +1,5 @@
-import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=2';
+import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=3';
+import { dataUrl, itemImageUrl } from './site.js?v=1';
 
 /* ===== data.js ===== */
 /**
@@ -46,16 +47,16 @@ function indexRecords(type, records) {
 async function loadData() {
     if (loadPromise) return loadPromise;
 
-    const dataVer = "19";
+    const dataVer = "20";
     loadPromise = Promise.all([
-        fetch(`./data/meta.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/items.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/uniques.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/runewords.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/sunders.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/charms.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/ubers.json?v=${dataVer}`).then(r => r.json()),
-        fetch(`./data/builds.json?v=${dataVer}`).then(r => r.json())
+        fetch(dataUrl('meta.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('items.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('uniques.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('runewords.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('sunders.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('charms.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('ubers.json', dataVer)).then(r => r.json()),
+        fetch(dataUrl('builds.json', dataVer)).then(r => r.json())
     ]).then(([meta, items, uniques, runewords, sunders, charms, ubers, builds]) => {
         DATA.meta = meta;
         DATA.items = items;
@@ -582,7 +583,7 @@ function setDbModalImage(imagePath) {
 
     const img = document.createElement("img");
     img.className = "db-modal-img";
-    img.src = `items/${imagePath}`;
+    img.src = itemImageUrl(imagePath);
     img.alt = "";
     img.onerror = fallback;
     artEl.innerHTML = "";
@@ -1089,7 +1090,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch('data/patchnotes.json?v=12');
+        const response = await fetch(dataUrl('patchnotes.json', 12));
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1247,7 +1248,7 @@ function runeTierBadge(tier) {
 
 async function loadRuneList() {
     try {
-        const response = await fetch('data/runes.json?v=18');
+        const response = await fetch(dataUrl('runes.json', 18));
         const runes = await response.json();
         DATA.runes = runes;
         if (window.DATA) window.DATA.runes = runes;
@@ -1391,7 +1392,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch('data/leveling.json?v=18');
+        const response = await fetch(dataUrl('leveling.json', 18));
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1405,7 +1406,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch('data/runewords.json?v=18');
+        const response = await fetch(dataUrl('runewords.json', 18));
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1435,7 +1436,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch('data/builds.json?v=16'); 
+        const response = await fetch(dataUrl('builds.json', 16)); 
         const data = await response.json();
         const builds = data.items; 
 
