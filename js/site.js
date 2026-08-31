@@ -1,15 +1,19 @@
 /**
- * 사이트 공통 설정 (언어·절대 경로)
+ * 사이트 공통 설정 (언어·절대 경로·UI 문자열)
  * /en/ 하위에서도 /data, /items, /css, /js 루트 자산을 쓰도록 합니다.
  */
 
 export const SITE_ORIGIN = 'https://diablo.1125labs.com';
 
-/** Phase 2부터 EN 전용 JSON이 있는 파일 */
+/** EN 전용 JSON이 있는 파일 */
 const LOCALIZED_DATA_FILES = new Set([
     'uniques.json',
     'runewords.json',
-    'runes.json'
+    'runes.json',
+    'builds.json',
+    'leveling.json',
+    'dropcalc.json',
+    'patchnotes.json'
 ]);
 
 function detectLang() {
@@ -33,6 +37,57 @@ const UI = {
         ladderOk: '✨ 비래더가능',
         runeTier: { high: '고급 룬', mid: '중급 룬', low: '하급 룬' },
         runeNum: (n) => `${n}번`,
+        searchEmpty: '검색 결과가 없습니다.',
+        searchHeader: (keyword) => `🔍 '${keyword}' 통합 검색 결과`,
+        searchBuilds: '🛡️ 추천 종결 빌드',
+        searchBuildBadge: '종결 빌드',
+        searchRelated: '🛡️ 연관 사용처 (종결 빌드 세팅)',
+        copyBuildOk: '종결 빌드 및 용병 세팅 정보가 클립보드에 복사되었습니다!',
+        copyUnsupported: '복사하기 기능이 지원되지 않는 브라우저입니다.',
+        copyInfoOk: '정보를 클립보드에 복사했습니다!',
+        copyRecipeOk: (recipe) => `조합 순서를 복사했습니다.\n${recipe}`,
+        copyRecipeFallback: (recipe) => `조합 순서: ${recipe}`,
+        copyPaperOk: '빌드 정보가 복사되었습니다!',
+        paperDefaultTitle: '빌드 정보',
+        patchLinkTitle: '공식 패치 노트 원문 보기',
+        patchSchedule: '📅 시즌 일정',
+        patchChanges: '📝 주요 변경 사항',
+        leveling: {
+            classHead: '직업별 시즌 초 운영',
+            runeHead: '만들 순서 (룬어)',
+            runeCols: ['룬어', '구간', '왜 만드나'],
+            countessHead: '카운테스 룬 구간',
+            countessCols: ['난이도', '드랍 룬', '쓰임'],
+            socketHead: '라주크 소켓은 아껴 두세요',
+            socketCols: ['난이도', '권장 사용'],
+            tipsHead: '놓치기 쉬운 점',
+            buildBtn: '종결 세팅 보기',
+            mercCols: ['구간', '고용', '무기', '갑옷', '투구']
+        },
+        feedback: {
+            limit: (n) => `⚠️ 오늘의 제보 한도(${n}회)를 모두 사용하셨습니다.\n내일 자정 이후 다시 제보해 주세요. 감사합니다!`,
+            ok: (type, remaining) => `[${type}] 제보가 정상 수신되었습니다! (오늘 남은 제보 횟수: ${remaining}회)\n소중한 의견 감사합니다.`,
+            slackTitle: (next, max) => `📢 *[디아2 백과사전] 새로운 제보/피드백이 접수되었습니다! (오늘 유저 제보 ${next}/${max}회)*`,
+            nick: '👤 닉네임',
+            anon: '익명',
+            type: '📌 제보 유형',
+            time: '⏰ 접수 시간',
+            detail: '📝 상세 내용',
+            langTag: 'ko'
+        },
+        dropcalc: {
+            perKill: (farm, mult) => `${farm} · per kill · ${mult.toFixed(2)}x vs 0 MF`,
+            empty: '검색하신 아이템이 목록에 없습니다.',
+            inputMf: '입력 매찬',
+            uniqMf: '유니크 유효 매찬',
+            setMf: '세트 유효 매찬',
+            rareMf: '레어 유효 매찬',
+            feel: (m) => `체감 ${m.toFixed(2)}배`,
+            heading: '유니크 드랍 확률',
+            cols: ['아이템', '현재 확률', '퍼센트', '절반 확률', '0매찬'],
+            half: (n) => `약 ${n}회`,
+            loadFail: '계산 데이터를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.'
+        },
         runeModal: {
             subtitle: (eng, name) => `룬어 · ${eng || name}`,
             intro: '룬 조합 순서와 추천 종결 베이스, 그리고 으뜸 수치를 확인합니다.',
@@ -50,13 +105,66 @@ const UI = {
             dropEmpty: '정보 없음',
             stats: '으뜸(최상급) 옵션 스펙',
             copy: '📋 아이템 정보 복사'
-        }
+        },
+        copyGeneric: '📋 정보 복사',
+        copyCube: '📋 큐빙 공식 복사'
     },
     en: {
         ladderOnly: '🔥 Ladder only',
         ladderOk: '✨ Non-ladder OK',
         runeTier: { high: 'High', mid: 'Mid', low: 'Low' },
         runeNum: (n) => `#${n}`,
+        searchEmpty: 'No results.',
+        searchHeader: (keyword) => `🔍 Results for '${keyword}'`,
+        searchBuilds: '🛡️ Suggested endgame builds',
+        searchBuildBadge: 'Endgame',
+        searchRelated: '🛡️ Used in endgame builds',
+        copyBuildOk: 'Build & mercenary setup copied to clipboard!',
+        copyUnsupported: 'Clipboard copy is not supported in this browser.',
+        copyInfoOk: 'Copied to clipboard!',
+        copyRecipeOk: (recipe) => `Copied rune order.\n${recipe}`,
+        copyRecipeFallback: (recipe) => `Rune order: ${recipe}`,
+        copyPaperOk: 'Build info copied!',
+        paperDefaultTitle: 'Build info',
+        patchLinkTitle: 'Open official patch notes',
+        patchSchedule: '📅 Season schedule',
+        patchChanges: '📝 Highlights',
+        leveling: {
+            classHead: 'Early season by class',
+            runeHead: 'Craft order (runewords)',
+            runeCols: ['Runeword', 'When', 'Why'],
+            countessHead: 'Countess rune tiers',
+            countessCols: ['Difficulty', 'Runes', 'Use'],
+            socketHead: 'Save Larzuk sockets',
+            socketCols: ['Difficulty', 'Recommended use'],
+            tipsHead: 'Easy to miss',
+            buildBtn: 'View endgame setup',
+            mercCols: ['Stage', 'Hire', 'Weapon', 'Armor', 'Helm']
+        },
+        feedback: {
+            limit: (n) => `⚠️ Daily report limit (${n}) used.\nPlease try again after midnight. Thanks!`,
+            ok: (type, remaining) => `[${type}] Report received! (Remaining today: ${remaining})\nThank you.`,
+            slackTitle: (next, max) => `📢 *[D2 Encyclopedia] New feedback (${next}/${max} today)*`,
+            nick: '👤 Nickname',
+            anon: 'Anonymous',
+            type: '📌 Type',
+            time: '⏰ Time',
+            detail: '📝 Details',
+            langTag: 'en'
+        },
+        dropcalc: {
+            perKill: (farm, mult) => `${farm} · per kill · ${mult.toFixed(2)}x vs 0 MF`,
+            empty: 'No matching items in the list.',
+            inputMf: 'Your MF',
+            uniqMf: 'Unique effective MF',
+            setMf: 'Set effective MF',
+            rareMf: 'Rare effective MF',
+            feel: (m) => `${m.toFixed(2)}x feel`,
+            heading: 'Unique drop odds',
+            cols: ['Item', 'Odds now', 'Percent', '50% chance', '0 MF'],
+            half: (n) => `~${n} kills`,
+            loadFail: 'Could not load calculator data. Try again shortly.'
+        },
         runeModal: {
             subtitle: (eng, name) => `Runeword · ${eng || name}`,
             intro: 'Rune order, recommended endgame bases, and perfect rolls.',
@@ -74,7 +182,9 @@ const UI = {
             dropEmpty: 'No data',
             stats: 'Perfect mods',
             copy: '📋 Copy item info'
-        }
+        },
+        copyGeneric: '📋 Copy info',
+        copyCube: '📋 Copy cube recipe'
     }
 };
 
@@ -82,7 +192,6 @@ export function t() {
     return UI[SITE_LANG] || UI.ko;
 }
 
-/** 루트 기준 자산 경로. 예: assetUrl('data/meta.json?v=19') → '/data/meta.json?v=19' */
 export function assetUrl(path) {
     const clean = String(path || '').replace(/^\.\//, '').replace(/^\//, '');
     return `/${clean}`;

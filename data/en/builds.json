@@ -1,0 +1,3874 @@
+{
+  "meta": {
+    "dataVersion": "1.5",
+    "patchVersion": "3.3",
+    "verificationStatus": "Verified",
+    "lastVerified": "2026-08-21"
+  },
+  "items": [
+    {
+      "id": 70001,
+      "legacyKey": "sorc_light",
+      "title": "Sorceress",
+      "subtitle": "Lightning Sorc (Lightning / Chain Lightning)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Eschuta's Temper",
+              "dataType": "unique",
+              "id": 20027
+            },
+            {
+              "type": "text",
+              "value": " [+3Skills / 5/5 Lightning facet or Eschuta's Temper] · alt: "
+            },
+            {
+              "type": "link",
+              "name": "Crescent Moon",
+              "dataType": "runeword",
+              "id": 30041
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Griffon's Eye",
+              "dataType": "unique",
+              "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " [5/5 Lightning facet, perfect 15/20 IAS/FHR jewel]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Chains of Honor",
+              "dataType": "runeword",
+              "id": 30011
+            },
+            {
+              "type": "text",
+              "value": " (Dusk Shroud / Archon Plate) · mobility alt: "
+            },
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR) · Mana/survivability: "
+            },
+            {
+              "type": "link",
+              "name": "Phoenix",
+              "dataType": "runeword",
+              "id": 30012
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " pair (117 FCR breakpoint)"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (Battle Command/Battle Orders)"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Strength 156 (Monarch), rest Life · 117% FCR (9-frame)<br><strong>🎒 Inventory:</strong> Heaven's Breach (Lightning Sunder), Lightning skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Lightning (20), Chain Lightning (20), Lightning Mastery (20), Lightning Bolt (20, synergy)<br><strong>🎮 Playstyle:</strong> Buff Battle Command / Battle Orders with CTA, then Teleport in. Use Chain Lightning on packs; Lightning on lined-up targets or bosses. Static Field bosses down, then finish with Lightning. Damage drops hard if you engage before the Infinity merc's Conviction lands — watch merc position.",
+      "badge": "Lightning",
+      "stats": "Strength 156 (Monarch), rest Life · 117% FCR (9-frame)",
+      "inventory": "Heaven's Breach (Lightning Sunder), Lightning skillers, Anni, Torch",
+      "skills": "Lightning (20), Chain Lightning (20), Lightning Mastery (20), Lightning Bolt (20, synergy)",
+      "playstyle": "Buff Battle Command / Battle Orders with CTA, then Teleport in. Use Chain Lightning on packs; Lightning on lined-up targets or bosses. Static Field bosses down, then finish with Lightning. Damage drops hard if you engage before the Infinity merc's Conviction lands — watch merc position."
+    },
+    {
+      "id": 70002,
+      "legacyKey": "sorc_cold",
+      "title": "Sorceress",
+      "subtitle": "Blizzard Sorc (Blizzard)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Death's Fathom",
+              "dataType": "unique",
+              "id": 20012
+            },
+            {
+              "type": "text",
+              "value": " [Cold facet socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Nightwing's Veil",
+              "dataType": "unique",
+              "id": 20023
+            },
+            {
+              "type": "text",
+              "value": " [Cold facet socket] · survivability: "
+            },
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Chains of Honor",
+              "dataType": "runeword",
+              "id": 30011
+            },
+            {
+              "type": "text",
+              "value": " · mobility: "
+            },
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / 10% FCR ring + "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Holy Freeze Insight merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Insight",
+                "dataType": "runeword",
+                "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (eth Cryptic Axe)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Strength 156, rest Life · 105% FCR (9-frame)<br><strong>🎒 Inventory:</strong> Cold Rupture (Cold Sunder), Cold skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Blizzard (20), Ice Blast (20), Glacial Spike (20), Cold Mastery (20)<br><strong>🎮 Playstyle:</strong> Teleport and drop Blizzard from off-screen, then pull monsters into the AoE. Static Field bosses, then keep Blizzard up. Blizzard has cast delay — diving the middle before it lands can get you hit; plant your feet first.",
+      "badge": "Blizzard",
+      "stats": "Strength 156, rest Life · 105% FCR (9-frame)",
+      "inventory": "Cold Rupture (Cold Sunder), Cold skillers, Anni, Torch",
+      "skills": "Blizzard (20), Ice Blast (20), Glacial Spike (20), Cold Mastery (20)",
+      "playstyle": "Teleport and drop Blizzard from off-screen, then pull monsters into the AoE. Static Field bosses, then keep Blizzard up. Blizzard has cast delay — diving the middle before it lands can get you hit; plant your feet first."
+    },
+    {
+      "id": 70003,
+      "legacyKey": "pala_ham",
+      "title": "Paladin",
+      "subtitle": "Blessed Hammer (Hammerdin)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Heart of the Oak",
+              "dataType": "runeword",
+              "id": 30019
+            },
+            {
+              "type": "text",
+              "value": " (Flail base, 40% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [Cham Rune or Ber Rune socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " (Mage Plate — Strength lowest Str req)"
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Sacred Targe (35% FCR, all-res 45) · survivability: "
+            },
+            {
+              "type": "link",
+              "name": "Herald of Zakarum",
+              "dataType": "unique",
+              "id": 20014
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + 10% FCR ring"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Holy Freeze Insight merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Insight",
+                "dataType": "runeword",
+                "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (eth Cryptic Axe)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Dexterity to 75% block with Holy Shield up, rest Life · 125% FCR<br><strong>🎒 Inventory:</strong> Combat skillers, Anni, Torch, life/res small charms<br><strong>⚡ Skills:</strong> Blessed Hammer (20), Concentration (20), Vigor (20), Blessed Aim (20)<br><strong>🎮 Playstyle:</strong> Teleport into packs with Concentration on. Hold still or micro-move so hammers spiral through the pack. Recheck Holy Shield 75% block and CTA Battle Command / Battle Orders often.",
+      "badge": "Hammerdin",
+      "stats": "Dexterity to 75% block with Holy Shield up, rest Life · 125% FCR",
+      "inventory": "Combat skillers, Anni, Torch, life/res small charms",
+      "skills": "Blessed Hammer (20), Concentration (20), Vigor (20), Blessed Aim (20)",
+      "playstyle": "Teleport into packs with Concentration on. Hold still or micro-move so hammers spiral through the pack. Recheck Holy Shield 75% block and CTA Battle Command / Battle Orders often."
+    },
+    {
+      "id": 70004,
+      "legacyKey": "pala_smite",
+      "title": "Paladin",
+      "subtitle": "Smiter (Ubers / Torch)",
+      "tags": [
+        "boss",
+        "physical"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Grief",
+              "dataType": "runeword",
+              "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " (Phase Blade)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Guillaume's Face",
+              "dataType": "unique",
+              "id": 20033
+            },
+            {
+              "type": "text",
+              "value": " [15/40 Smite·ED facet socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Treachery",
+              "dataType": "runeword",
+              "id": 30017
+            },
+            {
+              "type": "text",
+              "value": " (Fade prebuff) → in combat "
+            },
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Fortitude",
+              "dataType": "runeword",
+              "id": 30020
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Exile",
+              "dataType": "runeword",
+              "id": 30014
+            },
+            {
+              "type": "text",
+              "value": " (eth Sacred Targe)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Dracul's Grasp",
+              "dataType": "unique",
+              "id": 20022
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Gore Rider",
+              "dataType": "unique",
+              "id": 20029
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Verdungo's Hearty Cord",
+              "dataType": "unique",
+              "id": 20041
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + life steal/Smite ring"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might merc (Decrepify)",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "The Reaper's Toll",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (eth, Shael/Ohm socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Holy Shield 75% block, rest Life<br><strong>🎒 Inventory:</strong> Anni, Torch, all-res/life small charms, Physical Sunder (optional)<br><strong>⚡ Skills:</strong> Smite (20), Holy Shield (20), Fanaticism (20)<br><strong>🎮 Playstyle:</strong> Prebuff Fade in town with Treachery, then swap to main gear. Uber order: Lilith → Duriel → Izual → Tristram, Smite throughout. Don't stick early — wait for Dracul's Life Tap, then swing. If the Reaper's Toll merc dies, Decrepify drops; keep the merc alive.",
+      "badge": "Smiter",
+      "stats": "Holy Shield 75% block, rest Life",
+      "inventory": "Anni, Torch, all-res/life small charms, Physical Sunder (optional)",
+      "skills": "Smite (20), Holy Shield (20), Fanaticism (20)",
+      "playstyle": "Prebuff Fade in town with Treachery, then swap to main gear. Uber order: Lilith → Duriel → Izual → Tristram, Smite throughout. Don't stick early — wait for Dracul's Life Tap, then swing. If the Reaper's Toll merc dies, Decrepify drops; keep the merc alive."
+    },
+    {
+      "id": 70005,
+      "legacyKey": "necro_summon",
+      "title": "Necromancer",
+      "subtitle": "Summon Necro (Skeleton Army)",
+      "tags": [
+        "summon",
+        "boss"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Beast",
+              "dataType": "runeword",
+              "id": 30043
+            },
+            {
+              "type": "text",
+              "value": " (Fanaticism level 9 aura, scepter/axe)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [Cham Rune socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " (Mage Plate)"
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Trang-Oul's Claws",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Marrowwalk",
+              "dataType": "unique",
+              "id": 20036
+            },
+            {
+              "type": "text",
+              "value": " (Skeleton Mastery +1~2)"
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / +2 Necro FCR Amulet / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " dual"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Strength 156, rest Life<br><strong>🎒 Inventory:</strong> Summoning skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Raise Skeleton (20), Skeleton Mastery (20), Corpse Explosion (20)<br><strong>🎮 Playstyle:</strong> Fill skeletons and mages, then Teleport the army onto packs. Clear density with Corpse Explosion; let summons handle bosses. Amplify Damage into Corpse Explosion is the core loop. Keep Beast (Fanaticism) and merc Infinity (Conviction) up.",
+      "badge": "Summon",
+      "stats": "Strength 156, rest Life",
+      "inventory": "Summoning skillers, Anni, Torch",
+      "skills": "Raise Skeleton (20), Skeleton Mastery (20), Corpse Explosion (20)",
+      "playstyle": "Fill skeletons and mages, then Teleport the army onto packs. Clear density with Corpse Explosion; let summons handle bosses. Amplify Damage into Corpse Explosion is the core loop. Keep Beast (Fanaticism) and merc Infinity (Conviction) up."
+    },
+    {
+      "id": 70006,
+      "legacyKey": "necro_bone",
+      "title": "Necromancer",
+      "subtitle": "Bone Nec (Bone Spear)",
+      "tags": [
+        "magic"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "White",
+              "dataType": "runeword",
+              "id": 30044
+            },
+            {
+              "type": "text",
+              "value": " (+3 Bone Spear Unearthed Wand)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "text",
+              "value": "2Necro 20FCR Circlet · alt: "
+            },
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Trang-Oul's Claws",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 2Skills FCR Amulet / FCR ring + "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Holy Freeze Insight merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Insight",
+                "dataType": "runeword",
+                "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (eth Cryptic Axe)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Strength 156, rest Life · 125% FCR<br><strong>🎒 Inventory:</strong> Poison & Bone skillers, Anni, Torch, Magic Sunder (optional)<br><strong>⚡ Skills:</strong> Bone Spear (20), Bone Spirit (20), Bone Wall (20), Bone Prison (20)<br><strong>🎮 Playstyle:</strong> Teleport for angles — Bone Spear on lines, Bone Spirit on spread packs. Recast Bone Armor when it breaks; Bone Prison scary pulls. Insight merc covers mana; refresh CTA Battle Orders regularly.",
+      "badge": "Bone",
+      "stats": "Strength 156, rest Life · 125% FCR",
+      "inventory": "Poison & Bone skillers, Anni, Torch, Magic Sunder (optional)",
+      "skills": "Bone Spear (20), Bone Spirit (20), Bone Wall (20), Bone Prison (20)",
+      "playstyle": "Teleport for angles — Bone Spear on lines, Bone Spirit on spread packs. Recast Bone Armor when it breaks; Bone Prison scary pulls. Insight merc covers mana; refresh CTA Battle Orders regularly."
+    },
+    {
+      "id": 70007,
+      "legacyKey": "ama_jav",
+      "title": "Amazon",
+      "subtitle": "Javazon (Lightning Fury)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Titan's Revenge",
+              "dataType": "unique",
+              "id": 20009
+            },
+            {
+              "type": "text",
+              "value": " (eth upgrade recommended) · bossdamage alt: "
+            },
+            {
+              "type": "link",
+              "name": "Thunderstroke",
+              "dataType": "unique",
+              "id": 20028
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Griffon's Eye",
+              "dataType": "unique",
+              "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " [5/5 Lightning facet]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " (Teleport) · damage: "
+            },
+            {
+              "type": "link",
+              "name": "Chains of Honor",
+              "dataType": "runeword",
+              "id": 30011
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Fortitude",
+              "dataType": "runeword",
+              "id": 30020
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Phoenix",
+              "dataType": "runeword",
+              "id": 30012
+            },
+            {
+              "type": "text",
+              "value": " Monarch · survivability: "
+            },
+            {
+              "type": "link",
+              "name": "Stormshield",
+              "dataType": "unique",
+              "id": 20035
+            },
+            {
+              "type": "text",
+              "value": " · FCR: "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "text",
+              "value": "+2 Javelin 20IAS rare/crafted Gloves / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Razortail",
+              "dataType": "unique",
+              "id": 20034
+            },
+            {
+              "type": "text",
+              "value": " (Pierce 33%) / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Block build: Dex to 75% block; Pierce build: gear reqs then Life · 52% IAS<br><strong>🎒 Inventory:</strong> Heaven's Breach (Lightning Sunder), Javelin skillers, spare Titan's / Thunderstroke<br><strong>⚡ Skills:</strong> Lightning Fury (20), Charged Strike (20), Lightning Strike (20)<br><strong>🎮 Playstyle:</strong> Razortail Pierce is mandatory. Lightning Fury on stacked Cows/Pit; Charged Strike on bosses at melee range. Valkyrie and Decoy peel aggro; swap spare javelins when Titan's quantity runs out. Throw Fury from Conviction range with the Infinity merc.",
+      "badge": "Javazon",
+      "stats": "Block build: Dex to 75% block; Pierce build: gear reqs then Life · 52% IAS",
+      "inventory": "Heaven's Breach (Lightning Sunder), Javelin skillers, spare Titan's / Thunderstroke",
+      "skills": "Lightning Fury (20), Charged Strike (20), Lightning Strike (20)",
+      "playstyle": "Razortail Pierce is mandatory. Lightning Fury on stacked Cows/Pit; Charged Strike on bosses at melee range. Valkyrie and Decoy peel aggro; swap spare javelins when Titan's quantity runs out. Throw Fury from Conviction range with the Infinity merc."
+    },
+    {
+      "id": 70008,
+      "legacyKey": "ama_bow",
+      "title": "Amazon",
+      "subtitle": "Faith Bowazon (Multiple Shot)",
+      "tags": [
+        "physical",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Faith",
+              "dataType": "runeword",
+              "id": 30009
+            },
+            {
+              "type": "text",
+              "value": " (Grand Matron Bow, Fanaticism 12~15)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Andariel's Visage",
+              "dataType": "unique",
+              "id": 20007
+            },
+            {
+              "type": "text",
+              "value": " [15/40 facet socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Fortitude",
+              "dataType": "runeword",
+              "id": 30020
+            },
+            {
+              "type": "text",
+              "value": " (Archon Plate)"
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "N/A (two-hand Bow)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Laying of Hands",
+              "dataType": "unique",
+              "id": 20038
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Gore Rider",
+              "dataType": "unique",
+              "id": 20029
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Razortail",
+              "dataType": "unique",
+              "id": 20034
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + dual life steal ring"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Pride merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Pride",
+                "dataType": "runeword",
+                "id": 30021
+              },
+              {
+                "type": "text",
+                "value": " (eth Polearm, Concentration aura)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Bow Dexterity reqs, rest Life (extra Dex for max damage)<br><strong>🎒 Inventory:</strong> Bone Break (Physical Sunder), max-damage charms<br><strong>⚡ Skills:</strong> Multiple Shot (20), Strafe (20), Guided Arrow (20)<br><strong>🎮 Playstyle:</strong> Run Faith (Fanaticism) and Act 2 Pride merc (Concentration), then Multiple Shot packs. Bosses: Guided Arrow or Strafe. Without Pierce, arrows stop on the first target — confirm belt Pierce and Physical Sunder.",
+      "badge": "Bowazon",
+      "stats": "Bow Dexterity reqs, rest Life (extra Dex for max damage)",
+      "inventory": "Bone Break (Physical Sunder), max-damage charms",
+      "skills": "Multiple Shot (20), Strafe (20), Guided Arrow (20)",
+      "playstyle": "Run Faith (Fanaticism) and Act 2 Pride merc (Concentration), then Multiple Shot packs. Bosses: Guided Arrow or Strafe. Without Pierce, arrows stop on the first target — confirm belt Pierce and Physical Sunder."
+    },
+    {
+      "id": 70009,
+      "legacyKey": "barb_whirl",
+      "title": "Barbarian",
+      "subtitle": "WW Barb / GF Barb (Whirlwind)",
+      "tags": [
+        "farm",
+        "physical"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Grief",
+              "dataType": "runeword",
+              "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " Phase Blade dual wield"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arreat's Face",
+              "dataType": "unique",
+              "id": 20016
+            },
+            {
+              "type": "text",
+              "value": " [Lem Rune socket — Gold Find]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Wealth",
+              "dataType": "runeword",
+              "id": 30045
+            },
+            {
+              "type": "text",
+              "value": " (GF/Magic Find) · mobility: "
+            },
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "dual wield equip (Shield none)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Chance Guards",
+              "dataType": "unique",
+              "id": 20043
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Infernostride",
+              "dataType": "unique",
+              "id": 20045
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Goldwrap",
+              "dataType": "unique",
+              "id": 20044
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Dwarf Star",
+              "dataType": "unique",
+              "id": 20025
+            },
+            {
+              "type": "text",
+              "value": " dual"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Blade of Ali Baba",
+              "dataType": "unique",
+              "id": 20030
+            },
+            {
+              "type": "text",
+              "value": " (Find Item when GF/Magic Find)"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might merc (Decrepify)",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "The Reaper's Toll",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (eth, Shael/Ohm socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Gear Strength cushion; ~3k Life after CTA Battle Orders<br><strong>🎒 Inventory:</strong> Gheed's Fortune, GF/MF grand charms<br><strong>⚡ Skills:</strong> Whirlwind (20), Sword Mastery (20), Find Item (50%+)<br><strong>🎮 Playstyle:</strong> CTA Battle Orders, then Whirlwind through packs on dual Grief. Clear trash, swap to hork Barb, Find Item corpses. Horking too early mid-fight is messy — clean up, then swap.",
+      "badge": "WW Barb",
+      "stats": "Gear Strength cushion; ~3k Life after CTA Battle Orders",
+      "inventory": "Gheed's Fortune, GF/MF grand charms",
+      "skills": "Whirlwind (20), Sword Mastery (20), Find Item (50%+)",
+      "playstyle": "CTA Battle Orders, then Whirlwind through packs on dual Grief. Clear trash, swap to hork Barb, Find Item corpses. Horking too early mid-fight is messy — clean up, then swap."
+    },
+    {
+      "id": 70010,
+      "legacyKey": "barb_ber",
+      "title": "Barbarian",
+      "subtitle": "Berserk Barb",
+      "tags": [
+        "boss",
+        "magic"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Grief",
+              "dataType": "runeword",
+              "id": 30013
+            },
+            {
+              "type": "text",
+              "value": " (Phase Blade) + swap "
+            },
+            {
+              "type": "link",
+              "name": "Blade of Ali Baba",
+              "dataType": "unique",
+              "id": 20030
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arreat's Face",
+              "dataType": "unique",
+              "id": 20016
+            },
+            {
+              "type": "text",
+              "value": " [Cham Rune socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "dual wield when Shield none · single Grief when "
+            },
+            {
+              "type": "link",
+              "name": "Stormshield",
+              "dataType": "unique",
+              "id": 20035
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Laying of Hands",
+              "dataType": "unique",
+              "id": 20038
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Verdungo's Hearty Cord",
+              "dataType": "unique",
+              "id": 20041
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + life steal ring"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Blade of Ali Baba",
+              "dataType": "unique",
+              "id": 20030
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might merc (Decrepify)",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "The Reaper's Toll",
+                "dataType": "unique",
+                "id": 20032
+              },
+              {
+                "type": "text",
+                "value": " (eth, Shael/Ohm socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Reach ~3k Life, then Strength (Berserk is magic damage — no Strength scaling)<br><strong>🎒 Inventory:</strong> Life/res small charms; Physical Sunder optional (main skill is magic damage)<br><strong>⚡ Skills:</strong> Berserk (20), Howl (20), Sword Mastery (20)<br><strong>🎮 Playstyle:</strong> Berserk ignores Physical Immunes as magic damage. Single-target swing with Howl synergy for bosses/Ubers. Damage after Reaper's Toll Decrepify; Teleport away from nasty projectiles.",
+      "badge": "Berserk",
+      "stats": "Reach ~3k Life, then Strength (Berserk is magic damage — no Strength scaling)",
+      "inventory": "Life/res small charms; Physical Sunder optional (main skill is magic damage)",
+      "skills": "Berserk (20), Howl (20), Sword Mastery (20)",
+      "playstyle": "Berserk ignores Physical Immunes as magic damage. Single-target swing with Howl synergy for bosses/Ubers. Damage after Reaper's Toll Decrepify; Teleport away from nasty projectiles."
+    },
+    {
+      "id": 70011,
+      "legacyKey": "dru_ele",
+      "title": "Druid",
+      "subtitle": "Wind Druid (Tornado / Hurricane)",
+      "tags": [
+        "physical"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Heart of the Oak",
+              "dataType": "runeword",
+              "id": 30019
+            },
+            {
+              "type": "text",
+              "value": " (Flail)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Jalal's Mane",
+              "dataType": "unique",
+              "id": 20037
+            },
+            {
+              "type": "text",
+              "value": " · alt: +2 Druid 20FCR Circlet"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " dual"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Holy Freeze Insight merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Insight",
+                "dataType": "runeword",
+                "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (eth Cryptic Axe)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Monarch Strength 156, rest Life · 99% FCR (10-frame)<br><strong>🎒 Inventory:</strong> Elemental skillers, Anni, Torch, Bone Break (Physical Sunder)<br><strong>⚡ Skills:</strong> Tornado (20), Twister (20), Hurricane (20)<br><strong>🎮 Playstyle:</strong> Hurricane, Cyclone Armor, and Oak Sage up, then Teleport into position. Pre-drop Tornado on monster pathing lines. Tornado is Physical — without Sunder, Physical Immune packs barely take damage.",
+      "badge": "Wind",
+      "stats": "Monarch Strength 156, rest Life · 99% FCR (10-frame)",
+      "inventory": "Elemental skillers, Anni, Torch, Bone Break (Physical Sunder)",
+      "skills": "Tornado (20), Twister (20), Hurricane (20)",
+      "playstyle": "Hurricane, Cyclone Armor, and Oak Sage up, then Teleport into position. Pre-drop Tornado on monster pathing lines. Tornado is Physical — without Sunder, Physical Immune packs barely take damage."
+    },
+    {
+      "id": 70012,
+      "legacyKey": "dru_wolf",
+      "title": "Druid",
+      "subtitle": "Fury Werewolf",
+      "tags": [
+        "boss",
+        "physical"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "The Reaper's Toll",
+              "dataType": "unique",
+              "id": 20032
+            },
+            {
+              "type": "text",
+              "value": " (eth, Zod Rune socket)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Metamorphosis",
+              "dataType": "runeword",
+              "id": 30034
+            },
+            {
+              "type": "text",
+              "value": " (shapeshift +5, 2.6+ endgame) · alt: "
+            },
+            {
+              "type": "link",
+              "name": "Jalal's Mane",
+              "dataType": "unique",
+              "id": 20037
+            },
+            {
+              "type": "text",
+              "value": " [IAS facet socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Fortitude",
+              "dataType": "runeword",
+              "id": 30020
+            },
+            {
+              "type": "text",
+              "value": " (eth Archon Plate)"
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "two-handed weapon (Shield none)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Dracul's Grasp",
+              "dataType": "unique",
+              "id": 20022
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Gore Rider",
+              "dataType": "unique",
+              "id": 20029
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "String of Ears",
+              "dataType": "unique",
+              "id": 20039
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + dual life steal"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 1 Faith merc (Fanaticism aura)",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Faith",
+                "dataType": "runeword",
+                "id": 30009
+              },
+              {
+                "type": "text",
+                "value": " (Bow base)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Weapon Dexterity reqs, rest Life<br><strong>🎒 Inventory:</strong> Shape Shifting skillers, max-damage/life small charms<br><strong>⚡ Skills:</strong> Werewolf (20), Lycanthropy (20), Fury (20)<br><strong>🎮 Playstyle:</strong> Stay Werewolf and chain Fury. Confirm eth Reaper's Toll Decrepify and Act 1 Faith Fanaticism. If life steal drops, step back, reproc Dracul's, then re-engage.",
+      "badge": "Werewolf",
+      "stats": "Weapon Dexterity reqs, rest Life",
+      "inventory": "Shape Shifting skillers, max-damage/life small charms",
+      "skills": "Werewolf (20), Lycanthropy (20), Fury (20)",
+      "playstyle": "Stay Werewolf and chain Fury. Confirm eth Reaper's Toll Decrepify and Act 1 Faith Fanaticism. If life steal drops, step back, reproc Dracul's, then re-engage."
+    },
+    {
+      "id": 70013,
+      "legacyKey": "sin_mosaic",
+      "title": "Assassin",
+      "subtitle": "Mosaic Sin (Phoenix Strike)",
+      "tags": [
+        "magic",
+        "farm",
+        "boss"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Mosaic",
+              "dataType": "runeword",
+              "id": 30031
+            },
+            {
+              "type": "text",
+              "value": " +3 Phoenix Strike Runic Talons dual wield (charges not Devour 100%)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Griffon's Eye",
+              "dataType": "unique",
+              "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " (Lightning charges) · general: "
+            },
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "dual wield claws (Shield none)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "text",
+              "value": "+2 Martial Arts 20IAS rare Gloves / "
+            },
+            {
+              "type": "link",
+              "name": "Shadow Dancer",
+              "dataType": "unique",
+              "id": 20020
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "String of Ears",
+              "dataType": "unique",
+              "id": 20039
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Highlord's Wrath",
+              "dataType": "unique",
+              "id": 20021
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Raven Frost",
+              "dataType": "unique",
+              "id": 20024
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (Teleport FCR)"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Gear reqs, then rest Life<br><strong>🎒 Inventory:</strong> Heaven's Breach (Lightning) or Fire/Physical Sunder, Martial Arts skillers<br><strong>⚡ Skills:</strong> Phoenix Strike (20), Fists of Thunder (20), Blades of Ice (20)<br><strong>🎮 Playstyle:</strong> Stack Fire/Cold/Lightning charges with Phoenix Strike, release with Dragon Claw or Dragon Tail. Mosaic dual-wield keeps charges, so finishers can be spammed. Travel on CTA + Spirit Teleport, then swap back to claws — confirm claws after every swap.",
+      "badge": "Mosaic",
+      "stats": "Gear reqs, then rest Life",
+      "inventory": "Heaven's Breach (Lightning) or Fire/Physical Sunder, Martial Arts skillers",
+      "skills": "Phoenix Strike (20), Fists of Thunder (20), Blades of Ice (20)",
+      "playstyle": "Stack Fire/Cold/Lightning charges with Phoenix Strike, release with Dragon Claw or Dragon Tail. Mosaic dual-wield keeps charges, so finishers can be spammed. Travel on CTA + Spirit Teleport, then swap back to claws — confirm claws after every swap."
+    },
+    {
+      "id": 70014,
+      "legacyKey": "sin_trap",
+      "title": "Assassin",
+      "subtitle": "Trapsin (Lightning Sentry)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Heart of the Oak",
+              "dataType": "runeword",
+              "id": 30019
+            },
+            {
+              "type": "text",
+              "value": " · IAS/FHR jewel specialized: "
+            },
+            {
+              "type": "link",
+              "name": "Crescent Moon",
+              "dataType": "runeword",
+              "id": 30041
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " or +2 Assassin 20FCR Circlet · Lightning: "
+            },
+            {
+              "type": "link",
+              "name": "Griffon's Eye",
+              "dataType": "unique",
+              "id": 20006
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Waterwalk",
+              "dataType": "unique",
+              "id": 20042
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Shadow Dancer",
+              "dataType": "unique",
+              "id": 20020
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + FCR ring"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Monarch Strength 156, rest Life · 102%+ FCR<br><strong>🎒 Inventory:</strong> Heaven's Breach (Lightning Sunder), Traps skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Lightning Sentry (20), Death Sentry (20), Shock Web (20)<br><strong>🎮 Playstyle:</strong> Teleport in, plant five Lightning Sentries; Death Sentry corpses as they appear. Shadow Master peels, then move to the next pack. Traps do not follow Teleport — replant inside Infinity Conviction range.",
+      "badge": "Trapsin",
+      "stats": "Monarch Strength 156, rest Life · 102%+ FCR",
+      "inventory": "Heaven's Breach (Lightning Sunder), Traps skillers, Anni, Torch",
+      "skills": "Lightning Sentry (20), Death Sentry (20), Shock Web (20)",
+      "playstyle": "Teleport in, plant five Lightning Sentries; Death Sentry corpses as they appear. Shadow Master peels, then move to the next pack. Traps do not follow Teleport — replant inside Infinity Conviction range."
+    },
+    {
+      "id": 70015,
+      "legacyKey": "demo_echo",
+      "title": "Warlock",
+      "subtitle": "Resonating Blow (125 FCR)",
+      "tags": [
+        "physical",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Insight",
+              "dataType": "runeword",
+              "id": 30018
+            },
+            {
+              "type": "text",
+              "value": " (eth Cryptic Axe/Colossus Voulge, 35% FCR + Meditation)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Will of Hell-Keeper",
+              "dataType": "unique",
+              "id": 20019
+            },
+            {
+              "type": "text",
+              "value": " [ED facet socket] · alt: 2Skills 20FCR Circlet"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Phoenix",
+              "dataType": "runeword",
+              "id": 30012
+            },
+            {
+              "type": "text",
+              "value": " Monarch (Redemption aura + ED) — Warlock two-handed weapon+Shield can equip both"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Trang-Oul's Claws",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Wraithstep",
+              "dataType": "unique",
+              "id": 20048
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + 10% FCR ring"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Pride merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Pride",
+                "dataType": "runeword",
+                "id": 30021
+              },
+              {
+                "type": "text",
+                "value": " (eth Polearm, Concentration aura)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Cure",
+                "dataType": "runeword",
+                "id": 30025
+              },
+              {
+                "type": "text",
+                "value": " or "
+              },
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Gear Strength only; 0 Dex/Energy; rest Life · 125% FCR<br><strong>🎒 Inventory:</strong> Life/res small charms, Physical Sunder, Anni, Torch (Warlock skillers lower priority)<br><strong>⚡ Skills:</strong> Resonating Blow (20), Mirror Blades (20), Blade Move, Demon Binding, Devour<br><strong>🎮 Playstyle:</strong> Resonating Blow scales with FCR, not IAS — hit the 125 breakpoint, then spam. Eth Insight + Phoenix covers mana and Redemption. Keep a bound demon in front, Resonating Blow from pack center; Lower Resist bosses first. Below 125 FCR the build feels much worse — verify the breakpoint.",
+      "badge": "Resonating",
+      "stats": "Gear Strength only; 0 Dex/Energy; rest Life · 125% FCR",
+      "inventory": "Life/res small charms, Physical Sunder, Anni, Torch (Warlock skillers lower priority)",
+      "skills": "Resonating Blow (20), Mirror Blades (20), Blade Move, Demon Binding, Devour",
+      "playstyle": "Resonating Blow scales with FCR, not IAS — hit the 125 breakpoint, then spam. Eth Insight + Phoenix covers mana and Redemption. Keep a bound demon in front, Resonating Blow from pack center; Lower Resist bosses first. Below 125 FCR the build feels much worse — verify the breakpoint."
+    },
+    {
+      "id": 70016,
+      "legacyKey": "demo_endgame",
+      "title": "Warlock",
+      "subtitle": "Apocalypse / Fire AoE",
+      "tags": [
+        "magic",
+        "boss"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Obsession",
+              "dataType": "runeword",
+              "id": 30040
+            },
+            {
+              "type": "text",
+              "value": " (6-socket staff, 65% FCR) · alt: "
+            },
+            {
+              "type": "link",
+              "name": "Mang Song's Lesson",
+              "dataType": "unique",
+              "id": 20047
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Flickering Flame",
+              "dataType": "runeword",
+              "id": 30030
+            },
+            {
+              "type": "text",
+              "value": " (Fire endgame, Flickering Flame) · damage: 3Chaos 20FCR 2-socket Circlet+P-Diamond · budget: "
+            },
+            {
+              "type": "link",
+              "name": "Will of Hell-Keeper",
+              "dataType": "unique",
+              "id": 20019
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Ars Al'Diabolos",
+              "dataType": "unique",
+              "id": 20046
+            },
+            {
+              "type": "text",
+              "value": " (Chaos +2 / 25FCR) · survivability · Mana: "
+            },
+            {
+              "type": "link",
+              "name": "Phoenix",
+              "dataType": "runeword",
+              "id": 30012
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Trang-Oul's Claws",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Wraithstep",
+              "dataType": "unique",
+              "id": 20048
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Shadow Dancer",
+              "dataType": "unique",
+              "id": 20020
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / Fire crafted Amulet or "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " dual"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Gear Strength reqs, rest Life · 125% FCR (includes Obsession 65)<br><strong>🎒 Inventory:</strong> Flame Rift (Fire Sunder), Chaos/Fire skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Apocalypse (20), Flame Wave (20), Fire Seal · Lower Resist, Devour<br><strong>🎮 Playstyle:</strong> Teleport into pack center, lay Fire Ring / Flame Wave, spam Apocalypse. Warlocks can wear two-hand Obsession staff and Grimoire together. Flickering Flame plus Infinity merc cuts Fire resist before damage lands. Without broken immunes, damage is near zero — respect Sunder and Conviction range.",
+      "badge": "Apocalypse",
+      "stats": "Gear Strength reqs, rest Life · 125% FCR (includes Obsession 65)",
+      "inventory": "Flame Rift (Fire Sunder), Chaos/Fire skillers, Anni, Torch",
+      "skills": "Apocalypse (20), Flame Wave (20), Fire Seal · Lower Resist, Devour",
+      "playstyle": "Teleport into pack center, lay Fire Ring / Flame Wave, spam Apocalypse. Warlocks can wear two-hand Obsession staff and Grimoire together. Flickering Flame plus Infinity merc cuts Fire resist before damage lands. Without broken immunes, damage is near zero — respect Sunder and Conviction range."
+    },
+    {
+      "id": 70017,
+      "legacyKey": "sorc_nova",
+      "title": "Sorceress",
+      "subtitle": "Nova Sorc (Lightning Nova)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Infinity",
+              "dataType": "runeword",
+              "id": 30008
+            },
+            {
+              "type": "text",
+              "value": " (eth Scythe / Giant Thresher selfequip, two-hand so Shield none) · alt: "
+            },
+            {
+              "type": "link",
+              "name": "Crescent Moon",
+              "dataType": "runeword",
+              "id": 30041
+            },
+            {
+              "type": "text",
+              "value": " (Phase Blade+Spirit, then merc Infinity)"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "link",
+              "name": "Griffon's Eye",
+              "dataType": "unique",
+              "id": 20006
+            },
+            {
+              "type": "text",
+              "value": " [5/5 Lightning facet, perfect 15/20 IAS/FHR jewel]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " (Mage Plate) · FCR·res: "
+            },
+            {
+              "type": "link",
+              "name": "Skin of the Vipermagi",
+              "dataType": "unique",
+              "id": 20052
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "text",
+              "value": "two-hand Infinity when none · Crescent Moon setup: "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (35% FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Magefist",
+              "dataType": "unique",
+              "id": 20015
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / 10FCR crafted Amulet or "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " + FCR Ring (105 FCR)"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (Battle Command/Battle Orders)"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Insight merc (self Infinity setup)",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Insight",
+                "dataType": "runeword",
+                "id": 30018
+              },
+              {
+                "type": "text",
+                "value": " (eth Giant Thresher) · Crescent Moon setup if "
+              },
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud) · alt: "
+              },
+              {
+                "type": "link",
+                "name": "Chains of Honor",
+                "dataType": "runeword",
+                "id": 30011
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Gear Strength reqs; Energy Shield builds invest Energy · 105% FCR (8-frame)<br><strong>🎒 Inventory:</strong> Heaven's Breach (Lightning Sunder), Lightning skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Nova (20), Lightning Mastery (20), Static Field (20), Telekinesis · Energy Shield<br><strong>🎮 Playstyle:</strong> Teleport onto pack center and spam Nova. Nova only hits around you — casting from range does almost nothing. Static Field bosses, then stick Nova. Energy Shield drops at 0 mana — watch the mana pool.",
+      "badge": "Nova",
+      "stats": "Gear Strength reqs; Energy Shield builds invest Energy · 105% FCR (8-frame)",
+      "inventory": "Heaven's Breach (Lightning Sunder), Lightning skillers, Anni, Torch",
+      "skills": "Nova (20), Lightning Mastery (20), Static Field (20), Telekinesis · Energy Shield",
+      "playstyle": "Teleport onto pack center and spam Nova. Nova only hits around you — casting from range does almost nothing. Static Field bosses, then stick Nova. Energy Shield drops at 0 mana — watch the mana pool."
+    },
+    {
+      "id": 70018,
+      "legacyKey": "necro_pnova",
+      "title": "Necromancer",
+      "subtitle": "Poison Nec (Poison Nova)",
+      "tags": [
+        "magic",
+        "farm"
+      ],
+      "slots": [
+        {
+          "slot": "Weapon",
+          "content": [
+            {
+              "type": "link",
+              "name": "Death's Web",
+              "dataType": "unique",
+              "id": 20049
+            },
+            {
+              "type": "text",
+              "value": " [5/5 Poison facet socket, perfect 2P&B / -50 enemy Poison Resist]"
+            }
+          ]
+        },
+        {
+          "slot": "Helm",
+          "content": [
+            {
+              "type": "text",
+              "value": "2-socket 20FCR Circlet(+Necro) · budget: "
+            },
+            {
+              "type": "link",
+              "name": "Harlequin Crest",
+              "dataType": "unique",
+              "id": 20005
+            },
+            {
+              "type": "text",
+              "value": " [Cham Rune socket]"
+            }
+          ]
+        },
+        {
+          "slot": "Armor",
+          "content": [
+            {
+              "type": "link",
+              "name": "Enigma",
+              "dataType": "runeword",
+              "id": 30022
+            },
+            {
+              "type": "text",
+              "value": " (Mage Plate, Teleport) · damage: "
+            },
+            {
+              "type": "link",
+              "name": "Bramble",
+              "dataType": "runeword",
+              "id": 30046
+            },
+            {
+              "type": "text",
+              "value": " (Poison Skill Damage +25~50%)"
+            }
+          ]
+        },
+        {
+          "slot": "Shield",
+          "content": [
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " Monarch (125 FCR) · survivability: "
+            },
+            {
+              "type": "link",
+              "name": "Homunculus",
+              "dataType": "unique",
+              "id": 20050
+            },
+            {
+              "type": "text",
+              "value": " · Skills: "
+            },
+            {
+              "type": "link",
+              "name": "Darkforce Spawn",
+              "dataType": "unique",
+              "id": 20051
+            }
+          ]
+        },
+        {
+          "slot": "Gloves / Boots",
+          "content": [
+            {
+              "type": "link",
+              "name": "Trang-Oul's Claws",
+              "dataType": "unique",
+              "id": 20031
+            },
+            {
+              "type": "text",
+              "value": " (Poison Skill Damage +25% / 20FCR) / "
+            },
+            {
+              "type": "link",
+              "name": "War Traveler",
+              "dataType": "unique",
+              "id": 20008
+            },
+            {
+              "type": "text",
+              "value": " or "
+            },
+            {
+              "type": "link",
+              "name": "Sandstorm Trek",
+              "dataType": "unique",
+              "id": 20040
+            }
+          ]
+        },
+        {
+          "slot": "Belt / Jewelry",
+          "content": [
+            {
+              "type": "link",
+              "name": "Arachnid Mesh",
+              "dataType": "unique",
+              "id": 20013
+            },
+            {
+              "type": "text",
+              "value": " / "
+            },
+            {
+              "type": "link",
+              "name": "Mara's Kaleidoscope",
+              "dataType": "unique",
+              "id": 20003
+            },
+            {
+              "type": "text",
+              "value": " or FCR crafted Amulet / "
+            },
+            {
+              "type": "link",
+              "name": "The Stone of Jordan",
+              "dataType": "unique",
+              "id": 20001
+            },
+            {
+              "type": "text",
+              "value": " dual"
+            }
+          ]
+        },
+        {
+          "slot": "Weapon Swap",
+          "content": [
+            {
+              "type": "link",
+              "name": "Call to Arms",
+              "dataType": "runeword",
+              "id": 30006
+            },
+            {
+              "type": "text",
+              "value": " + "
+            },
+            {
+              "type": "link",
+              "name": "Spirit",
+              "dataType": "runeword",
+              "id": 30007
+            },
+            {
+              "type": "text",
+              "value": " (Battle Command/Battle Orders)"
+            }
+          ]
+        }
+      ],
+      "merc": {
+        "title": "Act 2 Might Infinity merc",
+        "gear": [
+          {
+            "slot": "Merc Weapon",
+            "content": [
+              {
+                "type": "link",
+                "name": "Infinity",
+                "dataType": "runeword",
+                "id": 30008
+              },
+              {
+                "type": "text",
+                "value": " (eth Thresher / Mancatcher)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Helm",
+            "content": [
+              {
+                "type": "link",
+                "name": "Andariel's Visage",
+                "dataType": "unique",
+                "id": 20007
+              },
+              {
+                "type": "text",
+                "value": " (eth, Ruby facet socket)"
+              }
+            ]
+          },
+          {
+            "slot": "Merc Armor",
+            "content": [
+              {
+                "type": "link",
+                "name": "Fortitude",
+                "dataType": "runeword",
+                "id": 30020
+              },
+              {
+                "type": "text",
+                "value": " (eth Archon Plate/Dusk Shroud)"
+              }
+            ]
+          }
+        ]
+      },
+      "info": "<strong>📊 Stats:</strong> Monarch Strength 156, rest Life · 75% FCR (main) / 125% (Spirit + FCR Circlet)<br><strong>🎒 Inventory:</strong> Rotting Cleavage (Poison Sunder), Poison & Bone skillers, Anni, Torch<br><strong>⚡ Skills:</strong> Poison Nova (20), Poison Explosion (20), Lower Resist (20), Corpse Explosion<br><strong>🎮 Playstyle:</strong> Lower Resist, soak packs with Poison Nova, Corpse Explosion as bodies drop. Poison is DoT — you can move to the next pack immediately. Keep Lower Resist up on bosses while reapplying Poison Nova. Poison Nova without Lower Resist loses most of its damage — curse first.",
+      "badge": "Poison",
+      "stats": "Monarch Strength 156, rest Life · 75% FCR (main) / 125% (Spirit + FCR Circlet)",
+      "inventory": "Rotting Cleavage (Poison Sunder), Poison & Bone skillers, Anni, Torch",
+      "skills": "Poison Nova (20), Poison Explosion (20), Lower Resist (20), Corpse Explosion",
+      "playstyle": "Lower Resist, soak packs with Poison Nova, Corpse Explosion as bodies drop. Poison is DoT — you can move to the next pack immediately. Keep Lower Resist up on bosses while reapplying Poison Nova. Poison Nova without Lower Resist loses most of its damage — curse first."
+    }
+  ]
+}

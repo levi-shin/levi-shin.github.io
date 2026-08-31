@@ -1,0 +1,49 @@
+[
+  {
+    "version": "Patch 3.3 (Ladder Season 15) — Diablo II: Resurrected Ladder Season 15 is live",
+    "badge": "🚀",
+    "isActive": true,
+    "isOpen": true,
+    "link": "https://news.blizzard.com/en-us/article/24296140/ii-15",
+    "schedule": [
+      "Ladder Season 14 ended — Aug 18 (Tue) 3:00 AM KST",
+      "Ladder Season 15 patch rollout began — Aug 19 (Wed)",
+      "<b>Ladder Season 15 started — Aug 22 9:00 AM KST</b>"
+    ],
+    "changes": [
+      "<b>Non-Ladder (Standard) carryover:</b> Previous Ladder-only items/runewords (Madness, Ground, Metamorphosis, Hearth, Temper, Cure, Bulwark, and related) can now be crafted and used in non-Ladder.",
+      "<b>Gear and set balance:</b> Several unique items (e.g. Bloodletter, Battle Branch, Rogues Bow, Snowclash) and set items received option/required-level adjustments.",
+      "<b>Terror Zones / drop tuning:</b> Chance for Rare-or-better drops from Herald tier 3+ has increased.",
+      "<b>Systems and bug fixes:</b> Jump into the fray with new Ladder items, Terror Zone changes, and assorted bug fixes — see the full notes on the Blizzard page."
+    ]
+  },
+  {
+    "version": "Patch 3.2 (Ladder Season 14 — archive)",
+    "badge": "📜",
+    "isActive": false,
+    "isOpen": false,
+    "link": "https://news.blizzard.com/en-us/diablo2",
+    "schedule": [
+      "Ladder Season 14 start: May 22, 2026 (PDT) / May 23 9:00 AM KST",
+      "Warlock class balance updates and a major Terror Zone system overhaul"
+    ],
+    "changes": [
+      "<b>Warlock class tuning:</b> Core skill mechanics reworked and damage synergy balance adjusted.",
+      "<b>Terror Zones and Herald tiers:</b> Tier 1–3 Heralds now hunt players inside Terror Zones.",
+      "<b>Colossal Ancients difficulty:</b> Magic resist and damage mechanics made more threatening."
+    ]
+  },
+  {
+    "version": "Patch 3.1 (Warlock launch and systems pass)",
+    "badge": "📜",
+    "isActive": false,
+    "isOpen": false,
+    "link": "https://news.blizzard.com/en-us/diablo2",
+    "schedule": [],
+    "changes": [
+      "<b>New class — Warlock:</b> Dark magic and summon trees plus dedicated Warlock gear.",
+      "<b>Hardcore Level 99 race:</b> Hardcore Ladder race to 99 celebrating the Warlock launch.",
+      "Graphics rendering optimizations, lobby filter improvements, and many client crash fixes."
+    ]
+  }
+]

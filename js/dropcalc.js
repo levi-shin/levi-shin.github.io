@@ -2,12 +2,12 @@
  * 매찬 대비 유니크 드랍 확률 계산기
  * 매찬을 입력하면 아이템별 확률이 목록으로 나옵니다.
  */
-import { dataUrl } from './site.js';
+import { dataUrl, t } from './site.js';
 
 const UNIQUE_MF_FACTOR = 250;
 const SET_MF_FACTOR = 500;
 const RARE_MF_FACTOR = 600;
-const DROP_CALC_VER = "2";
+const DROP_CALC_VER = "20";
 
 let dropCalcData = null;
 
@@ -71,6 +71,8 @@ export async function calculateDropOdds(event) {
     const results = document.getElementById("dropcalcResults");
     const mf = clampMf(document.getElementById("dropcalcMf")?.value);
     const query = (document.getElementById("dropcalcItemFilter")?.value || "").trim().toLowerCase();
+    const ui = t().dropcalc;
+    const locale = (typeof document !== 'undefined' && document.documentElement.lang?.startsWith('en')) ? 'en-US' : 'ko-KR';
 
     try {
         const data = await loadDropCalcData();
@@ -97,46 +99,42 @@ export async function calculateDropOdds(event) {
                 <tr class="searchable-item">
                     <td class="unique">
                         <span class="item-inline unique" onclick="openUniqueModal(${Number(row.id)})" style="cursor:pointer;">${row.name}</span>
-                        <div class="dropcalc-sub">${row.farm} 1킬 기준 · 0매찬 대비 ${row.multiplier.toFixed(2)}배</div>
+                        <div class="dropcalc-sub">${ui.perKill(row.farm, row.multiplier)}</div>
                     </td>
                     <td>1 / ${formatOneIn(row.oneIn)}</td>
                     <td>${formatPercent(row.chance)}</td>
-                    <td>약 ${expectedKillsForHalf(row.chance).toLocaleString("ko-KR")}회</td>
+                    <td>${ui.half(Number(expectedKillsForHalf(row.chance)).toLocaleString(locale))}</td>
                     <td>1 / ${formatOneIn(row.oneIn0)}</td>
                 </tr>
             `).join("")
-            : `<tr><td colspan="5" style="color:#888;">검색하신 아이템이 목록에 없습니다.</td></tr>`;
+            : `<tr><td colspan="5" style="color:#888;">${ui.empty}</td></tr>`;
 
         results.hidden = false;
         results.innerHTML = `
             <div class="dropcalc-summary">
                 <div class="dropcalc-stat">
-                    <span>입력 매찬</span>
+                    <span>${ui.inputMf}</span>
                     <strong>${mf}%</strong>
                 </div>
                 <div class="dropcalc-stat">
-                    <span>유니크 유효 매찬</span>
+                    <span>${ui.uniqMf}</span>
                     <strong>${uniqMf}%</strong>
-                    <em>체감 ${uniqMult.toFixed(2)}배</em>
+                    <em>${ui.feel(uniqMult)}</em>
                 </div>
                 <div class="dropcalc-stat">
-                    <span>세트 유효 매찬</span>
+                    <span>${ui.setMf}</span>
                     <strong>${setMf}%</strong>
                 </div>
                 <div class="dropcalc-stat">
-                    <span>레어 유효 매찬</span>
+                    <span>${ui.rareMf}</span>
                     <strong>${rareMf}%</strong>
                 </div>
             </div>
-            <h3 class="dropcalc-h">유니크 드랍 확률</h3>
+            <h3 class="dropcalc-h">${ui.heading}</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>아이템</th>
-                        <th>현재 확률</th>
-                        <th>퍼센트</th>
-                        <th>절반 확률</th>
-                        <th>0매찬</th>
+                        ${ui.cols.map(c => `<th>${c}</th>`).join('')}
                     </tr>
                 </thead>
                 <tbody>${tableBody}</tbody>
@@ -146,7 +144,7 @@ export async function calculateDropOdds(event) {
         console.error("매찬 계산기를 불러오지 못했습니다:", error);
         if (results) {
             results.hidden = false;
-            results.innerHTML = `<p class="item-click-hint">계산 데이터를 불러오지 못했습니다. 잠시 후 다시 눌러 주세요.</p>`;
+            results.innerHTML = `<p class="item-click-hint">${ui.loadFail}</p>`;
         }
     }
 }

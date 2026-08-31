@@ -1,0 +1,356 @@
+{
+  "title": "Fresh Ladder Leveling Guide",
+  "aliases": [
+    "leveling",
+    "ladder start",
+    "starter",
+    "Countess",
+    "Stealth",
+    "Warlock",
+    "Resonating Blow",
+    "Apocalypse",
+    "merc",
+    "gear tree",
+    "Strength"
+  ],
+  "intro": "Right after a Ladder launch, endgame gear matters less than which runewords you craft and where you farm. Follow the order below and you will stay on track from Normal through Hell self-sufficiency.",
+  "seasonNote": "From Ladder Season 15 (August 22, 2026), early/mid uniques and Angel's Vestments are buffed — equip them as they drop. Physical builds especially benefit from the Angel set for Attack Rating. Previous-season shared-stash items move to a 'Find Item only' tab, so move what you need into this season's stash yourself.",
+  "classes": [
+    {
+      "name": "Sorceress",
+      "badge": "Best starter",
+      "text": "Teleport makes Sorceress the easiest season starter. Put a point in Warmth, clear Normal with Fireball or Frozen Orb, and take at least 1 Teleport. From Nightmare you can respec to Blizzard or Chain Lightning. An Insight merc removes most mana stress.",
+      "buildId": 70002
+    },
+    {
+      "name": "Paladin",
+      "badge": "Self-farm / boosting",
+      "text": "Clear Normal with Holy Bolt and Charge, then move to Blessed Hammer once you have Spirit and Ancient's Pledge. Shield resists alone keep Hell stable.",
+      "buildId": 70003
+    },
+    {
+      "name": "Amazon",
+      "badge": "Javelin leveling",
+      "text": "Push Javelin/Spear skills, then dump into Lightning Fury when it unlocks. Until Titan's Revenge drops, use skill-pointed javelins.",
+      "buildId": 70007
+    },
+    {
+      "name": "Necromancer",
+      "badge": "Easy summons",
+      "text": "Skeletons plus Corpse Explosion is the safest path. For Bone Spear, aim for White (+3 Bone Spear Unearthed Wand).",
+      "buildId": 70005
+    },
+    {
+      "name": "Assassin",
+      "badge": "Traps → Mosaic",
+      "text": "Level on Lightning Sentry traps early. Mosaic comes after Mal · Gul · Amn — socket +3 Phoenix Strike Runic Talons dual-wield.",
+      "buildId": 70014
+    },
+    {
+      "name": "Druid",
+      "badge": "Wind / Werewolf",
+      "text": "Level as Wind (Tornado) or Werewolf shapeshift. Metamorphosis helms are a Hell+ concern.",
+      "buildId": 70011
+    },
+    {
+      "name": "Barbarian",
+      "badge": "WW / GF",
+      "text": "Start Bash, transition to Whirlwind. One point in Find Item early makes later farming smoother.",
+      "buildId": 70009
+    },
+    {
+      "name": "Warlock",
+      "badge": "Warlock · 2H + shield",
+      "text": "Two-hand weapons and Grimoire (shield slot) can be worn together, so Insight polearm plus Pledge/Spirit shield levels cleanly. Early: Demon Binding + Devour into Resonating Blow, or Flame Wave / Fire Ring AoE. Resonating Blow is FCR (75 → 125), not IAS.",
+      "buildId": 70015,
+      "buildIds": [
+        {
+          "id": 70015,
+          "label": "Resonating Blow endgame"
+        },
+        {
+          "id": 70016,
+          "label": "Apocalypse endgame"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "normal",
+      "title": "1. Normal (1–40)",
+      "goal": "Craft Teleport tools, Stealth, and Ancient's Pledge; hit Ancients at 20; kill Baal.",
+      "steps": [
+        "Always take Den of Evil, Radament, Lam Esen's Tome, Izual, and Anya resists each difficulty. Rewards are summarized in menu 10.",
+        "Farm Countess (Forgotten Tower level 5) for Tal · Eth · Ral · Ort · Tal. Normal Countess drops up to Ral.",
+        "Make Stealth (Tal + Eth) in a 2-socket armor first — FRW, FCR, and FHR in one piece.",
+        "Fire Sorc: Leaf (Tir + Ral) in a +Fire Short Staff; Warmth/Fireball staffmods help.",
+        "Ancient's Pledge (Ral + Ort + Tal) in a 3-socket shield removes most resist worry.",
+        "Hire an Act 2 Desert merc — Might or Holy Freeze both work. When Amn drops, Strength (Amn + Tir) on a 2-socket polearm. Merc gear by stage is in section 6.",
+        "Arreat Summit Ancients require level 20. If short, Cow Level or Countess."
+      ]
+    },
+    {
+      "id": "nightmare",
+      "title": "2. Nightmare (40–60)",
+      "goal": "Craft Lore, Spirit sword, and Insight; Smoke makes Hell resists much easier.",
+      "steps": [
+        "Nightmare Countess drops through Io. Sol and Amn here finish Lore, Spirit, and Insight mats.",
+        "Lore (Ort + Sol) in a 2-socket helm — Circlet with +Skills is ideal.",
+        "Spirit (Tal + Thul + Ort + Amn) wants a 4-socket Crystal Sword. Many Larzuk a Normal white Crystal Sword to 4os — save socket quests.",
+        "Insight (Ral + Tir + Tal + Sol) on a 4-socket polearm for the Act 2 merc — Meditation nearly ends mana issues. Rehire same aura in Nightmare Act 2; armor Smoke, helm Lore.",
+        "Smoke (Nef + Lum) is +50 all resist — craft before Hell. Nightmare Countess does not drop Lum; cube 3 Io or farm Nightmare Hellforge / Hell Countess. 2-socket Mage Plate is the easy base.",
+        "Ancients are level 40. If resists are low, finish Smoke first."
+      ]
+    },
+    {
+      "id": "hell",
+      "title": "3. Entering Hell (60–75)",
+      "goal": "Approach 75 resists and farm Countess, Andariel, Mephisto, and Cows for self-sufficiency.",
+      "steps": [
+        "Hell starts at −100 resist. Capped 75 needs +175 from gear — Smoke's +50 shines here.",
+        "Ancients are level 60. If short, more Nightmare Cows or Nightmare Baal.",
+        "Hell Countess drops through Ist — farm Treachery (Shael + Thul + Lem) mats and higher runes.",
+        "Treachery on Mage Plate is a Fade prebuff. On-hit Fade spikes resists and PDR. If you don't use it, give it to the merc.",
+        "Spirit Monarch (35 FCR) is the caster shield endgame. Until Strength 156 is comfortable, keep Pledge.",
+        "Farm Andariel / Mephisto for Shako, SOJ, Andariel's Visage, and similar. Even without them, runewords alone can clear Cows and Chaos."
+      ]
+    },
+    {
+      "id": "self",
+      "title": "4. After farming — toward endgame",
+      "goal": "Target HOTO, CTA, and Enigma, then swap into your class endgame build.",
+      "steps": [
+        "Heart of the Oak (HOTO) on Flail is standard — 40 FCR, all-res, and +3 Skills.",
+        "Call to Arms on a 5-socket Crystal Sword for Battle Command / Battle Orders swap.",
+        "Enigma prefers Mage Plate (55 Strength). Classes without Teleport change how they play once it drops.",
+        "Further gear is in section 1 endgame builds by class. Warlocks should read section 5 first, then Resonating Blow / Apocalypse paperdolls. Merc early tree is section 6; endgame section 8; farms section 12."
+      ]
+    },
+    {
+      "id": "warlock",
+      "title": "5. Warlock leveling",
+      "goal": "Tank with Binding summons, cover mana/res with Insight + shield, then self-farm Resonating Blow 125 FCR or Apocalypse Fire.",
+      "buildIds": [
+        {
+          "id": 70015,
+          "label": "View Resonating Blow endgame"
+        },
+        {
+          "id": 70016,
+          "label": "View Apocalypse endgame"
+        }
+      ],
+      "steps": [
+        "Warlocks wear a two-hand weapon and Grimoire (shield slot) together. Insight polearm plus Ancient's Pledge / Spirit / Phoenix on the off-hand is the core plan.",
+        "Normal: Demon Binding (tank summon) and Devour (leech/mana) first, then dump Resonating Blow. For Fire, take Flame Wave, Fire Ring, and Fire Seal.",
+        "Resonating Blow is FCR, not IAS. Hit 75 FCR first; once farming, aim for 125 (same table as Paladin/Necro). Missing breakpoints feels terrible.",
+        "Stealth armor and Pledge shield match other classes. Fire Warlock can Leaf a +Fire Short Staff.",
+        "In Nightmare, craft Insight (Ral + Tir + Tal + Sol) on eth Thresher / Cryptic Axe for yourself — Meditation keeps mana up. Pair Lore helm and Spirit shield (or Spirit sword swap).",
+        "Bosses: Lower Resist first, then Resonating Blow / Apocalypse. Bound demon in front while you damage from pack center is safest.",
+        "In Hell, Smoke for all-res; Enigma unlocks Teleport mobility. Resonating endgame is Insight + Phoenix Monarch; Apocalypse is Obsession Archon Staff + Flickering Flame + Grimoire.",
+        "Apocalypse (Fire) does almost nothing to Fire Immunes. Until Sunder and Infinity Conviction, Resonating Blow farms more easily.",
+        "If you hold Insight, give the merc Obedience or Infinity. Merc order is section 6."
+      ]
+    }
+  ],
+  "mercTree": {
+    "title": "6. Merc gear tree (early runewords)",
+    "goal": "Raise an Act 2 Desert merc from Normal; upgrade weapon Strength → Insight → Infinity.",
+    "rows": [
+      {
+        "when": "Normal Act 2",
+        "hire": "Desert Might (Physical) or Holy Freeze (safe)",
+        "weapon": "Any polearm/spear. When Amn drops: Strength (Amn + Tir) 2-socket polearm",
+        "armor": "Spare Stealth, or any armor",
+        "helm": "Any helm"
+      },
+      {
+        "when": "Nightmare",
+        "hire": "Rehire same aura in Nightmare Act 2 (higher aura level)",
+        "weapon": "Insight (Ral + Tir + Tal + Sol) 4-socket polearm. Eth Thresher / Cryptic Axe; budget 4os Colossus Voulge",
+        "armor": "Smoke (Nef + Lum) or Stealth",
+        "helm": "Lore (Ort + Sol)"
+      },
+      {
+        "when": "Early Hell",
+        "hire": "Hell Act 2 rehire optional — keep the aura",
+        "weapon": "Keep Insight. If you hold Insight, merc gets Obedience (Hel + Ko + Thul + Eth + Fal)",
+        "armor": "Treachery (Shael + Thul + Lem) — Fade",
+        "helm": "Keep Lore. Poison-heavy: Cure; dies often: Bulwark"
+      },
+      {
+        "when": "Farming / endgame",
+        "hire": "Act 2 Might or Holy Freeze. Bowazon / Werewolf endgame: Act 1 Faith",
+        "weapon": "Infinity (Ber + Mal + Ber + Ist) eth Giant Thresher / Cryptic Axe",
+        "armor": "Fortitude eth Archon Plate",
+        "helm": "Andariel's Visage; until then Lore / Cure / Bulwark"
+      }
+    ],
+    "steps": [
+      "Season-start merc default is Act 2 Desert. Might for Physical damage, Holy Freeze for safety. Rehire same aura in Nightmare Act 2 for higher aura level.",
+      "Craft your Stealth / Pledge first; spare runes go to the merc. Normal Amn → Strength (Amn + Tir) on 2-socket polearm for leech and Crushing Blow so the merc lives.",
+      "As soon as Sol appears in Nightmare, craft Insight. Meditation nearly ends your mana issues. Ideal bases: eth Thresher / Cryptic Axe; otherwise 4os Colossus Voulge first.",
+      "Before Hell, Smoke for merc all-res; when Lem drops, Treachery. On-hit Fade spikes resists and PDR. You can Fade-prebuff then hand Treachery to the merc.",
+      "Classes that self-wield Insight (Warlock) should move the merc to Obedience, then Infinity when Conviction is needed.",
+      "Endgame order: Infinity weapon → Fortitude armor → Andariel's Visage. Class merc endgames are also in menu 8."
+    ]
+  },
+  "runewords": [
+    {
+      "id": 30002,
+      "name": "Stealth",
+      "when": "Early Normal",
+      "why": "FRW · FCR · FHR. Craft this first."
+    },
+    {
+      "id": 30003,
+      "name": "Leaf",
+      "when": "Fire Sorc / Warlock Normal",
+      "why": "Socket a +3 Fire Short Staff."
+    },
+    {
+      "id": 30004,
+      "name": "Ancient's Pledge",
+      "when": "After Normal Countess",
+      "why": "Shield resists. Paladins love all-res Sacred Targe."
+    },
+    {
+      "id": 30037,
+      "name": "Strength",
+      "when": "Late Normal merc",
+      "why": "Amn + Tir. 2-socket polearm. Leech + CB before Insight."
+    },
+    {
+      "id": 30005,
+      "name": "Lore",
+      "when": "Nightmare",
+      "why": "+1 Skills helm. Circlet preferred. Also merc helm."
+    },
+    {
+      "id": 30007,
+      "name": "Spirit",
+      "when": "Nightmare",
+      "why": "4-socket Crystal Sword. Later 35 FCR Monarch."
+    },
+    {
+      "id": 30018,
+      "name": "Insight",
+      "when": "Nightmare merc / Warlock self",
+      "why": "Meditation. Warlock holds the polearm and a shield together."
+    },
+    {
+      "id": 30016,
+      "name": "Obedience",
+      "when": "Hell merc budget",
+      "why": "When you hold Insight. Eth Thresher / Cryptic Axe."
+    },
+    {
+      "id": 30036,
+      "name": "Smoke",
+      "when": "Late Nightmare – early Hell",
+      "why": "+50 all-res. 2-socket Mage Plate."
+    },
+    {
+      "id": 30017,
+      "name": "Treachery",
+      "when": "Early Hell self / merc",
+      "why": "Fade prebuff. Mage Plate. Also merc armor."
+    },
+    {
+      "id": 30025,
+      "name": "Cure",
+      "when": "Hell merc helm",
+      "why": "Cleansing aura. Swap over Lore in poison-heavy areas."
+    },
+    {
+      "id": 30026,
+      "name": "Bulwark",
+      "when": "Hell merc helm",
+      "why": "Physical DR. Swap over Lore when the merc dies often."
+    },
+    {
+      "id": 30020,
+      "name": "Fortitude",
+      "when": "Merc armor endgame",
+      "why": "Eth Archon Plate. After Treachery."
+    },
+    {
+      "id": 30008,
+      "name": "Infinity",
+      "when": "Merc weapon endgame",
+      "why": "Eth Giant Thresher / Cryptic Axe. Conviction aura."
+    },
+    {
+      "id": 30019,
+      "name": "Heart of the Oak",
+      "when": "After farming",
+      "why": "Flail base. Caster weapon endgame."
+    },
+    {
+      "id": 30006,
+      "name": "Call to Arms",
+      "when": "After farming",
+      "why": "5-socket Crystal Sword. Battle Command swap."
+    },
+    {
+      "id": 30022,
+      "name": "Enigma",
+      "when": "Mobility endgame",
+      "why": "Mage Plate. Turning point for non-Teleport classes and Warlock."
+    },
+    {
+      "id": 30030,
+      "name": "Flickering Flame",
+      "when": "Fire Warlock endgame",
+      "why": "+3 Fire Skills Diadem. Apocalypse helm."
+    },
+    {
+      "id": 30040,
+      "name": "Obsession",
+      "when": "Fire Warlock endgame",
+      "why": "+4 All Skills Archon Staff. 65 FCR in one piece."
+    }
+  ],
+  "countess": [
+    {
+      "diff": "Normal",
+      "runes": "El – Ral",
+      "tip": "Farm Stealth, Leaf, and Pledge mats here."
+    },
+    {
+      "diff": "Nightmare",
+      "runes": "El – Io",
+      "tip": "Sol / Amn finish Lore, Spirit, Insight. No Lum — cube 3 Io."
+    },
+    {
+      "diff": "Hell",
+      "runes": "El – Ist",
+      "tip": "Farm Lem for Treachery and higher runes. Core season-start farm."
+    }
+  ],
+  "sockets": [
+    {
+      "diff": "Normal Larzuk",
+      "use": "4-socket Crystal Sword (Spirit sword)"
+    },
+    {
+      "diff": "Nightmare Larzuk",
+      "use": "4-socket Monarch (Spirit shield)"
+    },
+    {
+      "diff": "Hell Larzuk",
+      "use": "3-socket Mage Plate (Enigma) · Fire Warlock may want 6-socket Archon Staff (Obsession)"
+    }
+  ],
+  "tips": [
+    "Season first character: Teleport Sorc, then level your main on the second character.",
+    "Boosting only and skipping quest rewards permanently costs skills, stats, and resists. Grab menu-10 permanent rewards each difficulty.",
+    "Larzuk sockets are once per difficulty. Recommended order: Spirit sword → Spirit Monarch → Enigma.",
+    "Nightmare Hellforge drops Sol–Um (Lum/Lem hope). Hell Hellforge is Hel–Gul.",
+    "Default merc is Act 2 Desert. Weapons: Strength → Insight → Infinity. Armor: Stealth/Smoke → Treachery → Fortitude.",
+    "Warlocks wear two-hand + Grimoire together. Self Insight with Pledge/Spirit/Phoenix in the shield slot.",
+    "Resonating Blow is FCR, not IAS. Hit 75 first; endgame 125. Frame tables are in menu 9.",
+    "Physical characters miss often without Attack Rating. Season 15 buffed Angel's Vestments (weapon/ring/amulet) — wear them Normal–Nightmare."
+  ]
+}

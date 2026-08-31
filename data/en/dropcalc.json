@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": 20010,
+      "oneIn0": 139,
+      "name": "Gheed's Fortune",
+      "farm": "Hell Andariel"
+    },
+    {
+      "id": 20005,
+      "oneIn0": 752,
+      "name": "Harlequin Crest",
+      "farm": "Hell Andariel"
+    },
+    {
+      "id": 20013,
+      "oneIn0": 1114,
+      "name": "Arachnid Mesh",
+      "farm": "Hell Mephisto"
+    },
+    {
+      "id": 20008,
+      "oneIn0": 1487,
+      "name": "War Traveler",
+      "farm": "Hell Andariel"
+    },
+    {
+      "id": 20001,
+      "oneIn0": 1616,
+      "name": "The Stone of Jordan",
+      "farm": "Nightmare Andariel"
+    },
+    {
+      "id": 20002,
+      "oneIn0": 1616,
+      "name": "Bul-Kathos' Wedding Band",
+      "farm": "Nightmare Andariel"
+    },
+    {
+      "id": 20023,
+      "oneIn0": 2458,
+      "name": "Nightwing's Veil",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20014,
+      "oneIn0": 3010,
+      "name": "Herald of Zakarum",
+      "farm": "Hell Mephisto"
+    },
+    {
+      "id": 20003,
+      "oneIn0": 3701,
+      "name": "Mara's Kaleidoscope",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20011,
+      "oneIn0": 15000,
+      "name": "Windforce",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20006,
+      "oneIn0": 19000,
+      "name": "Griffon's Eye",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20020,
+      "oneIn0": 19000,
+      "name": "Shadow Dancer",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20012,
+      "oneIn0": 28000,
+      "name": "Death's Fathom",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20051,
+      "oneIn0": 35000,
+      "name": "Darkforce Spawn",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20049,
+      "oneIn0": 47000,
+      "name": "Death's Web",
+      "farm": "Hell Baal"
+    },
+    {
+      "id": 20004,
+      "oneIn0": 173000,
+      "name": "Tyrael's Might",
+      "farm": "Hell Baal"
+    }
+  ]
+}

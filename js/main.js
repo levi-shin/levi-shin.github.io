@@ -1,5 +1,5 @@
-import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=3';
-import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=2';
+import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=4';
+import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=3';
 
 /* ===== data.js ===== */
 /**
@@ -243,9 +243,9 @@ window.renderGlobalSearchResults = function(keyword, primaries, builds) {
     }
 
     if (primaries.length === 0 && builds.length === 0) {
-        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">검색 결과가 없습니다.</div>`;
+        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">${t().searchEmpty}</div>`;
     } else {
-        let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">🔍 '${keyword}' 통합 검색 결과</div>`;
+        let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">${t().searchHeader(keyword)}</div>`;
         
         // 1. 유니크 / 룬어 아이템 결과
         if (primaries.length > 0) {
@@ -266,7 +266,7 @@ window.renderGlobalSearchResults = function(keyword, primaries, builds) {
 
         // 2. 추천 종결 빌드 결과 (성공적으로 매칭된 햄딘 등 출력)
         if (builds.length > 0) {
-            html += `<div style="font-size: 0.75rem; color: #38bdf8; margin: 10px 4px 4px; font-weight: bold;">🛡️ 추천 종결 빌드</div>`;
+            html += `<div style="font-size: 0.75rem; color: #38bdf8; margin: 10px 4px 4px; font-weight: bold;">${t().searchBuilds}</div>`;
             builds.forEach(build => {
                 html += `
                 <div onclick="switchSection(null, 'builds'); openPaperDollModal(${build.id}); window.closeGlobalSearch();" 
@@ -274,7 +274,7 @@ window.renderGlobalSearchResults = function(keyword, primaries, builds) {
                      onmouseover="this.style.borderColor='#38bdf8'" onmouseout="this.style.borderColor='#333'">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                         <span style="color: #38bdf8; font-weight: bold;">${build.title}</span>
-                        <span style="font-size: 0.7rem; background: #1e293b; color: #38bdf8; padding: 2px 6px; border-radius: 4px;">종결 빌드</span>
+                        <span style="font-size: 0.7rem; background: #1e293b; color: #38bdf8; padding: 2px 6px; border-radius: 4px;">${t().searchBuildBadge}</span>
                     </div>
                     <div style="font-size: 0.8rem; color: #ccc;">${build.subtitle}</div>
                 </div>`;
@@ -433,12 +433,12 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
     }
 
     if (primaries.length === 0 && builds.length === 0) {
-        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">검색 결과가 없습니다.</div>`;
+        dropdown.innerHTML = `<div style="padding: 12px; text-align: center; color: #888;">${t().searchEmpty}</div>`;
         dropdown.style.display = 'block';
         return;
     }
 
-    let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">🔍 '${keyword}' 통합 검색 결과</div>`;
+    let html = `<div style="padding: 6px 10px; font-size: 0.8rem; color: #aaa; border-bottom: 1px solid #262630; margin-bottom: 6px;">${t().searchHeader(keyword)}</div>`;
 
     if (primaries.length > 0) {
         html += `<div style="margin-bottom: 8px;"><div style="font-size: 0.75rem; color: var(--gold-light, #f3e5ab); font-weight: bold; margin-bottom: 4px;">✨ 핵심 정보 (조합 및 스펙)</div>`;
@@ -474,7 +474,7 @@ function renderGlobalSearchResults(keyword, primaries, builds) {
     }
 
     if (builds.length > 0) {
-        html += `<div><div style="font-size: 0.75rem; color: #38bdf8; font-weight: bold; margin-bottom: 4px;">🛡️ 연관 사용처 (종결 빌드 세팅)</div>`;
+        html += `<div><div style="font-size: 0.75rem; color: #38bdf8; font-weight: bold; margin-bottom: 4px;">${t().searchRelated}</div>`;
         builds.slice(0, 5).forEach(build => {
             html += `
                 <div onclick="switchSection(null, 'builds'); openPaperDollModal(${build.id}); closeGlobalSearch();" style="padding: 8px; border-radius: 6px; cursor: pointer; background: rgba(255,255,255,0.03); margin-bottom: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(56,189,248,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
@@ -724,10 +724,10 @@ function closePaperDollModal() {
 function copyPaperDollValue() {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(currentPaperDollText).then(() => {
-            alert("종결 빌드 및 용병 세팅 정보가 클립보드에 복사되었습니다!");
+            alert(t().copyBuildOk);
         });
     } else {
-        alert("복사하기 기능이 지원되지 않는 브라우저입니다.");
+        alert(t().copyUnsupported);
     }
 }
 function runewordLadderBadge(item) {
@@ -796,7 +796,7 @@ function openSunderModal(sunderId) {
         `<div class="item-stat"><strong>업그레이드 큐빙 공식 (호라드림의 함)</strong><br><span style="color:var(--rune-orange);">${item.recipe}</span></div>
          <div class="item-stat"><strong>새로워진 파괴참 상세 스펙</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
 
-    document.getElementById("dbModalRecipeBtn").textContent = "📋 큐빙 공식 복사";
+    document.getElementById("dbModalRecipeBtn").textContent = t().copyCube;
     databaseCopyText = `${item.name} 공식: ${item.recipe}`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
@@ -812,7 +812,7 @@ function openCharmModal(charmId) {
     document.getElementById("dbModalStats").innerHTML =
         `<div class="item-stat"><strong>부적 고유 옵션 스펙</strong><br><span style="color:var(--gold-light);">${item.stats}</span></div>`;
 
-    document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
+    document.getElementById("dbModalRecipeBtn").textContent = t().copyGeneric;
     databaseCopyText = `${item.name} - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
@@ -828,7 +828,7 @@ function openUberModal(uberId) {
     document.getElementById("dbModalStats").innerHTML =
         `<div class="item-stat"><strong>드랍 주얼 및 부적 상세 스펙</strong><br>${item.stats}</div>`;
 
-    document.getElementById("dbModalRecipeBtn").textContent = "📋 정보 복사";
+    document.getElementById("dbModalRecipeBtn").textContent = t().copyGeneric;
     databaseCopyText = `${item.name} - 드랍 보상 스펙 정보`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
@@ -861,7 +861,7 @@ function closeDatabaseModal() {
 function copyDatabaseValue() {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(databaseCopyText).then(() => {
-            alert("정보를 클립보드에 복사했습니다!");
+            alert(t().copyInfoOk);
         }).catch(() => alert(databaseCopyText));
     } else {
         alert(databaseCopyText);
@@ -901,10 +901,10 @@ function copyItemRecipe() {
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(recipe).then(() => {
-            alert(`조합 순서를 복사했습니다.\n${recipe}`);
+            alert(t().copyRecipeOk(recipe));
         }).catch(() => alert(`조합 순서: ${recipe}`));
     } else {
-        alert(`조합 순서: ${recipe}`);
+        alert(t().copyRecipeFallback(recipe));
     }
 }
 
@@ -945,7 +945,7 @@ function handleFeedbackSubmit(e) {
     }
 
     if (currentCount >= MAX_DAILY_LIMIT) {
-        alert(`⚠️ 오늘의 제보 한도(${MAX_DAILY_LIMIT}회)를 모두 사용하셨습니다.\n내일 자정 이후 다시 제보해 주세요. 감사합니다!`);
+        alert(t().feedback.limit(MAX_DAILY_LIMIT));
         closeFeedbackModal();
         return;
     }
@@ -962,17 +962,18 @@ function handleFeedbackSubmit(e) {
     const SLACK_WEBHOOK_URL = part1 + part2 + part3;
 
     const nextCount = currentCount + 1;
+    const fb = t().feedback;
 
     const payload = {
-        text: `📢 *[디아2 백과사전] 새로운 제보/피드백이 접수되었습니다! (오늘 유저 제보 ${nextCount}/${MAX_DAILY_LIMIT}회)*`,
+        text: `${fb.slackTitle(nextCount, MAX_DAILY_LIMIT)} [${fb.langTag}]`,
         attachments: [
             {
                 color: "#dfb15b",
                 fields: [
-                    { title: "👤 닉네임", value: nickname || "익명", short: true },
-                    { title: "📌 제보 유형", value: type, short: true },
-                    { title: "⏰ 접수 시간", value: new Date().toLocaleString(), short: true },
-                    { title: "📝 상세 내용", value: content, short: false }
+                    { title: fb.nick, value: nickname || fb.anon, short: true },
+                    { title: fb.type, value: type, short: true },
+                    { title: fb.time, value: new Date().toLocaleString(), short: true },
+                    { title: fb.detail, value: content, short: false }
                 ]
             }
         ]
@@ -981,7 +982,7 @@ function handleFeedbackSubmit(e) {
     localStorage.setItem(COUNT_KEY, nextCount.toString());
 
     const remaining = MAX_DAILY_LIMIT - nextCount;
-    alert(`[${type}] 제보가 정상 수신되었습니다! (오늘 남은 제보 횟수: ${remaining}회)\n소중한 의견 감사합니다.`);
+    alert(fb.ok(type, remaining));
     document.getElementById('feedbackForm').reset();
     closeFeedbackModal();
 
@@ -1051,7 +1052,7 @@ function renderSiteMetadata() {
 }
 
 window.copyPaperDollValue = function () {
-    const title = document.getElementById('pdModalTitle')?.innerText || "빌드 정보";
+    const title = document.getElementById('pdModalTitle')?.innerText || t().paperDefaultTitle;
     const subtitle = document.getElementById('pdModalSubtitle')?.innerText || "";
     const grid = document.getElementById('pdModalGrid');
 
@@ -1065,7 +1066,7 @@ window.copyPaperDollValue = function () {
     });
 
     navigator.clipboard.writeText(textToCopy)
-        .then(() => alert("빌드 정보가 복사되었습니다!"))
+        .then(() => alert(t().copyPaperOk))
         .catch(err => console.error("복사 실패:", err));
 };
 
@@ -1093,7 +1094,7 @@ async function initialize() {
 
 async function loadPatchNotes() {
     try {
-        const response = await fetch(dataUrl('patchnotes.json', 12));
+        const response = await fetch(dataUrl('patchnotes.json', 20));
         const patches = await response.json();
         
         const container = document.getElementById('patch-notes-container');
@@ -1103,7 +1104,7 @@ async function loadPatchNotes() {
             const activeClass = patch.isActive ? 'always-gold' : 'always-gray';
             
             const linkButtonHtml = patch.link ? `
-                <a href="${patch.link}" target="_blank" rel="noopener noreferrer" class="patch-external-link" onclick="event.stopPropagation()" title="공식 패치 노트 원문 보기">
+                <a href="${patch.link}" target="_blank" rel="noopener noreferrer" class="patch-external-link" onclick="event.stopPropagation()" title="${t().patchLinkTitle}">
                     🔗
                 </a>
             ` : '';
@@ -1118,12 +1119,12 @@ async function loadPatchNotes() {
                     </div>
                     <div class="patch-body">
                         ${patch.schedule.length > 0 ? `
-                            <h4>📅 시즌 일정</h4>
+                            <h4>${t().patchSchedule}</h4>
                             <ul>
                                 ${patch.schedule.map(s => `<li>${s}</li>`).join('')}
                             </ul>
                         ` : ''}
-                        <h4>🛡️ 주요 변경 사항</h4>
+                        <h4>${t().patchChanges}</h4>
                         <ul>
                             ${patch.changes.map(c => `<li>${c}</li>`).join('')}
                         </ul>
@@ -1296,7 +1297,7 @@ function renderMercTree(merc) {
             <p class="leveling-goal">${linkGuideTerms(merc.goal)}</p>
             <div class="leveling-table-wrap">
                 <table>
-                    <thead><tr><th>구간</th><th>고용</th><th>무기</th><th>갑옷</th><th>투구</th></tr></thead>
+                    <thead><tr>${t().leveling.mercCols.map(c => `<th>${c}</th>`).join('')}</tr></thead>
                     <tbody>${rows}</tbody>
                 </table>
             </div>
@@ -1308,7 +1309,7 @@ function renderMercTree(merc) {
 function levelingBuildButtons(entry) {
     const buttons = Array.isArray(entry.buildIds) && entry.buildIds.length
         ? entry.buildIds
-        : (entry.buildId ? [{ id: entry.buildId, label: '종결 세팅 보기' }] : []);
+        : (entry.buildId ? [{ id: entry.buildId, label: t().leveling.buildBtn }] : []);
     return buttons.map(btn => `
         <button type="button" class="btn-detail" onclick="switchSection(null, 'builds'); openPaperDollModal(${Number(btn.id)})">${btn.label}</button>
     `).join('');
@@ -1364,32 +1365,32 @@ function renderLevelingGuide(guide) {
     root.innerHTML = `
         <div class="leveling-note searchable-item">${guide.intro}</div>
         <div class="leveling-note season searchable-item">${guide.seasonNote}</div>
-        <h3 class="leveling-subhead">직업별 시즌 초 운영</h3>
+        <h3 class="leveling-subhead">${t().leveling.classHead}</h3>
         <div class="leveling-class-grid">${classCards}</div>
         ${stages}
         ${renderMercTree(guide.mercTree)}
-        <h3 class="leveling-subhead">만들 순서 (룬어)</h3>
+        <h3 class="leveling-subhead">${t().leveling.runeHead}</h3>
         <div class="leveling-table-wrap">
             <table>
-                <thead><tr><th>룬어</th><th>구간</th><th>왜 만드나</th></tr></thead>
+                <thead><tr><th>${t().leveling.runeCols[0]}</th><th>${t().leveling.runeCols[1]}</th><th>${t().leveling.runeCols[2]}</th></tr></thead>
                 <tbody>${runeRows}</tbody>
             </table>
         </div>
-        <h3 class="leveling-subhead">카운테스 룬 구간</h3>
+        <h3 class="leveling-subhead">${t().leveling.countessHead}</h3>
         <div class="leveling-table-wrap">
             <table>
-                <thead><tr><th>난이도</th><th>드랍 룬</th><th>쓰임</th></tr></thead>
+                <thead><tr><th>${t().leveling.countessCols[0]}</th><th>${t().leveling.countessCols[1]}</th><th>${t().leveling.countessCols[2]}</th></tr></thead>
                 <tbody>${countessRows}</tbody>
             </table>
         </div>
-        <h3 class="leveling-subhead">라주크 소켓은 아껴 두세요</h3>
+        <h3 class="leveling-subhead">${t().leveling.socketHead}</h3>
         <div class="leveling-table-wrap">
             <table>
-                <thead><tr><th>난이도</th><th>권장 사용</th></tr></thead>
+                <thead><tr><th>${t().leveling.socketCols[0]}</th><th>${t().leveling.socketCols[1]}</th></tr></thead>
                 <tbody>${socketRows}</tbody>
             </table>
         </div>
-        <h3 class="leveling-subhead">놓치기 쉬운 점</h3>
+        <h3 class="leveling-subhead">${t().leveling.tipsHead}</h3>
         <ul style="margin: 0 0 12px 1.2rem; font-size: 0.9rem; word-break: keep-all;">${tips}</ul>
         <div class="leveling-note">버스는 <span class="item-inline" onclick="switchSection(null, 'bus')">11. 버스 가이드</span>, 퀘스트 보상은 <span class="item-inline" onclick="switchSection(null, 'quest')">10. 영구보상 퀘스트</span>, 용병은 <span class="item-inline" onclick="switchSection(null, 'merc')">8. 용병 세팅</span>을 이어서 보시면 됩니다.</div>
     `;
@@ -1397,7 +1398,7 @@ function renderLevelingGuide(guide) {
 
 async function loadLevelingGuide() {
     try {
-        const response = await fetch(dataUrl('leveling.json', 18));
+        const response = await fetch(dataUrl('leveling.json', 20));
         const guide = await response.json();
         DATA.leveling = guide;
         if (window.DATA) window.DATA.leveling = guide;
@@ -1444,7 +1445,7 @@ async function renderBuildCards() {
     if (!gridContainer) return;
 
     try {
-        const response = await fetch(dataUrl('builds.json', 16)); 
+        const response = await fetch(dataUrl('builds.json', 20)); 
         const data = await response.json();
         const builds = data.items; 
 

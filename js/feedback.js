@@ -1,3 +1,4 @@
+import { t } from './site.js';
 /**
  * @file feedback.js
  * @description 사용자 제보 및 피드백 모달 창 조작과 Slack 백그라운드 웹훅 전송 모듈
@@ -36,7 +37,7 @@ export function handleFeedbackSubmit(e) {
     }
 
     if (currentCount >= MAX_DAILY_LIMIT) {
-        alert(`⚠️ 오늘의 제보 한도(${MAX_DAILY_LIMIT}회)를 모두 사용하셨습니다.\n내일 자정 이후 다시 제보해 주세요. 감사합니다!`);
+        alert(t().feedback.limit(MAX_DAILY_LIMIT));
         closeFeedbackModal();
         return;
     }
@@ -53,17 +54,18 @@ export function handleFeedbackSubmit(e) {
     const SLACK_WEBHOOK_URL = part1 + part2 + part3;
 
     const nextCount = currentCount + 1;
+    const fb = t().feedback;
 
     const payload = {
-        text: `📢 *[디아2 백과사전] 새로운 제보/피드백이 접수되었습니다! (오늘 유저 제보 ${nextCount}/${MAX_DAILY_LIMIT}회)*`,
+        text: `${fb.slackTitle(nextCount, MAX_DAILY_LIMIT)} [${fb.langTag}]`,
         attachments: [
             {
                 color: "#dfb15b",
                 fields: [
-                    { title: "👤 닉네임", value: nickname || "익명", short: true },
-                    { title: "📌 제보 유형", value: type, short: true },
-                    { title: "⏰ 접수 시간", value: new Date().toLocaleString(), short: true },
-                    { title: "📝 상세 내용", value: content, short: false }
+                    { title: fb.nick, value: nickname || fb.anon, short: true },
+                    { title: fb.type, value: type, short: true },
+                    { title: fb.time, value: new Date().toLocaleString(), short: true },
+                    { title: fb.detail, value: content, short: false }
                 ]
             }
         ]
@@ -72,7 +74,7 @@ export function handleFeedbackSubmit(e) {
     localStorage.setItem(COUNT_KEY, nextCount.toString());
 
     const remaining = MAX_DAILY_LIMIT - nextCount;
-    alert(`[${type}] 제보가 정상 수신되었습니다! (오늘 남은 제보 횟수: ${remaining}회)\n소중한 의견 감사합니다.`);
+    alert(fb.ok(type, remaining));
     document.getElementById('feedbackForm').reset();
     closeFeedbackModal();
 
