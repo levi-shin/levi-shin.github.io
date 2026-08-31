@@ -6,10 +6,14 @@
 export const SITE_ORIGIN = 'https://diablo.1125labs.com';
 
 function detectLang() {
+    if (typeof document === 'undefined') {
+        return 'ko';
+    }
     const htmlLang = (document.documentElement.lang || '').toLowerCase();
     if (htmlLang.startsWith('en')) return 'en';
     if (htmlLang.startsWith('ko')) return 'ko';
-    return location.pathname.startsWith('/en') ? 'en' : 'ko';
+    if (typeof location !== 'undefined' && location.pathname.startsWith('/en')) return 'en';
+    return 'ko';
 }
 
 export const SITE_LANG = detectLang();
