@@ -31,16 +31,16 @@
     display: flex;
     justify-content: center;
     gap: 6px;
-    margin: -4px 0 14px;
-    padding-bottom: 12px;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--card-border);
 }
 
 .lang-switcher a {
     flex: 1;
     text-align: center;
-    padding: 6px 8px;
-    font-size: 0.78rem;
+    padding: 5px 6px;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     color: var(--text-color);
@@ -95,7 +95,7 @@ html, body {
     padding: 20px 15px;
 }
 
-/* 왼쪽 고정 사이드바 네비게이션 */
+/* 왼쪽 고정 사이드바 네비게이션 — 데스크톱에서는 스크롤 없이 전체 메뉴가 보여야 함 */
 .left-sidebar {
     width: 260px;
     flex: 0 0 260px;
@@ -104,10 +104,10 @@ html, body {
     background: #141418;
     border: 1px solid var(--card-border);
     border-radius: 10px;
-    padding: 20px 15px;
+    padding: 14px 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    max-height: calc(100vh - 40px);
-    overflow-y: auto;
+    max-height: none;
+    overflow: visible;
     z-index: 100;
 }
 
@@ -116,15 +116,15 @@ html, body {
     font-size: 1.05rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-bottom: 2px solid var(--card-border);
-    padding-bottom: 12px;
+    padding-bottom: 10px;
     word-break: keep-all;
 }
 
 .sidebar-search {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .search-input {
@@ -173,7 +173,7 @@ html, body {
 .nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     list-style: none;
 }
 .nav-menu button { 
@@ -181,15 +181,16 @@ html, body {
     text-align: left;
     color: var(--text-color); 
     text-decoration: none; 
-    padding: 8px 12px; 
+    padding: 6px 10px; 
     background: #1a1a22; 
     border: 1px solid var(--card-border); 
     border-radius: 6px; 
-    font-size: 0.84rem; 
+    font-size: 0.8rem; 
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
     display: block;
+    line-height: 1.35;
 }
 .nav-menu button:hover, .nav-menu button.active { 
     color: var(--gold-light); 
