@@ -1,0 +1,634 @@
+[
+  {
+    "id": 30001,
+    "legacyKey": "강철|Steel",
+    "name": "Steel",
+    "eng": "Steel",
+    "aliases": [
+      "Steel"
+    ],
+    "recipe": "Tir + El",
+    "base": "Leveling: 2-socket Crystal Sword / Flail",
+    "stats": "Increased Attack Speed <strong>+25%</strong> / Damage <strong>+20%</strong> / Attack Rating <strong>+50</strong> / Open Wounds 50% / Mana after each Kill +2 / Light Radius +1",
+    "isLadder": false
+  },
+  {
+    "id": 30037,
+    "legacyKey": "힘|Strength",
+    "name": "Strength",
+    "eng": "Strength",
+    "aliases": [
+      "스트렝스",
+      "Strength",
+      "힘룬어"
+    ],
+    "recipe": "Amn + Tir",
+    "base": "Mercenary early: 2-socket Polearm / Spear",
+    "stats": "Damage <strong>+35%</strong> / Life Steal <strong>7%</strong> / Crushing Blow <strong>25%</strong> / Strength +20 / Vitality +10 / Mana after each Kill +2",
+    "isLadder": false
+  },
+  {
+    "id": 30002,
+    "legacyKey": "잠행|Stealth",
+    "name": "Stealth",
+    "eng": "Stealth",
+    "aliases": [
+      "스텔스",
+      "Stealth"
+    ],
+    "recipe": "Tal + Eth",
+    "base": "Leveling: 2-socket Mage Plate · early: Breast Plate",
+    "stats": "Magic Damage Reduced <strong>3</strong> / Faster Cast Rate <strong>+25%</strong> / Faster Hit Recovery <strong>+25%</strong> / Faster Run/Walk <strong>+25%</strong> / Dexterity +6 / Max Stamina +15 / Poison Resist +30% / Replenish Mana 15%",
+    "isLadder": false
+  },
+  {
+    "id": 30036,
+    "legacyKey": "연기|Smoke",
+    "name": "Smoke",
+    "eng": "Smoke",
+    "aliases": [
+      "스모크",
+      "Smoke",
+      "연기"
+    ],
+    "recipe": "Nef + Lum",
+    "base": "Endgame: 2-socket Mage Plate · Defense: Dusk Shroud",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+75%</strong> / Defense vs Missile <strong>+280</strong> / Energy +10 / All Resistances <strong>+50</strong> / Light Radius -1 / charges of Weaken 18회",
+    "isLadder": false
+  },
+  {
+    "id": 30003,
+    "legacyKey": "꽃잎|Leaf",
+    "name": "Leaf",
+    "eng": "Leaf",
+    "aliases": [
+      "Leaf"
+    ],
+    "recipe": "Tir + Ral",
+    "base": "Endgame: +3 Fire Skills Short Staff (Warmth·Fireball staffmods)",
+    "stats": "Fire Skills <strong>+3</strong> / Warmth <strong>+3</strong> (Fire tree) / Defense <strong>+20~30%</strong> / Enemy Fire Resist <strong>-20~30%</strong> / Cold Resist +33% / Mana after each Kill +2",
+    "isLadder": false
+  },
+  {
+    "id": 30004,
+    "legacyKey": "고대인의 서약|Ancient's Pledge",
+    "name": "Ancient's Pledge",
+    "eng": "Ancient's Pledge",
+    "aliases": [
+      "고대서약",
+      "Ancients Pledge"
+    ],
+    "recipe": "Ral + Ort + Tal",
+    "base": "Endgame: all-res 45 Sacred Targe · general: 3-socket Large Shield",
+    "stats": "Defense <strong>+50%</strong> / Cold Resist <strong>+43%</strong> / Fire/Lightning/Poison Resist <strong>+48%</strong> / Damage Taken Goes To Mana 10%",
+    "isLadder": false
+  },
+  {
+    "id": 30005,
+    "legacyKey": "학식|Lore",
+    "name": "Lore",
+    "eng": "Lore",
+    "aliases": [
+      "로어",
+      "Lore"
+    ],
+    "recipe": "Ort + Sol",
+    "base": "Endgame: +Skills 2-socket Circlet / Diadem · solid: 2-socket Mask",
+    "stats": "All Skills <strong>+1</strong> / Energy +10 / Lightning Resist <strong>+30%</strong> / Damage Reduced 7 / Mana after each Kill +2 / Light Radius +2",
+    "isLadder": false
+  },
+  {
+    "id": 30006,
+    "legacyKey": "콜투암스|Call to Arms",
+    "name": "Call to Arms",
+    "eng": "Call to Arms",
+    "aliases": [
+      "CTA",
+      "소집",
+      "콜투암스",
+      "Call to Arms"
+    ],
+    "image": "runes/calltoarms.png",
+    "recipe": "Amn + Ral + Mal + Ist + Ohm",
+    "base": "Endgame: 5-socket Crystal Sword · Paladin: 5-socket Flail",
+    "stats": "All Skills <strong>+1</strong> / Increased Attack Speed <strong>+40%</strong> / Damage <strong>+250~290%</strong> / Battle Command <strong>+2~6</strong> / Battle Orders <strong>+1~6</strong> / Battle Cry <strong>+1~4</strong> (perfect e.g. 6/6/4) / Magic Find 30%",
+    "isLadder": false
+  },
+  {
+    "id": 30007,
+    "legacyKey": "영혼|Spirit",
+    "name": "Spirit",
+    "eng": "Spirit",
+    "aliases": [
+      "스피릿",
+      "Spirit"
+    ],
+    "image": "runes/spirit.png",
+    "recipe": "Tal + Thul + Ort + Amn",
+    "base": "Sword: 4-socket Crystal Sword · Shield Endgame: 35FCR Monarch · Paladin: 35FCR all-res 45 Sacred Targe",
+    "stats": "All Skills <strong>+2</strong> / Faster Cast Rate <strong>+25~35%</strong> (perfect 35) / Faster Hit Recovery <strong>+55%</strong> / Mana <strong>+89~112</strong> / Vitality +22 / Magic Absorb <strong>3~8%</strong> (Shield: Poison/Cold/Lightning Resist +35%)",
+    "isLadder": false
+  },
+  {
+    "id": 30008,
+    "legacyKey": "무한|Infinity",
+    "name": "Infinity",
+    "eng": "Infinity",
+    "aliases": [
+      "인피",
+      "Infinity"
+    ],
+    "recipe": "Ber + Mal + Ber + Ist",
+    "base": "Mercenary Endgame: eth Giant Thresher / eth Cryptic Axe · budget: eth Thresher / 4-socket Colossus Voulge",
+    "stats": "Conviction Aura <strong>12Level</strong> / Enemy Lightning Resist <strong>-45~55%</strong> / Damage <strong>+255~325%</strong> / Faster Run/Walk +35% / Crushing Blow 40% / Magic Find 30%",
+    "isLadder": false
+  },
+  {
+    "id": 30009,
+    "legacyKey": "신념|Faith",
+    "name": "Faith",
+    "eng": "Faith",
+    "aliases": [
+      "페이스",
+      "Faith"
+    ],
+    "recipe": "Ohm + Jah + Lem + Eld",
+    "base": "Amazon Endgame: +3 Bow/Crossbow Grand Matron Bow · 1막 Mercenary: Hydra Bow / Great Bow",
+    "stats": "Fanaticism Aura <strong>12~15Level</strong> / All Skills +1~2 / Damage <strong>+280~330%</strong> / Attack Rating bonus / Fire Resist +15% / Life after each Kill Replenish",
+    "isLadder": false
+  },
+  {
+    "id": 30010,
+    "legacyKey": "꿈|Dream",
+    "name": "Dream",
+    "eng": "Dream",
+    "aliases": [
+      "드림",
+      "Dream"
+    ],
+    "recipe": "Io + Jah + Pul",
+    "base": "Helm Endgame: 3-socket Diadem · Paladin Shield: all-res 45 Sacred Targe",
+    "stats": "신성한 충격(Holy Shock) Aura <strong>10~15Level</strong> / Faster Hit Recovery +20~30% / Defense <strong>+20~30%</strong> / All Resistances <strong>+5~20</strong> / Mana 12~25% / Life after each Kill",
+    "isLadder": false
+  },
+  {
+    "id": 30011,
+    "legacyKey": "명예의 굴레|Chains of Honor",
+    "name": "Chains of Honor",
+    "eng": "Chains of Honor",
+    "aliases": [
+      "CoH",
+      "COH",
+      "명예",
+      "Chains of Honor"
+    ],
+    "recipe": "Dol + Um + Ber + Ist",
+    "base": "Endgame: Dusk Shroud / 아콘 플레이트 · 저Strength: Mage Plate",
+    "stats": "All Skills <strong>+2</strong> / All Resistances <strong>+65</strong> / Damage Reduced <strong>8%</strong> / 악마·언데드 Damage 증가 / Life Steal 7% / Magic Find 25%",
+    "isLadder": false
+  },
+  {
+    "id": 30012,
+    "legacyKey": "불사조|Phoenix",
+    "name": "Phoenix",
+    "eng": "Phoenix",
+    "aliases": [
+      "피닉스",
+      "Phoenix"
+    ],
+    "recipe": "Vex + Vex + Lo + Jah",
+    "base": "Shield Endgame: Monarch (자바·캐스터) · Paladin: Sacred Targe · 무기: 페이즈 블레이드",
+    "stats": "속죄(Redemption) Aura <strong>10~15Level</strong> / Fire Skill Damage <strong>+350~400%</strong> (무기) 또는 Enemy Fire Resist <strong>-28%</strong> (Shield) / Enhanced Defense 가변 / 처치 시 화염 폭풍",
+    "isLadder": false
+  },
+  {
+    "id": 30013,
+    "legacyKey": "고뇌|Grief",
+    "name": "Grief",
+    "eng": "Grief",
+    "aliases": [
+      "그리프",
+      "Grief"
+    ],
+    "recipe": "Eth + Tir + Lo + Mal + Ral",
+    "base": "Endgame: 페이즈 블레이드 · 극딜: eth 버서커 액스",
+    "stats": "Damage <strong>+340~400</strong> / Increased Attack Speed <strong>+30~40%</strong> / 대상 방어 무시 / Enemy Poison Resist -20~25% / Deadly Strike 20% / Life after each Kill·Mana",
+    "isLadder": false
+  },
+  {
+    "id": 30014,
+    "legacyKey": "망명|Exile",
+    "name": "Exile",
+    "eng": "Exile",
+    "aliases": [
+      "엑자일",
+      "Exile"
+    ],
+    "recipe": "Vex + Ohm + Ist + Dol",
+    "base": "Endgame: eth all-res 45 Sacred Targe",
+    "stats": "방어(Defiance) Aura <strong>13~16Level</strong> / Defense <strong>+220~260%</strong> / 프리즈 타겟 / Life Steal 7% / Magic Find 15% / 생명 재생",
+    "isLadder": false
+  },
+  {
+    "id": 30015,
+    "legacyKey": "성역|Sanctuary",
+    "name": "Sanctuary",
+    "eng": "Sanctuary",
+    "aliases": [
+      "생츄어리",
+      "Sanctuary"
+    ],
+    "recipe": "Ko + Ko + Mal",
+    "base": "Endgame: Monarch · Paladin: Sacred Targe",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+130~250%</strong> / All Resistances <strong>+50~70</strong> / 언데드 Damage·명중 증가 / 블럭 속도 +20%",
+    "isLadder": false
+  },
+  {
+    "id": 30016,
+    "legacyKey": "순종|Obedience",
+    "name": "Obedience",
+    "eng": "Obedience",
+    "aliases": [
+      "오비디언스",
+      "Obedience"
+    ],
+    "recipe": "Hel + Ko + Thul + Eth + Fal",
+    "base": "Mercenary Endgame: eth Thresher / eth Cryptic Axe",
+    "stats": "Damage <strong>+370%</strong> / Enemy Fire Resist <strong>-25%</strong> / Crushing Blow 40% / Faster Hit Recovery +40% / Defense +200~300 / All Resistances +20~30 / Requirements -20%",
+    "isLadder": false
+  },
+  {
+    "id": 30017,
+    "legacyKey": "배신|Treachery",
+    "name": "Treachery",
+    "eng": "Treachery",
+    "aliases": [
+      "트리셔리",
+      "Treachery"
+    ],
+    "image": "runes/treachery.png",
+    "recipe": "Shael + Thul + Lem",
+    "base": "Endgame: Mage Plate (흐리기 프리버프) · 착용: Dusk Shroud",
+    "stats": "암살자 Skills <strong>+2</strong> / Increased Attack Speed <strong>+45%</strong> / Faster Hit Recovery <strong>+20%</strong> / When Struck 5% 확률 15Level 흐리기 / 타격 시 25% 확률 15Level 맹독 / Cold Resist +30% / Gold Find 50%",
+    "isLadder": false
+  },
+  {
+    "id": 30018,
+    "legacyKey": "통찰|Insight",
+    "name": "Insight",
+    "eng": "Insight",
+    "aliases": [
+      "인사이트",
+      "Insight"
+    ],
+    "recipe": "Ral + Tir + Tal + Sol",
+    "base": "Mercenary Endgame: eth Cryptic Axe / eth Giant Thresher · 본인: +3 명상 4-socket 스태프",
+    "stats": "명상(Meditation) Aura <strong>12~17Level</strong> / Damage <strong>+200~260%</strong> / Faster Cast Rate +35% / Deadly Strike 1~6 / All Resistances +5 / Mana after each Kill +2",
+    "isLadder": false
+  },
+  {
+    "id": 30019,
+    "legacyKey": "오크의 심장|Heart of the Oak",
+    "name": "Heart of the Oak",
+    "eng": "Heart of the Oak",
+    "aliases": [
+      "HOTO",
+      "호토",
+      "오심",
+      "Heart of the Oak"
+    ],
+    "image": "runes/oaktheheart.png",
+    "recipe": "Ko + Vex + Pul + Thul",
+    "base": "Endgame: Flail (FCR 40) · Skills: +3 Skills 4-socket 스태프",
+    "stats": "All Skills <strong>+3</strong> / Faster Cast Rate <strong>+40%</strong> / All Resistances <strong>+30~40</strong> / Max Mana +15% / Mana Steal 7% / Dexterity +10 / 오크 세이지·레이븐 충전",
+    "isLadder": false
+  },
+  {
+    "id": 30020,
+    "legacyKey": "인내|Fortitude",
+    "name": "Fortitude",
+    "eng": "Fortitude",
+    "aliases": [
+      "포티",
+      "Fortitude"
+    ],
+    "recipe": "El + Sol + Dol + Lo",
+    "base": "Mercenary Endgame: eth 아콘 플레이트 · 본인: Mage Plate / Dusk Shroud",
+    "stats": "Damage <strong>+300%</strong> (고정) / Defense <strong>+200%</strong> / Faster Cast Rate +25% / All Resistances <strong>+25~30</strong> / Level 비례 Life / 갑옷: 최대 번저 +5% · Damage감소 7",
+    "isLadder": false
+  },
+  {
+    "id": 30021,
+    "legacyKey": "자존심|Pride",
+    "name": "Pride",
+    "eng": "Pride",
+    "aliases": [
+      "프라이드",
+      "Pride"
+    ],
+    "recipe": "Cham + Sur + Io + Lo",
+    "base": "Mercenary Endgame: eth Giant Thresher / eth Cryptic Axe",
+    "stats": "집중(Concentration) Aura <strong>16~20Level</strong> / Attack Rating bonus <strong>+260~300%</strong> / Lightning Damage 50~280 / Deadly Strike 20% / When Struck 방화벽 / Level 비례 악마 Damage",
+    "isLadder": false
+  },
+  {
+    "id": 30022,
+    "legacyKey": "수수께끼|Enigma",
+    "name": "Enigma",
+    "eng": "Enigma",
+    "aliases": [
+      "에니그마",
+      "수수께끼",
+      "Enigma"
+    ],
+    "image": "runes/enigma.png",
+    "recipe": "Jah + Ith + Ber",
+    "base": "Endgame: Mage Plate (Strength 55) · Defense: Dusk Shroud / 아콘 플레이트",
+    "stats": "All Skills <strong>+2</strong> / 텔레포트 <strong>+1</strong> / Faster Run/Walk <strong>+45%</strong> / Strength (Level당 +0.75) / Magic Find (Level당 +1%) / Damage Reduced 8% / 최대 생명 +5%",
+    "isLadder": false
+  },
+  {
+    "id": 30023,
+    "legacyKey": "정신 발작|Delirium",
+    "name": "Delirium",
+    "eng": "Delirium",
+    "aliases": [
+      "딜리리움",
+      "Delirium"
+    ],
+    "recipe": "Lem + Ko + Ist",
+    "base": "Endgame: +Skills 3-socket Circlet / Diadem",
+    "stats": "All Skills <strong>+2</strong> / When Struck 공포·정신폭발·디리리움 변신 / 타격 시 혼란 / Defense +261 / Vitality +10 / Gold Find·Magic Find / 어트랙트 충전",
+    "isLadder": false
+  },
+  {
+    "id": 30024,
+    "legacyKey": "엣지|Edge",
+    "name": "Edge",
+    "eng": "Edge",
+    "aliases": [
+      "Edge"
+    ],
+    "recipe": "Tir + Tal + Amn",
+    "base": "Endgame: 마트리알칼 보우 / Grand Matron Bow",
+    "stats": "가시(Thorns) Aura <strong>15Level</strong> / 상점가 <strong>-15%</strong> / Damage +320~380% / 악마 Damage +280% / 언데드 명중·Damage / 처치 시 모든 능력치 방지 Replenish / Mana after each Kill +2",
+    "isLadder": false
+  },
+  {
+    "id": 30025,
+    "legacyKey": "치료|Cure",
+    "name": "Cure",
+    "eng": "Cure",
+    "aliases": [
+      "큐어",
+      "Cure"
+    ],
+    "image": "runes/cure.png",
+    "recipe": "Shael + Io + Tal",
+    "base": "Mercenary: 3-socket 본 비사지 · 본인: 3-socket Circlet / Diadem",
+    "stats": "정화(Cleansing) Aura <strong>1Level</strong> / Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+75~100%</strong> / Vitality +10 / 최대 생명 +5% / Poison Resist <strong>+40~60%</strong> / 독 지속시간 -50%",
+    "isLadder": false
+  },
+  {
+    "id": 30026,
+    "legacyKey": "방벽|Bulwark",
+    "name": "Bulwark",
+    "eng": "Bulwark",
+    "aliases": [
+      "벌워크",
+      "Bulwark",
+      "방책"
+    ],
+    "recipe": "Shael + Io + Sol",
+    "base": "Mercenary: 3-socket 본 비사지 · 본인: 3-socket Circlet / Diadem",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Life Steal <strong>4~6%</strong> / Defense <strong>+75~100%</strong> / Vitality +10 / 최대 생명 +5% / 생명 재생 +30 / Damage Reduced 7 / Physical Damage Reduced <strong>10~15%</strong>",
+    "isLadder": true
+  },
+  {
+    "id": 30027,
+    "legacyKey": "발작|Ground",
+    "name": "Ground",
+    "eng": "Ground",
+    "aliases": [
+      "Ground",
+      "접지(번개)"
+    ],
+    "recipe": "Shael + Io + Ort",
+    "base": "Mercenary: 3-socket 본 비사지 · 본인: 3-socket Circlet / Diadem",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+75~100%</strong> / Vitality +10 / 최대 생명 +5% / Lightning Resist <strong>+40~60%</strong> / 번개 흡수 <strong>10~15</strong>",
+    "isLadder": true
+  },
+  {
+    "id": 30028,
+    "legacyKey": "접지|Hearth",
+    "name": "Hearth",
+    "eng": "Hearth",
+    "aliases": [
+      "Hearth",
+      "난로"
+    ],
+    "recipe": "Shael + Io + Thul",
+    "base": "Mercenary: 3-socket 본 비사지 · 본인: 3-socket Circlet / Diadem",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+75~100%</strong> / Vitality +10 / 최대 생명 +5% / Cold Resist <strong>+40~60%</strong> / 냉기 흡수 <strong>10~15</strong> / Cannot Be Frozen",
+    "isLadder": true
+  },
+  {
+    "id": 30029,
+    "legacyKey": "담금질|Temper",
+    "name": "Temper",
+    "eng": "Temper",
+    "aliases": [
+      "Temper"
+    ],
+    "recipe": "Shael + Io + Ral",
+    "base": "Mercenary: 3-socket 본 비사지 · 본인: 3-socket Circlet / Diadem",
+    "stats": "Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+75~100%</strong> / Vitality +10 / 최대 생명 +5% / Fire Resist <strong>+40~60%</strong> / 화염 흡수 <strong>10~15</strong>",
+    "isLadder": true
+  },
+  {
+    "id": 30030,
+    "legacyKey": "깜빡이는 불꽃|Flickering Flame",
+    "name": "Flickering Flame",
+    "eng": "Flickering Flame",
+    "aliases": [
+      "플리커링",
+      "Flickering Flame",
+      "화로"
+    ],
+    "recipe": "Nef + Pul + Vex",
+    "base": "Endgame: +3 Fire Skills Diadem / Circlet",
+    "stats": "Fire Resist Aura <strong>4~8Level</strong> / Fire Skills <strong>+3</strong> / Enemy Fire Resist <strong>-10~15%</strong> / Defense +30% / Mana +50~75 / 최대 Fire Resist +5% / 빙결 반감",
+    "isLadder": false
+  },
+  {
+    "id": 30031,
+    "legacyKey": "모자이크|Mosaic",
+    "name": "Mosaic",
+    "eng": "Mosaic",
+    "aliases": [
+      "모자이크",
+      "Mosaic"
+    ],
+    "recipe": "Mal + Gul + Amn",
+    "base": "Endgame: +3 불사조 일격 루닉 탤런 쌍수 · 저Strength: +3 불사조 일격 그레이터 탤런",
+    "stats": "마무리 기술 충전 미소모 <strong>50%</strong> / 무술 Skills <strong>+2</strong> / Increased Attack Speed <strong>+20%</strong> / Damage <strong>+200~250%</strong> / Life Steal 7% / 냉·번·화 기술 Damage <strong>+8~15%</strong>",
+    "isLadder": true
+  },
+  {
+    "id": 30032,
+    "legacyKey": "집행자|Lawbringer",
+    "name": "Lawbringer",
+    "eng": "Lawbringer",
+    "aliases": [
+      "로브링어",
+      "Lawbringer"
+    ],
+    "recipe": "Amn + Um + Ko",
+    "base": "Endgame: 페이즈 블레이드",
+    "stats": "타격 시 20% 확률 15Level 노화 / 성역 Aura <strong>16~18Level</strong> / 대상 방어 -50% / 화염·Cold Damage extra / Life Steal 7% / 죽은 몬스터 부활 없음",
+    "isLadder": false
+  },
+  {
+    "id": 30033,
+    "legacyKey": "열정|Passion",
+    "name": "Passion",
+    "eng": "Passion",
+    "aliases": [
+      "Passion"
+    ],
+    "recipe": "Dol + Ort + Eld + Lem",
+    "base": "Endgame: 버서커 액스 / 페이즈 블레이드",
+    "stats": "질주(Zeal) <strong>+1</strong> / 광폭(Berserk) <strong>+1</strong> / Damage <strong>+210~340%</strong> / Increased Attack Speed +25% / 히트 블라인드 / 몬스터 Replenish 방지 / Gold Find 75%",
+    "isLadder": false
+  },
+  {
+    "id": 30034,
+    "legacyKey": "탈태|Metamorphosis",
+    "name": "Metamorphosis",
+    "eng": "Metamorphosis",
+    "aliases": [
+      "탈퇴",
+      "Metamorphosis"
+    ],
+    "recipe": "Io + Cham + Fal",
+    "base": "Endgame: +3 변신 +3 분노 블러드 스피릿 / 어스 스피릿",
+    "stats": "변신 Skills <strong>+5</strong> (드루이드) / 늑대·곰 징표 부여 / Crushing Blow 25% / Defense +50~80% / Strength and Vitality +10 / All Resistances +10 / Cannot Be Frozen",
+    "isLadder": true
+  },
+  {
+    "id": 30035,
+    "legacyKey": "투지|Hustle",
+    "name": "Hustle",
+    "eng": "Hustle",
+    "aliases": [
+      "허슬",
+      "Hustle"
+    ],
+    "recipe": "Shael + Ko + Eld",
+    "base": "갑옷 Endgame: Mage Plate (이속) · 무기: 페이즈 블레이드",
+    "stats": "무기: Fanaticism Aura 1Level / Increased Attack Speed +30% / Damage +180~200% / 타격 시 버스트 오브 스피드<br>갑옷: Faster Run/Walk <strong>+65%</strong> / Increased Attack Speed +40% / Faster Hit Recovery +20% / Dexterity +10 / All Resistances +10",
+    "isLadder": true
+  },
+  {
+    "id": 30040,
+    "legacyKey": "집착|Obsession",
+    "name": "Obsession",
+    "eng": "Obsession",
+    "aliases": [
+      "옵세션",
+      "Obsession"
+    ],
+    "base": "Endgame: +4 All Skills 아콘 스태프 (FCR·Skills모드)",
+    "recipe": "Zod + Ist + Lem + Lum + Io + Nef",
+    "stats": "Indestructible / All Skills <strong>+4</strong> / Faster Cast Rate <strong>+65%</strong> / Faster Hit Recovery <strong>+60%</strong> / All Resistances <strong>+60~70</strong> / 최대 생명·Replenish Mana 증가 / Magic Find 30% / Gold Find 75%",
+    "isLadder": true
+  },
+  {
+    "id": 30041,
+    "legacyKey": "초승달|Crescent Moon",
+    "name": "Crescent Moon",
+    "eng": "Crescent Moon",
+    "aliases": [
+      "크레센트",
+      "초승달",
+      "Crescent Moon"
+    ],
+    "image": "runes/crescentmoon.png",
+    "recipe": "Shael + Um + Tir",
+    "base": "Endgame: 페이즈 블레이드 · Polearm: eth Cryptic Axe",
+    "stats": "Enemy Lightning Resist <strong>-35%</strong> / Increased Attack Speed <strong>+20%</strong> / Damage <strong>+180~220%</strong> / 타격 시 체인 라이트닝·스태틱 필드 / Magic Absorb 9~11 / Open Wounds 25%",
+    "isLadder": false
+  },
+  {
+    "id": 30042,
+    "legacyKey": "어둠|Black",
+    "name": "Black",
+    "eng": "Black",
+    "aliases": [
+      "블랙",
+      "Black",
+      "어둠"
+    ],
+    "image": "runes/darkness.png",
+    "recipe": "Thul + Io + Nef",
+    "base": "Endgame: Flail (Crushing Blow 40%)",
+    "stats": "Damage <strong>+120%</strong> / Crushing Blow <strong>40%</strong> / Increased Attack Speed <strong>+15%</strong> / Attack Rating +200 / Cold Damage 3~14 / Vitality +10 / 밀쳐내기 / 시체 폭발 충전",
+    "isLadder": false
+  },
+  {
+    "id": 30043,
+    "legacyKey": "야수|Beast",
+    "name": "Beast",
+    "eng": "Beast",
+    "aliases": [
+      "비스트",
+      "Beast"
+    ],
+    "recipe": "Ber + Tir + Um + Mal + Lum",
+    "base": "Endgame: 버서커 액스 · Paladin: 5-socket 워 셉터",
+    "stats": "Fanaticism Aura <strong>9Level</strong> / Increased Attack Speed <strong>+40%</strong> / Damage <strong>+240~270%</strong> / Crushing Blow 20% / Open Wounds 25% / 늑대인간·곰 +3 / Strength +25~40",
+    "isLadder": false
+  },
+  {
+    "id": 30044,
+    "legacyKey": "화이트|White",
+    "name": "White",
+    "eng": "White",
+    "aliases": [
+      "White"
+    ],
+    "recipe": "Dol + Io",
+    "base": "Endgame: +3 뼈 Spear 언어스드 원드 (독·뼈 staffmods)",
+    "stats": "독·뼈 Skills <strong>+3</strong> / Faster Cast Rate <strong>+20%</strong> / 뼈 Spear <strong>+2</strong> / 해골 숙련 <strong>+4</strong> / 뼈 갑옷 +3 / Magic Damage Reduced 4 / Mana after each Kill +13",
+    "isLadder": false
+  },
+  {
+    "id": 30045,
+    "legacyKey": "부|Wealth",
+    "name": "Wealth",
+    "eng": "Wealth",
+    "aliases": [
+      "웰스",
+      "Wealth"
+    ],
+    "recipe": "Lem + Ko + Tir",
+    "base": "Endgame: 샤크투스 아머 · 저Strength: Mage Plate",
+    "stats": "Gold Find <strong>300%</strong> / Magic Find <strong>100%</strong> / Dexterity +10 / Mana after each Kill +2",
+    "isLadder": false
+  },
+  {
+    "id": 30046,
+    "legacyKey": "찔레|Bramble",
+    "name": "Bramble",
+    "eng": "Bramble",
+    "aliases": [
+      "브램블",
+      "가시덤불",
+      "Bramble"
+    ],
+    "recipe": "Ral + Ohm + Sur + Eth",
+    "base": "Endgame: 아콘 플레이트 / Dusk Shroud · 저Strength: Mage Plate",
+    "stats": "장착 시 가시(Thorns) Aura <strong>15~21Level</strong> / Faster Hit Recovery <strong>+50%</strong> / Poison Skill Damage <strong>+25~50%</strong> / Defense +300 / Max Mana 5% / Replenish Mana 15% / 최대 Cold Resist +5% / Fire Resist +30% / Poison Resist +100% / Life after each Kill +13",
+    "isLadder": false
+  }
+]

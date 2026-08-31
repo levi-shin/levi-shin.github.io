@@ -1,5 +1,5 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=3';
-import { dataUrl, itemImageUrl } from './site.js?v=1';
+import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=2';
 
 /* ===== data.js ===== */
 /**
@@ -731,9 +731,10 @@ function copyPaperDollValue() {
     }
 }
 function runewordLadderBadge(item) {
+    const ui = t();
     return (item.isLadder || item.ladder)
-        ? '<span class="ladder-badge ladder-only">🔥 래더 전용</span>'
-        : '<span class="ladder-badge ladder-ok">✨ 비래더가능</span>';
+        ? `<span class="ladder-badge ladder-only">${ui.ladderOnly}</span>`
+        : `<span class="ladder-badge ladder-ok">${ui.ladderOk}</span>`;
 }
 
 function openRuneModal(runewordId) {
@@ -743,19 +744,20 @@ function openRuneModal(runewordId) {
         return;
     }
 
+    const ui = t().runeModal;
     const name = item.name || item.legacyKey;
     const eng = item.eng ? `<span class="item-modal-eng">(${escapeHtml(item.eng)})</span>` : "";
     const ladderBadge = runewordLadderBadge(item);
     document.getElementById("dbModalTitle").innerHTML = `${escapeHtml(name)} ${eng}`;
-    document.getElementById("dbModalSubtitle").textContent = "룬어 · " + (item.eng || name);
-    document.getElementById("dbModalIntro").textContent = "룬 조합 순서와 추천 종결 베이스, 그리고 으뜸 수치를 확인합니다.";
+    document.getElementById("dbModalSubtitle").textContent = ui.subtitle(item.eng, name);
+    document.getElementById("dbModalIntro").textContent = ui.intro;
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>래더 여부</strong><br>${ladderBadge}</div>
-         <div class="item-stat"><strong>룬 조합 순서</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
-         <div class="item-stat"><strong>종결 권장 베이스</strong><br>${item.base}</div>
-         <div class="item-stat"><strong>으뜸(최상급) 변동 옵션</strong><br>${item.stats}</div>`;
+        `<div class="item-stat"><strong>${ui.ladder}</strong><br>${ladderBadge}</div>
+         <div class="item-stat"><strong>${ui.recipe}</strong><br><span style="color:var(--rune-orange); font-weight:bold;">${item.recipe}</span></div>
+         <div class="item-stat"><strong>${ui.base}</strong><br>${item.base}</div>
+         <div class="item-stat"><strong>${ui.stats}</strong><br>${item.stats}</div>`;
 
-    document.getElementById("dbModalRecipeBtn").textContent = "📋 룬 조합 복사";
+    document.getElementById("dbModalRecipeBtn").textContent = ui.copy;
     databaseCopyText = item.recipe;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.remove("unique-art");
@@ -768,15 +770,16 @@ function openUniqueModal(uniqueId) {
         return;
     }
 
+    const ui = t().uniqueModal;
     document.getElementById("dbModalTitle").textContent = item.name;
-    document.getElementById("dbModalSubtitle").textContent = "유니크 · " + (item.eng || "Unique Item");
-    document.getElementById("dbModalIntro").textContent = "유니크 아이템의 최상급(으뜸) 옵션 정보입니다.";
+    document.getElementById("dbModalSubtitle").textContent = ui.subtitle(item.eng);
+    document.getElementById("dbModalIntro").textContent = ui.intro;
     document.getElementById("dbModalStats").innerHTML =
-        `<div class="item-stat"><strong>아이템 종류 / 베이스</strong><br>${item.base}</div>
-         <div class="item-stat"><strong>대표 드랍 장소</strong><br>${item.drop || "정보 없음"}</div>
-         <div class="item-stat"><strong>으뜸(최상급) 옵션 스펙</strong><br><span style="color:var(--unique-orange);">${item.stats}</span></div>`;
+        `<div class="item-stat"><strong>${ui.base}</strong><br>${item.base}</div>
+         <div class="item-stat"><strong>${ui.drop}</strong><br>${item.drop || ui.dropEmpty}</div>
+         <div class="item-stat"><strong>${ui.stats}</strong><br><span style="color:var(--unique-orange);">${item.stats}</span></div>`;
 
-    document.getElementById("dbModalRecipeBtn").textContent = "📋 아이템 정보 복사";
+    document.getElementById("dbModalRecipeBtn").textContent = ui.copy;
     databaseCopyText = `${item.name} (${item.eng || ""}) - ${String(item.stats).replace(/<[^>]+>/g, "")}`;
     setDbModalImage(item.image || null);
     document.getElementById("dbModalArt").classList.add("unique-art");
@@ -1237,18 +1240,19 @@ function linkGuideTerms(text) {
 }
 
 function runeTierBadge(tier) {
+    const label = t().runeTier[tier] || t().runeTier.low;
     if (tier === 'high') {
-        return '<span class="badge rune-tier-high">고급 룬</span>';
+        return `<span class="badge rune-tier-high">${label}</span>`;
     }
     if (tier === 'mid') {
-        return '<span class="badge rune-tier-mid">중급 룬</span>';
+        return `<span class="badge rune-tier-mid">${label}</span>`;
     }
-    return '<span class="badge rune-tier-low">하급 룬</span>';
+    return `<span class="badge rune-tier-low">${label}</span>`;
 }
 
 async function loadRuneList() {
     try {
-        const response = await fetch(dataUrl('runes.json', 18));
+        const response = await fetch(dataUrl('runes.json', 20));
         const runes = await response.json();
         DATA.runes = runes;
         if (window.DATA) window.DATA.runes = runes;
@@ -1256,9 +1260,10 @@ async function loadRuneList() {
         const tbody = document.getElementById('runeListTbody');
         if (!tbody) return;
 
+        const ui = t();
         tbody.innerHTML = runes.map(rune => `
             <tr class="searchable-item">
-                <td>${rune.num}번</td>
+                <td>${ui.runeNum(rune.num)}</td>
                 <td class="rune">${rune.name} (${rune.eng})</td>
                 <td>${runeTierBadge(rune.tier)}</td>
                 <td>${rune.upgrade}</td>
@@ -1406,7 +1411,7 @@ document.addEventListener('DOMContentLoaded', loadPatchNotes);
 
 async function loadRunewords() {
     try {
-        const response = await fetch(dataUrl('runewords.json', 18));
+        const response = await fetch(dataUrl('runewords.json', 20));
         const runewords = await response.json();
         
         const tbody = document.getElementById('runewordsTbody');
@@ -1414,12 +1419,15 @@ async function loadRunewords() {
 
         tbody.innerHTML = runewords.map(item => {
             const badgeHtml = runewordLadderBadge(item);
+            const label = SITE_LANG === 'en'
+                ? (item.name || item.eng || item.legacyKey)
+                : (item.legacyKey || item.name);
 
             return `
                 <tr class="searchable-item">
                     <td class="highlight">
                         <span class="item-inline" onclick="openRuneModal(${item.id})" style="cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
-                            ${item.legacyKey} ${badgeHtml}
+                            ${label}${item.eng && item.name !== item.eng ? ` <span class="item-modal-eng">(${item.eng})</span>` : ''} ${badgeHtml}
                         </span>
                     </td>
                     <td class="rune">${item.recipe}</td>

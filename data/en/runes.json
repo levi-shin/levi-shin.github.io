@@ -1,0 +1,266 @@
+[
+  {
+    "num": 1,
+    "name": "El",
+    "eng": "El",
+    "tier": "low",
+    "upgrade": "Starter rune (no upgrade recipe)",
+    "use": "Steel, Fortitude"
+  },
+  {
+    "num": 2,
+    "name": "Eld",
+    "eng": "Eld",
+    "tier": "low",
+    "upgrade": "3 El Rune",
+    "use": "Faith, Hustle"
+  },
+  {
+    "num": 3,
+    "name": "Tir",
+    "eng": "Tir",
+    "tier": "low",
+    "upgrade": "3 Eld Rune",
+    "use": "Steel, Strength, Leaf, Insight, Wealth"
+  },
+  {
+    "num": 4,
+    "name": "Nef",
+    "eng": "Nef",
+    "tier": "low",
+    "upgrade": "3 Tir Rune",
+    "use": "Smoke, Black, Obsession"
+  },
+  {
+    "num": 5,
+    "name": "Eth",
+    "eng": "Eth",
+    "tier": "low",
+    "upgrade": "3 Nef Rune",
+    "use": "Stealth, Grief, Bramble"
+  },
+  {
+    "num": 6,
+    "name": "Ith",
+    "eng": "Ith",
+    "tier": "low",
+    "upgrade": "3 Eth Rune",
+    "use": "Enigma"
+  },
+  {
+    "num": 7,
+    "name": "Tal",
+    "eng": "Tal",
+    "tier": "low",
+    "upgrade": "3 Ith Rune",
+    "use": "Stealth, Spirit, Insight, Ancient's Pledge, Cure"
+  },
+  {
+    "num": 8,
+    "name": "Ral",
+    "eng": "Ral",
+    "tier": "low",
+    "upgrade": "3 Tal Rune",
+    "use": "Leaf, Call to Arms, Insight, Ancient's Pledge, Bramble"
+  },
+  {
+    "num": 9,
+    "name": "Ort",
+    "eng": "Ort",
+    "tier": "low",
+    "upgrade": "3 Ral Rune",
+    "use": "Ancient's Pledge, Spirit, Lore, Ground"
+  },
+  {
+    "num": 10,
+    "name": "Thul",
+    "eng": "Thul",
+    "tier": "low",
+    "upgrade": "3 Ort Rune",
+    "use": "Spirit, Treachery, Heart of the Oak, Black, Hearth"
+  },
+  {
+    "num": 11,
+    "name": "Amn",
+    "eng": "Amn",
+    "tier": "low",
+    "upgrade": "3 Thul Rune + Chipped Topaz",
+    "use": "Strength, Call to Arms, Spirit, Mosaic, Lawbringer"
+  },
+  {
+    "num": 12,
+    "name": "Sol",
+    "eng": "Sol",
+    "tier": "low",
+    "upgrade": "3 Amn Rune + Chipped Amethyst",
+    "use": "Lore, Insight, Fortitude, Bulwark"
+  },
+  {
+    "num": 13,
+    "name": "Shael",
+    "eng": "Shael",
+    "tier": "low",
+    "upgrade": "3 Sol Rune + Chipped Sapphire",
+    "use": "Treachery, Cure, Hustle, Crescent Moon"
+  },
+  {
+    "num": 14,
+    "name": "Dol",
+    "eng": "Dol",
+    "tier": "low",
+    "upgrade": "3 Shael Rune + Chipped Ruby",
+    "use": "Chains of Honor, White, Passion"
+  },
+  {
+    "num": 15,
+    "name": "Hel",
+    "eng": "Hel",
+    "tier": "low",
+    "upgrade": "3 Dol Rune + Chipped Emerald",
+    "use": "Obedience, socketed rune removal"
+  },
+  {
+    "num": 16,
+    "name": "Io",
+    "eng": "Io",
+    "tier": "mid",
+    "upgrade": "3 Hel Rune + Chipped Diamond",
+    "use": "Cure/Bulwark/Ground/Hearth/Temper, Metamorphosis"
+  },
+  {
+    "num": 17,
+    "name": "Lum",
+    "eng": "Lum",
+    "tier": "mid",
+    "upgrade": "3 Io Rune + Flawed Topaz",
+    "use": "Smoke, Beast, Obsession"
+  },
+  {
+    "num": 18,
+    "name": "Ko",
+    "eng": "Ko",
+    "tier": "mid",
+    "upgrade": "3 Lum Rune + Flawed Amethyst",
+    "use": "Heart of the Oak, Sanctuary, Wealth, Lawbringer"
+  },
+  {
+    "num": 19,
+    "name": "Fal",
+    "eng": "Fal",
+    "tier": "mid",
+    "upgrade": "3 Ko Rune + Flawed Sapphire",
+    "use": "Obedience, Metamorphosis"
+  },
+  {
+    "num": 20,
+    "name": "Lem",
+    "eng": "Lem",
+    "tier": "mid",
+    "upgrade": "3 Fal Rune + Flawed Ruby",
+    "use": "Treachery, Faith, Wealth, Passion"
+  },
+  {
+    "num": 21,
+    "name": "Pul",
+    "eng": "Pul",
+    "tier": "mid",
+    "upgrade": "3 Lem Rune + Flawed Emerald",
+    "use": "Flickering Flame, Heart of the Oak"
+  },
+  {
+    "num": 22,
+    "name": "Um",
+    "eng": "Um",
+    "tier": "mid",
+    "upgrade": "3 Pul Rune + Flawed Diamond",
+    "use": "Chains of Honor, Crescent Moon, Beast, all-res jewel socket"
+  },
+  {
+    "num": 23,
+    "name": "Mal",
+    "eng": "Mal",
+    "tier": "mid",
+    "upgrade": "2 Um Rune + Topaz",
+    "use": "Call to Arms, Infinity, Grief, Mosaic"
+  },
+  {
+    "num": 24,
+    "name": "Ist",
+    "eng": "Ist",
+    "tier": "mid",
+    "upgrade": "2 Mal Rune + Amethyst",
+    "use": "Call to Arms, Infinity, Chains of Honor, Exile"
+  },
+  {
+    "num": 25,
+    "name": "Gul",
+    "eng": "Gul",
+    "tier": "mid",
+    "upgrade": "2 Ist Rune + Sapphire",
+    "use": "Mosaic"
+  },
+  {
+    "num": 26,
+    "name": "Vex",
+    "eng": "Vex",
+    "tier": "high",
+    "upgrade": "2 Gul Rune + Ruby",
+    "use": "Heart of the Oak, Phoenix, Exile"
+  },
+  {
+    "num": 27,
+    "name": "Ohm",
+    "eng": "Ohm",
+    "tier": "high",
+    "upgrade": "2 Vex Rune + Emerald",
+    "use": "Call to Arms, Faith, Exile, Bramble"
+  },
+  {
+    "num": 28,
+    "name": "Lo",
+    "eng": "Lo",
+    "tier": "high",
+    "upgrade": "2 Ohm Rune + Diamond",
+    "use": "Grief, Fortitude, Phoenix"
+  },
+  {
+    "num": 29,
+    "name": "Sur",
+    "eng": "Sur",
+    "tier": "high",
+    "upgrade": "2 Lo Rune + Flawless Topaz",
+    "use": "Pride, Bramble, Ber crafting"
+  },
+  {
+    "num": 30,
+    "name": "Ber",
+    "eng": "Ber",
+    "tier": "high",
+    "upgrade": "2 Sur Rune + Flawless Amethyst",
+    "use": "Enigma, Infinity, Beast, Chains of Honor"
+  },
+  {
+    "num": 31,
+    "name": "Jah",
+    "eng": "Jah",
+    "tier": "high",
+    "upgrade": "2 Ber Rune + Flawless Sapphire",
+    "use": "Enigma, Faith, Phoenix, Dream"
+  },
+  {
+    "num": 32,
+    "name": "Cham",
+    "eng": "Cham",
+    "tier": "high",
+    "upgrade": "2 Jah Rune + Flawless Ruby",
+    "use": "Pride, Metamorphosis"
+  },
+  {
+    "num": 33,
+    "name": "Zod",
+    "eng": "Zod",
+    "tier": "high",
+    "upgrade": "2 Cham Rune + Flawless Emerald",
+    "use": "Obsession, Indestructible"
+  }
+]

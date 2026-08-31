@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.12",
+  "siteVersion": "v1.0.13",
   "lastUpdated": "2026-08-31",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.13",
+      "date": "2026-08-31",
+      "desc": "영문 /en/ Phase 2: 유니크·룬어·룬표 EN 데이터 및 모달"
+    },
     {
       "version": "v1.0.12",
       "date": "2026-08-31",

@@ -1,0 +1,793 @@
+[
+  {
+    "id": 20001,
+    "legacyKey": "요르단(조단)의 반지|The Stone of Jordan",
+    "name": "The Stone of Jordan",
+    "eng": "The Stone of Jordan",
+    "aliases": [
+      "조단",
+      "조던",
+      "조던링",
+      "조단링",
+      "SoJ",
+      "SOJ",
+      "Stone of Jordan",
+      "요르단"
+    ],
+    "image": "uniques/jordan.png",
+    "base": "Ring",
+    "drop": "Nightmare Andariel (best odds 1/31), Hell Andariel / Mephisto",
+    "stats": "All Skills <strong>+1</strong> / Max Mana <strong>+25%</strong> / Lightning Damage <strong>1~12</strong> / Mana <strong>+20</strong> (fixed perfect)"
+  },
+  {
+    "id": 20002,
+    "legacyKey": "불카토스의 결혼반지|Bul-Kathos' Wedding Band",
+    "name": "Bul-Kathos' Wedding Band",
+    "eng": "Bul-Kathos' Wedding Band",
+    "aliases": [
+      "불카",
+      "불카링",
+      "발카링",
+      "BK링",
+      "BK Band",
+      "Wedding Band"
+    ],
+    "image": "uniques/bulkathos.png",
+    "base": "Ring",
+    "drop": "Hell Andariel, Mephisto, Diablo, Baal, TC85 farming spots",
+    "stats": "All Skills <strong>+1</strong> / Life Steal <strong>3~5%</strong> (perfect 5%) / Life per Level <strong>+0.5</strong> (based on Character Level)"
+  },
+  {
+    "id": 20003,
+    "legacyKey": "마라의 만화경|Mara's Kaleidoscope",
+    "name": "Mara's Kaleidoscope",
+    "eng": "Mara's Kaleidoscope",
+    "aliases": [
+      "마라",
+      "마라아뮬",
+      "Mara",
+      "Maras"
+    ],
+    "image": "uniques/mara.png",
+    "base": "Amulet",
+    "drop": "Hell Mephisto, Diablo, Travincal, TC85 farming spots",
+    "stats": "All Skills <strong>+2</strong> / All Resistances <strong>+20~30</strong> (perfect 30) / All Attributes <strong>+5</strong>"
+  },
+  {
+    "id": 20004,
+    "legacyKey": "티리얼의 권능|Tyrael's Might",
+    "name": "Tyrael's Might",
+    "eng": "Tyrael's Might",
+    "aliases": [
+      "티리얼",
+      "티리엘",
+      "Tyrael",
+      "Tyraels Might"
+    ],
+    "base": "Sacred Armor",
+    "drop": "Hell Baal, Diablo, TC85 farming spots (extremely rare)",
+    "stats": "Enhanced Defense <strong>+120~150%</strong> / Damage to Demons <strong>+50~100%</strong> / Faster Run/Walk <strong>+20%</strong> / Strength <strong>+20~30</strong> / All Resistances <strong>+20~30</strong> / Cannot Be Frozen / Requirements <strong>-100%</strong> / Slain Monsters Rest in Peace / Indestructible"
+  },
+  {
+    "id": 20005,
+    "legacyKey": "샤코|Harlequin Crest",
+    "name": "Harlequin Crest",
+    "eng": "Harlequin Crest",
+    "aliases": [
+      "할리퀸",
+      "할리퀸 관모",
+      "Shako",
+      "Harlequin"
+    ],
+    "image": "uniques/shako.png",
+    "base": "Cap",
+    "drop": "Hell Andariel, Mephisto (popular farm)",
+    "stats": "All Skills <strong>+2</strong> / Life and Mana per Level <strong>+1.5</strong> / Damage Reduced <strong>10%</strong> / Magic Find <strong>50%</strong> / Enhanced Defense <strong>+100%</strong>"
+  },
+  {
+    "id": 20006,
+    "legacyKey": "그리폰의 눈|Griffon's Eye",
+    "name": "Griffon's Eye",
+    "eng": "Griffon's Eye",
+    "aliases": [
+      "그리폰",
+      "Griffon",
+      "Griffons Eye"
+    ],
+    "base": "Diadem",
+    "drop": "TC85 farming spots (Pit, Chaos, Baal, Ancient Tunnels)",
+    "stats": "All Skills <strong>+1</strong> / Faster Cast Rate <strong>+25%</strong> / Lightning Skill Damage <strong>+10~15%</strong> / Enemy Lightning Resist <strong>-15~20%</strong> / Defense <strong>+100~200</strong>"
+  },
+  {
+    "id": 20007,
+    "legacyKey": "안다리엘의 두개골|Andariel's Visage",
+    "name": "Andariel's Visage",
+    "eng": "Andariel's Visage",
+    "aliases": [
+      "안다헬",
+      "안다투구",
+      "앤디",
+      "Andy",
+      "Andariel",
+      "Andys",
+      "안다리엘의 두개골",
+      "두개골"
+    ],
+    "image": "uniques/andys.png",
+    "base": "Demonhead",
+    "drop": "Hell Andariel, Diablo, Baal (eth perfect)",
+    "stats": "All Skills <strong>+2</strong> / Enhanced Defense <strong>+100~150%</strong> / Increased Attack Speed <strong>+20%</strong> / Life Steal <strong>8~10%</strong> / Strength <strong>+25~30</strong> / All Resistances <strong>+10</strong> / Poison Resist <strong>+70%</strong> / Poison Damage extra / Level 3 charges of Poison Nova"
+  },
+  {
+    "id": 20008,
+    "legacyKey": "배틀부츠|War Traveler",
+    "name": "War Traveler",
+    "eng": "War Traveler",
+    "aliases": [
+      "워트",
+      "워트래블러",
+      "War Traveler",
+      "WarTraveler",
+      "WT"
+    ],
+    "image": "uniques/wartraveler.png",
+    "base": "Battle Boots",
+    "drop": "Hell Mephisto, Andariel, Chaos",
+    "stats": "Enhanced Defense <strong>+150~190%</strong> / Faster Run/Walk <strong>+25%</strong> / Strength and Vitality <strong>+10</strong> / Damage <strong>15~25</strong> / Magic Find <strong>+30~50%</strong> / Attacker Takes Damage 5~10"
+  },
+  {
+    "id": 20009,
+    "legacyKey": "거인의 복수|Titan's Revenge",
+    "name": "Titan's Revenge",
+    "eng": "Titan's Revenge",
+    "aliases": [
+      "타이탄",
+      "Titans",
+      "Titan's Revenge"
+    ],
+    "base": "Ceremonial Javelin",
+    "drop": "Hell Andariel, Mephisto, Baal (eth perfect)",
+    "stats": "Enhanced Damage <strong>+150~200%</strong> / Amazon Skills <strong>+2</strong> / Javelin and Spear Skills <strong>+2</strong> / Life Steal <strong>5~9%</strong> / Strength and Dexterity <strong>+20</strong> / Replenish Quantity / Requirements <strong>-30%</strong>"
+  },
+  {
+    "id": 20010,
+    "legacyKey": "기드의 운|Gheed's Fortune",
+    "name": "Gheed's Fortune",
+    "eng": "Gheed's Fortune",
+    "aliases": [
+      "기드",
+      "기드참",
+      "Gheed",
+      "Gheeds"
+    ],
+    "base": "Grand Charm",
+    "drop": "Hell Andariel, Travincal, Chaos Sanctuary",
+    "stats": "Magic Find <strong>+20~40%</strong> / Vendor Prices <strong>-10~15%</strong> / Gold Find <strong>+80~160%</strong> (perfect)"
+  },
+  {
+    "id": 20011,
+    "legacyKey": "바람살|Windforce",
+    "name": "Windforce",
+    "eng": "Windforce",
+    "aliases": [
+      "윈드포스",
+      "WF",
+      "Windforce"
+    ],
+    "image": "uniques/windforce.png",
+    "base": "Hydra Bow",
+    "drop": "Hell Pit, Ancient Tunnels, Baal etc. TC85",
+    "stats": "Damage <strong>+250%</strong> / Mana Steal <strong>6~8%</strong> / Maximum Damage (based on Character Level) / Strength <strong>+10</strong> / Knockback / Replenish Life <strong>+20%</strong>"
+  },
+  {
+    "id": 20012,
+    "legacyKey": "죽음의 깊이|Death's Fathom",
+    "name": "Death's Fathom",
+    "eng": "Death's Fathom",
+    "aliases": [
+      "데스파덤",
+      "데스 파버",
+      "Deaths Fathom",
+      "Death Fathom",
+      "디멘셔널 샤드"
+    ],
+    "base": "Dimensional Shard",
+    "drop": "Hell Diablo, Baal, Terror Zones",
+    "stats": "Sorceress Skills <strong>+3</strong> / Faster Cast Rate <strong>+20%</strong> / Cold Skill Damage <strong>+15~30%</strong> / Lightning Resist <strong>+25~40%</strong> / Fire Resist <strong>+25~40%</strong>"
+  },
+  {
+    "id": 20013,
+    "legacyKey": "거미그물 띠|Arachnid Mesh",
+    "name": "Arachnid Mesh",
+    "eng": "Arachnid Mesh",
+    "aliases": [
+      "아라크",
+      "스웹",
+      "스파이더웹",
+      "Arach",
+      "Arachnid"
+    ],
+    "image": "uniques/arach.png",
+    "base": "Spiderweb Sash",
+    "drop": "Hell Mephisto, Diablo, Baal",
+    "stats": "Enhanced Defense <strong>+90~120%</strong> / All Skills <strong>+1</strong> / Faster Cast Rate <strong>+20%</strong> / Max Mana <strong>+5%</strong> / Slow <strong>10%</strong>"
+  },
+  {
+    "id": 20014,
+    "legacyKey": "자카룸의 전령|Herald of Zakarum",
+    "name": "Herald of Zakarum",
+    "eng": "Herald of Zakarum",
+    "aliases": [
+      "호즈",
+      "HoZ",
+      "자카룸",
+      "Herald",
+      "HOZ"
+    ],
+    "image": "uniques/heraldofzakarum.png",
+    "base": "Gilded Shield",
+    "drop": "Hell Andariel, Mephisto, Chaos",
+    "stats": "Enhanced Defense <strong>+150~200%</strong> / Paladin Skills <strong>+2</strong> / Combat Skills <strong>+2</strong> / Strength <strong>+20</strong> / Vitality <strong>+20</strong> / All Resistances <strong>+50</strong> / Chance of Blocking 증가"
+  },
+  {
+    "id": 20015,
+    "legacyKey": "마수|Magefist",
+    "name": "Magefist",
+    "eng": "Magefist",
+    "aliases": [
+      "메이지피스트",
+      "Magefist"
+    ],
+    "image": "uniques/magefist.png",
+    "base": "Light Gauntlets",
+    "drop": "Normal Diablo, Baal / Nightmare all areas",
+    "stats": "Enhanced Defense <strong>+20~30%</strong> / Fire Skills <strong>+1</strong> / Faster Cast Rate <strong>+20%</strong> / Replenish Mana <strong>25%</strong> / Fire Damage <strong>1~6</strong>"
+  },
+  {
+    "id": 20016,
+    "legacyKey": "아리앗의 얼굴|Arreat's Face",
+    "name": "Arreat's Face",
+    "eng": "Arreat's Face",
+    "aliases": [
+      "슬레이어의 갈기",
+      "슬레이어",
+      "아리앗",
+      "Arreat",
+      "Arreats Face"
+    ],
+    "base": "Slayer Guard",
+    "drop": "Hell Mephisto, Baal, Diablo, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+150~200%</strong> / Barbarian Skills <strong>+2</strong> / Combat Skills <strong>+2</strong> / Faster Hit Recovery <strong>+30%</strong> / Life Steal <strong>3~6%</strong> / All Resistances <strong>+30</strong> / Strength and Dexterity <strong>+20</strong>"
+  },
+  {
+    "id": 20017,
+    "legacyKey": "새총|Slingshot",
+    "name": "Slingshot",
+    "eng": "Slingshot",
+    "aliases": [
+      "슬링샷",
+      "Slingshot"
+    ],
+    "image": "uniques/slingshot.png",
+    "base": "Ring",
+    "drop": "Hell bosses and Terror Zones",
+    "stats": "Faster Cast Rate <strong>+10%</strong> / 타운 포탈(Town Portal) 1Level Skills 부여 / 적 마법 저항 <strong>-3~5%</strong> / Energy <strong>+10~15</strong> / 대상 Slow <strong>15%</strong> / Magic Find <strong>+10~20%</strong>"
+  },
+  {
+    "id": 20018,
+    "legacyKey": "오팔맥|Opalmac",
+    "name": "Opalmac",
+    "eng": "Opalmac",
+    "aliases": [
+      "Opalmac"
+    ],
+    "base": "Ring",
+    "drop": "Hell Chaos/Baal",
+    "stats": "타격 시 15Level 화염파도(신캐 Skills) 2% 확률 발동 / Faster Cast Rate <strong>+10%</strong> / All Resistances <strong>+6~8</strong> / Mana 획득(마상) <strong>+1~3</strong> / 적 Life after each Kill <strong>+1~3</strong>"
+  },
+  {
+    "id": 20019,
+    "legacyKey": "지옥파수꾼의 의지|Will of Hell-Keeper",
+    "name": "Will of Hell-Keeper",
+    "eng": "Will of Hell-Keeper",
+    "aliases": [
+      "헬키퍼",
+      "Hellkeeper",
+      "Hell-Keeper"
+    ],
+    "image": "uniques/hellkeeperswill.png",
+    "base": "Death Mask",
+    "drop": "Hell Chaos Sanctuary",
+    "stats": "All Skills <strong>+1</strong> / 적의 Fire Resist <strong>-5~8%</strong> / 적의 매직 저항 <strong>-5~8%</strong> / Faster Cast Rate <strong>+20%</strong> / Increased Attack Speed <strong>+20%</strong> / Enhanced Defense <strong>+150~215%</strong> / Mana 획득(마상) <strong>+4~6</strong>"
+  },
+  {
+    "id": 20020,
+    "legacyKey": "섀도우 댄서|Shadow Dancer",
+    "name": "Shadow Dancer",
+    "eng": "Shadow Dancer",
+    "aliases": [
+      "섀댄",
+      "쉐도우댄서",
+      "Shadow Dancer"
+    ],
+    "image": "uniques/shadowdancer.png",
+    "base": "Myrmidon Greaves",
+    "drop": "Hell 테러 존, Baal, Diablo",
+    "stats": "Enhanced Defense <strong>+70~100%</strong> / 그림자 단련 Skills <strong>+1~2</strong> (암살자) / Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+30%</strong> / Dexterity <strong>+15~25</strong> / Requirements <strong>-20%</strong>"
+  },
+  {
+    "id": 20021,
+    "legacyKey": "대군주의 분노|Highlord's Wrath",
+    "name": "Highlord's Wrath",
+    "eng": "Highlord's Wrath",
+    "aliases": [
+      "하이로드",
+      "대군주",
+      "Highlord",
+      "Highlords Wrath",
+      "HLW"
+    ],
+    "image": "uniques/highlordswrath.png",
+    "base": "Amulet",
+    "drop": "Hell Mephisto, Diablo, Baal, 테러 존",
+    "stats": "All Skills <strong>+1</strong> / Increased Attack Speed <strong>+20%</strong> / Deadly Strike(Deadly Strike) Level당 <strong>+0.375%</strong> / Lightning Resist <strong>+35%</strong> / Lightning Damage <strong>1~30</strong> / When Struck 번개 반사 15"
+  },
+  {
+    "id": 20022,
+    "legacyKey": "드라쿨의 장갑|Dracul's Grasp",
+    "name": "Dracul's Grasp",
+    "eng": "Dracul's Grasp",
+    "aliases": [
+      "드라쿨",
+      "Dracul",
+      "Draculs Grasp"
+    ],
+    "image": "uniques/draculsgrasp.png",
+    "base": "Vampirebone Gloves",
+    "drop": "Hell 테러 존, Diablo, Baal, 니라트하크",
+    "stats": "Enhanced Defense <strong>+90~120%</strong> / 타격 시 5% 확률로 Level 10 Life 추출 / Life Steal <strong>7~10%</strong> / Strength <strong>+10~15</strong> / Life after each Kill <strong>+5~10</strong> / 대상 Slow <strong>25%</strong>"
+  },
+  {
+    "id": 20023,
+    "legacyKey": "밤날개의 너울|Nightwing's Veil",
+    "name": "Nightwing's Veil",
+    "eng": "Nightwing's Veil",
+    "aliases": [
+      "밤날개",
+      "나이트윙",
+      "Nightwing",
+      "Nightwings Veil"
+    ],
+    "image": "uniques/nightwingsveil.png",
+    "base": "Spired Helm",
+    "drop": "Hell 전역",
+    "stats": "All Skills <strong>+2</strong> / Enhanced Defense <strong>+90~120%</strong> / Cold Skill Damage <strong>+8~15%</strong> / Dexterity <strong>+10~20</strong> / 냉기 흡수 <strong>5~9</strong> / 빙결 시간 반감 / Requirements <strong>-50%</strong>"
+  },
+  {
+    "id": 20024,
+    "legacyKey": "칠흑서리|Raven Frost",
+    "name": "Raven Frost",
+    "eng": "Raven Frost",
+    "aliases": [
+      "레이븐",
+      "레이븐링",
+      "레이븐프로스트",
+      "Raven",
+      "Raven Frost"
+    ],
+    "image": "uniques/ravenfrost.png",
+    "base": "Ring",
+    "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
+    "stats": "Attack Rating <strong>+150~250</strong> / Cold Damage <strong>15~45</strong> / Dexterity <strong>+15~20</strong> / Mana <strong>+40</strong> / 냉기 흡수 <strong>20%</strong> / Cannot Be Frozen"
+  },
+  {
+    "id": 20025,
+    "legacyKey": "왜성반지|Dwarf Star",
+    "name": "Dwarf Star",
+    "eng": "Dwarf Star",
+    "aliases": [
+      "드워프스타",
+      "왜성",
+      "Dwarf Star",
+      "Dwarfstar"
+    ],
+    "image": "uniques/dwarfstar.png",
+    "base": "Ring",
+    "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
+    "stats": "화염 흡수 <strong>15%</strong> / Magic Damage Reduced <strong>12~15</strong> / Gold Find <strong>+100%</strong> / Life <strong>+40</strong> / 스태미나 <strong>+40</strong>"
+  },
+  {
+    "id": 20026,
+    "legacyKey": "자연의 평화반지|Nature's Peace",
+    "name": "Nature's Peace",
+    "eng": "Nature's Peace",
+    "aliases": [
+      "네이처스피스",
+      "자연의평화",
+      "Natures Peace",
+      "Nature's Peace"
+    ],
+    "image": "uniques/naturespeace.png",
+    "base": "Ring",
+    "drop": "Hell TC85 farming spots",
+    "stats": "죽은 몬스터가 되살아나지 않음 / 몬스터 Replenish 방지 / Poison Resist <strong>+20~30%</strong> / Damage Reduced <strong>7~11</strong> / Level 5 오크 세이지 충전"
+  },
+  {
+    "id": 20027,
+    "legacyKey": "에슈타의 성미|Eschuta's Temper",
+    "name": "Eschuta's Temper",
+    "eng": "Eschuta's Temper",
+    "aliases": [
+      "에스추타",
+      "에슈타",
+      "엘드리치",
+      "Eschuta",
+      "Eschutas Temper"
+    ],
+    "image": "uniques/eschutastemper.png",
+    "base": "Eldritch Orb",
+    "drop": "Hell TC85 farming spots, Terror Zones",
+    "stats": "Sorceress Skills <strong>+1~3</strong> / Faster Cast Rate <strong>+40%</strong> / Fire Skill Damage <strong>+10~20%</strong> / Lightning Skill Damage <strong>+10~20%</strong> / Energy <strong>+20~30</strong>"
+  },
+  {
+    "id": 20028,
+    "legacyKey": "천둥일격|Thunderstroke",
+    "name": "Thunderstroke",
+    "eng": "Thunderstroke",
+    "aliases": [
+      "썬더스트로크",
+      "Thunderstroke"
+    ],
+    "image": "uniques/thunderstroke.png",
+    "base": "Matriarchal Javelin",
+    "drop": "Hell TC85 farming spots, Baal",
+    "stats": "Enhanced Damage <strong>+150~200%</strong> / Javelin and Spear Skills <strong>+2~4</strong> / 번개 화살 <strong>+3</strong> / Increased Attack Speed <strong>+15%</strong> / Enemy Lightning Resist <strong>-15%</strong> / Lightning Damage <strong>1~511</strong> / 타격 시 14Level 번개 20% 발동"
+  },
+  {
+    "id": 20029,
+    "legacyKey": "선혈 기수|Gore Rider",
+    "name": "Gore Rider",
+    "eng": "Gore Rider",
+    "aliases": [
+      "고어라이더",
+      "고어",
+      "Gore Rider",
+      "GoreRider",
+      "블러드라이더"
+    ],
+    "image": "uniques/boodrider.png",
+    "base": "Heavy Boots",
+    "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+160~200%</strong> / Faster Run/Walk <strong>+30%</strong> / Crushing Blow(Crushing Blow) <strong>15%</strong> / Deadly Strike <strong>15%</strong> / Open Wounds <strong>10%</strong> / Max Stamina +20 / Requirements <strong>-25%</strong>"
+  },
+  {
+    "id": 20030,
+    "legacyKey": "알리바바의 칼날|Blade of Ali Baba",
+    "name": "Blade of Ali Baba",
+    "eng": "Blade of Ali Baba",
+    "aliases": [
+      "알리바바",
+      "Ali Baba",
+      "Alibaba"
+    ],
+    "image": "uniques/alibaba.png",
+    "base": "Tulwar",
+    "drop": "Hell Mephisto, TC85 farming spots",
+    "stats": "Enhanced Damage <strong>+60~120%</strong> / Gold Find Level당 <strong>+2.5%</strong> / Magic Find Level당 <strong>+1%</strong> / Dexterity <strong>+5~15</strong> / Mana <strong>+15</strong> / 소켓 <strong>2</strong>"
+  },
+  {
+    "id": 20031,
+    "legacyKey": "트래그울의 발톱|Trang-Oul's Claws",
+    "name": "Trang-Oul's Claws",
+    "eng": "Trang-Oul's Claws",
+    "aliases": [
+      "트랑울",
+      "트랑장",
+      "트랑울 장갑",
+      "Trang",
+      "Trangs"
+    ],
+    "base": "Heavy Bracers",
+    "drop": "Hell Mephisto, 세트 아이템 (트래그울의 화신)",
+    "stats": "Faster Cast Rate <strong>+20%</strong> / Cold Resist <strong>+30%</strong> / Defense <strong>+30</strong> / Poison Skill Damage <strong>+25%</strong> / 저주 Skills <strong>+2</strong> (강령술사)"
+  },
+  {
+    "id": 20032,
+    "legacyKey": "사신의 종소리|The Reaper's Toll",
+    "name": "The Reaper's Toll",
+    "eng": "The Reaper's Toll",
+    "aliases": [
+      "리퍼스톨",
+      "리퍼",
+      "Reaper's Toll",
+      "Reapers Toll"
+    ],
+    "base": "Thresher",
+    "drop": "Hell Baal, Diablo, TC85 farming spots (eth perfect)",
+    "stats": "Enhanced Damage <strong>+190~240%</strong> / 대상 방어 무시 / Deadly Strike <strong>33%</strong> / Life Steal <strong>11~15%</strong> / 타격 시 33% 확률 1Level 노화(Decrepify) / Requirements <strong>-25%</strong>"
+  },
+  {
+    "id": 20033,
+    "legacyKey": "기욤의 얼굴|Guillaume's Face",
+    "name": "Guillaume's Face",
+    "eng": "Guillaume's Face",
+    "aliases": [
+      "기욤",
+      "Guillaume",
+      "Guillaumes"
+    ],
+    "base": "Winged Helm",
+    "drop": "Hell Mephisto, 세트 아이템 (고아의 부름)",
+    "stats": "Enhanced Defense <strong>+120%</strong> / Crushing Blow <strong>15%</strong> / Deadly Strike <strong>35%</strong> / Increased Attack Speed <strong>+30%</strong> / Strength <strong>+15</strong>"
+  },
+  {
+    "id": 20034,
+    "legacyKey": "서슬꼬리|Razortail",
+    "name": "Razortail",
+    "eng": "Razortail",
+    "aliases": [
+      "레이저테일",
+      "관통벨트",
+      "관통 벨트",
+      "Razortail"
+    ],
+    "base": "Sharkskin Belt",
+    "drop": "Hell Mephisto, Andariel, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+120~150%</strong> / 관통 확률 <strong>+33%</strong> / Maximum Damage +10 / Dexterity +15 / 가시 Damage 15"
+  },
+  {
+    "id": 20035,
+    "legacyKey": "폭풍막이|Stormshield",
+    "name": "Stormshield",
+    "eng": "Stormshield",
+    "aliases": [
+      "스톰쉴드",
+      "Stormshield",
+      "SS"
+    ],
+    "base": "Monarch",
+    "drop": "Hell Diablo, Baal, TC85 farming spots",
+    "stats": "Damage Reduced <strong>35%</strong> / Chance of Blocking 증가 / Cold Resist +60% / Lightning Resist +25% / Strength +30 / When Struck 번개 반사"
+  },
+  {
+    "id": 20036,
+    "legacyKey": "골수걸음|Marrowwalk",
+    "name": "Marrowwalk",
+    "eng": "Marrowwalk",
+    "aliases": [
+      "마로우워크",
+      "Marrowwalk"
+    ],
+    "base": "Boneweave Boots",
+    "drop": "Hell Baal, Diablo, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+170~200%</strong> / 해골 숙련 <strong>+1~2</strong> / 해골 되살리기 +1~2 / Strength +20~30 / Replenish Mana 10% / Faster Run/Walk +20% / 충전: 뼈 감옥·라이프 탭"
+  },
+  {
+    "id": 20037,
+    "legacyKey": "잘랄의 갈기|Jalal's Mane",
+    "name": "Jalal's Mane",
+    "eng": "Jalal's Mane",
+    "aliases": [
+      "잘랄",
+      "Jalal",
+      "Jalals Mane"
+    ],
+    "base": "Totemic Mask",
+    "drop": "Hell Mephisto, Baal, TC85 farming spots",
+    "stats": "드루이드 Skills <strong>+2</strong> / 변신 Skills <strong>+2</strong> / Faster Hit Recovery <strong>+30%</strong> / Enhanced Defense <strong>+150~200%</strong> / Strength·Energy +20 / All Resistances +30 / Mana after each Kill +5"
+  },
+  {
+    "id": 20038,
+    "legacyKey": "안수|Laying of Hands",
+    "name": "Laying of Hands",
+    "eng": "Laying of Hands",
+    "aliases": [
+      "레잉오브핸즈",
+      "고무장갑",
+      "Laying of Hands",
+      "LoH"
+    ],
+    "base": "Bramble Mitts",
+    "drop": "Hell 세트 아이템 (제자의 세트)",
+    "stats": "Increased Attack Speed <strong>+20%</strong> / Damage to Demons <strong>+350%</strong> / Fire Resist +50% / 타격 시 10% 확률 3Level 신성한 볼트"
+  },
+  {
+    "id": 20039,
+    "legacyKey": "귀 꿰미|String of Ears",
+    "name": "String of Ears",
+    "eng": "String of Ears",
+    "aliases": [
+      "귀꿰미",
+      "스트링오비어스",
+      "String of Ears",
+      "SoE"
+    ],
+    "base": "Demonhide Sash",
+    "drop": "Hell Andariel, Mephisto, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+150~180%</strong> / Life Steal <strong>6~8%</strong> / Damage Reduced <strong>10~15%</strong> / Magic Damage Reduced 10~15"
+  },
+  {
+    "id": 20040,
+    "legacyKey": "모래폭풍 여로|Sandstorm Trek",
+    "name": "Sandstorm Trek",
+    "eng": "Sandstorm Trek",
+    "aliases": [
+      "샌드스톰",
+      "유닉스캐럽",
+      "Sandstorm Trek",
+      "Sandstorm"
+    ],
+    "base": "Scarab Husk Boots",
+    "drop": "Hell Mephisto, Diablo, Baal, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+140~170%</strong> / Faster Run/Walk <strong>+20%</strong> / Faster Hit Recovery <strong>+20%</strong> / Strength and Vitality +10~15 / Poison Resist +40~70% / Max Stamina Level당 +1 / 스태미나 재생 50%"
+  },
+  {
+    "id": 20041,
+    "legacyKey": "베르둔고의 튼튼한 노끈|Verdungo's Hearty Cord",
+    "name": "Verdungo's Hearty Cord",
+    "eng": "Verdungo's Hearty Cord",
+    "aliases": [
+      "베르둔고",
+      "둔고",
+      "미스릴 코일",
+      "Verdungo",
+      "Verdungos"
+    ],
+    "base": "Mithril Coil",
+    "drop": "Hell Baal, Diablo, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+90~140%</strong> / Vitality <strong>+30~40</strong> / Max Stamina +10~20% / 생명 재생 +10~13 / Damage Reduced <strong>10~15%</strong>"
+  },
+  {
+    "id": 20042,
+    "legacyKey": "물나그네|Waterwalk",
+    "name": "Waterwalk",
+    "eng": "Waterwalk",
+    "aliases": [
+      "워터워크",
+      "물부츠",
+      "Waterwalk"
+    ],
+    "base": "Sharkskin Boots",
+    "drop": "악몽~지옥 Mephisto, Andariel",
+    "stats": "Enhanced Defense <strong>+180~210%</strong> / Faster Run/Walk <strong>+20%</strong> / 최대 생명 +15~25 / Dexterity +15 / 최대 Fire Resist +5% / 스태미나 +40"
+  },
+  {
+    "id": 20043,
+    "legacyKey": "행운의 장갑|Chance Guards",
+    "name": "Chance Guards",
+    "eng": "Chance Guards",
+    "aliases": [
+      "챈스가드",
+      "챈스",
+      "Chance Guards",
+      "Chanceguards"
+    ],
+    "base": "Chain Gloves",
+    "drop": "악몽~지옥 전역 (Magic Find 장갑)",
+    "stats": "Enhanced Defense <strong>+20~30%</strong> / Magic Find <strong>+25~40%</strong> / Attack Rating +200 / Mana +40 / Light Radius +2 / 상점가 -15%"
+  },
+  {
+    "id": 20044,
+    "legacyKey": "금박 허리띠|Goldwrap",
+    "name": "Goldwrap",
+    "eng": "Goldwrap",
+    "aliases": [
+      "골드랩",
+      "Goldwrap"
+    ],
+    "base": "Heavy Belt",
+    "drop": "악몽~지옥 전역 (Gold Find/Magic Find 벨트)",
+    "stats": "Enhanced Defense <strong>+40~60%</strong> / Increased Attack Speed <strong>+10%</strong> / Gold Find <strong>+50~80%</strong> / Magic Find <strong>+30%</strong> / Light Radius +2"
+  },
+  {
+    "id": 20045,
+    "legacyKey": "지옥불걸음|Infernostride",
+    "name": "Infernostride",
+    "eng": "Infernostride",
+    "aliases": [
+      "인페르노스트라이드",
+      "지옥걸음",
+      "Infernostride"
+    ],
+    "base": "Demonhide Boots",
+    "drop": "Hell Mephisto, TC85 farming spots",
+    "stats": "Enhanced Defense <strong>+120~150%</strong> / Faster Run/Walk <strong>+20%</strong> / 최대 Fire Resist +5% / Fire Resist +30% / Gold Find <strong>+40~70%</strong> / When Struck 화염 발동"
+  },
+  {
+    "id": 20046,
+    "legacyKey": "아르스 알디아볼로스|Ars Al'Diabolos",
+    "name": "Ars Al'Diabolos",
+    "eng": "Ars Al'Diabolos",
+    "aliases": [
+      "알디아볼로스",
+      "Ars Al'Diabolos",
+      "Ars Aldiabolos"
+    ],
+    "base": "그리모어 (Grimoire, 악마술사 전용)",
+    "drop": "Hell Terror Zones, Baal, TC85 farming spots",
+    "stats": "When Struck 15% 확률로 공포 1Level / 혼돈 Skills <strong>+2</strong> (악마술사) / Faster Cast Rate <strong>+25%</strong> / Fire Skill Damage <strong>+15~25%</strong> / 종말 <strong>+3~5</strong> / Enhanced Defense <strong>+170~200%</strong> / Fire Resist <strong>+20~30%</strong> / Mana after each Kill <strong>+5~10</strong> / Light Radius +5~10"
+  },
+  {
+    "id": 20047,
+    "legacyKey": "망 송의 가르침|Mang Song's Lesson",
+    "name": "Mang Song's Lesson",
+    "eng": "Mang Song's Lesson",
+    "aliases": [
+      "망송",
+      "Mang Song",
+      "Mang Songs Lesson"
+    ],
+    "base": "Archon Staff",
+    "drop": "Hell Baal, Diablo (극악 드랍률)",
+    "stats": "All Skills <strong>+5</strong> / Faster Cast Rate <strong>+30%</strong> / 적 화염·번개·Cold Resist <strong>-7~15%</strong> / Replenish Mana 10%"
+  },
+  {
+    "id": 20048,
+    "legacyKey": "망령걸음|Wraithstep",
+    "name": "Wraithstep",
+    "eng": "Wraithstep",
+    "aliases": [
+      "레이스스텝",
+      "Wraithstep"
+    ],
+    "base": "미러드 부츠 (Mirrored Boots, 악마술사 전용)",
+    "drop": "Hell Terror Zones, TC85 farming spots",
+    "stats": "Faster Run/Walk <strong>+30%</strong> / Faster Hit Recovery <strong>+20%</strong> / Defense <strong>+40~60</strong> / Dexterity <strong>+10~15</strong> / 마력 <strong>+10~15</strong> / 혼돈 Skills <strong>+1</strong> (악마술사 전용)"
+  },
+  {
+    "id": 20049,
+    "legacyKey": "죽음의 거미줄|Death's Web",
+    "name": "Death's Web",
+    "eng": "Death's Web",
+    "aliases": [
+      "데스웹",
+      "데쓰웹",
+      "Death's Web",
+      "Deaths Web"
+    ],
+    "base": "Unearthed Wand",
+    "drop": "Hell Baal, Diablo, TC87 farming spots (극악 드랍률)",
+    "stats": "All Skills <strong>+2</strong> / 독·뼈 Skills <strong>+1~2</strong> (강령술사) / Enemy Poison Resist <strong>-40~50%</strong> / Life after each Kill <strong>+7~12</strong> / Mana after each Kill <strong>+7~12</strong> / 언데드 Damage +50%"
+  },
+  {
+    "id": 20050,
+    "legacyKey": "호문쿨루스|Homunculus",
+    "name": "Homunculus",
+    "eng": "Homunculus",
+    "aliases": [
+      "호문",
+      "Homunculus"
+    ],
+    "base": "하이어러팬트 트로피 (Hierophant Trophy, 강령술사 전용)",
+    "drop": "악몽~지옥 전역 (강령 방패)",
+    "stats": "강령술사 Skills <strong>+2</strong> / 저주 <strong>+2</strong> / 막기 속도 <strong>+30%</strong> / 막기 확률 <strong>+40%</strong> / Enhanced Defense <strong>+150~200%</strong> / 마력 +20 / Replenish Mana 33% / All Resistances <strong>+40</strong> / Mana after each Kill +5"
+  },
+  {
+    "id": 20051,
+    "legacyKey": "어둠의 종자|Darkforce Spawn",
+    "name": "Darkforce Spawn",
+    "eng": "Darkforce Spawn",
+    "aliases": [
+      "다크포스",
+      "다크포스 스폰",
+      "Darkforce Spawn"
+    ],
+    "base": "블러드로드 스컬 (Bloodlord Skull, 강령술사 전용)",
+    "drop": "Hell Baal, Diablo, TC87 farming spots",
+    "stats": "소환 Skills <strong>+1~3</strong> / 독·뼈 Skills <strong>+1~3</strong> / 저주 <strong>+1~3</strong> (강령술사) / Faster Cast Rate <strong>+30%</strong> / Enhanced Defense <strong>+140~180%</strong> / Max Mana 10% 증가"
+  },
+  {
+    "id": 20052,
+    "legacyKey": "독사마술사의 가죽|Skin of the Vipermagi",
+    "name": "Skin of the Vipermagi",
+    "eng": "Skin of the Vipermagi",
+    "aliases": [
+      "비퍼마기",
+      "Vipermagi",
+      "스키나브"
+    ],
+    "base": "Serpentskin Armor",
+    "drop": "악몽~지옥 전역 (패캐 갑옷)",
+    "stats": "All Skills <strong>+1</strong> / Faster Cast Rate <strong>+30%</strong> / Enhanced Defense <strong>+120~150%</strong> / All Resistances <strong>+20~35</strong> / Magic Damage Reduced <strong>9~13</strong>"
+  }
+]

@@ -90,7 +90,7 @@
         <div class="container">
 
     <div class="lang-rollout-note" role="status">
-        English UI chrome is live (nav, SEO, language switch). Guide tables and Korean JSON content are still rolling out in later phases — builds, uniques, and leveling text will be translated next.
+English Phase 2 is live for Uniques, Runewords, and the Rune list (English DB + modals). Builds, leveling, and guide tables still roll out in later phases.
     </div>
     <section id="builds" class="content-section active">
         <h2 class="section-title">🛡️ 1. Endgame Build Guides</h2>
@@ -119,21 +119,21 @@
 
     <section id="uniques" class="content-section">
         <h2 class="section-title">💎 2. Key Unique Items & Drop Tips</h2>
-        <div class="item-click-hint">🟠 유니크 이름을 클릭하면 상세 옵션 및 으뜸 수치 팝업을 확인할 수 있습니다.</div>
+    <div class="item-click-hint">🟠 Click a unique name for perfect rolls and details.</div>
         <table>
-            <thead><tr><th>아이템 명칭</th><th>기본 베이스</th><th>대표 주요 드랍 장소 / 팁</th></tr></thead>
+            <thead><tr><th>Item</th><th>Base</th><th>Drop sources / tips</th></tr></thead>
             <tbody id="uniqueTbody"></tbody>
         </table>
     </section>
 
 <section id="runes" class="content-section">
     <h2 class="section-title">📜 3. Core Runeword Recipes</h2>
-    <div class="item-click-hint">💡 <b>아이템명을 클릭하면</b> 상세 베이스, 조합 순서 및 으뜸 수치를 볼 수 있습니다.</div>
+    <div class="item-click-hint">💡 <b>Click a runeword name</b> for bases, rune order, and perfect mods.</div>
     
     <!-- 룬어 테이블이 동적으로 렌더링될 영역 -->
     <table id="runewordsTable">
         <thead>
-            <tr><th>룬어 명칭</th><th>조합 룬</th></tr>
+            <tr><th>Runeword</th><th>Rune order</th></tr>
         </thead>
         <tbody id="runewordsTbody">
             <!-- JS가 runewords.json을 읽어와서 여기에 <tr>들을 꽂아넣습니다 -->
@@ -204,7 +204,7 @@
         <div class="item-click-hint">💡 1번 엘부터 33번 조드까지 전부 나열합니다. 합성 공식은 <b>그 룬을 만들기 위한</b> 큐브 재료입니다.</div>
         <div class="leveling-table-wrap">
         <table>
-            <thead><tr><th>룬 번호</th><th>룬 명칭</th><th>룬 등급</th><th>상위 룬 합성 공식 (큐빙 재료)</th><th>주요 쓰임새</th></tr></thead>
+            <thead><tr><th>#</th><th>Rune</th><th>Tier</th><th>Upgrade recipe</th><th>Used in</th></tr></thead>
             <tbody id="runeListTbody">
             </tbody>
         </table>
@@ -670,7 +670,7 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="/js/legacy-globals.js?v=12"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-    <script type="module" src="/js/main.js?v=24"></script>
+    <script type="module" src="/js/main.js?v=25"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
