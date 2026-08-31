@@ -12,8 +12,9 @@
 
 ## Regenerate
 ```bash
-python3 scripts/build_en_db.py        # uniques / runewords / runes
+python3 scripts/build_en_db.py        # uniques / runewords / runes / sunders / charms / ubers
 python3 scripts/build_en_content.py   # builds / leveling / dropcalc / patchnotes
+python3 scripts/build_en_guide.py     # en/index.html guide sections
 ```
 
 ## Workflow
