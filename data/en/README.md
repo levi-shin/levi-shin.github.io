@@ -8,7 +8,7 @@
 ## Localized files
 - uniques.json, runewords.json, runes.json
 - builds.json, leveling.json, dropcalc.json, patchnotes.json
-- sunders.json, charms.json, ubers.json
+- sunders.json, charms.json, ubers.json, meta.json
 
 ## Regenerate
 ```bash
