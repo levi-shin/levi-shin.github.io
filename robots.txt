@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://diablo.1125labs.com/sitemap.xml
