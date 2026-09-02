@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/js/prefs-boot.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5Y0ZFS04L"></script>
     <script>
@@ -12,12 +13,12 @@
     </script>
     <meta name="google-adsense-account" content="ca-pub-8514352833859910">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>DIABLO II RESURRECTED - Endgame Encyclopedia | 1125 Labs</title>
-    <meta name="description" content="Diablo II Resurrected (D2R) encyclopedia — endgame builds, runewords, uniques, leveling guide, MF calculator, Uber/Torch and Sunder charm info.">
+    <title>D2R Second-Monitor Endgame Encyclopedia (Runewords, Uniques, Builds, MF Calculator)</title>
+    <meta name="description" content="Diablo II Resurrected (D2R) second-monitor endgame encyclopedia — runewords, uniques, builds, leveling guide, MF drop calculator, Uber/Torch and Sunder charms.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="keywords" content="Diablo 2, D2R, Resurrected, runewords, uniques, endgame builds, leveling, MF, Uber, Torch">
     <!-- Stylesheet -->
-    <meta property="og:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
+    <meta property="og:title" content="D2R Second-Monitor Endgame Encyclopedia | 1125 Labs">
     <meta property="og:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="1125 Labs">
@@ -30,7 +31,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Diablo II Resurrected Encyclopedia | 1125 Labs">
+    <meta name="twitter:title" content="D2R Second-Monitor Endgame Encyclopedia | 1125 Labs">
     <meta name="twitter:description" content="Practical D2R encyclopedia: endgame builds, runewords, uniques, and leveling.">
     <meta name="twitter:image" content="https://diablo.1125labs.com/images/og-thumb.jpg?v=2">
     <link rel="canonical" href="https://diablo.1125labs.com/en/">
@@ -42,14 +43,16 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Diablo II Resurrected Encyclopedia",
+      "name": "D2R Second-Monitor Endgame Encyclopedia",
       "alternateName": "D2R Endgame Guide",
       "url": "https://diablo.1125labs.com/en/",
       "inLanguage": ["en-US", "ko-KR"],
       "publisher": { "@type": "Organization", "name": "1125 Labs" }
     }
     </script>
-    <link rel="stylesheet" href="/css/style.css?v=18">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css?v=19">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -62,8 +65,8 @@
             <span style="font-size:0.75rem; color:var(--gold-light);">Diablo II Encyclopedia</span>
         </div>
         <nav class="lang-switcher" aria-label="Language">
-            <a href="/" lang="ko" hreflang="ko">한국어</a>
-            <a href="/en/" class="active" lang="en" hreflang="en">English</a>
+            <a href="/" lang="ko" hreflang="ko" onclick="window.__d2SaveLang && __d2SaveLang('ko')">한국어</a>
+            <a href="/en/" class="active" lang="en" hreflang="en" onclick="window.__d2SaveLang && __d2SaveLang('en')">English</a>
         </nav>
         <div class="sidebar-search">
             <span class="search-icon">🔍</span>
@@ -655,7 +658,7 @@ English Phase 3–7 content is live: Uniques, Runewords, Runes, Builds, Leveling
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="/js/legacy-globals.js?v=12"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-    <script type="module" src="/js/main.js?v=31"></script>
+    <script type="module" src="/js/main.js?v=32"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
