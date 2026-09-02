@@ -72,6 +72,45 @@
     line-height: 1.55;
 }
 
+.bookmark-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 0 0 10px;
+    padding: 8px 8px 8px 10px;
+    border: 1px solid #3a3428;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1a1812 0%, #121218 100%);
+}
+
+.bookmark-banner-text {
+    flex: 1;
+    margin: 0;
+    color: var(--gold-light);
+    font-size: 0.72rem;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+}
+
+.bookmark-banner-dismiss {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #888;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.bookmark-banner-dismiss:hover {
+    color: var(--gold-light);
+    background: rgba(223, 177, 91, 0.12);
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
     width: 100%;

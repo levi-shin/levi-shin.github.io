@@ -1,5 +1,13 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=5';
 import { dataUrl, itemImageUrl, t, SITE_LANG, submitFeedbackArchive } from './site.js?v=8';
+import {
+    saveSection,
+    saveBuildFilter,
+    initBookmarkBanner,
+    restoreSectionAndFilter,
+    restoreBuildFilterAfterCards,
+    wireLangSwitcher
+} from './prefs.js?v=1';
 
 const DATA_VER = '22';
 
@@ -163,6 +171,7 @@ function switchSection(evt, sectionId) {
     });
     document.getElementById(sectionId)?.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
+    saveSection(sectionId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function toggleAccordion(headerEl) { 
@@ -188,6 +197,7 @@ function filterBuilds(evt, tag) {
     cards.forEach(card => {
         card.style.display = (tag === 'all' || cardHasTag(card, tag)) ? 'flex' : 'none';
     });
+    saveBuildFilter(tag);
 }
 
 // ==========================================
@@ -1060,6 +1070,8 @@ window.copyPaperDollValue = function () {
 
 async function initialize() {
     bindGlobalFunctions();
+    wireLangSwitcher();
+    initBookmarkBanner();
 
     try {
         await loadData();
@@ -1068,6 +1080,7 @@ async function initialize() {
         renderSiteMetadata();
         await Promise.all([loadLevelingGuide(), loadRuneList()]);
         await initDropCalc();
+        restoreSectionAndFilter();
     } catch (error) {
         console.error('악군 데이터 초기화 실패:', error);
 
@@ -1481,9 +1494,10 @@ async function renderBuildCards() {
         // ==========================================
         const searchInput = document.getElementById('searchInput');
         if (searchInput && searchInput.value.trim() !== '' && typeof filterBuilds === 'function') {
-            // 만약 검색창에 이미 무언가 적혀있었다면 그에 맞춰 필터 적용
-            filterBuilds(); 
+            filterBuilds();
         }
+
+        restoreBuildFilterAfterCards();
 
     } catch (error) {
         console.error('builds.json 불러오기 실패:', error);
