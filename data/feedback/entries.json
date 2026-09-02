@@ -8,7 +8,8 @@
       "nickname": "",
       "type": "기타",
       "content": "테스트입니다.",
-      "source": "web"
+      "source": "web",
+      "githubSent": true
     }
   ]
 }
