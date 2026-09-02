@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import json
 import os
-import re
-import subprocess
 import sys
 import uuid
 from datetime import datetime, timezone
@@ -36,32 +34,35 @@ def append_entry(payload: dict) -> dict:
         "type": str(payload.get("type") or "Other")[:80],
         "content": str(payload.get("content") or "")[:4000],
         "source": str(payload.get("source") or "web"),
+        "githubSent": False,
     }
     data.setdefault("entries", []).append(entry)
     save_entries(data)
     return entry
 
 
-def git_show_prev() -> dict | None:
-    try:
-        out = subprocess.run(
-            ["git", "show", "HEAD~1:data/feedback/entries.json"],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-        return json.loads(out.stdout)
-    except (subprocess.CalledProcessError, json.JSONDecodeError, FileNotFoundError):
-        return None
+def pending_entries(data: dict) -> list[dict]:
+    return [e for e in data.get("entries", []) if not e.get("githubSent", False)]
 
 
-def new_entries_since_push() -> list[dict]:
-    current = load_entries()
-    prev = git_show_prev()
-    if not prev:
-        return list(current.get("entries", []))
-    prev_ids = {e.get("id") for e in prev.get("entries", [])}
-    return [e for e in current.get("entries", []) if e.get("id") not in prev_ids]
+def mark_github_sent(data: dict, entry_ids: set[str]) -> None:
+    for entry in data.get("entries", []):
+        if entry.get("id") in entry_ids:
+            entry["githubSent"] = True
+
+
+def notify_pending() -> int:
+    data = load_entries()
+    pending = pending_entries(data)
+    if not pending:
+        print("No pending feedback entries")
+        return 0
+
+    print(f"Notifying Slack for {len(pending)} pending entries")
+    send_slack(pending)
+    mark_github_sent(data, {e["id"] for e in pending})
+    save_entries(data)
+    return len(pending)
 
 
 def send_slack(entries: list[dict]) -> None:
@@ -105,7 +106,7 @@ def send_slack(entries: list[dict]) -> None:
     blocks.append(
         {
             "type": "context",
-            "elements": [{"type": "mrkdwn", "text": "🤖 Saved to repo · existing Slack form webhook unchanged"}],
+            "elements": [{"type": "mrkdwn", "text": "🤖 Saved to repo · sent via GitHub Actions (no client webhook)"}],
         }
     )
 
@@ -148,13 +149,8 @@ def main() -> None:
             }
         )
         print(json.dumps(entry, ensure_ascii=False))
-    elif cmd == "notify-new":
-        new = new_entries_since_push()
-        if new:
-            print(f"Notifying Slack for {len(new)} new entries")
-            send_slack(new)
-        else:
-            print("No new feedback entries")
+    elif cmd == "notify-pending":
+        notify_pending()
     else:
         print(f"Unknown command: {cmd}", file=sys.stderr)
         sys.exit(1)

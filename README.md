@@ -10,5 +10,9 @@
 ## 🔗 방문하기
 [https://1125labs.com](https://1125labs.com)
 
+## 📝 변경 이력
+
+버전별 작업 내역은 [CHANGELOG.md](CHANGELOG.md)를 참고하세요.
+
 ## 📝 라이선스
 이 프로젝트는 [LICENSE](LICENSE) 파일을 따릅니다.

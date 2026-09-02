@@ -1,10 +1,20 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.18",
+  "siteVersion": "v1.0.20",
   "lastUpdated": "2026-09-02",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.20",
+      "date": "2026-09-02",
+      "desc": "피드백 Slack: githubSent 플래그 + 매일 19시 KST GHA 배치 발송"
+    },
+    {
+      "version": "v1.0.19",
+      "date": "2026-09-02",
+      "desc": "피드백 Slack 웹훅 클라이언트 제거 — GHA Secret 경로만 사용"
+    },
     {
       "version": "v1.0.18",
       "date": "2026-09-02",
@@ -24,6 +34,11 @@
       "version": "v1.0.15",
       "date": "2026-08-31",
       "desc": "영문 /en/ 폴리시: sunders·charms·ubers EN, 가이드 HTML, stats glossary"
+    },
+    {
+      "version": "v1.0.14",
+      "date": "2026-08-31",
+      "desc": "데스크톱 사이드바 네비 스크롤 제거 (언어 스위치 레이아웃 정리)"
     },
     {
       "version": "v1.0.13",

@@ -310,7 +310,7 @@ export function itemImageUrl(imagePath) {
 /**
  * Optional: archive feedback to repo JSON via repository_dispatch.
  * Set patParts + secretParts (match secrets.FEEDBACK_SUBMIT_SECRET).
- * Existing Slack webhook flow is unchanged.
+ * Slack webhook is server-side only (secrets.SLACK_WEBHOOK_URL in GHA).
  */
 export const FEEDBACK_GITHUB = {
     repo: 'levi-shin/levi-shin.github.io',
