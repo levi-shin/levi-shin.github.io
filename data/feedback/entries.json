@@ -1,4 +1,14 @@
 {
   "schemaVersion": 1,
-  "entries": []
+  "entries": [
+    {
+      "id": "fb-20260902-cf4bbd40",
+      "createdAt": "2026-09-02T00:19:36Z",
+      "lang": "ko",
+      "nickname": "",
+      "type": "기타",
+      "content": "테스트입니다.",
+      "source": "web"
+    }
+  ]
 }
