@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.19",
+  "siteVersion": "v1.0.20",
   "lastUpdated": "2026-09-02",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.20",
+      "date": "2026-09-02",
+      "desc": "피드백 Slack: githubSent 플래그 + 매일 19시 KST GHA 배치 발송"
+    },
     {
       "version": "v1.0.19",
       "date": "2026-09-02",
