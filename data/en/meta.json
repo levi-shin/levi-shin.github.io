@@ -1,10 +1,25 @@
 {
   "projectName": "D2R Endgame Encyclopedia",
-  "siteVersion": "v1.0.17",
-  "lastUpdated": "2026-09-01",
+  "siteVersion": "v1.0.20",
+  "lastUpdated": "2026-09-02",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.20",
+      "date": "2026-09-02",
+      "desc": "Feedback Slack: githubSent flag + daily 19:00 KST GHA batch"
+    },
+    {
+      "version": "v1.0.19",
+      "date": "2026-09-02",
+      "desc": "Remove client Slack webhook — GHA Secret only"
+    },
+    {
+      "version": "v1.0.18",
+      "date": "2026-09-02",
+      "desc": "Feedback JSON archive + GitHub Actions Slack notify"
+    },
     {
       "version": "v1.0.17",
       "date": "2026-09-01",
@@ -19,6 +34,11 @@
       "version": "v1.0.15",
       "date": "2026-08-31",
       "desc": "EN polish: sunders/charms/ubers JSON, guide HTML, stats glossary"
+    },
+    {
+      "version": "v1.0.14",
+      "date": "2026-08-31",
+      "desc": "Desktop sidebar nav scroll removed (language switch layout)"
     },
     {
       "version": "v1.0.13",
