@@ -307,6 +307,47 @@ export function itemImageUrl(imagePath) {
     return assetUrl(`items/${imagePath}`);
 }
 
+/**
+ * Optional: archive feedback to repo JSON via repository_dispatch.
+ * Set patParts + secretParts (match secrets.FEEDBACK_SUBMIT_SECRET).
+ * Existing Slack webhook flow is unchanged.
+ */
+export const FEEDBACK_GITHUB = {
+    repo: 'levi-shin/levi-shin.github.io',
+    patParts: [],
+    secretParts: []
+};
+
+export function submitFeedbackArchive({ nick, type, content, lang }) {
+    const token = FEEDBACK_GITHUB.patParts.join('');
+    const secret = FEEDBACK_GITHUB.secretParts.join('');
+    if (!token || !secret) return;
+
+    const body = {
+        event_type: 'feedback',
+        client_payload: {
+            secret,
+            nick: nick || '',
+            nickname: nick || '',
+            type: type || 'Other',
+            content: content || '',
+            lang: lang || SITE_LANG,
+            source: 'web'
+        }
+    };
+
+    fetch(`https://api.github.com/repos/${FEEDBACK_GITHUB.repo}/dispatches`, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/vnd.github+json',
+            'Content-Type': 'application/json',
+            'X-GitHub-Api-Version': '2022-11-28'
+        },
+        body: JSON.stringify(body)
+    }).catch(() => {});
+}
+
 if (typeof window !== 'undefined') {
     window.SITE_LANG = SITE_LANG;
     window.SITE_HOME = SITE_HOME;

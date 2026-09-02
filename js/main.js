@@ -1,5 +1,5 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=5';
-import { dataUrl, itemImageUrl, t, SITE_LANG } from './site.js?v=5';
+import { dataUrl, itemImageUrl, t, SITE_LANG, submitFeedbackArchive } from './site.js?v=6';
 
 const DATA_VER = '22';
 
@@ -1001,6 +1001,13 @@ function handleFeedbackSubmit(e) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     }).catch(err => console.error("Slack 백그라운드 전송 에러:", err));
+
+    submitFeedbackArchive({
+        nick: nickname,
+        type,
+        content,
+        lang: SITE_LANG
+    });
 }
 
 

@@ -1,0 +1,63 @@
+name: Feedback Ingest (JSON)
+
+on:
+  repository_dispatch:
+    types: [feedback]
+  workflow_dispatch:
+    inputs:
+      nickname:
+        description: Nickname (optional)
+        required: false
+        default: ''
+      type:
+        description: Report type
+        required: true
+        default: 'Other'
+      content:
+        description: Feedback body
+        required: true
+      lang:
+        description: Language tag (ko/en)
+        required: false
+        default: 'ko'
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Append feedback to JSON (repository_dispatch)
+        if: github.event_name == 'repository_dispatch'
+        env:
+          CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          FEEDBACK_SUBMIT_SECRET: ${{ secrets.FEEDBACK_SUBMIT_SECRET }}
+        run: python scripts/feedback_store.py append-dispatch
+
+      - name: Append feedback to JSON (manual test)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          FB_NICK: ${{ github.event.inputs.nickname }}
+          FB_TYPE: ${{ github.event.inputs.type }}
+          FB_CONTENT: ${{ github.event.inputs.content }}
+          FB_LANG: ${{ github.event.inputs.lang }}
+        run: python scripts/feedback_store.py append-manual
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/feedback/entries.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "chore: append feedback entry to data/feedback/entries.json"
+          git push

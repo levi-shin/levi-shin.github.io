@@ -1,4 +1,4 @@
-import { t } from './site.js';
+import { t, SITE_LANG, submitFeedbackArchive } from './site.js';
 /**
  * @file feedback.js
  * @description 사용자 제보 및 피드백 모달 창 조작과 Slack 백그라운드 웹훅 전송 모듈
@@ -84,4 +84,11 @@ export function handleFeedbackSubmit(e) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     }).catch(err => console.error("Slack 백그라운드 전송 에러:", err));
+
+    submitFeedbackArchive({
+        nick: nickname,
+        type,
+        content,
+        lang: SITE_LANG
+    });
 }

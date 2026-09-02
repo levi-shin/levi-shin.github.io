@@ -1,0 +1,30 @@
+name: Feedback Notify (Slack)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/feedback/entries.json'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Slack notify for new entries
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scripts/feedback_store.py notify-new
