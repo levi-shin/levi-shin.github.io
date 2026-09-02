@@ -1,7 +1,6 @@
 # Feedback archive (`data/feedback/entries.json`)
 
-Web form submissions are appended here via GitHub Actions (`repository_dispatch`).
-A separate workflow sends Slack when new rows land in this file.
+Web form → `repository_dispatch` → `data/feedback/entries.json` → **Feedback Notify** workflow → Slack (`SLACK_WEBHOOK_URL` secret only; not in site JS).
 
 ## Repo secrets (required for form → JSON)
 
