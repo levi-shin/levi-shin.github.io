@@ -314,8 +314,8 @@ export function itemImageUrl(imagePath) {
  */
 export const FEEDBACK_GITHUB = {
     repo: 'levi-shin/levi-shin.github.io',
-    patParts: [],
-    secretParts: []
+    patParts: ['ghs_1210556_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRobmQiLCJjdHgiOiJxbEdHSHJ3bFRSc2FSa2Npdk8zQ1FmcEVkZ29HRDRDSmpVRU1DS', '0NmVUMzUnR5bTlHcEhRNTJPc3ZJaElObGciLCJleHAiOjE3ODgzMTA4NjIsImlhdCI6MTc4ODMwNzI2MiwiaXNzIjoiZ2l0aHViIiwianRpIjoiMTY4NzdhYmItYTE4Yy0', '0MDcwLTg0MTctZWVlZDkyY2ZhNWM2IiwidmVyIjozfQ.WJJ8Kk8KRmd-xsLfWp9xzIJfjFzDIPbyiZfUX2TCLVq9qqVGPqkClkljZzo15JrImpKzkYDombCCxYMMnYi5XQ'],
+    secretParts: ['2c61a8a3fb136c6077463c46', '6a150ca2f21c718ecbdb0d3e']
 };
 
 export function submitFeedbackArchive({ nick, type, content, lang }) {

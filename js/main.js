@@ -1,5 +1,5 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=5';
-import { dataUrl, itemImageUrl, t, SITE_LANG, submitFeedbackArchive } from './site.js?v=6';
+import { dataUrl, itemImageUrl, t, SITE_LANG, submitFeedbackArchive } from './site.js?v=7';
 
 const DATA_VER = '22';
 

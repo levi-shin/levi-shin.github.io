@@ -7,11 +7,16 @@ A separate workflow sends Slack when new rows land in this file.
 
 | Secret | Purpose |
 |--------|---------|
-| `FEEDBACK_SUBMIT_SECRET` | Must match `patParts` / `secretParts` in `js/site.js` |
+| `FEEDBACK_SUBMIT_SECRET` | Must match `secretParts` in `js/site.js` — **set in repo Secrets** |
 | `SLACK_WEBHOOK_URL` | Slack notify on new entries (same as patch crawler) |
-| `FEEDBACK_DISPATCH_PAT` | Fine-grained PAT: this repo **Contents** read/write + **Metadata** read |
 
-In `js/site.js` → `FEEDBACK_GITHUB`, set `patParts` and `secretParts` (split strings like the Slack webhook).
+**Current `FEEDBACK_SUBMIT_SECRET` value** (add in GitHub → Settings → Secrets → Actions):
+
+```
+2c61a8a3fb136c6077463c466a150ca2f21c718ecbdb0d3e
+```
+
+`patParts` in `js/site.js` holds the dispatch PAT (split). Regenerate a fine-grained PAT if dispatch stops working.
 
 ## Manual test
 
