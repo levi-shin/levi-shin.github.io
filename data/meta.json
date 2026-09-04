@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.21",
-  "lastUpdated": "2026-09-02",
+  "siteVersion": "v1.0.22",
+  "lastUpdated": "2026-09-04",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.22",
+      "date": "2026-09-04",
+      "desc": "수수께끼(Enigma) 모달 이미지 경로 404 수정"
+    },
     {
       "version": "v1.0.21",
       "date": "2026-09-02",
