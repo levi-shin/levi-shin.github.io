@@ -1,10 +1,15 @@
 {
   "projectName": "D2R Endgame Encyclopedia",
-  "siteVersion": "v1.0.22",
-  "lastUpdated": "2026-09-04",
+  "siteVersion": "v1.0.23",
+  "lastUpdated": "2026-09-10",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.23",
+      "date": "2026-09-10",
+      "desc": "AdSense: hide ads until content ready and on feedback screen"
+    },
     {
       "version": "v1.0.22",
       "date": "2026-09-04",

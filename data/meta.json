@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.22",
-  "lastUpdated": "2026-09-04",
+  "siteVersion": "v1.0.23",
+  "lastUpdated": "2026-09-10",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.23",
+      "date": "2026-09-10",
+      "desc": "AdSense: 콘텐츠 로드 전·피드백 화면 광고 비표시 (게시자 콘텐츠 없는 화면 정책)"
+    },
     {
       "version": "v1.0.22",
       "date": "2026-09-04",
