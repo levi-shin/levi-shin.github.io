@@ -8,6 +8,7 @@ import {
     restoreBuildFilterAfterCards,
     wireLangSwitcher
 } from './prefs.js?v=1';
+import { syncAdsForSection, markPublisherContentReady } from './ads.js?v=1';
 
 const DATA_VER = '22';
 
@@ -172,6 +173,7 @@ function switchSection(evt, sectionId) {
     document.getElementById(sectionId)?.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     saveSection(sectionId);
+    syncAdsForSection(sectionId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function toggleAccordion(headerEl) { 
@@ -1498,6 +1500,7 @@ async function renderBuildCards() {
         }
 
         restoreBuildFilterAfterCards();
+        markPublisherContentReady();
 
     } catch (error) {
         console.error('builds.json 불러오기 실패:', error);

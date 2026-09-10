@@ -52,7 +52,7 @@
     </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicon.svg">
-    <link rel="stylesheet" href="/css/style.css?v=19">
+    <link rel="stylesheet" href="/css/style.css?v=20">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8514352833859910" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -94,13 +94,6 @@
 
     <main class="main-content">
 
-        <div class="mobile-ad mobile-top-ad" aria-label="모바일 상단 광고">
-            <div class="mobile-ad-inner">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8514352833859910" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
-
         <header class="desktop-only">
             <h1>⚔️ DIABLO II RESURRECTED - 악군 패키지 마스터 종결 백과사전 (ULTIMATE EDITION) ⚔️</h1>
         </header>
@@ -123,14 +116,14 @@
         <div class="grid-cards" id="buildCardsGrid">
             
         </div>
-    </section>
 
-    <div class="mobile-ad mobile-mid-ad" aria-label="모바일 본문 중간 광고">
-        <div class="mobile-ad-inner">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8514352833859910" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <!-- AdSense: only filled after build cards render; hidden on feedback -->
+        <div class="mobile-ad mobile-incontent-ad site-ad is-hidden" aria-label="모바일 본문 광고" aria-hidden="true">
+            <div class="mobile-ad-inner">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8514352833859910" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
         </div>
-    </div>
+    </section>
 
     <section id="uniques" class="content-section">
         <h2 class="section-title">💎 2. 주요 유니크 아이템 핵심 요약 및 드랍 장소</h2>
@@ -555,14 +548,11 @@
         </div>
     </main>
 
-    <aside class="side-ad right-ad" aria-label="우측 광고">
+    <aside class="side-ad right-ad site-ad is-hidden" aria-label="우측 광고" aria-hidden="true">
         <div class="side-ad-inner">
             <ins class="adsbygoogle"
                  style="display:inline-block;width:160px;height:600px"
                  data-ad-client="ca-pub-8514352833859910"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
     </aside>
 
@@ -685,7 +675,7 @@
 <!-- 기존 inline onclick 호환용 전역 함수. ES Module 로딩 전에도 메뉴가 동작합니다. -->
 <script src="/js/legacy-globals.js?v=12"></script>
 <!-- JSON 데이터 + UI + 모달 통합 진입점 -->
-    <script type="module" src="/js/main.js?v=32"></script>
+    <script type="module" src="/js/main.js?v=33"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
