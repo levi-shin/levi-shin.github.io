@@ -2,21 +2,25 @@
  * Keeps existing HTML onclick handlers working while ES modules load.
  */
 (function () {
-  window.switchSection = function (evt, sectionId) {
+  function activateSection(sectionId, evt) {
     document.querySelectorAll('.content-section').forEach(function (sec) {
       sec.classList.remove('active');
     });
-    document.querySelectorAll('.nav-menu button').forEach(function (btn) {
+    document.querySelectorAll('.nav-menu .nav-btn, .nav-menu button').forEach(function (btn) {
       btn.classList.remove('active');
-      var onclick = btn.getAttribute('onclick') || '';
-      if (onclick.indexOf("'" + sectionId + "'") !== -1 || onclick.indexOf('"' + sectionId + '"') !== -1) {
-        btn.classList.add('active');
-      }
     });
+    var navMatch = document.querySelector(
+      '.nav-menu [data-section="' + sectionId + '"], .nav-menu button[onclick*="\'' + sectionId + '\'"], .nav-menu button[onclick*="' + sectionId + '"]'
+    );
+    if (navMatch) navMatch.classList.add('active');
     var section = document.getElementById(sectionId);
     if (section) section.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.switchSection = function (evt, sectionId) {
+    activateSection(sectionId, evt);
   };
 
   window.filterBuilds = function (evt, tag) {

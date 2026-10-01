@@ -6,13 +6,13 @@
 
 export function switchSection(evt, sectionId) {
     document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-    document.querySelectorAll('.nav-menu button').forEach(btn => {
+    document.querySelectorAll('.nav-menu .nav-btn, .nav-menu button').forEach(btn => {
         btn.classList.remove('active');
-        const onclick = btn.getAttribute('onclick') || '';
-        if (onclick.includes(`'${sectionId}'`) || onclick.includes(`"${sectionId}"`)) {
-            btn.classList.add('active');
-        }
     });
+    const navMatch = document.querySelector(
+        `.nav-menu [data-section="${sectionId}"], .nav-menu button[onclick*="'${sectionId}'"], .nav-menu button[onclick*='"${sectionId}"]`
+    );
+    if (navMatch) navMatch.classList.add('active');
     document.getElementById(sectionId)?.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });

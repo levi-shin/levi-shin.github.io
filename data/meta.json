@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.23",
-  "lastUpdated": "2026-09-10",
+  "siteVersion": "v1.0.24",
+  "lastUpdated": "2026-10-01",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.24",
+      "date": "2026-10-01",
+      "desc": "카테고리별 독립 URL(/runewords/, /cube/, /frames/ 등) + SEO 메타·sitemap·실제 링크 메뉴"
+    },
     {
       "version": "v1.0.23",
       "date": "2026-09-10",

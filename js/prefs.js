@@ -2,6 +2,8 @@
  * Site preferences: section, build filter, bookmark banner.
  */
 
+import { sectionFromPath } from './routes.js?v=1';
+
 const PREFS_KEY = 'd2_prefs';
 const BOOKMARK_KEY = 'd2_bookmark_dismissed';
 
@@ -79,19 +81,40 @@ export function initBookmarkBanner() {
     });
 }
 
-export function restoreSectionAndFilter() {
-    const sectionId = getSavedSection();
-    const buildFilter = getSavedBuildFilter();
+function navBtnForSection(sectionId) {
+    return document.querySelector(
+        `.nav-menu [data-section="${sectionId}"], .nav-menu button[onclick*="'${sectionId}'"], .nav-menu button[onclick*='"${sectionId}"]`
+    );
+}
 
-    if (sectionId && sectionId !== 'builds') {
-        const navBtn = document.querySelector(
-            `.nav-menu button[onclick*="'${sectionId}'"], .nav-menu button[onclick*='"${sectionId}"']`
-        );
-        if (typeof window.switchSection === 'function' && navBtn) {
-            window.switchSection({ currentTarget: navBtn, target: navBtn }, sectionId);
+export function restoreSectionAndFilter() {
+    const pathSection = sectionFromPath(location.pathname);
+    const bodySection = document.body?.dataset?.section || null;
+    const urlSection = pathSection || bodySection;
+
+    if (urlSection) {
+        // Category URL / body data-section: sync UI + ads without leaving the page.
+        if (typeof window.switchSection === 'function') {
+            window.switchSection(null, urlSection, { navigate: false });
+        } else {
+            saveSection(urlSection);
+        }
+    } else {
+        // Home hub: restore last section in-page (keep / as hub URL).
+        const sectionId = getSavedSection();
+        if (sectionId && sectionId !== 'builds') {
+            const navBtn = navBtnForSection(sectionId);
+            if (typeof window.switchSection === 'function') {
+                window.switchSection(
+                    { currentTarget: navBtn, target: navBtn },
+                    sectionId,
+                    { navigate: false }
+                );
+            }
         }
     }
 
+    const buildFilter = getSavedBuildFilter();
     if (buildFilter && buildFilter !== 'all') {
         applyBuildFilter(buildFilter);
     }
@@ -107,7 +130,7 @@ export function restoreBuildFilterAfterCards() {
 function applyBuildFilter(tag) {
     if (typeof window.filterBuilds !== 'function') return;
     const filterBtn = document.querySelector(
-        `.filter-tags .filter-btn[onclick*="'${tag}'"], .filter-tags .filter-btn[onclick*='"${tag}"']`
+        `.filter-tags .filter-btn[onclick*="'${tag}'"], .filter-tags .filter-btn[onclick*='"${tag}"]`
     );
     if (filterBtn) {
         window.filterBuilds({ currentTarget: filterBtn, target: filterBtn }, tag);
@@ -115,10 +138,10 @@ function applyBuildFilter(tag) {
 }
 
 export function wireLangSwitcher() {
-    document.querySelectorAll('.lang-switcher a[href="/"]').forEach((a) => {
+    document.querySelectorAll('.lang-switcher a[lang="ko"]').forEach((a) => {
         a.addEventListener('click', () => window.__d2SaveLang?.('ko'));
     });
-    document.querySelectorAll('.lang-switcher a[href="/en/"]').forEach((a) => {
+    document.querySelectorAll('.lang-switcher a[lang="en"]').forEach((a) => {
         a.addEventListener('click', () => window.__d2SaveLang?.('en'));
     });
     window.__d2SeedLangIfMissing?.();
