@@ -1,5 +1,6 @@
 /**
  * Early prefs boot: language redirect before paint (no ?lang= param).
+ * Preserves category URL slugs when switching / ↔ /en/.
  */
 (function () {
     const KEY = 'd2_prefs';
@@ -25,18 +26,44 @@
         return location.pathname.startsWith('/en') ? 'en' : 'ko';
     }
 
+    function normalizePath(pathname) {
+        let p = String(pathname || '/');
+        p = p.replace(/\/index\.html$/i, '/');
+        if (p.length > 1 && !p.endsWith('/')) p += '/';
+        return p;
+    }
+
+    function toEnPath(path) {
+        const p = normalizePath(path);
+        if (p === '/') return '/en/';
+        if (p.startsWith('/en/')) return p;
+        return '/en' + p;
+    }
+
+    function toKoPath(path) {
+        const p = normalizePath(path);
+        if (p === '/en/' || p === '/en') return '/';
+        if (p.startsWith('/en/')) {
+            const rest = p.slice(3) || '/';
+            return rest.startsWith('/') ? rest : '/' + rest;
+        }
+        return p;
+    }
+
     function applyLangRedirect() {
         const prefs = load();
         const saved = prefs.lang;
         if (!saved) return;
 
         const path = location.pathname;
-        if (saved === 'en' && (path === '/' || path === '/index.html')) {
-            location.replace('/en/');
+        const isEn = path === '/en' || path.startsWith('/en/');
+
+        if (saved === 'en' && !isEn) {
+            location.replace(toEnPath(path));
             return;
         }
-        if (saved === 'ko' && path.startsWith('/en')) {
-            location.replace('/');
+        if (saved === 'ko' && isEn) {
+            location.replace(toKoPath(path));
         }
     }
 

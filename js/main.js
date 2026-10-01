@@ -1,5 +1,5 @@
 import { initDropCalc, calculateDropOdds, setDropCalcMf } from './dropcalc.js?v=5';
-import { dataUrl, itemImageUrl, t, SITE_LANG, submitFeedbackArchive } from './site.js?v=8';
+import { dataUrl, itemImageUrl, t, SITE_LANG, SITE_HOME, submitFeedbackArchive } from './site.js?v=8';
 import {
     saveSection,
     saveBuildFilter,
@@ -7,10 +7,11 @@ import {
     restoreSectionAndFilter,
     restoreBuildFilterAfterCards,
     wireLangSwitcher
-} from './prefs.js?v=1';
+} from './prefs.js?v=2';
 import { syncAdsForSection, markPublisherContentReady } from './ads.js?v=1';
+import { SECTION_SLUGS, sectionPath } from './routes.js?v=1';
 
-const DATA_VER = '22';
+const DATA_VER = '23';
 
 /* ===== data.js ===== */
 /**
@@ -161,17 +162,34 @@ function resolveSegmentIds() {
  * @description 섹션 탭 전환 및 아코디언 토글 등 기본 화면 UI 인터랙션 제어 모듈
  * @author LEVI SHIN (악군 패키지 백과사전 프로젝트)
  */
-function switchSection(evt, sectionId) {
-    document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-    document.querySelectorAll('.nav-menu button').forEach(btn => {
-        btn.classList.remove('active');
-        const onclick = btn.getAttribute('onclick') || '';
-        if (onclick.includes(`'${sectionId}'`) || onclick.includes(`"${sectionId}"`)) {
-            btn.classList.add('active');
+function normalizePathname(pathname) {
+    let p = String(pathname || '/').replace(/\/index\.html$/i, '/');
+    if (p.length > 1 && !p.endsWith('/')) p += '/';
+    return p;
+}
+
+function switchSection(evt, sectionId, opts = {}) {
+    const navigate = opts.navigate !== false;
+    const slug = SECTION_SLUGS[sectionId];
+    if (navigate && slug) {
+        const dest = sectionPath(sectionId, SITE_LANG);
+        if (normalizePathname(location.pathname) !== normalizePathname(dest)) {
+            saveSection(sectionId);
+            location.assign(dest);
+            return;
         }
+    }
+
+    document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('.nav-menu .nav-btn, .nav-menu button').forEach(btn => {
+        btn.classList.remove('active');
     });
-    document.getElementById(sectionId)?.classList.add('active');
+    const navMatch = document.querySelector(
+        `.nav-menu [data-section="${sectionId}"], .nav-menu button[onclick*="'${sectionId}'"], .nav-menu button[onclick*='"${sectionId}"]`
+    );
+    if (navMatch) navMatch.classList.add('active');
     if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
+    document.getElementById(sectionId)?.classList.add('active');
     saveSection(sectionId);
     syncAdsForSection(sectionId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1536,22 +1554,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById('sidebarLogo');
     if (logo) {
         logo.addEventListener('click', () => {
-            // 1. 네비게이션의 '1. 종결 빌드' 버튼 찾기
-            const buildsNavBtn = document.querySelector("button[onclick*=\"switchSection(event, 'builds')\"]");
-            
-            // 2. 만약 switchSection 함수가 있다면 종결 빌드 섹션으로 전환
-            if (typeof switchSection === 'function' && buildsNavBtn) {
-                // 가짜 이벤트 객체나 첫 번째 인자로 전달해 switchSection 실행
-                switchSection({ target: buildsNavBtn }, 'builds');
-            }
-            
-            // 3. 검색창 초기화 및 전체 빌드 보기 상태로 정렬 (필요시)
             const searchInput = document.getElementById('searchInput');
             if (searchInput) searchInput.value = '';
-            
+            if (normalizePathname(location.pathname) !== normalizePathname(SITE_HOME)) {
+                location.assign(SITE_HOME);
+                return;
+            }
+            switchSection(null, 'builds', { navigate: false });
             const allFilterBtn = document.querySelector('.filter-btn');
             if (allFilterBtn && typeof filterBuilds === 'function') {
-                filterBuilds({ target: allFilterBtn }, 'all');
+                filterBuilds({ currentTarget: allFilterBtn, target: allFilterBtn }, 'all');
             }
         });
     }
@@ -1559,17 +1571,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     renderBuildCards();
-
-    // 사이드바 로고 클릭 이벤트
-    const logo = document.getElementById('sidebarLogo');
-    if (logo) {
-        logo.addEventListener('click', () => {
-            const buildsNavBtn = document.querySelector("button[onclick*=\"switchSection(event, 'builds')\"]");
-            if (typeof switchSection === 'function' && buildsNavBtn) {
-                switchSection({ target: buildsNavBtn }, 'builds');
-            }
-        });
-    }
     
     // ==========================================
     // ★ [강제 연결] 페이지 내의 모든 텍스트 입력창을 뒤져서

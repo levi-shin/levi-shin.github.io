@@ -215,25 +215,30 @@ html, body {
     gap: 4px;
     list-style: none;
 }
-.nav-menu button { 
+.nav-menu button,
+.nav-menu a.nav-btn {
     width: 100%;
     text-align: left;
-    color: var(--text-color); 
-    text-decoration: none; 
-    padding: 6px 10px; 
-    background: #1a1a22; 
-    border: 1px solid var(--card-border); 
-    border-radius: 6px; 
-    font-size: 0.8rem; 
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 6px 10px;
+    background: #1a1a22;
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
     display: block;
     line-height: 1.35;
+    box-sizing: border-box;
 }
-.nav-menu button:hover, .nav-menu button.active { 
-    color: var(--gold-light); 
-    border-color: var(--gold); 
+.nav-menu button:hover,
+.nav-menu button.active,
+.nav-menu a.nav-btn:hover,
+.nav-menu a.nav-btn.active {
+    color: var(--gold-light);
+    border-color: var(--gold);
     background: #252530;
     transform: translateX(3px);
     font-weight: bold;
