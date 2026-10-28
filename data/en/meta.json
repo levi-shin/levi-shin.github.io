@@ -1,10 +1,15 @@
 {
   "projectName": "D2R Endgame Encyclopedia",
-  "siteVersion": "v1.0.24",
-  "lastUpdated": "2026-10-01",
+  "siteVersion": "v1.0.25",
+  "lastUpdated": "2026-10-28",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.25",
+      "date": "2026-10-28",
+      "desc": "Remove non-D2R Diablo V news from auto patch crawler; restore Ladder 15 notes"
+    },
     {
       "version": "v1.0.24",
       "date": "2026-10-01",
