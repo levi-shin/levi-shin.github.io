@@ -11,7 +11,7 @@ import {
 import { syncAdsForSection, markPublisherContentReady } from './ads.js?v=1';
 import { SECTION_SLUGS, sectionPath } from './routes.js?v=1';
 
-const DATA_VER = '23';
+const DATA_VER = '24';
 
 /* ===== data.js ===== */
 /**

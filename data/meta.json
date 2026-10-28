@@ -1,10 +1,15 @@
 {
   "projectName": "악군 패키지 마스터 백과사전",
-  "siteVersion": "v1.0.24",
-  "lastUpdated": "2026-10-01",
+  "siteVersion": "v1.0.25",
+  "lastUpdated": "2026-10-28",
   "author": "LEVI SHIN",
   "verificationStatus": "Verified",
   "history": [
+    {
+      "version": "v1.0.25",
+      "date": "2026-10-28",
+      "desc": "패치 자동수집이 Diablo V 글을 잘못 넣던 문제 수정, D2R 래더 15 노트 복구"
+    },
     {
       "version": "v1.0.24",
       "date": "2026-10-01",

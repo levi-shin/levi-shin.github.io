@@ -26,16 +26,88 @@ def save_patch_notes(data):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def fetch_latest_patch_url():
-    url = "https://news.blizzard.com/ko-kr/diablo2"
+# diablo2 허브에 D4/D5/블리즈컨 교차 홍보 글이 먼저 뜨는 경우가 있어 D2R만 통과시킴
+D2R_TITLE_ALLOW = re.compile(
+    r"(디아블로\s*II|디아블로\s*2|레저렉션|Diablo\s*II|D2R|래더\s*\d+\s*시즌)",
+    re.I,
+)
+NON_D2R_TITLE = re.compile(
+    r"(디아블로\s*V\b|디아블로\s*IV\b|디아블로\s*4\b|Diablo\s*V\b|Diablo\s*IV\b|"
+    r"Immortal|블리즈컨|다음\s*시대)",
+    re.I,
+)
+D2R_SLUG = re.compile(r"(?:^|/)(ii(?:-|$)|diablo-?ii|resurrected)", re.I)
+NON_D2R_SLUG = re.compile(r"(?:^|/)(v(?:-\d+)?$|immortal|diablo-?[45])", re.I)
+
+
+def fetch_article_title(url: str) -> str:
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(res.text, "html.parser")
+        title_el = soup.select_one("h1, .Article-title, .NewsBlog-title, .article-headline, header h1")
+        if title_el:
+            return clean_text(title_el.get_text())
+        if soup.title:
+            return clean_text(soup.title.get_text().split(" - ")[0].split(" — ")[0])
+    except Exception as e:
+        print(f"제목 조회 실패 ({url}): {e}")
+    return ""
+
+
+def is_d2r_article(url: str, title: str = "") -> bool:
+    path = url.rsplit("/article/", 1)[-1]
+    slug = path.split("/", 1)[-1] if "/" in path else path
+    if NON_D2R_SLUG.search(slug) and not D2R_SLUG.search(slug):
+        return False
+    if D2R_SLUG.search(slug):
+        # URL이 D2R처럼 보여도 제목이 타 작품이면 제외
+        if title and NON_D2R_TITLE.search(title) and not D2R_TITLE_ALLOW.search(title):
+            return False
+        return True
+    if not title:
+        title = fetch_article_title(url)
+    if not title:
+        return False
+    if NON_D2R_TITLE.search(title) and not D2R_TITLE_ALLOW.search(title):
+        return False
+    return bool(D2R_TITLE_ALLOW.search(title))
+
+
+def fetch_latest_patch_url():
+    list_url = "https://news.blizzard.com/ko-kr/diablo2"
+    fallback = "https://news.blizzard.com/ko-kr/article/24296140/ii-15"
+    try:
+        res = requests.get(list_url, headers=HEADERS, timeout=15)
         matches = re.findall(r'/ko-kr/article/(\d+/[^"\'\s<>\)]+)', res.text)
-        if matches:
-            return f"https://news.blizzard.com/ko-kr/article/{matches[0]}"
+        seen = set()
+        unique = []
+        for path in matches:
+            if path not in seen:
+                seen.add(path)
+                unique.append(path)
+
+        for path in unique:
+            url = f"https://news.blizzard.com/ko-kr/article/{path}"
+            title = ""
+            # 슬러그만으로 명확히 탈락/통과 가능한 경우 네트워크 절약
+            slug = path.split("/", 1)[-1]
+            if NON_D2R_SLUG.search(slug) and not D2R_SLUG.search(slug):
+                print(f"⏭️ D2R 아님(슬러그 스킵): {path}")
+                continue
+            if not D2R_SLUG.search(slug):
+                title = fetch_article_title(url)
+            if is_d2r_article(url, title):
+                if title:
+                    print(f"✅ D2R 후보 선택: {title} ({url})")
+                else:
+                    print(f"✅ D2R 후보 선택: {url}")
+                return url
+            if not title:
+                title = fetch_article_title(url)
+            print(f"⏭️ D2R 아님(스킵): {title or path}")
     except Exception as e:
         print(f"목록 파싱 오류: {e}")
-    return "https://news.blizzard.com/ko-kr/article/24296140/ii-15"
+    return fallback
 
 def clean_text(text):
     return re.sub(r'\s+', ' ', text).strip()
@@ -199,12 +271,21 @@ def main():
 
     print(f"🎯 파싱 대상 URL: {url}")
 
+    if not is_d2r_article(url):
+        print(f"❌ D2R 패치가 아닌 글로 판단되어 중단: {url}")
+        return
+
     existing_links = [p.get("link") for p in patches]
     if url in existing_links:
         print("✅ 이미 최신 패치 노트가 반영되어 있습니다. (종료)")
         return
 
     new_patch = parse_patch_detail(url)
+
+    # 파싱 후에도 제목 기준으로 한 번 더 검증 (교차 홍보 기사 방어)
+    if not is_d2r_article(url, new_patch.get("version", "")):
+        print(f"❌ 파싱 결과가 D2R이 아니라 저장하지 않습니다: {new_patch.get('version')}")
+        return
 
     for item in patches:
         item["isActive"] = False
